@@ -20,7 +20,7 @@ public class Impacto : MonoBehaviour {
         {
             if (other.GetComponent<Soldier>() != null)
             {
-                other.GetComponent<Soldier>().RecibirDaño(daño);
+                other.GetComponent<Soldier>().GetDamage(daño);
             }
             else if (other.GetComponent<Pato>() != null)
             {

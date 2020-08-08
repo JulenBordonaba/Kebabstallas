@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Text;
 
-public class Soldier : SoldierStateMachine
+public class Soldier : SoldierStateMachine , IDamagable, IHealeable
 {
 
     string[] map;
@@ -48,9 +48,11 @@ public class Soldier : SoldierStateMachine
 
     public GameObject lagrimas;
 
-    protected bool canAttack = true;
+    protected bool canAttack = false;
 
     protected Coroutine attackCoroutine;
+
+    public EffectManager effectManager;
 
     class Location  //Nodo para el algoritmo de búsqueda
     {
@@ -76,7 +78,7 @@ public class Soldier : SoldierStateMachine
         sr = transform.GetComponent<SpriteRenderer>();
         //InvokeRepeating("Attack", Random.Range(1, 3.5f), stats.AttackSpeed);
         Invoke("StartAttacking", Random.Range(1, 3.5f));
-        
+        attackCoroutine = StartCoroutine(AttackCoroutine());
 
         print("start");
         
@@ -305,7 +307,7 @@ public class Soldier : SoldierStateMachine
 
     public void StartAttacking()
     {
-        attackCoroutine = StartCoroutine(AttackCoroutine());
+        canAttack = true;
     }
 
     public IEnumerator AttackCoroutine()
@@ -417,7 +419,7 @@ public class Soldier : SoldierStateMachine
                 }
             case Type.PAULA:
                 {
-                    StartCoroutine("Llorar");
+                    
                     break;
                 }
             case Type.LEYRE:
@@ -491,12 +493,12 @@ public class Soldier : SoldierStateMachine
                         if (friend != this.gameObject)
                             if (friend.GetComponent<Pato>() == null && Vector2.Distance(friend.transform.position, transform.position) < stats.AttackDistance)
                             {
-                                friend.GetComponent<Soldier>().RecibirVida(10);
+                                friend.GetComponent<Soldier>().GetHeal(10);
                                 atacar = true;
                             }
                     }
                     if (atacar)
-                        StartCoroutine("Vida");
+                        StartCoroutine(Vida());
                     break;
                 }
             default:
@@ -532,7 +534,7 @@ public class Soldier : SoldierStateMachine
     {
         GameObject Notas = Instantiate(nota, transform.position + new Vector3(Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f)), Quaternion.identity);
         Notas.transform.parent = transform;
-        RecibirDaño(3);
+        GetDamage(3);
         foreach (GameObject friend in GameObject.FindGameObjectsWithTag(tag))
         {
             if (friend != this.gameObject)
@@ -551,7 +553,7 @@ public class Soldier : SoldierStateMachine
         campoReg.GetComponent<Animator>().SetBool("activo", false);
     }
 
-    private IEnumerator Llorar()
+    protected IEnumerator Llorar()
     {
         CampoLlanto.SetActive(true);
         CampoLlanto.GetComponent<CampoDebilitador>().targetTag = opositeTag;
@@ -601,9 +603,10 @@ public class Soldier : SoldierStateMachine
         bar.localScale = new Vector3(sizeNormalized, 1f);
     }
 
-    public void RecibirDaño(float daño)
+    public void GetDamage(float daño)
     {
-        stats.vida -= daño * defensa;
+
+        stats.vida -= daño * ((100f-stats.DamageReduction)/100f);
         if (stats.vida < 0)
         {
             stats.vida = 0;
@@ -613,7 +616,7 @@ public class Soldier : SoldierStateMachine
         StartCoroutine(RecuperarColor(0.2f));
     }
 
-    public void RecibirVida(float regeneracion)
+    public void GetHeal(float regeneracion)
     {
         stats.vida += regeneracion;
         if (stats.vida > stats.maxVida)

@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class HulsSoldier : Soldier
 {
-    
-        
-    
+
+    public EffectData efectoPrueba;
+
+    protected override void Update()
+    {
+        base.Update();
+
+        if(Input.GetKeyDown(KeyCode.L))
+        {
+            effectManager.StartEffect(efectoPrueba.id);
+            StartAttacking();
+        }
+    }
+
 
     public override void Attack()
     {
-        print("Attack");
         targetEnemy = null;
         float distance = stats.AttackDistance;
         foreach (GameObject enemy in GameObject.FindGameObjectsWithTag(opositeTag))
@@ -25,9 +35,11 @@ public class HulsSoldier : Soldier
         }
         if (targetEnemy != null)
         {
-            GameObject arrojadiza = Instantiate(arma, transform.position, Quaternion.identity);
-            arrojadiza.GetComponent<arrojadiza>().targetTag = opositeTag;
-            arrojadiza.GetComponent<arrojadiza>().target = targetEnemy;
+            GameObject arrojadizaObj = Instantiate(arma, transform.position, Quaternion.identity);
+            arrojadiza arrojadiza = arrojadizaObj.GetComponent<arrojadiza>();
+            arrojadiza.targetTag = opositeTag;
+            arrojadiza.target = targetEnemy;
+            arrojadiza.daño = stats.AttackDamage;
         }
     }
 }
