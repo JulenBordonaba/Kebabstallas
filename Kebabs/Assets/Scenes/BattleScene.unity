@@ -815,7 +815,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4136756544758436, guid: 268558dac54036c4d82ba3f93a573540, type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 268558dac54036c4d82ba3f93a573540, type: 3}
@@ -900,16 +900,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1603980040381792, guid: 17dc68b448d22f442a13b74d426414c6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: m_Name
+      value: Explosion
       objectReference: {fileID: 0}
     - target: {fileID: 4617139018267010, guid: 17dc68b448d22f442a13b74d426414c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.722
+      value: 1.044
       objectReference: {fileID: 0}
     - target: {fileID: 4617139018267010, guid: 17dc68b448d22f442a13b74d426414c6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.09
+      value: 1.761
       objectReference: {fileID: 0}
     - target: {fileID: 4617139018267010, guid: 17dc68b448d22f442a13b74d426414c6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -934,6 +934,18 @@ PrefabInstance:
     - target: {fileID: 4617139018267010, guid: 17dc68b448d22f442a13b74d426414c6, type: 3}
       propertyPath: m_RootOrder
       value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 4617139018267010, guid: 17dc68b448d22f442a13b74d426414c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4617139018267010, guid: 17dc68b448d22f442a13b74d426414c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4617139018267010, guid: 17dc68b448d22f442a13b74d426414c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17dc68b448d22f442a13b74d426414c6, type: 3}
@@ -1176,7 +1188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1913781140069312, guid: 9943776167d030544b0387e712211633, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1913781140069312, guid: 9943776167d030544b0387e712211633, type: 3}
       propertyPath: m_IsActive
@@ -1216,19 +1228,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1076001359330264, guid: 9943776167d030544b0387e712211633, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1292947401200740, guid: 9943776167d030544b0387e712211633, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1702528779912318, guid: 9943776167d030544b0387e712211633, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1612529366372446, guid: 9943776167d030544b0387e712211633, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 114766076131956278, guid: 9943776167d030544b0387e712211633,
         type: 3}
@@ -1239,6 +1251,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5755847737022345517, guid: 9943776167d030544b0387e712211633,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9943776167d030544b0387e712211633, type: 3}
@@ -1767,7 +1784,7 @@ Transform:
   m_LocalScale: {x: 0.61, y: 0.83, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &904669698
 GameObject:

@@ -54,6 +54,8 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
 
     public EffectManager effectManager;
 
+    public GameObject followEnemy;
+
     class Location  //Nodo para el algoritmo de búsqueda
     {
         public int X;
@@ -115,6 +117,15 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
 
         //lógica al pulsar click izquierdo con el ratón 
         OnMouseClick();
+
+        if (followEnemy != null)
+        {
+            target = new Location
+            {
+                X = Mathf.Clamp(Mathf.RoundToInt(followEnemy.transform.position.x * 10), 1, 19),
+                Y = Mathf.Clamp(Mathf.RoundToInt(followEnemy.transform.position.y * 10), 1, 19),
+            };
+        }
 
         //redondear a float con un decimal
         float posRoundX = RoundWithDecimals(transform.position.x, 1);
@@ -259,18 +270,27 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
             {
                 if (selected)
                 {
-                    var v3 = Input.mousePosition;
-                    v3.z = 10.0f;
-                    v3 = Camera.main.ScreenToWorldPoint(v3);
-                    int X = Mathf.Clamp(Mathf.RoundToInt(v3.x * 10), 1, 19);
-                    int Y = Mathf.Clamp(Mathf.RoundToInt(v3.y * 10), 1, 19);
-                    if (map[X][Y] != 'X')
+                    int layerMask2 = 1 << 9;
+                    if (Physics.Raycast(ray, out hitInfo, 100, layerMask2))
                     {
-                        target = new Location
+                        followEnemy = hitInfo.collider.gameObject;
+                    }
+                    else
+                    {
+                        var v3 = Input.mousePosition;
+                        v3.z = 10.0f;
+                        v3 = Camera.main.ScreenToWorldPoint(v3);
+                        int X = Mathf.Clamp(Mathf.RoundToInt(v3.x * 10), 1, 19);
+                        int Y = Mathf.Clamp(Mathf.RoundToInt(v3.y * 10), 1, 19);
+                        if (map[X][Y] != 'X')
                         {
-                            X = X,
-                            Y = Y,
-                        };
+                            followEnemy = null;
+                            target = new Location
+                            {
+                                X = X,
+                                Y = Y,
+                            };
+                        }
                     }
                 }
             }
