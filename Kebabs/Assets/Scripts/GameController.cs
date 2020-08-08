@@ -49,7 +49,7 @@ public class GameController : MonoBehaviour {
                 posx += inc * 0.2f * Mathf.Pow(-1, inc);
                 soldier.transform.position = new Vector2(posx, 1.9f);
                 soldier.tag = "Enemy";
-                soldier.layer = 0;
+                soldier.layer = 9;
                 inc++;
                 if (inc > 8)
                 {

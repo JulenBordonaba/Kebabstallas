@@ -23,6 +23,8 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
     public GameObject nota;
 
     private bool riendo = false;
+
+    private bool escudo = false;
     
 
     public string opositeTag;
@@ -625,15 +627,18 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
 
     public void GetDamage(float daño)
     {
-
-        stats.vida -= daño * ((100f-stats.DamageReduction)/100f);
-        if (stats.vida < 0)
+        if (!escudo)
         {
-            stats.vida = 0;
+            stats.vida -= daño * ((100f - stats.DamageReduction) / 100f);
+            if (stats.vida < 0)
+            {
+                stats.vida = 0;
+            }
+            sr.color = new Color32(255, 83, 83, 255);
+            SetHealthBarSize(stats.vida / stats.maxVida);
+            StartCoroutine(RecuperarColor(0.2f));
         }
-        sr.color = new Color32(255, 83, 83, 255);
-        SetHealthBarSize(stats.vida / stats.maxVida);
-        StartCoroutine(RecuperarColor(0.2f));
+        
     }
 
     public void GetHeal(float regeneracion)
@@ -646,6 +651,15 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
         sr.color = new Color32(129, 255, 133, 255);
         SetHealthBarSize(stats.vida / stats.maxVida);
         StartCoroutine(RecuperarColor(0.4f));
+    }
+
+    public IEnumerator ActivateShield()
+    {
+        escudo = true;
+        transform.Find("escudito").GetComponent<SpriteRenderer>().enabled = true;
+        yield return new WaitForSeconds(15f);
+        escudo = false;
+        transform.Find("escudito").GetComponent<SpriteRenderer>().enabled = false;
     }
 
     private IEnumerator RecuperarColor(float segs)

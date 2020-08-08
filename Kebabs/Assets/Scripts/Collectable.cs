@@ -63,7 +63,8 @@ public class Collectable : MonoBehaviour
                         }
                     case Type.ESCUDO:
                         {
-                            var TargetTag = other.GetComponent<Soldier>().opositeTag;
+                            other.GetComponent<Soldier>().StartCoroutine("ActivateShield");
+                            Destroy(this.gameObject);
                             break;
                         }
                     case Type.MINIOM:
