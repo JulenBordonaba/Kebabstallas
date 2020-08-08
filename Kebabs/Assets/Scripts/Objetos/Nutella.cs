@@ -32,7 +32,7 @@ public class Nutella : MonoBehaviour {
                 if (Vector2.Distance(enemy.transform.position, transform.position) < 0.1f && enemy.GetComponent<Soldier>() != null)
                 {
 
-                    enemy.GetComponent<Soldier>().GetOriginalSpeed();
+                    enemy.GetComponent<Soldier>().stats.speedMultiplier = 1; ;
                 }
             }
             Destroy(this.gameObject);
@@ -45,7 +45,7 @@ public class Nutella : MonoBehaviour {
         {
             if (other.GetComponent<Soldier>() != null)
             {
-                other.GetComponent<Soldier>().speed = 0.1f;
+                other.GetComponent<Soldier>().stats.speedMultiplier = 0.1f;
             }
         }
     }
@@ -56,7 +56,7 @@ public class Nutella : MonoBehaviour {
         {
             if (other.GetComponent<Soldier>() != null)
             {
-                other.GetComponent<Soldier>().GetOriginalSpeed();
+                other.GetComponent<Soldier>().stats.speedMultiplier=1;
             }
         }
     }

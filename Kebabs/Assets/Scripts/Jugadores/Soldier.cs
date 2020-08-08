@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Text;
 
-public class Soldier : SoldierStateMachine {
+public class Soldier : SoldierStateMachine
+{
 
     string[] map;
 
@@ -13,7 +14,7 @@ public class Soldier : SoldierStateMachine {
 
     private SpriteRenderer sr;
 
-    private GameObject targetEnemy;
+    protected GameObject targetEnemy;
 
     public GameObject arma;
 
@@ -22,22 +23,14 @@ public class Soldier : SoldierStateMachine {
     public GameObject nota;
 
     private bool riendo = false;
-
-    public float vida = 100f;
-
-    private float maxVida;
+    
 
     public string opositeTag;
 
     public float defensa = 1;
 
-    public float originalSpeed;
 
-    public float speed;
-
-    public float atackSpeed = 2.5f;
-
-    public float atackDistance = 0.5f;
+    public Stats stats;
 
     private Vector3 direction = Vector3.zero;//Direccion del fantasma
 
@@ -55,7 +48,9 @@ public class Soldier : SoldierStateMachine {
 
     public GameObject lagrimas;
 
+    protected bool canAttack = true;
 
+    protected Coroutine attackCoroutine;
 
     class Location  //Nodo para el algoritmo de búsqueda
     {
@@ -72,14 +67,19 @@ public class Soldier : SoldierStateMachine {
     private Transform bar;
 
     // Use this for initialization
-    void Start () {
-        GetOriginalSpeed();
-        maxVida = vida;
+    protected virtual void Start()
+    {
+        stats.maxVida = stats.vida;
         transform.position = new Vector3(Mathf.RoundToInt(transform.position.x * 10) * 0.1f, Mathf.RoundToInt(transform.position.y * 10) * 0.1f);
         GC = FindObjectOfType<GameController>();
         anim = this.GetComponent<Animator>();
         sr = transform.GetComponent<SpriteRenderer>();
-        InvokeRepeating("Attack", Random.Range(1,3.5f), atackSpeed);
+        //InvokeRepeating("Attack", Random.Range(1, 3.5f), stats.AttackSpeed);
+        Invoke("StartAttacking", Random.Range(1, 3.5f));
+        
+
+        print("start");
+        
         bar = transform.Find("Bar");
         if (this.tag == "Enemy")
         {
@@ -92,11 +92,12 @@ public class Soldier : SoldierStateMachine {
             opositeTag = "Enemy";
             bar.GetComponentInChildren<SpriteRenderer>().color = Color.green;
         }
-        
+
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    protected virtual void Update()
+    {
 
         //Asignar mapa actual
         map = GC.GetMap();
@@ -105,7 +106,7 @@ public class Soldier : SoldierStateMachine {
         sr.sortingOrder = Mathf.RoundToInt(100 - transform.position.y * 20);
 
         //si se queda sin vida muere
-        if (vida == 0)
+        if (stats.vida == 0)
         {
             Die();
         }
@@ -137,7 +138,7 @@ public class Soldier : SoldierStateMachine {
 
                 //Calculamos el siguiente movimiento
                 Location next = A_estrella(initial, target);
-                
+
 
                 //Si lo encuentra, obtenemos la dirección que toma el fantasma
                 if (next != null)
@@ -147,7 +148,7 @@ public class Soldier : SoldierStateMachine {
                         direction = Vector2.zero;
                     }
                     else
-                    { 
+                    {
                         direction = new Vector2(next.X - initial.X, next.Y - initial.Y).normalized;
                     }
                 }
@@ -158,18 +159,18 @@ public class Soldier : SoldierStateMachine {
                         direction = Vector2.zero;
                     }
                 }
-                    
+
 
             }
 
-            
+
         }
 
         //Movemos el fantasma(personaje XD) en esa dirección
         if (direction != Vector3.zero)
         {
             lastDirection = direction;
-            this.transform.Translate(direction * speed * Time.deltaTime);
+            this.transform.Translate(direction * stats.Speed * Time.deltaTime);
         }
 
         if (myType == Type.PAULA && atacando)
@@ -199,8 +200,9 @@ public class Soldier : SoldierStateMachine {
         }
 
         SetWalkAnimator();
-        
+
     }
+
 
     public void SetWalkAnimator()
     {
@@ -229,7 +231,7 @@ public class Soldier : SoldierStateMachine {
     public float RoundWithDecimals(float num, int numDecimals)
     {
         float pow = Mathf.Pow(10, numDecimals);
-        
+
         return Mathf.RoundToInt(num * pow) / pow;
     }
 
@@ -273,12 +275,12 @@ public class Soldier : SoldierStateMachine {
         }
     }
 
-    private void Die()
+    protected void Die()
     {
         Instantiate(sangre, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
-    private void Move()
+    protected void Move()
     {
         int X = 0;
         int Y = 0;
@@ -294,12 +296,33 @@ public class Soldier : SoldierStateMachine {
         };
     }
 
-    public void GetOriginalSpeed()
+    
+    public virtual void Attack()
     {
-        speed = originalSpeed;
+
     }
 
-    private void Attack()
+
+    public void StartAttacking()
+    {
+        attackCoroutine = StartCoroutine(AttackCoroutine());
+    }
+
+    public IEnumerator AttackCoroutine()
+    {
+        while(true)
+        {
+            if(canAttack)
+            {
+                Attack();
+            }
+
+            yield return new WaitForSeconds(stats.AttackSpeed);
+        }
+    }
+
+
+    private void Atack()
     {
 
         switch (myType)
@@ -307,10 +330,10 @@ public class Soldier : SoldierStateMachine {
             case Type.HULS:
                 {
                     targetEnemy = null;
-                    float distance = atackDistance;
+                    float distance = stats.AttackDistance;
                     foreach (GameObject enemy in GameObject.FindGameObjectsWithTag(opositeTag))
                     {
-                        
+
                         if (Vector2.Distance(enemy.transform.position, transform.position) < distance)
                         {
 
@@ -331,14 +354,14 @@ public class Soldier : SoldierStateMachine {
                     bool atacar = false;
                     foreach (GameObject enemy in GameObject.FindGameObjectsWithTag(opositeTag))
                     {
-                        if (Vector2.Distance(enemy.transform.position, transform.position) < atackDistance)
+                        if (Vector2.Distance(enemy.transform.position, transform.position) < stats.AttackDistance)
                         {
                             atacar = true;
                         }
                     }
                     if (atacar)
                     {
-                        GameObject baston = Instantiate(arma, transform.position, Quaternion.Euler(new Vector3(0,0,90+ Vector2.SignedAngle(Vector2.up, lastDirection))));
+                        GameObject baston = Instantiate(arma, transform.position, Quaternion.Euler(new Vector3(0, 0, 90 + Vector2.SignedAngle(Vector2.up, lastDirection))));
                         GameObject baston01 = GameObject.Find("baston_0");
                         baston01.GetComponent<Impacto>().targetTag = opositeTag;
                         baston.GetComponent<Baston>().owner = gameObject;
@@ -352,7 +375,7 @@ public class Soldier : SoldierStateMachine {
                     bool atacar = false;
                     foreach (GameObject enemy in GameObject.FindGameObjectsWithTag(opositeTag))
                     {
-                        if (Vector2.Distance(enemy.transform.position, transform.position) < atackDistance)
+                        if (Vector2.Distance(enemy.transform.position, transform.position) < stats.AttackDistance)
                         {
                             atacar = true;
                         }
@@ -364,11 +387,11 @@ public class Soldier : SoldierStateMachine {
                         {
                             GameObject pollo = Instantiate(arma, transform.position, transform.rotation);
                             pollo.GetComponent<Pollo>().targetTag = opositeTag;
-                            pollo.GetComponent<Pollo>().direccion = (lastDirection + Vector2.Perpendicular(lastDirection) * (angulo + angulo*(-i)));
-                            
+                            pollo.GetComponent<Pollo>().direccion = (lastDirection + Vector2.Perpendicular(lastDirection) * (angulo + angulo * (-i)));
+
                         }
                     }
-                        
+
                     break;
                 }
             case Type.LUCIA:
@@ -376,7 +399,7 @@ public class Soldier : SoldierStateMachine {
                     bool atacar = false;
                     foreach (GameObject enemy in GameObject.FindGameObjectsWithTag(opositeTag))
                     {
-                        if (Vector2.Distance(enemy.transform.position, transform.position) < atackDistance)
+                        if (Vector2.Distance(enemy.transform.position, transform.position) < stats.AttackDistance)
                         {
                             atacar = true;
                         }
@@ -385,8 +408,8 @@ public class Soldier : SoldierStateMachine {
                     {
                         GameObject cartel = Instantiate(arma, transform.position, Quaternion.identity);
                         cartel.GetComponent<Señal>().targetTag = opositeTag;
-                        cartel.transform.rotation = Quaternion.Euler(0,0, Vector2.SignedAngle(Vector2.up, lastDirection));
-                        
+                        cartel.transform.rotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, lastDirection));
+
                         cartel.transform.parent = this.transform;
                     }
 
@@ -416,7 +439,7 @@ public class Soldier : SoldierStateMachine {
             case Type.MARIA:
                 {
                     targetEnemy = null;
-                    float distance = atackDistance;
+                    float distance = stats.AttackDistance;
                     foreach (GameObject enemy in GameObject.FindGameObjectsWithTag(opositeTag))
                     {
 
@@ -440,7 +463,7 @@ public class Soldier : SoldierStateMachine {
                     bool atacar = false;
                     foreach (GameObject enemy in GameObject.FindGameObjectsWithTag(opositeTag))
                     {
-                        if (Vector2.Distance(enemy.transform.position, transform.position) < atackDistance)
+                        if (Vector2.Distance(enemy.transform.position, transform.position) < stats.AttackDistance)
                         {
                             atacar = true;
                         }
@@ -457,7 +480,7 @@ public class Soldier : SoldierStateMachine {
                         pato.GetComponent<Pato>().opositeTag = opositeTag;
                         pato.tag = this.tag;
                     }
-                    
+
                     break;
                 }
             case Type.LOREA:
@@ -466,7 +489,7 @@ public class Soldier : SoldierStateMachine {
                     foreach (GameObject friend in GameObject.FindGameObjectsWithTag(tag))
                     {
                         if (friend != this.gameObject)
-                            if (friend.GetComponent<Pato>() == null && Vector2.Distance(friend.transform.position, transform.position) < atackDistance)
+                            if (friend.GetComponent<Pato>() == null && Vector2.Distance(friend.transform.position, transform.position) < stats.AttackDistance)
                             {
                                 friend.GetComponent<Soldier>().RecibirVida(10);
                                 atacar = true;
@@ -494,7 +517,7 @@ public class Soldier : SoldierStateMachine {
         {
             riendo = true;
             InvokeRepeating("Reir", 0, 1.5f);
-            yield return new WaitForSeconds(Random.Range(10,15));
+            yield return new WaitForSeconds(Random.Range(10, 15));
             CancelInvoke("Reir");
             riendo = false;
         }
@@ -502,12 +525,12 @@ public class Soldier : SoldierStateMachine {
         {
             yield return null;
         }
-        
+
     }
 
     private void Reir()
     {
-        GameObject Notas =  Instantiate(nota, transform.position + new Vector3(Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f)), Quaternion.identity);
+        GameObject Notas = Instantiate(nota, transform.position + new Vector3(Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f)), Quaternion.identity);
         Notas.transform.parent = transform;
         RecibirDaño(3);
         foreach (GameObject friend in GameObject.FindGameObjectsWithTag(tag))
@@ -580,25 +603,25 @@ public class Soldier : SoldierStateMachine {
 
     public void RecibirDaño(float daño)
     {
-        vida -= daño * defensa;
-        if (vida < 0)
+        stats.vida -= daño * defensa;
+        if (stats.vida < 0)
         {
-            vida = 0;
+            stats.vida = 0;
         }
         sr.color = new Color32(255, 83, 83, 255);
-        SetHealthBarSize(vida / maxVida);
+        SetHealthBarSize(stats.vida / stats.maxVida);
         StartCoroutine(RecuperarColor(0.2f));
     }
 
     public void RecibirVida(float regeneracion)
     {
-        vida += regeneracion;
-        if (vida > maxVida)
+        stats.vida += regeneracion;
+        if (stats.vida > stats.maxVida)
         {
-            vida = maxVida;
+            stats.vida = stats.maxVida;
         }
         sr.color = new Color32(129, 255, 133, 255);
-        SetHealthBarSize(vida/maxVida);
+        SetHealthBarSize(stats.vida / stats.maxVida);
         StartCoroutine(RecuperarColor(0.4f));
     }
 
@@ -712,7 +735,7 @@ public class Soldier : SoldierStateMachine {
                 }
             }
         }
-        
+
         if (openList.Count == 0)
         {
             current = bestH;
@@ -734,12 +757,12 @@ public class Soldier : SoldierStateMachine {
     static List<Location> GetWalkableAdjacentSquares(int x, int y, string[] map)
     {
         var proposedLocations = new List<Location>()
-    {
-        new Location { X = x, Y = y - 1 },
-        new Location { X = x, Y = y + 1 },
-        new Location { X = x - 1, Y = y },
-        new Location { X = x + 1, Y = y },
-    };
+        {
+            new Location { X = x, Y = y - 1 },
+            new Location { X = x, Y = y + 1 },
+            new Location { X = x - 1, Y = y },
+            new Location { X = x + 1, Y = y },
+        };
 
         var aux = new List<Location>();
 

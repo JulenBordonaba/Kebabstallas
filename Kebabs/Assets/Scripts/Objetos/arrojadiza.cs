@@ -10,6 +10,7 @@ public class arrojadiza : MonoBehaviour {
     public float daño = 10;
     float timer;
     private SpriteRenderer sr;
+    [Range(0f,1f)]
     public float accuracy = 0.4f;
     // Use this for initialization
 
