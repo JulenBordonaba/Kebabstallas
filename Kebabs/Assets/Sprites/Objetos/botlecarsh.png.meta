@@ -1,0 +1,562 @@
+fileFormatVersion: 2
+guid: ee3d9a5b289bc3d42a5e1ef2a72b9df6
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: botlecarsh_0
+    21300002: botlecarsh_1
+    21300004: botlecarsh_2
+    21300006: botlecarsh_3
+    21300008: botlecarsh_4
+    21300010: botlecarsh_5
+    21300012: botlecarsh_6
+    21300014: botlecarsh_7
+    21300016: botlecarsh_8
+    21300018: botlecarsh_9
+    21300020: botlecarsh_10
+    21300022: botlecarsh_11
+    21300024: botlecarsh_12
+    21300026: botlecarsh_13
+    21300028: botlecarsh_14
+    21300030: botlecarsh_15
+    21300032: botlecarsh_16
+    21300034: botlecarsh_17
+    21300036: botlecarsh_18
+    21300038: botlecarsh_19
+    21300040: botlecarsh_20
+    21300042: botlecarsh_21
+    21300044: botlecarsh_22
+    21300046: botlecarsh_23
+    21300048: botlecarsh_24
+    21300050: botlecarsh_25
+    21300052: botlecarsh_26
+    21300054: botlecarsh_27
+    21300056: botlecarsh_28
+    21300058: botlecarsh_29
+    21300060: botlecarsh_30
+    21300062: botlecarsh_31
+    21300064: botlecarsh_32
+    21300066: botlecarsh_33
+    21300068: botlecarsh_34
+    21300070: botlecarsh_35
+    21300072: botlecarsh_36
+    21300074: botlecarsh_37
+    21300076: botlecarsh_38
+    21300078: botlecarsh_39
+    21300080: botlecarsh_40
+    21300082: botlecarsh_41
+    21300084: botlecarsh_42
+    21300086: botlecarsh_43
+    21300088: botlecarsh_44
+    21300090: botlecarsh_45
+    21300092: botlecarsh_46
+    21300094: botlecarsh_47
+    21300096: botlecarsh_48
+    21300098: botlecarsh_49
+    21300100: botlecarsh_50
+    21300102: botlecarsh_51
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: botlecarsh_0
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 256
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f5ebf9e5c06fb45af97393019c6acb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botlecarsh_1
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 256
+        width: 22
+        height: 25
+      alignment: 9
+      pivot: {x: 0.5220774, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 660644e5e7939f24ba886d872017a23a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botlecarsh_2
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 256
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03f2f590112e0e1468b65ceafbcbf253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botlecarsh_3
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 247
+        width: 46
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eabd08c28438d9458eb45e51ad8ba30
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botlecarsh_4
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 241
+        width: 64
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54621f987ad564d41a6d3181f005bd26
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botlecarsh_5
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 241
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d8004b62f39deb4fb5495e6a4780334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botlecarsh_6
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 151
+        width: 62
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29323a701c594ce49ad81f085ff8eb7f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botlecarsh_7
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 208
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4002daf61c8cdff47b4498a397d7abc9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botlecarsh_8
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 146
+        width: 97
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6afd672fe4fee644da94a18b92af2e5f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botlecarsh_11
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 158
+        width: 64
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bd195c1968fd6f4397abadd797c68c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botlecarsh_26
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 145
+        width: 101
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acd7b717ff7bb244d9837a90319dffa6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botlecarsh_29
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 170
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4366142ab306a4409996a22c173eaf1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botlecarsh_32
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 145
+        width: 102
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4816f313c4df7e84d9a1c7479bce09b5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botlecarsh_38
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 148
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 880f25cb378ba1f409b8792b6c6b435b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botlecarsh_43
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 144
+        width: 105
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9279f36e63718943a5bb7a7cdd9cc0f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botlecarsh_46
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 56
+        width: 109
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc42301be90da4c40bb25c20cd069a2c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botlecarsh_47
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 56
+        width: 110
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ef290dd85069be44bc81d016790d37c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botlecarsh_48
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 56
+        width: 106
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf5bfb1f55e74746a804bff06ebb757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botlecarsh_49
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 56
+        width: 97
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 714a974813700604c95b55f17c1e1332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botlecarsh_51
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 55
+        width: 89
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a29a7780b5f7c3a429cdca290bc7c944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e07bb47e3d1a2a8438fa92b1e7b7dd0a
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

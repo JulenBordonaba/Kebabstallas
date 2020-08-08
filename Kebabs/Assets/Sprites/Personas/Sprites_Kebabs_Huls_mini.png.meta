@@ -1,0 +1,351 @@
+fileFormatVersion: 2
+guid: a1f39e32485e93c4cbe69c1c2c58c6ed
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Sprites_Kebabs_Huls_mini_0
+    21300002: Sprites_Kebabs_Huls_mini_1
+    21300004: Sprites_Kebabs_Huls_mini_2
+    21300006: Sprites_Kebabs_Huls_mini_3
+    21300008: Sprites_Kebabs_Huls_mini_4
+    21300010: Sprites_Kebabs_Huls_mini_5
+    21300012: Sprites_Kebabs_Huls_mini_6
+    21300014: Sprites_Kebabs_Huls_mini_7
+    21300016: Sprites_Kebabs_Huls_mini_8
+    21300018: Sprites_Kebabs_Huls_mini_9
+    21300020: Sprites_Kebabs_Huls_mini_10
+    21300022: Sprites_Kebabs_Huls_mini_11
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sprites_Kebabs_Huls_mini_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 152
+        width: 29
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34146342}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67aa4b7f702d1f343a505bbf3de58496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites_Kebabs_Huls_mini_1
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 150
+        width: 29
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8186a2b18535ba42ae87b93234cb7e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites_Kebabs_Huls_mini_2
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 152
+        width: 29
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34146342}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5222294e50feca4888aa3c7d74ac398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites_Kebabs_Huls_mini_3
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 106
+        width: 26
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34146342}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b17d1c973926204469a222cd8a3a91d3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites_Kebabs_Huls_mini_4
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 102
+        width: 26
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3255814}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04ea99aa28fa4c045b10547930d06c27
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites_Kebabs_Huls_mini_5
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 104
+        width: 28
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3255814}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f5566683ac5bb3428e7f7e7f46e5fc9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites_Kebabs_Huls_mini_6
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 58
+        width: 26
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34146342}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b9138e5250adf41ac10ad71e2d81de
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites_Kebabs_Huls_mini_7
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 54
+        width: 26
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3255814}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97b61a9f8ba831d46bb0846aa82943ee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites_Kebabs_Huls_mini_8
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 56
+        width: 28
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3255814}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d68e89268253e46b8a60361a2f7f0d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites_Kebabs_Huls_mini_9
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 7
+        width: 29
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd1056e969685804eae3bec07b19d49e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites_Kebabs_Huls_mini_10
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 6
+        width: 29
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a8e3f696c247cb47bed0e5311426c55
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites_Kebabs_Huls_mini_11
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 7
+        width: 29
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c10cf99d817aca41bbe6456003667d7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c7d2c7341bd315a46a880302e5fc7da4
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
