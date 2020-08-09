@@ -11,7 +11,6 @@ public class Stats : MonoBehaviour
     public float baseSpeed;
     public float baseAttackSpeed;
     public float baseAttackDistance;
-    public float slow = 0;
     public float baseAttackDamage = 10;
     public float baseDamageReduction = 0;
 
@@ -25,7 +24,7 @@ public class Stats : MonoBehaviour
         {
             if (speedReplace < 0)
             {
-                return Mathf.Max((baseSpeed + effectManager.Velocity) * ((100f-slow)/100f),0);
+                return Mathf.Max((baseSpeed + effectManager.Velocity) * ((100f-effectManager.Slow)/100f),0);
             }
             else
             {
