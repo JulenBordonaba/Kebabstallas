@@ -110,7 +110,7 @@ public class GameController : MonoBehaviour {
             Y = Random.Range(1, 19);
         }
 
-        GameObject Collectable = Instantiate(Collectables[Random.Range(0, Collectables.Length - 1)]);
+        GameObject Collectable = Instantiate(Collectables[Random.Range(0, Collectables.Length)]);
         Collectable.transform.position = new Vector2(X/10f, Y/10f);
     }
 
@@ -152,6 +152,37 @@ public class GameController : MonoBehaviour {
         enemies = new List<int>();
         GameManager.LoadLevel(level);
         onGame = true;
+    }
+
+    public void RandomizeTeams()
+    {
+        foreach (GameObject persona in GameObject.FindGameObjectsWithTag("Player"))
+        {
+            persona.tag = "Selectable";
+            persona.GetComponent<SpriteRenderer>().color = Color.white;
+        }
+        foreach (GameObject persona in GameObject.FindGameObjectsWithTag("Enemy"))
+        {
+            persona.tag = "Selectable";
+            persona.GetComponent<SpriteRenderer>().color = Color.white;
+        }
+        GameObject[] personas = GameObject.FindGameObjectsWithTag("Selectable");
+        int nEnemigos = Random.Range(1, personas.Length);
+        for (int i = 0; i < nEnemigos; i++)
+        {
+            int ind = Random.Range(0, personas.Length);
+            personas[ind].tag = "Enemy";
+            personas[ind].GetComponent<SpriteRenderer>().color = new Color32(255, 83, 83, 255);
+
+        }
+        personas = GameObject.FindGameObjectsWithTag("Selectable");
+        int nPlayers = Random.Range(1, personas.Length);
+        for (int i = 0; i < nPlayers; i++)
+        {
+            int ind = Random.Range(0, personas.Length);
+            personas[ind].tag = "Player";
+            personas[ind].GetComponent<SpriteRenderer>().color = new Color32(129, 255, 133, 255);
+        }
     }
 
     public void StartGameScene()
@@ -241,6 +272,10 @@ public class GameController : MonoBehaviour {
         string[] mapa = GetOriginalMap();
         List<GameObject> gente = new List<GameObject>(GameObject.FindGameObjectsWithTag("Enemy"));
         foreach (GameObject soldier in GameObject.FindGameObjectsWithTag("Player"))
+        {
+            gente.Add(soldier);
+        }
+        foreach (GameObject soldier in GameObject.FindGameObjectsWithTag("Miniom"))
         {
             gente.Add(soldier);
         }

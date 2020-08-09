@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7970280650534101103}
   m_Layer: 0
   m_Name: OsoPedorro
-  m_TagString: Untagged
+  m_TagString: Miniom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,5 +149,6 @@ MonoBehaviour:
   opositeTag: Player
   "da\xF1o": 10
   defensa: 1
-  speed: 0.15
+  speed: 0.1
+  sangre: {fileID: 1284217796436144, guid: fa6ad27a4c01595479b078e73176167f, type: 3}
   fart: {fileID: 5226525092211818888, guid: 2b90374a556ba534c87b1d803854c184, type: 3}

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Fart : MonoBehaviour
 {
     public string targetTag;
-    public float daño = 30;
+    private float daño = 15;
     float timer;
     private SpriteRenderer sr;
 

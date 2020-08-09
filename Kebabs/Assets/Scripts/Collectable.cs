@@ -42,6 +42,14 @@ public class Collectable : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+    private IEnumerator SubeAtaque()
+    {
+        exploting = true;
+        this.GetComponent<Animator>().SetBool("Recolectada", true);
+        yield return new WaitForSeconds(0.95f);
+        Destroy(this.gameObject);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (TargetTag == null)
@@ -74,7 +82,8 @@ public class Collectable : MonoBehaviour
                             TargetTag = other.GetComponent<Soldier>().opositeTag;
                             foreach (GameObject enemy in GameObject.FindGameObjectsWithTag(TargetTag))
                             {
-                                enemy.GetComponent<EffectManager>().StartEffect(myEffect.id);
+                                if (enemy.GetComponent<EffectManager>() != null)
+                                    enemy.GetComponent<EffectManager>().StartEffect(myEffect.id);
                             }
                             Destroy(this.gameObject);
                             break;
@@ -103,7 +112,10 @@ public class Collectable : MonoBehaviour
                         }
                     case Type.ATAQUE:
                         {
-                            var TargetTag = other.GetComponent<Soldier>().opositeTag;
+                            transform.parent = other.transform;
+                            other.GetComponent<EffectManager>().StartEffect(myEffect.id);
+                            StartCoroutine("SubeAtaque");
+                            
                             break;
                         }
                 }
@@ -113,7 +125,7 @@ public class Collectable : MonoBehaviour
         {
             if (other.tag == TargetTag && exploting)
             {
-                if (other != null)
+                if (other != null && other.GetComponent<Soldier>() != null)
                     other.GetComponent<Soldier>().GetDamage(40);
             }
         }

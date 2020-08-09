@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4747102707294794457}
   - component: {fileID: 1876495895526718390}
   - component: {fileID: 2975938449949714536}
+  - component: {fileID: -7189287959301975990}
   m_Layer: 0
   m_Name: Vida
   m_TagString: Untagged
@@ -95,6 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c9729ed8f025334aa871bbb93e986a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myEffect: {fileID: 0}
+  Oso: {fileID: 0}
   myType: 1
 --- !u!65 &1876495895526718390
 BoxCollider:
@@ -125,3 +128,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!95 &-7189287959301975990
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938660314206857670}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ca7be7294b5e46c4198411ea374423d2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

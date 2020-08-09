@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTag: 
-  "da\xF1o": 30
+  "da\xF1o": 15
 --- !u!65 &7138627501502438318
 BoxCollider:
   m_ObjectHideFlags: 0

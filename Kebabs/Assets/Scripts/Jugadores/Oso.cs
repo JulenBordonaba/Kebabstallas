@@ -24,11 +24,13 @@ public class Oso : MonoBehaviour
 
     public float defensa = 1;
 
-    public float speed = 0.15f;
+    public float speed = 0.1f;
 
     private float atackDistance;
 
     private bool exploting = false;
+
+    public GameObject sangre;
 
     private float timer;
 
@@ -84,7 +86,7 @@ public class Oso : MonoBehaviour
             }
         }
         timer += Time.deltaTime;
-        if (timer > 40)
+        if (timer > 34)
         {
             Die();
         }
@@ -181,6 +183,7 @@ public class Oso : MonoBehaviour
 
     private void Die()
     {
+        Instantiate(sangre, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
 

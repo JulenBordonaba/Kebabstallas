@@ -29,7 +29,7 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
 
     public string opositeTag;
 
-    public float defensa = 1;
+    public float debilidad = 1;
 
 
     public Stats stats;
@@ -471,7 +471,7 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
     {
         if (!escudo)
         {
-            stats.vida -= daño * ((100f - stats.DamageReduction) / 100f);
+            stats.vida -= debilidad * daño * ((100f - stats.DamageReduction) / 100f);
             if (stats.vida < 0)
             {
                 stats.vida = 0;

@@ -20,7 +20,7 @@ public class CampoDebilitador : MonoBehaviour {
         {
             if (other.GetComponent<Soldier>() != null)
             {
-                other.GetComponent<Soldier>().defensa = 3;
+                other.GetComponent<Soldier>().debilidad = 3;
             }
             else if (other.GetComponent<Pato>() != null)
             {
@@ -35,7 +35,7 @@ public class CampoDebilitador : MonoBehaviour {
         {
             if (other.GetComponent<Soldier>() != null)
             {
-                other.GetComponent<Soldier>().defensa = 1;
+                other.GetComponent<Soldier>().debilidad = 1;
             }
             else if (other.GetComponent<Pato>() != null)
             {
