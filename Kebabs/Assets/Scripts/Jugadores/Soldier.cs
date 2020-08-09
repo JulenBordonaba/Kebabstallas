@@ -346,7 +346,7 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
     {
         while(true)
         {
-            if(canAttack)
+            if(CanAttack)
             {
                 Attack();
             }
@@ -838,6 +838,11 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
             proposedLocations.Remove(l);
         }
         return proposedLocations;
+    }
+
+    public bool CanAttack
+    {
+        get { return canAttack && !effectManager.SilenceAbilities; }
     }
 
 }
