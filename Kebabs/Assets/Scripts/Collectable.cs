@@ -89,8 +89,9 @@ public class Collectable : MonoBehaviour
                         }
                     case Type.PETRIFICACION:
                         {
-                            StartCoroutine(other.GetComponent<Soldier>().SpeedChange(0f, Color.gray));
-                            Destroy(this.gameObject);
+                            Soldier mySoldier = other.GetComponent<Soldier>();
+                            StartCoroutine(mySoldier.SpeedChange(1f, Color.gray));
+                            //Destroy(this.gameObject);
                             break;
 
                         }
