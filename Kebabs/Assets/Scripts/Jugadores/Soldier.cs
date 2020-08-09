@@ -58,6 +58,8 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
 
     public GameObject followEnemy;
 
+    private Color myColor = Color.white;
+
     class Location  //Nodo para el algoritmo de búsqueda
     {
         public int X;
@@ -221,26 +223,34 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
 
     public void SetWalkAnimator()
     {
-        if (direction == Vector3.up)
-        {
-            anim.SetInteger("Walk", 1);
-        }
-        else if (direction == Vector3.right)
-        {
-            anim.SetInteger("Walk", 0);
-        }
-        else if (direction == Vector3.down)
-        {
-            anim.SetInteger("Walk", 2);
-        }
-        else if (direction == Vector3.left)
-        {
-            anim.SetInteger("Walk", 3);
-        }
-        else
+        if (stats.speedReplace == 0)
         {
             anim.SetInteger("Walk", 4);
         }
+        else
+        {
+            if (direction == Vector3.up)
+            {
+                anim.SetInteger("Walk", 1);
+            }
+            else if (direction == Vector3.right)
+            {
+                anim.SetInteger("Walk", 0);
+            }
+            else if (direction == Vector3.down)
+            {
+                anim.SetInteger("Walk", 2);
+            }
+            else if (direction == Vector3.left)
+            {
+                anim.SetInteger("Walk", 3);
+            }
+            else
+            {
+                anim.SetInteger("Walk", 4);
+            }
+        }
+        
     }
 
     public float RoundWithDecimals(float num, int numDecimals)
@@ -386,7 +396,7 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
                     if (atacar)
                     {
                         GameObject baston = Instantiate(arma, transform.position, Quaternion.Euler(new Vector3(0, 0, 90 + Vector2.SignedAngle(Vector2.up, lastDirection))));
-                        GameObject baston01 = GameObject.Find("baston_0");
+                        GameObject baston01 = baston.transform.Find("baston_0").gameObject;
                         baston01.GetComponent<Impacto>().targetTag = opositeTag;
                         baston.GetComponent<Baston>().owner = gameObject;
 
@@ -662,10 +672,23 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
         transform.Find("escudito").GetComponent<SpriteRenderer>().enabled = false;
     }
 
+    public IEnumerator SpeedChange(float speed, Color colorChange)
+    {
+        stats.speedReplace = speed;
+        myColor = colorChange;
+        sr.color = colorChange;
+        yield return new WaitForSeconds(15f);
+        stats.speedReplace = -1;
+        myColor = Color.white;
+        sr.color = Color.white;
+    }
+
+
+
     private IEnumerator RecuperarColor(float segs)
     {
         yield return new WaitForSeconds(segs);
-        sr.color = Color.white;
+        sr.color = myColor;
     }
 
     //Usmaos la distancia euclídea para la heurística del A*

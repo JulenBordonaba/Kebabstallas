@@ -37,7 +37,7 @@ public class arrojadiza : MonoBehaviour {
                 float t = timer / 1f;
                 transform.position = Vector3.Lerp(start, targetPos, t);
             }
-            else if (timer <1.65)
+            else if (timer <1.6)
             {
                 this.GetComponent<BoxCollider>().enabled = true;
             }

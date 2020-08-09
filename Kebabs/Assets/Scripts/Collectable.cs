@@ -8,7 +8,7 @@ public class Collectable : MonoBehaviour
     private string TargetTag = null;
     private bool exploting = false;
     public enum Type
-    { EXPLOSION, VIDA, VELOCIDAD, RALENTIZADOR, ESCUDO, MINIOM, CONGELACION, ATAQUE };
+    { EXPLOSION, VIDA, VELOCIDAD, RALENTIZADOR, ESCUDO, MINIOM, PETRIFICACION, ATAQUE };
 
     public Type myType;
 
@@ -32,6 +32,14 @@ public class Collectable : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+    private IEnumerator PolvoVida()
+    {
+        exploting = true;
+        this.GetComponent<Animator>().SetBool("Recolectada", true);
+        yield return new WaitForSeconds(0.45f);
+        Destroy(this.gameObject);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (TargetTag == null)
@@ -48,17 +56,24 @@ public class Collectable : MonoBehaviour
                         }
                     case Type.VIDA:
                         {
-                            var TargetTag = other.GetComponent<Soldier>().opositeTag;
+                            StartCoroutine("PolvoVida");
+                            other.GetComponent<Soldier>().GetHeal(50f);
                             break;
                         }
                     case Type.VELOCIDAD:
                         {
-                            var TargetTag = other.GetComponent<Soldier>().opositeTag;
+                            StartCoroutine(other.GetComponent<Soldier>().SpeedChange(0.6f, Color.yellow));
+                            Destroy(this.gameObject);
                             break;
                         }
                     case Type.RALENTIZADOR:
                         {
-                            var TargetTag = other.GetComponent<Soldier>().opositeTag;
+                            TargetTag = other.GetComponent<Soldier>().opositeTag;
+                            foreach (GameObject enemy in GameObject.FindGameObjectsWithTag(TargetTag))
+                            {
+                                StartCoroutine(enemy.GetComponent<Soldier>().SpeedChange(0.05f, Color.cyan));
+                            }
+                            Destroy(this.gameObject);
                             break;
                         }
                     case Type.ESCUDO:
@@ -72,9 +87,10 @@ public class Collectable : MonoBehaviour
                             var TargetTag = other.GetComponent<Soldier>().opositeTag;
                             break;
                         }
-                    case Type.CONGELACION:
+                    case Type.PETRIFICACION:
                         {
-                            var TargetTag = other.GetComponent<Soldier>().opositeTag;
+                            StartCoroutine(other.GetComponent<Soldier>().SpeedChange(0f, Color.gray));
+                            Destroy(this.gameObject);
                             break;
 
                         }

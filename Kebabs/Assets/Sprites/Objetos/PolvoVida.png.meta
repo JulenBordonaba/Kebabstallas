@@ -1,0 +1,667 @@
+fileFormatVersion: 2
+guid: 50dfa37312b3bde4a8abfa0c7846aaf8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3973125228401720524
+    second: PolvoVida_0
+  - first:
+      213: -3047790554248774626
+    second: PolvoVida_1
+  - first:
+      213: -6053168865801955527
+    second: PolvoVida_2
+  - first:
+      213: -800992487788641638
+    second: PolvoVida_3
+  - first:
+      213: -4283896215342668892
+    second: PolvoVida_4
+  - first:
+      213: -5646227731978768011
+    second: PolvoVida_5
+  - first:
+      213: 848805758487950873
+    second: PolvoVida_6
+  - first:
+      213: -572959754122607749
+    second: PolvoVida_7
+  - first:
+      213: 2490069027845250978
+    second: PolvoVida_8
+  - first:
+      213: -1419617412063746092
+    second: PolvoVida_9
+  - first:
+      213: 7523891554666608646
+    second: PolvoVida_10
+  - first:
+      213: 3124238421163452767
+    second: PolvoVida_11
+  - first:
+      213: -2420648945899940083
+    second: PolvoVida_12
+  - first:
+      213: -2695636490394417804
+    second: PolvoVida_13
+  - first:
+      213: 4909343237913828390
+    second: PolvoVida_14
+  - first:
+      213: 3316012154872795676
+    second: PolvoVida_15
+  - first:
+      213: -6775645973465471165
+    second: PolvoVida_16
+  - first:
+      213: 3614594383932835659
+    second: PolvoVida_17
+  - first:
+      213: -4028576242048578358
+    second: PolvoVida_18
+  - first:
+      213: -489084656511653102
+    second: PolvoVida_19
+  - first:
+      213: -3578882625401380814
+    second: PolvoVida_20
+  - first:
+      213: -960433431139945579
+    second: PolvoVida_21
+  - first:
+      213: 8021440332426129549
+    second: PolvoVida_22
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PolvoVida_0
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 769
+        width: 191
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5db76335154d713438e79742ff411fbc
+      internalID: 3973125228401720524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolvoVida_1
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 769
+        width: 191
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 110eaeb506d71ea418b3fa044b5028f5
+      internalID: -3047790554248774626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolvoVida_2
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 769
+        width: 191
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b528a286a4c056541aacb2d89565cf4a
+      internalID: -6053168865801955527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolvoVida_3
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 769
+        width: 191
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ded86098405284d97aae8e73e3e078
+      internalID: -800992487788641638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolvoVida_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 578
+        width: 191
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5037f79c88ca5134c8966c24d4ba6919
+      internalID: -4283896215342668892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolvoVida_5
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 578
+        width: 191
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28db4f0c525f83246a6db51a0697bc7e
+      internalID: -5646227731978768011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolvoVida_6
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 578
+        width: 191
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0563679b6abff234499c752cb3f4fc59
+      internalID: 848805758487950873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolvoVida_7
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 578
+        width: 191
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b904bb5cd971ce544af55e592cfac2ce
+      internalID: -572959754122607749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolvoVida_8
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 578
+        width: 191
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce8427155a9e4854495bff3f268fc784
+      internalID: 2490069027845250978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolvoVida_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 387
+        width: 191
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1245c1d31209bf94f88a5698bb41895f
+      internalID: -1419617412063746092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolvoVida_10
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 387
+        width: 191
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e0ac50a40a8204c829aaeb271b7361
+      internalID: 7523891554666608646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolvoVida_11
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 387
+        width: 191
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 127f07e0a1f73214f8f1f1b977365949
+      internalID: 3124238421163452767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolvoVida_12
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 387
+        width: 191
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd7ff759cf2b5ac48b254a99718a2931
+      internalID: -2420648945899940083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolvoVida_13
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 387
+        width: 191
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b25409e73fc7ea44d915dc9821f04dab
+      internalID: -2695636490394417804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolvoVida_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 196
+        width: 191
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a60d428a3cd7d55438b1a99187ff37be
+      internalID: 4909343237913828390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolvoVida_15
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 196
+        width: 191
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc05eff80f96eb44883ca0eaf94b83e
+      internalID: 3316012154872795676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolvoVida_16
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 196
+        width: 191
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83298aa21bb2d7d4987f3d8b78deb0ef
+      internalID: -6775645973465471165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolvoVida_17
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 196
+        width: 191
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b81c0e281d1d2489828c27fa5e3947
+      internalID: 3614594383932835659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolvoVida_18
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 196
+        width: 191
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1fbe679561f113478f88d82d0fd5da3
+      internalID: -4028576242048578358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolvoVida_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5
+        width: 191
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 437884ddf94997b48b473283e0b7f38d
+      internalID: -489084656511653102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolvoVida_20
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 5
+        width: 191
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 561a54530c55c984b9142a24d3232bf6
+      internalID: -3578882625401380814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolvoVida_21
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 5
+        width: 191
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11cb5055197cff540bf05cc9c8865b0f
+      internalID: -960433431139945579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PolvoVida_22
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 5
+        width: 191
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31fdbbf50c322fe46a60b5cbfee390e9
+      internalID: 8021440332426129549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
