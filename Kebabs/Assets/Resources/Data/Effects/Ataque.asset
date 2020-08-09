@@ -18,10 +18,11 @@ MonoBehaviour:
   damageReduction: 0
   slow: 0
   velocity: 0
-  attackSpeed: 2
+  attackSpeed: 0
   attackDistance: 0
   attackDamage: 0
   effectColor: {r: 1, g: 0.5392201, b: 0.2971698, a: 1}
+  attackSpeedMultiplier: 2
   silenceAbilities: 0
   permanent: 0
   dot:

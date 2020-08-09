@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4855634077207892}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4630347190822364}
   - component: {fileID: 212487082916944510}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 4455541863791160}
   - component: {fileID: 212718894961184724}
   - component: {fileID: 95153914607468924}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Llorar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,9 +353,9 @@ GameObject:
   - component: {fileID: 6783077876037474059}
   - component: {fileID: 330980592670134192}
   - component: {fileID: 6258403540220533324}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PaulaSoldier
-  m_TagString: Enemy
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -367,7 +367,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1580976547392002}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.564, y: 1.788, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
@@ -478,7 +478,7 @@ MonoBehaviour:
   sangre: {fileID: 1284217796436144, guid: fa6ad27a4c01595479b078e73176167f, type: 3}
   nota: {fileID: 1349014291828412, guid: 81be92be73c4cba4a8354aff56b4bf9a, type: 3}
   opositeTag: 
-  defensa: 1
+  debilidad: 1
   stats: {fileID: 6783077876037474059}
   direction: {x: 0, y: 0, z: 0}
   myType: 4
@@ -502,9 +502,8 @@ MonoBehaviour:
   vida: 100
   maxVida: 0
   baseSpeed: 0.3
-  baseAttackSpeed: 0.01
+  baseAttackSpeed: 60
   baseAttackDistance: 0.5
-  slow: 0
   baseAttackDamage: 0
   baseDamageReduction: 0
   speedReplace: -1
@@ -639,7 +638,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4108312700559266}
   - component: {fileID: 212245795159509128}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -719,7 +718,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4325410219426578}
   - component: {fileID: 212139825492391976}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -798,7 +797,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 71797275219581957}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EffectIcons(no se usa pero no se borra)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -830,7 +829,7 @@ GameObject:
   - component: {fileID: 7963485411388233806}
   - component: {fileID: 4107651420235644665}
   - component: {fileID: 7343904314638905739}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: escudito
   m_TagString: Untagged
   m_Icon: {fileID: 0}

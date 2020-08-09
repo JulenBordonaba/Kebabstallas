@@ -139,8 +139,8 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
         float posRoundY = RoundWithDecimals(transform.position.y, 1);
 
         //
-        if (target != null && Mathf.Abs(transform.position.x - posRoundX) < 0.01f
-                           && Mathf.Abs(transform.position.y - posRoundY) < 0.01f)
+        if (target != null && Mathf.Abs(transform.position.x - posRoundX) < 0.005f
+                           && Mathf.Abs(transform.position.y - posRoundY) < 0.005f)
         {
             if (Mathf.Abs(target.X / 10f - posRoundX) < 0.05f && Mathf.Abs(target.Y / 10f - posRoundY) < 0.05f)
             {

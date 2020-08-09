@@ -113,6 +113,7 @@ public class Collectable : MonoBehaviour
                     case Type.ATAQUE:
                         {
                             transform.parent = other.transform;
+                            transform.position = transform.parent.position;
                             other.GetComponent<EffectManager>().StartEffect(myEffect.id);
                             StartCoroutine("SubeAtaque");
                             
