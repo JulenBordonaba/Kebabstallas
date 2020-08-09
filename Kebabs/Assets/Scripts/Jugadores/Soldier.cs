@@ -226,7 +226,7 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
 
     public void SetWalkAnimator()
     {
-        if (stats.speedReplace == 0)
+        if (stats.Speed <= 0)
         {
             anim.SetInteger("Walk", 4);
         }

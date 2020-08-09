@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myEffect: {fileID: 11400000, guid: 558ea650d77f20e4fa66402a47ceb7a8, type: 2}
+  Oso: {fileID: 0}
   myType: 6
 --- !u!65 &5267314088849922126
 BoxCollider:

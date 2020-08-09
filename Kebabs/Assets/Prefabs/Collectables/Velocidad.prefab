@@ -95,6 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c9729ed8f025334aa871bbb93e986a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myEffect: {fileID: 11400000, guid: 7c4fb41e9a4c21244b3858a569a203a5, type: 2}
+  Oso: {fileID: 0}
   myType: 2
 --- !u!65 &6428531443481717516
 BoxCollider:

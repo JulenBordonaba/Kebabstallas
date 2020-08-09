@@ -65,6 +65,7 @@ public class Collectable : MonoBehaviour
                     case Type.VELOCIDAD:
                         {
                             //StartCoroutine(other.GetComponent<Soldier>().OriginalColorChange( Color.yellow));
+                            other.GetComponent<EffectManager>().StartEffect(myEffect.id);
                             Destroy(this.gameObject);
                             break;
                         }
@@ -73,7 +74,7 @@ public class Collectable : MonoBehaviour
                             TargetTag = other.GetComponent<Soldier>().opositeTag;
                             foreach (GameObject enemy in GameObject.FindGameObjectsWithTag(TargetTag))
                             {
-                                //StartCoroutine(enemy.GetComponent<Soldier>().OriginalColorChange( Color.cyan));
+                                enemy.GetComponent<EffectManager>().StartEffect(myEffect.id);
                             }
                             Destroy(this.gameObject);
                             break;
