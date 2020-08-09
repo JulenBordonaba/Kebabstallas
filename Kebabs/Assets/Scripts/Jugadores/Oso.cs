@@ -36,7 +36,7 @@ public class Oso : MonoBehaviour
 
     GameController GC;
 
-    bool blinking = false;
+    public GameObject fart;
 
 
     class Location  //Nodo para el algoritmo de búsqueda
@@ -61,6 +61,7 @@ public class Oso : MonoBehaviour
         sr = transform.GetComponent<SpriteRenderer>();
         bar = transform.Find("Bar");
         opositeTag = "Untagged";
+        InvokeRepeating("Attack", 2, 6);
         transform.position = new Vector3(Mathf.RoundToInt(transform.position.x*10)*0.1f,Mathf.RoundToInt(transform.position.y * 10) * 0.1f);
         timer = 0;
     }
@@ -83,22 +84,14 @@ public class Oso : MonoBehaviour
             }
         }
         timer += Time.deltaTime;
-        if (timer > 10)
+        if (timer > 40)
         {
-            StartCoroutine("Explode");
-        }else if(timer > 8.5 && !blinking)
-        {
-            blinking = true;
-            StartCoroutine("Blink");
+            Die();
         }
-        if (targetEnemy != null)
+
+            if (targetEnemy != null)
         {
             
-            if (Vector2.Distance(transform.position, targetEnemy.transform.position) < 0.13f)
-            {
-                StartCoroutine("Explode");
-            }
-
             target = new Location
             {
                 X = Mathf.Clamp(Mathf.RoundToInt(targetEnemy.transform.position.x * 10), 1, 19),
@@ -106,13 +99,8 @@ public class Oso : MonoBehaviour
             };
         }
 
-
         
-
-        if (vida == 0)
-        {
-            Die();
-        }
+       
 
         float posRoundX = Mathf.RoundToInt(transform.position.x * 10f) / 10f;
         float posRoundY = Mathf.RoundToInt(transform.position.y * 10f) / 10f;
@@ -189,36 +177,18 @@ public class Oso : MonoBehaviour
             anim.SetInteger("Walk", 4);
         }
     }
-
-    private IEnumerator Blink()
-    {
-        sr.color = Color.red;
-        yield return new WaitForSeconds(0.3f);
-        sr.color = Color.white;
-        yield return new WaitForSeconds(0.3f);
-        sr.color = Color.red;
-        yield return new WaitForSeconds(0.3f);
-        sr.color = Color.white;
-        yield return new WaitForSeconds(0.3f);
-    }
-
-    private IEnumerator Explode()
-    {
-        Transform[] allChildren = GetComponentsInChildren<Transform>();
-        foreach (Transform child in allChildren)
-        {
-            if (child != transform)
-                child.gameObject.SetActive(false);
-        }
-        exploting = true;
-        anim.SetBool("Explode", true);
-        yield return new WaitForSeconds(0.7f);
-        Destroy(this.gameObject);
-    }
+    
 
     private void Die()
     {
         Destroy(this.gameObject);
+    }
+
+    private void Attack()
+    {
+        GameObject pedo = Instantiate(fart, transform.position, Quaternion.identity);
+        pedo.GetComponent<Fart>().targetTag = opositeTag;
+        pedo.transform.parent = this.transform;
     }
 
 

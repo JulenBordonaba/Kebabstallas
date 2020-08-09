@@ -8,6 +8,7 @@ public class Collectable : MonoBehaviour
     private string TargetTag = null;
     private bool exploting = false;
     public EffectData myEffect;
+    public GameObject Oso;
     public enum Type
     { EXPLOSION, VIDA, VELOCIDAD, RALENTIZADOR, ESCUDO, MINIOM, PETRIFICACION, ATAQUE };
 
@@ -85,7 +86,9 @@ public class Collectable : MonoBehaviour
                         }
                     case Type.MINIOM:
                         {
-                            var TargetTag = other.GetComponent<Soldier>().opositeTag;
+                            GameObject Osito = Instantiate(Oso, transform.position, Quaternion.identity);
+                            Osito.GetComponent<Oso>().opositeTag = other.GetComponent<Soldier>().opositeTag;
+                            Destroy(this.gameObject);
                             break;
                         }
                     case Type.PETRIFICACION:
