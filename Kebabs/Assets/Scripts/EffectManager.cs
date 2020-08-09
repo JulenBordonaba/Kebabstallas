@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EffectManager : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class EffectManager : MonoBehaviour
         effects = Resources.LoadAll<EffectData>("Data/Effects");
     }
 
+    public UnityEvent OnEffectStart = new UnityEvent();
+    public UnityEvent OnEffectEnd = new UnityEvent();
 
 
     //[PunRPC]
@@ -70,7 +73,7 @@ public class EffectManager : MonoBehaviour
             }
         }
 
-
+        OnEffectStart.Invoke();
 
     }
 
@@ -150,6 +153,7 @@ public class EffectManager : MonoBehaviour
             {
                 StopCoroutine(_ed.dot.dotEffect);
             }
+            OnEffectEnd.Invoke();
         }
     }
 
@@ -178,6 +182,7 @@ public class EffectManager : MonoBehaviour
             {
                 StopCoroutine(_ed.dot.dotEffect);
             }
+            OnEffectEnd.Invoke();
         }
     }
 
@@ -188,6 +193,7 @@ public class EffectManager : MonoBehaviour
             StopCoroutine(ed.dot.dotEffect);
         }
         activeEffects.Clear();
+        OnEffectEnd.Invoke();
     }
 
 
