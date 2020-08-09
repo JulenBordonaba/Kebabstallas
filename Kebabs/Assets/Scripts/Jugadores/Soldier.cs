@@ -26,6 +26,8 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
 
     private bool escudo = false;
 
+    private int border = 0;
+
 
     public string opositeTag;
 
@@ -127,8 +129,8 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
         {
             target = new Location
             {
-                X = Mathf.Clamp(Mathf.RoundToInt(followEnemy.transform.position.x * 10), 1, 19),
-                Y = Mathf.Clamp(Mathf.RoundToInt(followEnemy.transform.position.y * 10), 1, 19),
+                X = Mathf.Clamp(Mathf.RoundToInt(followEnemy.transform.position.x * 10), 1, 19) + border,
+                Y = Mathf.Clamp(Mathf.RoundToInt(followEnemy.transform.position.y * 10), 1, 19) + border,
             };
         }
 
@@ -137,8 +139,8 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
         float posRoundY = RoundWithDecimals(transform.position.y, 1);
 
         //
-        if (target != null && Mathf.Abs(transform.position.x - posRoundX) < 0.005f
-                           && Mathf.Abs(transform.position.y - posRoundY) < 0.005f)
+        if (target != null && Mathf.Abs(transform.position.x - posRoundX) < 0.01f
+                           && Mathf.Abs(transform.position.y - posRoundY) < 0.01f)
         {
             if (Mathf.Abs(target.X / 10f - posRoundX) < 0.05f && Mathf.Abs(target.Y / 10f - posRoundY) < 0.05f)
             {
@@ -150,8 +152,8 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
                 //Posición actual para el primer nodo del A*
                 Location initial = new Location
                 {
-                    X = Mathf.RoundToInt(transform.position.x * 10),
-                    Y = Mathf.RoundToInt(transform.position.y * 10),
+                    X = Mathf.RoundToInt(transform.position.x * 10) + border,
+                    Y = Mathf.RoundToInt(transform.position.y * 10) + border,
                 };
 
                 //Calculamos el siguiente movimiento
@@ -269,8 +271,8 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
                         var v3 = Input.mousePosition;
                         v3.z = 10.0f;
                         v3 = Camera.main.ScreenToWorldPoint(v3);
-                        int X = Mathf.Clamp(Mathf.RoundToInt(v3.x * 10), 1, 19);
-                        int Y = Mathf.Clamp(Mathf.RoundToInt(v3.y * 10), 1, 19);
+                        int X = Mathf.Clamp(Mathf.RoundToInt(v3.x * 10), 1, 19) + border;
+                        int Y = Mathf.Clamp(Mathf.RoundToInt(v3.y * 10), 1, 19) + border;
                         if (map[X][Y] != 'X')
                         {
                             followEnemy = null;
