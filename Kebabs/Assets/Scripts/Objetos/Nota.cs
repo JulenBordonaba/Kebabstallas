@@ -41,7 +41,7 @@ public class Nota : MonoBehaviour {
         {
             if (other.GetComponent<Soldier>() != null)
             {
-                other.GetComponent<Soldier>().EmpiezaContagio();
+                other.GetComponent<Soldier>().EmpiezaContagio(daño);
             }
         }
     }

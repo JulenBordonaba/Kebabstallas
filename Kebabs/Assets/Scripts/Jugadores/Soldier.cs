@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Text;
 
-public class Soldier : SoldierStateMachine , IDamagable, IHealeable
+public class Soldier : SoldierStateMachine, IDamagable, IHealeable
 {
 
     string[] map;
@@ -25,7 +25,7 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
     private bool riendo = false;
 
     private bool escudo = false;
-    
+
 
     public string opositeTag;
 
@@ -34,9 +34,9 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
 
     public Stats stats;
 
-    private Vector3 direction = Vector3.zero;//Direccion del fantasma
+    public Vector3 direction = Vector3.zero;//Direccion del fantasma
 
-    private Vector2 lastDirection = Vector2.down;
+    protected Vector2 lastDirection = Vector2.down;
 
     GameController GC;
 
@@ -44,11 +44,9 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
 
     public Type myType;
 
-    private bool atacando = false;
+    private float notaDamage = 0;
 
-    public GameObject CampoLlanto;
 
-    public GameObject lagrimas;
 
     protected bool canAttack = false;
 
@@ -108,7 +106,7 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
     protected virtual void Update()
     {
 
-        
+
 
         //Asignar mapa actual
         map = GC.GetMap();
@@ -193,31 +191,7 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
             this.transform.Translate(direction * stats.Speed * Time.deltaTime);
         }
 
-        if (myType == Type.PAULA && atacando)
-        {
-            if (lastDirection == Vector2.up)
-            {
-                lagrimas.GetComponent<Animator>().SetInteger("Llorar", 0);
-                lagrimas.GetComponent<SpriteRenderer>().sortingOrder = 50;
-            }
-            else
-            {
-                lagrimas.GetComponent<SpriteRenderer>().sortingOrder = 100;
-                if (lastDirection == Vector2.right)
-                {
-                    lagrimas.GetComponent<Animator>().SetInteger("Llorar", 1);
-                }
-                else if (lastDirection == Vector2.down)
-                {
-                    lagrimas.GetComponent<Animator>().SetInteger("Llorar", 0);
-                }
-                else if (lastDirection == Vector2.left)
-                {
-                    lagrimas.GetComponent<Animator>().SetInteger("Llorar", 2);
-                }
-            }
 
-        }
 
         SetWalkAnimator();
 
@@ -226,7 +200,7 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
 
     public void SetWalkAnimator()
     {
-        if (stats.Speed <= 0)
+        if (stats.Speed == 0)
         {
             anim.SetInteger("Walk", 4);
         }
@@ -253,7 +227,7 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
                 anim.SetInteger("Walk", 4);
             }
         }
-        
+
     }
 
     public float RoundWithDecimals(float num, int numDecimals)
@@ -333,7 +307,7 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
         };
     }
 
-    
+
     public virtual void Attack()
     {
 
@@ -347,9 +321,9 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
 
     public IEnumerator AttackCoroutine()
     {
-        while(true)
+        while (true)
         {
-            if(CanAttack)
+            if (CanAttack)
             {
                 Attack();
             }
@@ -366,174 +340,65 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
         {
             case Type.HULS:
                 {
-                    targetEnemy = null;
-                    float distance = stats.AttackDistance;
-                    foreach (GameObject enemy in GameObject.FindGameObjectsWithTag(opositeTag))
-                    {
 
-                        if (Vector2.Distance(enemy.transform.position, transform.position) < distance)
-                        {
-
-                            distance = Vector2.Distance(enemy.transform.position, transform.position);
-                            targetEnemy = enemy;
-                        }
-                    }
-                    if (targetEnemy != null)
-                    {
-                        GameObject arrojadiza = Instantiate(arma, transform.position, Quaternion.identity);
-                        arrojadiza.GetComponent<arrojadiza>().targetTag = opositeTag;
-                        arrojadiza.GetComponent<arrojadiza>().target = targetEnemy;
-                    }
                     break;
                 }
             case Type.DANI:
                 {
-                    bool atacar = false;
-                    foreach (GameObject enemy in GameObject.FindGameObjectsWithTag(opositeTag))
-                    {
-                        if (Vector2.Distance(enemy.transform.position, transform.position) < stats.AttackDistance)
-                        {
-                            atacar = true;
-                        }
-                    }
-                    if (atacar)
-                    {
-                        GameObject baston = Instantiate(arma, transform.position, Quaternion.Euler(new Vector3(0, 0, 90 + Vector2.SignedAngle(Vector2.up, lastDirection))));
-                        GameObject baston01 = baston.transform.Find("baston_0").gameObject;
-                        baston01.GetComponent<Impacto>().targetTag = opositeTag;
-                        baston.GetComponent<Baston>().owner = gameObject;
 
-
-                    }
                     break;
                 }
             case Type.THANIA:
                 {
-                    bool atacar = false;
-                    foreach (GameObject enemy in GameObject.FindGameObjectsWithTag(opositeTag))
-                    {
-                        if (Vector2.Distance(enemy.transform.position, transform.position) < stats.AttackDistance)
-                        {
-                            atacar = true;
-                        }
-                    }
-                    if (atacar)
-                    {
-                        float angulo = -0.4f;
-                        for (int i = 0; i < 3; i += 1)
-                        {
-                            GameObject pollo = Instantiate(arma, transform.position, transform.rotation);
-                            pollo.GetComponent<Pollo>().targetTag = opositeTag;
-                            pollo.GetComponent<Pollo>().direccion = (lastDirection + Vector2.Perpendicular(lastDirection) * (angulo + angulo * (-i)));
 
-                        }
-                    }
 
                     break;
                 }
             case Type.LUCIA:
                 {
-                    bool atacar = false;
-                    foreach (GameObject enemy in GameObject.FindGameObjectsWithTag(opositeTag))
-                    {
-                        if (Vector2.Distance(enemy.transform.position, transform.position) < stats.AttackDistance)
-                        {
-                            atacar = true;
-                        }
-                    }
-                    if (atacar)
-                    {
-                        GameObject cartel = Instantiate(arma, transform.position, Quaternion.identity);
-                        cartel.GetComponent<Señal>().targetTag = opositeTag;
-                        cartel.transform.rotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, lastDirection));
 
-                        cartel.transform.parent = this.transform;
-                    }
 
                     break;
                 }
             case Type.PAULA:
                 {
-                    
+
                     break;
                 }
             case Type.LEYRE:
                 {
-                    GameObject nutella = Instantiate(arma, transform.position, Quaternion.identity);
-                    nutella.GetComponent<Nutella>().targetTag = opositeTag;
+
                     break;
                 }
             case Type.CARLOTA:
                 {
-                    StartCoroutine("notas");
+
                     break;
                 }
             case Type.ESQUELETO2:
                 {
-                    StartCoroutine("huesos");
+
                     break;
                 }
             case Type.MARIA:
                 {
-                    targetEnemy = null;
-                    float distance = stats.AttackDistance;
-                    foreach (GameObject enemy in GameObject.FindGameObjectsWithTag(opositeTag))
-                    {
 
-                        if (Vector2.Distance(enemy.transform.position, transform.position) < distance && enemy.GetComponent<Soldier>() != null)
-                        {
-
-                            distance = Vector2.Distance(enemy.transform.position, transform.position);
-                            targetEnemy = enemy;
-                        }
-                    }
-                    if (targetEnemy != null)
-                    {
-                        GameObject bomba = Instantiate(arma, transform.position, Quaternion.identity);
-                        bomba.GetComponent<BombaCorazon>().targetPos = targetEnemy.transform.position + targetEnemy.GetComponent<Soldier>().direction * 0.3f;
-                        bomba.GetComponent<BombaCorazon>().targetTag = opositeTag;
-                    }
                     break;
                 }
             case Type.CARLOS:
                 {
-                    bool atacar = false;
-                    foreach (GameObject enemy in GameObject.FindGameObjectsWithTag(opositeTag))
-                    {
-                        if (Vector2.Distance(enemy.transform.position, transform.position) < stats.AttackDistance)
-                        {
-                            atacar = true;
-                        }
-                    }
-                    if (atacar)
-                        StartCoroutine("rayos");
+
                     break;
                 }
             case Type.OSKAR:
                 {
-                    if (GameObject.FindGameObjectsWithTag(opositeTag).Length > 0)
-                    {
-                        GameObject pato = Instantiate(arma, transform.position, Quaternion.identity);
-                        pato.GetComponent<Pato>().opositeTag = opositeTag;
-                        pato.tag = this.tag;
-                    }
+
 
                     break;
                 }
             case Type.LOREA:
                 {
-                    bool atacar = false;
-                    foreach (GameObject friend in GameObject.FindGameObjectsWithTag(tag))
-                    {
-                        if (friend != this.gameObject)
-                            if (friend.GetComponent<Pato>() == null && Vector2.Distance(friend.transform.position, transform.position) < stats.AttackDistance)
-                            {
-                                friend.GetComponent<Soldier>().GetHeal(10);
-                                atacar = true;
-                            }
-                    }
-                    if (atacar)
-                        StartCoroutine(Vida());
+
                     break;
                 }
             default:
@@ -543,16 +408,17 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
         }
     }
 
-    public void EmpiezaContagio()
+    public void EmpiezaContagio(float damage)
     {
-        StartCoroutine(Contagiar());
+        StartCoroutine(Contagiar(damage));
     }
 
-    private IEnumerator Contagiar()
+    private IEnumerator Contagiar(float damage)
     {
         if (!riendo)
         {
             riendo = true;
+            notaDamage = damage;
             InvokeRepeating("Reir", 0, 1.5f);
             yield return new WaitForSeconds(Random.Range(10, 15));
             CancelInvoke("Reir");
@@ -569,69 +435,32 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
     {
         GameObject Notas = Instantiate(nota, transform.position + new Vector3(Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f)), Quaternion.identity);
         Notas.transform.parent = transform;
-        GetDamage(3);
+        GetDamage(notaDamage);
         foreach (GameObject friend in GameObject.FindGameObjectsWithTag(tag))
         {
             if (friend != this.gameObject)
                 if (friend.GetComponent<Pato>() == null && Vector2.Distance(friend.transform.position, transform.position) < 0.15)
                 {
-                    friend.GetComponent<Soldier>().EmpiezaContagio();
+                    friend.GetComponent<Soldier>().EmpiezaContagio(notaDamage);
                 }
         }
     }
 
-    private IEnumerator Vida()
-    {
-        Transform campoReg = transform.Find("CampoReg");
-        campoReg.GetComponent<Animator>().SetBool("activo", true);
-        yield return new WaitForSeconds(1);
-        campoReg.GetComponent<Animator>().SetBool("activo", false);
-    }
+    //protected IEnumerator Vida()
+    //{
+    //    Transform campoReg = transform.Find("CampoReg");
+    //    campoReg.GetComponent<Animator>().SetBool("activo", true);
+    //    yield return new WaitForSeconds(1);
+    //    campoReg.GetComponent<Animator>().SetBool("activo", false);
+    //}
 
-    protected IEnumerator Llorar()
-    {
-        CampoLlanto.SetActive(true);
-        CampoLlanto.GetComponent<CampoDebilitador>().targetTag = opositeTag;
-        lagrimas.SetActive(true);
-        atacando = true;
-        yield return new WaitForSeconds(40);
-        CampoLlanto.SetActive(false);
-        lagrimas.SetActive(false);
-        atacando = false;
-    }
 
-    private IEnumerator rayos()
-    {
-        for (int i = 0; i < 6; i += 1)
-        {
-            yield return new WaitForSeconds(0.1f);
-            GameObject rayo = Instantiate(arma, transform.position + new Vector3(Random.Range(-0.4f, 0.4f), Random.Range(-0.4f, 0.4f)), Quaternion.identity);
-            rayo.GetComponent<Rayo>().targetTag = opositeTag;
-        }
-        yield return null;
-    }
 
-    private IEnumerator notas()
-    {
-        for (int i = 0; i < 10; i += 1)
-        {
-            yield return new WaitForSeconds(0.02f);
-            GameObject Nota = Instantiate(arma, transform.position, Quaternion.Euler(0, 0, Random.Range(0, 360)));
-            Nota.GetComponent<Nota>().targetTag = opositeTag;
-        }
-        yield return null;
-    }
 
-    private IEnumerator huesos()
-    {
-        for (int i = 0; i < 10; i += 1)
-        {
-            yield return new WaitForSeconds(0.02f);
-            GameObject Hueso = Instantiate(arma, transform.position, Quaternion.Euler(0, 0, Random.Range(0, 360)));
-            Hueso.GetComponent<Hueso>().targetTag = opositeTag;
-        }
-        yield return null;
-    }
+
+
+
+
 
     public void SetHealthBarSize(float sizeNormalized)
     {
@@ -652,7 +481,7 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
             object[] parms = new object[2] { 0.2f, new Color32(255, 83, 83, 255) };
             StartCoroutine("OriginalColorChange", parms);
         }
-        
+
     }
 
     public void GetHeal(float regeneracion)
@@ -859,5 +688,7 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
     {
         get { return myColor * effectManager.EffectColor; }
     }
+
+
 
 }

@@ -7,6 +7,7 @@ public class Baston : MonoBehaviour {
     
     private float timer = 0;
     public GameObject owner;
+    public GameObject imageObject;
     private Vector3 start;
     private bool vuelta = true;
     // Use this for initialization
