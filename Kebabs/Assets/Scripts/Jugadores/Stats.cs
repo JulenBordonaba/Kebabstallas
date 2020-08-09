@@ -36,7 +36,7 @@ public class Stats : MonoBehaviour
     {
         get
         {
-            return Mathf.Max(baseAttackSpeed-effectManager.AttackSpeed,0.1f);
+            return Mathf.Max((baseAttackSpeed-effectManager.AttackSpeed)/effectManager.AttackSpeedMultiplier,0.1f);
         }
     }
     public float AttackDistance

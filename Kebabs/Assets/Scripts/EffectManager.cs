@@ -361,6 +361,19 @@ public class EffectManager : MonoBehaviour
         }
     }
 
+    public float AttackSpeedMultiplier
+    {
+        get
+        {
+            float attackSpeedMultiplier = 1;
+            foreach (EffectData ed in activeEffects)
+            {
+                attackSpeedMultiplier *= ed.attackSpeedMultiplier;
+            }
+            return attackSpeedMultiplier;
+        }
+    }
+
     public float AttackDistance
     {
         get

@@ -18,6 +18,7 @@ public class EffectData : ScriptableObject
     public float attackDistance;
     public float attackDamage;
     public Color effectColor = Color.white;
+    public float attackSpeedMultiplier = 1;
 
 
     //public float maneuverability;
