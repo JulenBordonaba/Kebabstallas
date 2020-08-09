@@ -86,8 +86,8 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
         Invoke("StartAttacking", Random.Range(1, 3.5f));
         attackCoroutine = StartCoroutine(AttackCoroutine());
 
-        effectManager.OnEffectStart.AddListener(Si);
-        effectManager.OnEffectEnd.AddListener(Si);
+        effectManager.OnEffectStart.AddListener(UpdateSpriteColor);
+        effectManager.OnEffectEnd.AddListener(UpdateSpriteColor);
 
         bar = transform.Find("Bar");
         if (this.tag == "Enemy")
@@ -647,9 +647,10 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
             {
                 stats.vida = 0;
             }
-            sr.color = new Color32(255, 83, 83, 255);
             SetHealthBarSize(stats.vida / stats.maxVida);
-            StartCoroutine(RecuperarColor(0.2f));
+
+            object[] parms = new object[2] { 0.2f, new Color32(255, 83, 83, 255) };
+            StartCoroutine("OriginalColorChange", parms);
         }
         
     }
@@ -661,9 +662,10 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
         {
             stats.vida = stats.maxVida;
         }
-        sr.color = new Color32(129, 255, 133, 255);
         SetHealthBarSize(stats.vida / stats.maxVida);
-        StartCoroutine(RecuperarColor(0.4f));
+
+        object[] parms = new object[2] { 0.4f, new Color32(129, 255, 133, 255) };
+        StartCoroutine("OriginalColorChange", parms);
     }
 
     public IEnumerator ActivateShield()
@@ -677,26 +679,27 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
 
     public IEnumerator OriginalColorChange(object[] parms)
     {
-        myColor = (Color)parms[1];
-        sr.color = (Color)parms[1];
+        myColor = (Color32)parms[1];
+        //sr.color = (Color)parms[1];
+        UpdateSpriteColor();
         yield return new WaitForSeconds((float)parms[0]);
         myColor = Color.white;
-        sr.color = Color.white;
+        UpdateSpriteColor();
+        //sr.color = Color.white;
     }
 
-    private void Si()
+    private void UpdateSpriteColor()
     {
-        sr.color = effectManager.EffectColor;
-        myColor = effectManager.EffectColor;
+        sr.color = SpriteColor;
     }
 
 
 
-    private IEnumerator RecuperarColor(float segs)
-    {
-        yield return new WaitForSeconds(segs);
-        sr.color = myColor;
-    }
+    //private IEnumerator RecuperarColor(float segs)
+    //{
+    //    yield return new WaitForSeconds(segs);
+    //    sr.color = myColor;
+    //}
 
     //Usmaos la distancia euclídea para la heurística del A*
     static float ComputeHScore(float x, float y, float targetX, float targetY)
@@ -850,6 +853,11 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
     public bool CanAttack
     {
         get { return canAttack && !effectManager.SilenceAbilities; }
+    }
+
+    public Color SpriteColor
+    {
+        get { return myColor * effectManager.EffectColor; }
     }
 
 }

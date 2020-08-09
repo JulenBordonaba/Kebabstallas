@@ -91,8 +91,8 @@ public class Collectable : MonoBehaviour
                     case Type.PETRIFICACION:
                         {
                             other.GetComponent<EffectManager>().StartEffect(myEffect.id); 
-                            object[] parms = new object[2] { myEffect.duration, other.GetComponent<EffectManager>().EffectColor };
-                            other.GetComponent<Soldier>().StartCoroutine("OriginalColorChange", parms);
+                            //object[] parms = new object[2] { myEffect.duration, other.GetComponent<EffectManager>().EffectColor };
+                            //other.GetComponent<Soldier>().StartCoroutine("OriginalColorChange", parms);
                             Destroy(this.gameObject);
                             break;
 
