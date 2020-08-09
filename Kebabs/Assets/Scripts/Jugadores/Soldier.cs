@@ -84,7 +84,7 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
         sr = transform.GetComponent<SpriteRenderer>();
         //InvokeRepeating("Attack", Random.Range(1, 3.5f), stats.AttackSpeed);
         Invoke("StartAttacking", Random.Range(1, 3.5f));
-        attackCoroutine = StartCoroutine(AttackCoroutine());
+        
 
         effectManager.OnEffectStart.AddListener(UpdateSpriteColor);
         effectManager.OnEffectEnd.AddListener(UpdateSpriteColor);
@@ -319,18 +319,19 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
     public void StartAttacking()
     {
         canAttack = true;
+        attackCoroutine = StartCoroutine(AttackCoroutine());
     }
 
     public IEnumerator AttackCoroutine()
     {
+        Attack();
         while (true)
         {
+            yield return new WaitForSeconds(stats.AttackSpeed);
             if (CanAttack)
             {
                 Attack();
             }
-
-            yield return new WaitForSeconds(stats.AttackSpeed);
         }
     }
 
