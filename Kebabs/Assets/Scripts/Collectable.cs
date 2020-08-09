@@ -7,6 +7,7 @@ public class Collectable : MonoBehaviour
 
     private string TargetTag = null;
     private bool exploting = false;
+    public EffectData myEffect;
     public enum Type
     { EXPLOSION, VIDA, VELOCIDAD, RALENTIZADOR, ESCUDO, MINIOM, PETRIFICACION, ATAQUE };
 
@@ -62,7 +63,7 @@ public class Collectable : MonoBehaviour
                         }
                     case Type.VELOCIDAD:
                         {
-                            StartCoroutine(other.GetComponent<Soldier>().SpeedChange(0.6f, Color.yellow));
+                            //StartCoroutine(other.GetComponent<Soldier>().OriginalColorChange( Color.yellow));
                             Destroy(this.gameObject);
                             break;
                         }
@@ -71,7 +72,7 @@ public class Collectable : MonoBehaviour
                             TargetTag = other.GetComponent<Soldier>().opositeTag;
                             foreach (GameObject enemy in GameObject.FindGameObjectsWithTag(TargetTag))
                             {
-                                StartCoroutine(enemy.GetComponent<Soldier>().SpeedChange(0.05f, Color.cyan));
+                                //StartCoroutine(enemy.GetComponent<Soldier>().OriginalColorChange( Color.cyan));
                             }
                             Destroy(this.gameObject);
                             break;
@@ -89,7 +90,9 @@ public class Collectable : MonoBehaviour
                         }
                     case Type.PETRIFICACION:
                         {
-                            StartCoroutine(other.GetComponent<Soldier>().SpeedChange(0f, Color.gray));
+                            other.GetComponent<EffectManager>().StartEffect(myEffect.id); 
+                            object[] parms = new object[2] { 2f, other.GetComponent<EffectManager>().EffectColor };
+                            other.GetComponent<Soldier>().StartCoroutine("OriginalColorChange", parms);
                             Destroy(this.gameObject);
                             break;
 

@@ -107,6 +107,8 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
     protected virtual void Update()
     {
 
+        
+
         //Asignar mapa actual
         map = GC.GetMap();
 
@@ -672,13 +674,11 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
         transform.Find("escudito").GetComponent<SpriteRenderer>().enabled = false;
     }
 
-    public IEnumerator SpeedChange(float speed, Color colorChange)
+    public IEnumerator OriginalColorChange(object[] parms)
     {
-        stats.speedReplace = speed;
-        myColor = colorChange;
-        sr.color = colorChange;
-        yield return new WaitForSeconds(15f);
-        stats.speedReplace = -1;
+        myColor = (Color)parms[1];
+        sr.color = (Color)parms[1];
+        yield return new WaitForSeconds((float)parms[0]);
         myColor = Color.white;
         sr.color = Color.white;
     }
