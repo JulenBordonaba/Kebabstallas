@@ -13,10 +13,11 @@ public class EffectData : ScriptableObject
     public float velocity;
 
 
-    //estos 3 son los nuevos
+    //estos 4 son los nuevos
     public float attackSpeed;
     public float attackDistance;
     public float attackDamage;
+    public Color effectColor = Color.white;
 
 
     //public float maneuverability;

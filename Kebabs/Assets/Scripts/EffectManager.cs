@@ -23,7 +23,7 @@ public class EffectManager : MonoBehaviour
 
     private void Start()
     {
-        damagables = new List<IDamagable>( GetComponents<IDamagable>());
+        damagables = new List<IDamagable>(GetComponents<IDamagable>());
         effects = Resources.LoadAll<EffectData>("Data/Effects");
     }
 
@@ -77,7 +77,7 @@ public class EffectManager : MonoBehaviour
     EffectIcon CreateIcon(EffectData ed)
     {
         EffectIcon newIcon = Instantiate(iconPrefab, iconContainer.transform).GetComponent<EffectIcon>();
-        if(ed.icon)
+        if (ed.icon)
         {
             newIcon.icon.sprite = ed.icon;
         }
@@ -254,11 +254,12 @@ public class EffectManager : MonoBehaviour
     #endregion
 
     #region SilenceAbilities
-    
+
 
     public bool SilenceAbilities
     {
-        get {
+        get
+        {
             foreach (EffectData ed in activeEffects)
             {
                 if (ed.silenceAbilities) return true;
@@ -281,11 +282,30 @@ public class EffectManager : MonoBehaviour
     //}
     #endregion
 
+
+    #region color
+
+    public Color EffectColor
+    {
+        get
+        {
+            Color myColor = Color.white;
+            foreach (EffectData ed in activeEffects)
+            {
+                myColor *= ed.effectColor;
+            }
+
+            return myColor;
+        }
+    }
+    #endregion
+
     #region stats
-    
+
     public float DamageReduction
     {
-        get {
+        get
+        {
             float damageReduction = 0;
             foreach (EffectData ed in activeEffects)
             {
@@ -294,11 +314,12 @@ public class EffectManager : MonoBehaviour
             return Mathf.Clamp(damageReduction, 0f, 100f);
         }
     }
-    
+
 
     public float Slow
     {
-        get {
+        get
+        {
             float slow = 0;
             foreach (EffectData ed in activeEffects)
             {
@@ -307,10 +328,11 @@ public class EffectManager : MonoBehaviour
             return Mathf.Clamp(slow, 0f, 100f);
         }
     }
-    
+
     public float Velocity
     {
-        get {
+        get
+        {
             float velocity = 0;
             foreach (EffectData ed in activeEffects)
             {
