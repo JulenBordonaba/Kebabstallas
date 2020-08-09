@@ -86,8 +86,9 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
         Invoke("StartAttacking", Random.Range(1, 3.5f));
         attackCoroutine = StartCoroutine(AttackCoroutine());
 
-        print("start");
-        
+        effectManager.OnEffectStart.AddListener(Si);
+        effectManager.OnEffectEnd.AddListener(Si);
+
         bar = transform.Find("Bar");
         if (this.tag == "Enemy")
         {
@@ -681,6 +682,12 @@ public class Soldier : SoldierStateMachine , IDamagable, IHealeable
         yield return new WaitForSeconds((float)parms[0]);
         myColor = Color.white;
         sr.color = Color.white;
+    }
+
+    private void Si()
+    {
+        sr.color = effectManager.EffectColor;
+        myColor = effectManager.EffectColor;
     }
 
 
