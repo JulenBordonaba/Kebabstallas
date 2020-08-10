@@ -8,7 +8,10 @@ public class LoreaSoldier : Soldier
     protected override void Update()
     {
         base.Update();
-        print("X: " + target.X + " / Y: " + target.Y);
+        if (target != null)
+            print("X: " + target.X + " / Y: " + target.Y);
+        else
+            print("No tengo target");
     }
 
     public override void Attack()
