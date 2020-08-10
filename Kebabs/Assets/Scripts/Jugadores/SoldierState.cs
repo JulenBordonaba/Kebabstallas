@@ -28,4 +28,9 @@ public class SoldierState
     {
         yield break;
     }
+
+    public virtual void ChangeState()
+    {
+
+    }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Collectable : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class Collectable : MonoBehaviour
     { EXPLOSION, VIDA, VELOCIDAD, RALENTIZADOR, ESCUDO, MINIOM, PETRIFICACION, ATAQUE };
 
     public Type myType;
+
+    public static UnityEvent OnCollectableCollected = new UnityEvent();
 
     // Use this for initialization
     void Start()

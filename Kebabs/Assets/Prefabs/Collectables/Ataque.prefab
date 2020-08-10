@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6366367480180349318}
   m_Layer: 0
   m_Name: Ataque
-  m_TagString: Untagged
+  m_TagString: Consumable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

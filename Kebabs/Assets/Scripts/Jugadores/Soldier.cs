@@ -6,7 +6,7 @@ using System.Text;
 public class Soldier : SoldierStateMachine, IDamagable, IHealeable
 {
 
-    string[] map;
+    public string[] map;
 
     private bool selected = false;
 
@@ -26,7 +26,7 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
 
     private bool escudo = false;
 
-    private int border = 0;
+    public int border = 0;
 
 
     public string opositeTag;
@@ -56,21 +56,13 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
 
     public EffectManager effectManager;
 
-    public GameObject followEnemy;
+    public GameObject followTarget;
 
     private Color myColor = Color.white;
 
-    class Location  //Nodo para el algoritmo de búsqueda
-    {
-        public int X;
-        public int Y;
-        public float F;
-        public int G;
-        public float H;
-        public Location Parent;
-    }
-    Location target;
-    Location provisionalTarget = null;
+    
+    public Location target;
+    public Location provisionalTarget = null;
 
     private Transform bar;
 
@@ -92,7 +84,8 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
         bar = transform.Find("Bar");
         if (this.tag == "Enemy")
         {
-            InvokeRepeating("Move", 1, 5f);
+            //InvokeRepeating("Move", 1, 5f);
+            StateMachineLogic();
             opositeTag = "Player";
             bar.GetComponentInChildren<SpriteRenderer>().color = Color.red;
         }
@@ -105,13 +98,15 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
     }
 
     // Update is called once per frame
-    protected virtual void Update()
+    protected override void Update()
     {
-
-
-
         //Asignar mapa actual
         map = GC.GetMap();
+
+        base.Update();
+        
+
+        
 
         //asignar sorting layer
         sr.sortingOrder = Mathf.RoundToInt(100 - transform.position.y * 20);
@@ -125,12 +120,12 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
         //lógica al pulsar click izquierdo con el ratón 
         OnMouseClick();
 
-        if (followEnemy != null)
+        if (followTarget != null)
         {
             target = new Location
             {
-                X = Mathf.Clamp(Mathf.RoundToInt(followEnemy.transform.position.x * 10), 1, 19) + border,
-                Y = Mathf.Clamp(Mathf.RoundToInt(followEnemy.transform.position.y * 10), 1, 19) + border,
+                X = Mathf.Clamp(Mathf.RoundToInt(followTarget.transform.position.x * 10), 1, 19) + border,
+                Y = Mathf.Clamp(Mathf.RoundToInt(followTarget.transform.position.y * 10), 1, 19) + border,
             };
         }
 
@@ -142,6 +137,7 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
         if (target != null && Mathf.Abs(transform.position.x - posRoundX) < 0.005f
                            && Mathf.Abs(transform.position.y - posRoundY) < 0.005f)
         {
+
             if (Mathf.Abs(target.X / 10f - posRoundX) < 0.05f && Mathf.Abs(target.Y / 10f - posRoundY) < 0.05f)
             {
                 direction = Vector2.zero;
@@ -264,7 +260,7 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
                     int layerMask2 = 1 << 9;
                     if (Physics.Raycast(ray, out hitInfo, 100, layerMask2))
                     {
-                        followEnemy = hitInfo.collider.gameObject;
+                        followTarget = hitInfo.collider.gameObject;
                     }
                     else
                     {
@@ -275,7 +271,7 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
                         int Y = Mathf.Clamp(Mathf.RoundToInt(v3.y * 10), 1, 19) + border;
                         if (map[X][Y] != 'X')
                         {
-                            followEnemy = null;
+                            followTarget = null;
                             target = new Location
                             {
                                 X = X,
@@ -525,8 +521,6 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
         sr.color = SpriteColor;
     }
 
-
-
     //private IEnumerator RecuperarColor(float segs)
     //{
     //    yield return new WaitForSeconds(segs);
@@ -534,6 +528,7 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
     //}
 
     //Usmaos la distancia euclídea para la heurística del A*
+
     static float ComputeHScore(float x, float y, float targetX, float targetY)
     {
         return Mathf.Sqrt(Mathf.Pow(Mathf.Abs(targetX - x), 2) + Mathf.Pow(Mathf.Abs(targetY - y), 2));
@@ -656,6 +651,128 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
         return next;
     }
 
+    public List<Location> A_estrella_Coste(Location initial, Location target)
+    {
+        Location bestH = null;
+        Location current = null;
+        List<Location> openList = new List<Location>();
+        List<Location> closedList = new List<Location>();
+
+        initial.G = 0;
+        initial.Parent = null;
+        initial.H = ComputeHScore(initial.X, initial.Y, target.X, target.Y);
+        initial.F = initial.H + initial.G;
+
+        bestH = initial;
+        openList.Add(initial);
+        while (openList.Count > 0)
+        {
+            float minim = 9999;
+            foreach (Location l in openList)
+            {
+                if (l.F < minim)
+                {
+                    current = l;
+                    minim = l.F;
+                }
+            }
+            //print(current.X +" " + current.Y + " " + current.F);
+            openList.Remove(current);
+
+            closedList.Add(current);
+
+            if (current.H < bestH.H || (current.H == bestH.H && current.G < bestH.G))
+            {
+                bestH = current;
+            }
+
+            if (current.X == target.X && current.Y == target.Y)
+            {
+                break;
+            }
+
+
+            var adjacentSquares = GetWalkableAdjacentSquares(current.X, current.Y, map);
+            foreach (var adjacentSquare in adjacentSquares)
+            {
+                // if this adjacent square is already in the closed list, ignore it
+
+                bool isIn = false;
+                foreach (Location l in closedList)
+                {
+                    if (l.X == adjacentSquare.X && l.Y == adjacentSquare.Y)
+                    {
+                        isIn = true;
+                    }
+                }
+                if (isIn)
+                {
+                    continue;
+                }
+
+
+
+                // if it's not in the open list...
+                isIn = false;
+                Location aux = null;
+                foreach (Location l in openList)
+                {
+                    if (l.X == adjacentSquare.X && l.Y == adjacentSquare.Y)
+                    {
+                        isIn = true;
+                        aux = l;
+                    }
+                }
+                if (!isIn)
+                {
+                    // compute its score, set the parent
+                    adjacentSquare.G = current.G + 1;
+                    adjacentSquare.H = ComputeHScore(adjacentSquare.X,
+                        adjacentSquare.Y, target.X, target.Y);
+                    adjacentSquare.F = adjacentSquare.G + adjacentSquare.H;
+                    adjacentSquare.Parent = current;
+
+                    // and add it to the open list
+                    openList.Add(adjacentSquare);
+                }
+                else
+                {
+                    // test if using the current G score makes the adjacent square's F score
+                    // lower, if yes update the parent because it means it's a better path
+                    if (current.G + 1 + aux.H < aux.F)
+                    {
+                        aux.G = current.G + 1;
+                        aux.F = aux.G + aux.H;
+                        aux.Parent = current;
+                    }
+                }
+            }
+        }
+
+        if (openList.Count == 0)
+        {
+            current = bestH;
+            provisionalTarget = bestH;
+        }
+        else
+        {
+            provisionalTarget = null;
+        }
+
+        List<Location> path = new List<Location>();
+
+        Location next = null;
+        while (current.Parent != null)
+        {
+            path.Add(current);
+            next = current;
+            current = current.Parent;
+        }
+        path.Add(current);
+
+        return path;
+    }
+
     static List<Location> GetWalkableAdjacentSquares(int x, int y, string[] map)
     {
         var proposedLocations = new List<Location>()
@@ -693,5 +810,20 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
     }
 
 
+    public virtual void StateMachineLogic()
+    {
 
+    }
+
+
+}
+
+public class Location  //Nodo para el algoritmo de búsqueda
+{
+    public int X;
+    public int Y;
+    public float F;
+    public int G;
+    public float H;
+    public Location Parent;
 }

@@ -62,4 +62,13 @@ public class Stats : MonoBehaviour
         }
     }
 
+
+    public float HealthPercentaje
+    {
+        get
+        {
+            return (vida / maxVida) * 100;
+        }
+    }
+
 }

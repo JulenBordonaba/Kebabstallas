@@ -12,5 +12,14 @@ public class SoldierStateMachine : MonoBehaviour
         StartCoroutine(state.Start());
     }
 
+    protected virtual void Update()
+    {
+        if(state!=null)
+        {
+            state.Update();
+        }
+        
+    }
+
 
 }

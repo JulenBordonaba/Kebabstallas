@@ -12,7 +12,6 @@ public class SoldierStay : SoldierState
     public override IEnumerator Start()
     {
         yield return null;
-        //golemBossAI.SetState()
     }
 
     public override void Update()

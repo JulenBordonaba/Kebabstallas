@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7307690539124777725}
   m_Layer: 0
   m_Name: Escudo
-  m_TagString: Untagged
+  m_TagString: Consumable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,6 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c9729ed8f025334aa871bbb93e986a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myEffect: {fileID: 0}
+  Oso: {fileID: 0}
   myType: 4
 --- !u!65 &2382125190015199450
 BoxCollider:

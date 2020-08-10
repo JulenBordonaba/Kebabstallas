@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class LoreaSoldier : Soldier
 {
+
+    protected override void Update()
+    {
+        base.Update();
+        print("X: " + target.X + " / Y: " + target.Y);
+    }
+
     public override void Attack()
     {
         bool atacar = false;
@@ -27,5 +34,11 @@ public class LoreaSoldier : Soldier
         campoReg.GetComponent<Animator>().SetBool("activo", true);
         yield return new WaitForSeconds(1);
         campoReg.GetComponent<Animator>().SetBool("activo", false);
+    }
+
+    public override void StateMachineLogic()
+    {
+        print("StateMachineLogic");
+        SetState(new SoldierHuir(this));
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Text;
+using UnityEngine.Events;
 
 public class GameController : MonoBehaviour {
     private string[] map;
@@ -14,6 +15,8 @@ public class GameController : MonoBehaviour {
     public GameObject LoseImage;    //Pantalla de derrota
     public GameObject VictoryImage; //Pantalla de victoria
     public static int[] levels = new int[20];
+
+    public static UnityEvent OnCollectablePlaced = new UnityEvent();
 
     private void Start()
     {
