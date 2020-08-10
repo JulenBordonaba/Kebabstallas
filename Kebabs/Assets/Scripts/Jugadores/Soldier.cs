@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Text;
+using UnityEngine.Events;
 
 public class Soldier : SoldierStateMachine, IDamagable, IHealeable
 {
@@ -66,6 +67,8 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
 
     private Transform bar;
 
+    public static UnityEvent OnDamageDealed = new UnityEvent();
+
     // Use this for initialization
     protected virtual void Start()
     {
@@ -85,7 +88,7 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
         if (this.tag == "Enemy")
         {
             //InvokeRepeating("Move", 1, 5f);
-            StateMachineLogic();
+            Invoke("StateMachineLogic",Random.Range(0.1f,2f));
             opositeTag = "Player";
             bar.GetComponentInChildren<SpriteRenderer>().color = Color.red;
         }
@@ -477,6 +480,8 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
             }
             SetHealthBarSize(stats.vida / stats.maxVida);
 
+            OnDamageDealed.Invoke();
+
             object[] parms = new object[2] { 0.2f, new Color32(255, 83, 83, 255) };
             StartCoroutine("OriginalColorChange", parms);
         }
@@ -491,6 +496,8 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
             stats.vida = stats.maxVida;
         }
         SetHealthBarSize(stats.vida / stats.maxVida);
+
+        OnDamageDealed.Invoke();
 
         object[] parms = new object[2] { 0.4f, new Color32(129, 255, 133, 255) };
         StartCoroutine("OriginalColorChange", parms);
@@ -812,7 +819,7 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
 
     public virtual void StateMachineLogic()
     {
-
+        InvokeRepeating("Move", 1, 5f);
     }
 
 

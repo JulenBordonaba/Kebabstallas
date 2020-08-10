@@ -1336,11 +1336,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5017186712838390150, guid: aba806650b6767748ab306ed8c013a24,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 1880663826411496, guid: aba806650b6767748ab306ed8c013a24, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -1354,6 +1349,11 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2272870356645872033, guid: aba806650b6767748ab306ed8c013a24,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5017186712838390150, guid: aba806650b6767748ab306ed8c013a24,
         type: 3}
       propertyPath: m_Layer
       value: 8
@@ -1385,7 +1385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4460945274785622, guid: 7b05463d310774043b280b9f9603d7f7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.169
+      value: 1.488
       objectReference: {fileID: 0}
     - target: {fileID: 4460945274785622, guid: 7b05463d310774043b280b9f9603d7f7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1427,11 +1427,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3317208811580621184, guid: 7b05463d310774043b280b9f9603d7f7,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 1917873629948964, guid: 7b05463d310774043b280b9f9603d7f7, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -1449,6 +1444,11 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2001949528234055707, guid: 7b05463d310774043b280b9f9603d7f7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3317208811580621184, guid: 7b05463d310774043b280b9f9603d7f7,
         type: 3}
       propertyPath: m_Layer
       value: 8

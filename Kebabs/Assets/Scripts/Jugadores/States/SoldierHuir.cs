@@ -8,14 +8,14 @@ public class SoldierHuir : SoldierState
 
     List<Location> proposedEscapePoints = new List<Location>()
         {
-            new Location { X = 3, Y = 2 },
-            new Location { X = 17, Y = 2 },
+            new Location { X = 5, Y = 2 },
+            new Location { X = 15, Y = 2 },
             new Location { X = 10, Y = 2 },
             new Location { X = 3, Y = 10 },
             new Location { X = 17, Y = 10 },
             new Location { X = 10, Y = 10 },
-            new Location { X = 3, Y = 17 },
-            new Location { X = 17, Y = 17 },
+            new Location { X = 5, Y = 17 },
+            new Location { X = 15, Y = 17 },
             new Location { X = 10, Y = 17}
         };
 
@@ -68,12 +68,12 @@ public class SoldierHuir : SoldierState
         }
     }
 
-    
+
     public IEnumerator ResetCanCheckPath()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.5f);
         canCheckPath = true;
-        
+
     }
 
     public Location FindSaveWay()
@@ -85,15 +85,29 @@ public class SoldierHuir : SoldierState
         float maxDistSiHayPeligro = 0;
         List<Location> bestPath = new List<Location>();
         List<GameObject> enemies = new List<GameObject>(GameObject.FindGameObjectsWithTag(soldier.opositeTag));
+        List<GameObject> minions = new List<GameObject>(GameObject.FindGameObjectsWithTag("Miniom"));
+        
+
+        foreach(GameObject miniom in minions)
+        {
+            if(miniom.GetComponent<Oso>())
+            {
+                if(miniom.GetComponent<Oso>().opositeTag==soldier.tag)
+                {
+                    enemies.Add(miniom);
+                }
+            }
+        }
+
         if (enemies.Count <= 0) return null;
 
         foreach (Location location in proposedEscapePoints)
         {
-            if (!CheckPeligro(enemies, new List<Location> { location}))
+            if (!CheckPeligro(enemies, new List<Location> { location }))
             {
                 sumDist = 0;
 
-
+                float nearestEnemyDistance = float.MaxValue;
                 foreach (GameObject enemy in enemies)
                 {
                     Location target = new Location
@@ -102,30 +116,38 @@ public class SoldierHuir : SoldierState
                         Y = Mathf.Clamp(Mathf.RoundToInt(enemy.transform.position.y * 10), 1, 19) + soldier.border,
                     };
 
+                    
                     bestPath = soldier.A_estrella_Coste(location, target);
 
-                    sumDist += bestPath.Count;
-                        
+                    if(bestPath.Count<nearestEnemyDistance)
+                    {
+                        nearestEnemyDistance = bestPath.Count;
+                    }
+
+                    //sumDist += bestPath.Count;
+
+                    
+
                 }
                 //Debug.Log(sumDist);
 
                 if (CheckPeligro(enemies, bestPath))
                 {
                     Debug.Log("Hay peligro");
-                    if (sumDist > maxDistSiHayPeligro)
+                    if (nearestEnemyDistance > maxDistSiHayPeligro)
                     {
                         Debug.Log("Asigna bestPathSiHayPeligro");
-                        maxDistSiHayPeligro = sumDist;
+                        maxDistSiHayPeligro = nearestEnemyDistance;
                         bestPlaceSiHayPeligro = location;
                     }
-                        
+
                 }
                 else
                 {
                     Debug.Log("No hay peligro");
-                    if (sumDist > maxDist)
+                    if (nearestEnemyDistance > maxDist)
                     {
-                        maxDist = sumDist;
+                        maxDist = nearestEnemyDistance;
                         bestPlace = location;
                     }
                 }
@@ -154,14 +176,30 @@ public class SoldierHuir : SoldierState
     public bool CheckPeligro(List<GameObject> enemies, List<Location> bestPath)
     {
         bool hayPeligro = false;
-        foreach (Location casilla in bestPath)
+        //foreach (Location casilla in bestPath)
+        for (int i = 0; i < bestPath.Count; i += 1)
         {
+
             foreach (GameObject enemy in enemies)
             {
                 if (enemy.GetComponent<Soldier>())
                 {
                     Soldier sold = enemy.GetComponent<Soldier>();
-                    if (sold.stats.AttackDistance > Vector2.Distance(enemy.transform.position, new Vector2(casilla.X, casilla.Y)))
+                    if (sold.stats.AttackDistance > Vector2.Distance(enemy.transform.position, new Vector2(bestPath[i].X, bestPath[i].Y)))
+                    {
+                        hayPeligro = true;
+                    }
+                }
+                else if (enemy.GetComponent<Oso>())
+                {
+                    if(0.4f > Vector2.Distance(enemy.transform.position, new Vector2(bestPath[i].X, bestPath[i].Y)))
+                    {
+                        hayPeligro = true;
+                    }
+                }
+                else if (enemy.GetComponent<Pato>())
+                {
+                    if (0.2f > Vector2.Distance(enemy.transform.position, new Vector2(bestPath[i].X, bestPath[i].Y)))
                     {
                         hayPeligro = true;
                     }
@@ -172,10 +210,11 @@ public class SoldierHuir : SoldierState
 
         return hayPeligro;
     }
+    
 
     public override void ChangeState()
     {
-        
+
         soldier.StateMachineLogic();
     }
 
