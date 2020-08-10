@@ -1,0 +1,1132 @@
+fileFormatVersion: 2
+guid: b3c7958117c356f4b96c5945f27d81e6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5792112289864014019
+    second: cristales_0
+  - first:
+      213: -3585566619315595912
+    second: cristales_1
+  - first:
+      213: 3544087097302948188
+    second: cristales_2
+  - first:
+      213: 5967378684286600507
+    second: cristales_3
+  - first:
+      213: 4069558024959023037
+    second: cristales_4
+  - first:
+      213: -6387029883783788101
+    second: cristales_5
+  - first:
+      213: 557755299808536691
+    second: cristales_6
+  - first:
+      213: -8564291105751997527
+    second: cristales_7
+  - first:
+      213: 6072887622674064647
+    second: cristales_8
+  - first:
+      213: 4175758817615874480
+    second: cristales_9
+  - first:
+      213: -775736264638904678
+    second: cristales_10
+  - first:
+      213: -3854430101117684443
+    second: cristales_11
+  - first:
+      213: -3259623170967088229
+    second: cristales_12
+  - first:
+      213: 2573226099791987695
+    second: cristales_13
+  - first:
+      213: -2497616111036098142
+    second: cristales_14
+  - first:
+      213: -8787708329576854797
+    second: cristales_15
+  - first:
+      213: 8170270487854521920
+    second: cristales_16
+  - first:
+      213: 247085407996476895
+    second: cristales_17
+  - first:
+      213: -4896097424143522266
+    second: cristales_18
+  - first:
+      213: -2577353958209815474
+    second: cristales_19
+  - first:
+      213: -4323413287943807997
+    second: cristales_20
+  - first:
+      213: 2794559771823088636
+    second: cristales_21
+  - first:
+      213: 7420101177627781605
+    second: cristales_22
+  - first:
+      213: 4214586339301606991
+    second: cristales_23
+  - first:
+      213: 6130502585800844505
+    second: cristales_24
+  - first:
+      213: 3173458810649560680
+    second: cristales_25
+  - first:
+      213: -3976953680151744069
+    second: cristales_26
+  - first:
+      213: 7508695495937867625
+    second: cristales_27
+  - first:
+      213: 3541450366971990742
+    second: cristales_28
+  - first:
+      213: 3199243597132842248
+    second: cristales_29
+  - first:
+      213: -2705712737151592422
+    second: cristales_30
+  - first:
+      213: 2037909523918301734
+    second: cristales_31
+  - first:
+      213: 2185069364298353896
+    second: cristales_32
+  - first:
+      213: 4320378317140129246
+    second: cristales_33
+  - first:
+      213: -3583165102683857887
+    second: cristales_34
+  - first:
+      213: 6881789611023040158
+    second: cristales_35
+  - first:
+      213: 1645296658715160143
+    second: cristales_36
+  - first:
+      213: 3055703165453785373
+    second: cristales_37
+  - first:
+      213: -1371484694622246823
+    second: cristales_38
+  - first:
+      213: 950943514213023048
+    second: cristales_39
+  - first:
+      213: -531011908595441100
+    second: cristales_40
+  - first:
+      213: 5135784066470815388
+    second: cristales_41
+  - first:
+      213: 1968958076958759791
+    second: cristales_42
+  - first:
+      213: 9108047419099616975
+    second: cristales_43
+  - first:
+      213: 6277074961369103014
+    second: cristales_44
+  - first:
+      213: -6921260379735156206
+    second: cristales_45
+  - first:
+      213: 5361682013635890450
+    second: cristales_46
+  - first:
+      213: -7756343238103452226
+    second: cristales_47
+  - first:
+      213: 4808688618268265257
+    second: cristales_48
+  - first:
+      213: -798571696855803134
+    second: cristales_49
+  - first:
+      213: 2651082871113727263
+    second: cristales_50
+  - first:
+      213: -6134140149257715394
+    second: cristales_51
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cristales_1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 337
+        width: 22
+        height: 38
+      alignment: 9
+      pivot: {x: 0.5263256, y: 0.4771383}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91a157f95fb05ab49b8a585b5678c8fa
+      internalID: -3585566619315595912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_3
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 337
+        width: 22
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46ae8ac0b36952644924f5d44cde21d1
+      internalID: 5967378684286600507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_4
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 339
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24133b6f93634954ea776386df750cc7
+      internalID: 4069558024959023037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_5
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 339
+        width: 21
+        height: 38
+      alignment: 9
+      pivot: {x: 0.4586316, y: 0.4009335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12b12ea6734bf004ea8d6d129cb01dad
+      internalID: -6387029883783788101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_6
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 342
+        width: 15
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49001443}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29e59fb1001c65542a3ab860df582be7
+      internalID: 557755299808536691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_7
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 339
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d640eab010ac729478fc5fec9131028c
+      internalID: -8564291105751997527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_8
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 339
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aea0712cd45f93e4a967434a4fa33135
+      internalID: 6072887622674064647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_9
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 342
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b37eceb01bb4e543ac59599e9caddef
+      internalID: 4175758817615874480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_11
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 273
+        width: 22
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2af71794d127564ea85c83342c61f25
+      internalID: -3854430101117684443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_13
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 273
+        width: 22
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cdba76cdcfb81b4fa84e7d11707bedb
+      internalID: 2573226099791987695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_14
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 275
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62aea88d7cc9fdf40b3b2880076c98cc
+      internalID: -2497616111036098142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_15
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 275
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f236d2153b71f48a911c05fd08c361
+      internalID: -8787708329576854797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_16
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 278
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 551ed91cfc915a940a99ce7793e3a65e
+      internalID: 8170270487854521920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_17
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 275
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c56516424f58244a6d2315562090db
+      internalID: 247085407996476895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_18
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 275
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 089ba1795d154f6498d0be7d620ad5ca
+      internalID: -4896097424143522266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_19
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 278
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd54c915635e1684ea6de8f322b8e4de
+      internalID: -2577353958209815474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_21
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 209
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bd11f06ca8668940a96e6d4e87e247c
+      internalID: 2794559771823088636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_23
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 209
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e867485fd26f68b4d88d51cf2beede88
+      internalID: 4214586339301606991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_24
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 211
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4e664360abf6df46b4af66219d9d54f
+      internalID: 6130502585800844505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_25
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 214
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7a3d62aec696d42812c506bf9b89ef
+      internalID: 3173458810649560680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_26
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 211
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7954b76fc153f3147ba42345b9e05659
+      internalID: -3976953680151744069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_27
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 214
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b88ebd66a0594ef488cf20bca9e048a6
+      internalID: 7508695495937867625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_29
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 145
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2218217e398fc5a45a4d2112b4a38dc7
+      internalID: 3199243597132842248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_31
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 145
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8841c7991828557468ac46c40c35e39a
+      internalID: 2037909523918301734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_32
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 147
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5584e0f92b365b34aa87ef12caaf5460
+      internalID: 2185069364298353896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_33
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 150
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ec4114b3209b247a6b636fffefd105
+      internalID: 4320378317140129246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_34
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 147
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 882b94ce5eb8f994c967695a4bd6a80f
+      internalID: -3583165102683857887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_35
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 150
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1be0b4a596322a44eb86f7527a058e33
+      internalID: 6881789611023040158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_37
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 81
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8b640eefe1b2047887838ffa77e674
+      internalID: 3055703165453785373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_38
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 86
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ba0e6504f3e6d4e81ed42672438788
+      internalID: -1371484694622246823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_40
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 81
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3494b4e34e942bc4286dc50dc1d269e4
+      internalID: -531011908595441100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_41
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 86
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9d4714ae6592154dad6aedcb93c8150
+      internalID: 5135784066470815388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_42
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 83
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 388e18f9a2e20e345bfe55f64a7a32a8
+      internalID: 1968958076958759791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_43
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 83
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e68dade95b7a2f488744512d684dff4
+      internalID: 9108047419099616975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_45
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 17
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c724f44f6ae9de443838466b982b9712
+      internalID: -6921260379735156206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_46
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 22
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b834cf6586421fc409d0ab6f783dec50
+      internalID: 5361682013635890450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_48
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 17
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa96020a83908d24cbc63cea33f824e2
+      internalID: 4808688618268265257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_49
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 22
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e96e0370de154d848ae783e8dece2de5
+      internalID: -798571696855803134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_50
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 19
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87ab07126a865b7469fa3e623e4beb90
+      internalID: 2651082871113727263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_51
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 19
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e056bfb5ad34194db8bc8bcf6de7aed
+      internalID: -6134140149257715394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cristales_0
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 183
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17f05a360d0aa7049b3ca8271749c031
+      internalID: -5792112289864014019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

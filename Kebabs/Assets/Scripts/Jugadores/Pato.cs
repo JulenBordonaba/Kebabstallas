@@ -399,7 +399,13 @@ public class Pato : MonoBehaviour
         if (other.tag == opositeTag && exploting)
         {
             if (other != null)
-                other.GetComponent<Soldier>().GetDamage(daño);
+            {
+                if (other.GetComponent<Soldier>())
+                    other.GetComponent<Soldier>().GetDamage(daño);
+                else if (other.GetComponent<Pato>())
+                    other.GetComponent<Pato>().RecibirDaño(daño);
+            }
+                
         }
     }
 

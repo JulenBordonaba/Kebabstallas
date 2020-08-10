@@ -1,0 +1,2419 @@
+fileFormatVersion: 2
+guid: 254c6c8aeb23dd047934f761c48588bd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8044305189525541832
+    second: gente5_0
+  - first:
+      213: -8814764319341732017
+    second: gente5_1
+  - first:
+      213: -6345377210914754965
+    second: gente5_2
+  - first:
+      213: -1054107723228654434
+    second: gente5_3
+  - first:
+      213: 6753772436475523485
+    second: gente5_4
+  - first:
+      213: 9050952728463890256
+    second: gente5_5
+  - first:
+      213: -3374939427077556821
+    second: gente5_6
+  - first:
+      213: 6256253049036751878
+    second: gente5_7
+  - first:
+      213: -1009968576991969923
+    second: gente5_8
+  - first:
+      213: 8303313902396326715
+    second: gente5_9
+  - first:
+      213: -1835328375176746324
+    second: gente5_10
+  - first:
+      213: 4624375927069108543
+    second: gente5_11
+  - first:
+      213: 7431914217198123590
+    second: gente5_12
+  - first:
+      213: 7381538191576793479
+    second: gente5_13
+  - first:
+      213: -4613409374092989473
+    second: gente5_14
+  - first:
+      213: 3047968457933861721
+    second: gente5_15
+  - first:
+      213: -233272219754382023
+    second: gente5_16
+  - first:
+      213: -8999185443690518981
+    second: gente5_17
+  - first:
+      213: -3142013421022665889
+    second: gente5_18
+  - first:
+      213: 6731131119735899201
+    second: gente5_19
+  - first:
+      213: 4148938317757882550
+    second: gente5_20
+  - first:
+      213: 8089734519688633473
+    second: gente5_21
+  - first:
+      213: 882926984557157386
+    second: gente5_22
+  - first:
+      213: -6016348108466077613
+    second: gente5_23
+  - first:
+      213: 4905432845585213604
+    second: gente5_24
+  - first:
+      213: 3279349408322406563
+    second: gente5_25
+  - first:
+      213: -4973428899637850000
+    second: gente5_26
+  - first:
+      213: 1324366724301166530
+    second: gente5_27
+  - first:
+      213: -2763475127000933212
+    second: gente5_28
+  - first:
+      213: 4153666143458352754
+    second: gente5_29
+  - first:
+      213: 7876067994841200415
+    second: gente5_30
+  - first:
+      213: -2971946992756258204
+    second: gente5_31
+  - first:
+      213: -737316916213751537
+    second: gente5_32
+  - first:
+      213: -3199310074011954852
+    second: gente5_33
+  - first:
+      213: 1391382347870173870
+    second: gente5_34
+  - first:
+      213: 3627782623454881723
+    second: gente5_35
+  - first:
+      213: -8732511764516330377
+    second: gente5_36
+  - first:
+      213: -3314672161404044914
+    second: gente5_37
+  - first:
+      213: 8685744249696513272
+    second: gente5_38
+  - first:
+      213: -528261589578693507
+    second: gente5_39
+  - first:
+      213: -9222043124441370498
+    second: gente5_40
+  - first:
+      213: 748145679727864004
+    second: gente5_41
+  - first:
+      213: 8314636943755636856
+    second: gente5_42
+  - first:
+      213: -5524071741266681301
+    second: gente5_43
+  - first:
+      213: 6158585499395804482
+    second: gente5_44
+  - first:
+      213: 4442832402763477875
+    second: gente5_45
+  - first:
+      213: -852599230168551406
+    second: gente5_46
+  - first:
+      213: 65658896535722742
+    second: gente5_47
+  - first:
+      213: 9028808585906373806
+    second: gente5_48
+  - first:
+      213: -4029157444279869341
+    second: gente5_49
+  - first:
+      213: 3310917188754042328
+    second: gente5_50
+  - first:
+      213: -2539399108751431436
+    second: gente5_51
+  - first:
+      213: -5097994174187261869
+    second: gente5_52
+  - first:
+      213: 2424633163094462224
+    second: gente5_53
+  - first:
+      213: 7600881838302070910
+    second: gente5_54
+  - first:
+      213: 7285166177657691775
+    second: gente5_55
+  - first:
+      213: -5768388210242924854
+    second: gente5_56
+  - first:
+      213: -8025231623565508548
+    second: gente5_57
+  - first:
+      213: 4352358203762828767
+    second: gente5_58
+  - first:
+      213: -6737245815536299488
+    second: gente5_59
+  - first:
+      213: -1693255975862963190
+    second: gente5_60
+  - first:
+      213: -552097123584008859
+    second: gente5_61
+  - first:
+      213: -3704539465756727502
+    second: gente5_62
+  - first:
+      213: 8146308217344746967
+    second: gente5_63
+  - first:
+      213: 1054053246434620299
+    second: gente5_64
+  - first:
+      213: 6646059963147729128
+    second: gente5_65
+  - first:
+      213: -8533938351143133662
+    second: gente5_66
+  - first:
+      213: -5809671577850104589
+    second: gente5_67
+  - first:
+      213: -3007307695403456110
+    second: gente5_68
+  - first:
+      213: 8635384754058664765
+    second: gente5_69
+  - first:
+      213: 6497547124195313718
+    second: gente5_70
+  - first:
+      213: -5359199883583018960
+    second: gente5_71
+  - first:
+      213: -3687991231017436895
+    second: gente5_72
+  - first:
+      213: 6416234522734090309
+    second: gente5_73
+  - first:
+      213: 8975635510876903233
+    second: gente5_74
+  - first:
+      213: -2393267480432737264
+    second: gente5_75
+  - first:
+      213: 4891354218024300495
+    second: gente5_76
+  - first:
+      213: 2284565616589641175
+    second: gente5_77
+  - first:
+      213: 3684235892748146449
+    second: gente5_78
+  - first:
+      213: -1817918364648400414
+    second: gente5_79
+  - first:
+      213: 3796552682660066310
+    second: gente5_80
+  - first:
+      213: -7305276179815028292
+    second: gente5_81
+  - first:
+      213: 4560601762586749566
+    second: gente5_82
+  - first:
+      213: -6290136583147172975
+    second: gente5_83
+  - first:
+      213: -545706876112741986
+    second: gente5_84
+  - first:
+      213: 2429999577607072459
+    second: gente5_85
+  - first:
+      213: 7375887182447036840
+    second: gente5_86
+  - first:
+      213: 1427420416667112853
+    second: gente5_87
+  - first:
+      213: -7503117796566162424
+    second: gente5_88
+  - first:
+      213: 2131841647210799825
+    second: gente5_89
+  - first:
+      213: 6908378982152900660
+    second: gente5_90
+  - first:
+      213: -9005612907922582214
+    second: gente5_91
+  - first:
+      213: 4375330575903936752
+    second: gente5_92
+  - first:
+      213: 8159043877784291804
+    second: gente5_93
+  - first:
+      213: -781822304090591905
+    second: gente5_94
+  - first:
+      213: 4116427187639091420
+    second: gente5_95
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gente5_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 336
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f2f50b4eeb21f244ab6a154fb97c447
+      internalID: -8044305189525541832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_1
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 336
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 813975604f02a2349ab5099cc8ff035d
+      internalID: -8814764319341732017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_2
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 336
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1295dc4e839417649811a96253ea8436
+      internalID: -6345377210914754965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_3
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 336
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4252e154200b3ac42ba44d97bcc8e9a9
+      internalID: -1054107723228654434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_4
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 336
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 643436b8e4878284db0f3d327b50de1e
+      internalID: 6753772436475523485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_5
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 336
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b99e7eb3104c27c459d1a63a62333771
+      internalID: 9050952728463890256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_6
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 336
+        width: 33
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e961f177bca3098468d868c56d72227d
+      internalID: -3374939427077556821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_7
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 336
+        width: 33
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e76d91b9f45cae94ebc4da428409fbbe
+      internalID: 6256253049036751878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_8
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 336
+        width: 33
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e15eef84fd2d54bb6c3ec2723fa866
+      internalID: -1009968576991969923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_9
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 336
+        width: 33
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce8a184a2da87d45a2cd85a0b582f5d
+      internalID: 8303313902396326715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_10
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 337
+        width: 33
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34146342}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d74c1954eae0ac498bdf0885c3d5dd3
+      internalID: -1835328375176746324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_11
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 336
+        width: 33
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce071915bbed70409da11820ef59b30
+      internalID: 4624375927069108543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_12
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 288
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1eee01dcf0b51842a03929eccfeb22f
+      internalID: 7431914217198123590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_13
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 288
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf57428de7502643bfce0ee581fc923
+      internalID: 7381538191576793479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_14
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 288
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fc5506cf062ceb4883bdb4a8cd9066c
+      internalID: -4613409374092989473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_15
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 288
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fff32bebe601a94188b6c1e981fb7aa
+      internalID: 3047968457933861721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_16
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 288
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0f4b31def6b9314d8a2040c95052b05
+      internalID: -233272219754382023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_17
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 288
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32d31497b842e464b87e386776588cd0
+      internalID: -8999185443690518981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_18
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 288
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 658fc01401677384f9f4f0b5cd5ead65
+      internalID: -3142013421022665889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_19
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 288
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca381983fdf138e4d8876703472b47fb
+      internalID: 6731131119735899201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_20
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 288
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f12cb1bfadba8fb40868cf87ce9acf30
+      internalID: 4148938317757882550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_21
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 288
+        width: 33
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fcabba2ccacbea42bcac7c6b8ac9879
+      internalID: 8089734519688633473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_22
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 288
+        width: 33
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3255814}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0893290ca98c84f4c99082e98829082b
+      internalID: 882926984557157386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_23
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 288
+        width: 33
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee53536e61b3b0445bd49e9f3d8c9c31
+      internalID: -6016348108466077613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_24
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 240
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a355a1e6db4392f44802110fcd37b5d7
+      internalID: 4905432845585213604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_25
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 240
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cbac9070a638cc4a82efa874da50122
+      internalID: 3279349408322406563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_26
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 240
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98b562a6fda422f4e863e1736e615e42
+      internalID: -4973428899637850000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_27
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 240
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 391ebae878da6824b98a5d2b5e390830
+      internalID: 1324366724301166530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_28
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 240
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 350a37425cc827f438903922ea463cb7
+      internalID: -2763475127000933212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_29
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 240
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775d064e39fdedb41b0b3adbfe149dde
+      internalID: 4153666143458352754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_30
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 240
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d61fb8a46bf4db34bb4eed0ee8a36a4e
+      internalID: 7876067994841200415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_31
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 240
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 070a573193363b64dbead14c7f587f71
+      internalID: -2971946992756258204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_32
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 240
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0fa04883a356304985d4678ba6ee688
+      internalID: -737316916213751537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_33
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 240
+        width: 33
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7329367da6316cd4d8e299ca98a0e530
+      internalID: -3199310074011954852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_34
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 239
+        width: 33
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3255814}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eb7ca8b96c837544a2e1fc2f65efac4
+      internalID: 1391382347870173870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_35
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 240
+        width: 33
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 826c3de01edd06d49bbc68612bf55818
+      internalID: 3627782623454881723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_36
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 192
+        width: 35
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b12d9ef6adf9664abe809e37359c087
+      internalID: -8732511764516330377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_37
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 192
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0743e7a9933244647a7036f28ef3a928
+      internalID: -3314672161404044914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_38
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 192
+        width: 35
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d38134849d9211419f4f77e71a625ce
+      internalID: 8685744249696513272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_39
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 192
+        width: 31
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef394258c7a0df64796ac44c448e5fc6
+      internalID: -528261589578693507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_40
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 192
+        width: 31
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 059b02103075f6c4190c2c6d162c8468
+      internalID: -9222043124441370498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_41
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 192
+        width: 31
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 611c062b3ec613c4f800a21f3e9362d7
+      internalID: 748145679727864004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_42
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 192
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8870fe8bf8de40544a75e28a29a472bc
+      internalID: 8314636943755636856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_43
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 192
+        width: 33
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f10a2a051ee82754687626a353e5926a
+      internalID: -5524071741266681301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_44
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 192
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6de012ce5e6edc148bafafe431c09b03
+      internalID: 6158585499395804482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_45
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 192
+        width: 33
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52b0f148a9f79b44fb32a27ca766b0b9
+      internalID: 4442832402763477875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_46
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 192
+        width: 33
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3255814}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc9d32a8679881408fbcfbfc6f94a40
+      internalID: -852599230168551406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_47
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 192
+        width: 33
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13304bbbe59f63c43a5d1aea02b761a0
+      internalID: 65658896535722742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_48
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 144
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17ea4688005cc734db0844572bd1c39f
+      internalID: 9028808585906373806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_49
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 144
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1b4426938af3cb4a9c7d515a52d69e6
+      internalID: -4029157444279869341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_50
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 144
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00901cecb82cede45b0fd4279b5df6a6
+      internalID: 3310917188754042328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_51
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 144
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e664b4ec9cfb3a84492e24b5ce97b075
+      internalID: -2539399108751431436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_52
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 144
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cebac85b2f6e6f46a113417b67414b7
+      internalID: -5097994174187261869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_53
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 144
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 878e09b79a6b41247bc2a0cffa2c4863
+      internalID: 2424633163094462224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_54
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 144
+        width: 33
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf91d78ca2fe2ca4987f2a7eef17552f
+      internalID: 7600881838302070910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_55
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 144
+        width: 33
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efabde24e47c49047b313b12ca632b35
+      internalID: 7285166177657691775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_56
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 144
+        width: 33
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3bd64446018b334bb7e48abc58c262a
+      internalID: -5768388210242924854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_57
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 144
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7087a04e1fb1814182e97c6ed4b785d
+      internalID: -8025231623565508548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_58
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 144
+        width: 33
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2830385c72f91e48a9cf919ed43664e
+      internalID: 4352358203762828767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_59
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 144
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c76e2ee17201947a32e4768f22d8d3
+      internalID: -6737245815536299488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_60
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 96
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 940efba920f255b4aa84c218a6c64759
+      internalID: -1693255975862963190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_61
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 96
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08ba1ec41be7bdc44b9c121b05d23ef5
+      internalID: -552097123584008859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_62
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 96
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d35e76b020bc3214da462df609606d6c
+      internalID: -3704539465756727502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_63
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 96
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f8e292edf18e394fbade5fb9d517bc7
+      internalID: 8146308217344746967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_64
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 96
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abad835659cc0744f8cc389d98cc69da
+      internalID: 1054053246434620299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_65
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 96
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f33b8b174c28b444acf06fb2798c4e0
+      internalID: 6646059963147729128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_66
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 96
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af247318384bddf4b9c981872aff1f5b
+      internalID: -8533938351143133662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_67
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 96
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93bc392d16cdb55418613f1ea7eaac8e
+      internalID: -5809671577850104589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_68
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 96
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4a634d8a4858e14eadda110b05d1213
+      internalID: -3007307695403456110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_69
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 96
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86c32707e4ab6e04c84a8644794618a3
+      internalID: 8635384754058664765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_70
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 96
+        width: 33
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2134e4c4c98baec408c9cc300ce338ff
+      internalID: 6497547124195313718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_71
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 96
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70cb50f6ce75453409b457a2d7bddf61
+      internalID: -5359199883583018960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_72
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 48
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38504c32b8255024893bad94eb479005
+      internalID: -3687991231017436895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_73
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 48
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab2e9b3ce4501cf4ebf4fb54f684729e
+      internalID: 6416234522734090309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_74
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 48
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 680e151f6d9f46747b3245265b9064a2
+      internalID: 8975635510876903233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_75
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 48
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70c16e6728c5e7c49bd370d1e22731c8
+      internalID: -2393267480432737264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_76
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 48
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a460f0a6b53b424899aaf2e47d22de1
+      internalID: 4891354218024300495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_77
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 48
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f749c16f829cb1468250f02148c39ee
+      internalID: 2284565616589641175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_78
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 48
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b4f67508c6cb884ba9bee9c2a8182c7
+      internalID: 3684235892748146449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_79
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 48
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cadf6454be13d144db3b11b450a7c4ae
+      internalID: -1817918364648400414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_80
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 48
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ed14a31978ce5c4182e0d67beecb7cf
+      internalID: 3796552682660066310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_81
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 48
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1193ced13da76cb49a84c90f7ff98f92
+      internalID: -7305276179815028292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_82
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 48
+        width: 33
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 139a8c4ebe94f16428efab00114a4b92
+      internalID: 4560601762586749566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_83
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 48
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbad261757ecc6344b0f4c9afed90d15
+      internalID: -6290136583147172975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_84
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 0
+        width: 35
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c568c540f49f8f04298c23f614217992
+      internalID: -545706876112741986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_85
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 0
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e18d41eda46c4f54eb5d3180f79348f9
+      internalID: 2429999577607072459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_86
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 0
+        width: 35
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b4d3495cd2ff1245ad04a41fae3ee07
+      internalID: 7375887182447036840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_87
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 0
+        width: 31
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 124ea3ea4225c194b8b322a143069066
+      internalID: 1427420416667112853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_88
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 31
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faed7930af0cdbb429ae5aaeadd25521
+      internalID: -7503117796566162424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_89
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 0
+        width: 31
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c962bd047829e6f4ea251591a67d33f3
+      internalID: 2131841647210799825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_90
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 0
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4594666e05d11fd468292c31ebedcdc0
+      internalID: 6908378982152900660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_91
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 0
+        width: 33
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb4db4761a5efe49915d43b2d215ae4
+      internalID: -9005612907922582214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_92
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 0
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5933cc1430066bc4d97ac0c2af406323
+      internalID: 4375330575903936752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_93
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 0
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44d9f3eb0ab5b3e488148fe49c72b7c6
+      internalID: 8159043877784291804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_94
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 0
+        width: 33
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7a3e86fc3bb55f4fa7c9dc8561b78ec
+      internalID: -781822304090591905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gente5_95
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 0
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3681804db11c1c6428c1fdf6ebad28cb
+      internalID: 4116427187639091420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
