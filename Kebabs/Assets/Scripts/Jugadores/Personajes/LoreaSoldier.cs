@@ -48,61 +48,94 @@ public class LoreaSoldier : Soldier
 
         print("StateMachineLogic");
         followTarget = null;
-        if (stats.HealthPercentaje < 25f)
+
+        if (CheckNearConsumables())
         {
-            SetState(new SoldierHuir(this));
-        }
-        else if (stats.HealthPercentaje < 40f)
-        {
-            GameObject[] consumables = GameObject.FindGameObjectsWithTag("Consumable");
-            GameObject[] allies = GameObject.FindGameObjectsWithTag(tag);
-            foreach (GameObject consumable in consumables)
-            {
-                if (consumable.GetComponent<Collectable>())
-                {
-                    Collectable collectable = consumable.GetComponent<Collectable>();
-                    if (collectable.myType == Collectable.Type.VIDA)
-                    {
-
-
-                        float healDistance = Vector2.Distance(transform.position, collectable.transform.position);
-                        if (healDistance < 0.8f)
-                        {
-                            SetState(new SoldierFindHealConsumable(this));
-                        }
-                        else
-                        {
-                            foreach (GameObject ally in allies)
-                            {
-                                float allyDistance = Vector2.Distance(transform.position, collectable.transform.position);
-                                if (allyDistance < 0.8f)
-                                {
-                                    SetState(new SoldierFollowWeakestTeammate(this));
-                                }
-                                else
-                                {
-                                    SetState(new SoldierHuir(this));
-                                }
-                            }
-                        }
-
-                    }
-                }
-            }
+            SetState(new SoldierFindConsumables(this));
         }
         else
         {
-            SetState(new SoldierFollowWeakestTeammate(this));
-            //if (AllAlliesHealed)
-            //{
 
-            //}
-            //else
-            //{
-            //    SetState(new SoldierFollowWeakestTeammate(this));
-            //}
+
+
+            if (stats.HealthPercentaje < 25f)
+            {
+                SetState(new SoldierHuir(this));
+            }
+            else if (stats.HealthPercentaje < 40f)
+            {
+                GameObject[] consumables = GameObject.FindGameObjectsWithTag("Consumable");
+                GameObject[] allies = GameObject.FindGameObjectsWithTag(tag);
+                foreach (GameObject consumable in consumables)
+                {
+                    if (consumable.GetComponent<Collectable>())
+                    {
+                        Collectable collectable = consumable.GetComponent<Collectable>();
+                        if (collectable.myType == Collectable.Type.VIDA)
+                        {
+
+
+                            float healDistance = Vector2.Distance(transform.position, collectable.transform.position);
+                            if (healDistance < 0.8f)
+                            {
+                                SetState(new SoldierFindHealConsumable(this));
+                            }
+                            else
+                            {
+                                foreach (GameObject ally in allies)
+                                {
+                                    float allyDistance = Vector2.Distance(transform.position, collectable.transform.position);
+                                    if (allyDistance < 0.8f)
+                                    {
+                                        SetState(new SoldierFollowWeakestTeammate(this));
+                                    }
+                                    else
+                                    {
+                                        SetState(new SoldierHuir(this));
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+            else
+            {
+                //SetState(new SoldierFollowWeakestTeammate(this));
+                if (AllAlliesHealed)
+                {
+                    if (GameObject.FindGameObjectsWithTag("Consumable").Length > 0)
+                    {
+                        SetState(new SoldierFindConsumables(this));
+                    }
+                    else
+                    {
+                        SetState(new SoldierHuir(this));
+                    }
+                }
+                else
+                {
+                    SetState(new SoldierFollowWeakestTeammate(this));
+                }
+            }
         }
 
+    }
+
+    public bool CheckNearConsumables()
+    {
+        bool hayCerca = false;
+        foreach (GameObject collectable in GameObject.FindGameObjectsWithTag("Consumable"))
+        {
+            
+            if (Vector2.Distance(transform.position, collectable.transform.position) < 0.8f)
+            {
+                hayCerca = true;
+            }
+        }
+
+        return hayCerca;
     }
 
     public bool AllAlliesHealed
@@ -123,5 +156,10 @@ public class LoreaSoldier : Soldier
             }
             return allHealed;
         }
+    }
+
+    private void OnDestroy()
+    {
+        state.UnsubscribeFromEvents();
     }
 }

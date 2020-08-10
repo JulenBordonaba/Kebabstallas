@@ -23,7 +23,7 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
 
     public GameObject nota;
 
-    private bool riendo = false;
+    public bool riendo = false;
 
     private bool escudo = false;
 

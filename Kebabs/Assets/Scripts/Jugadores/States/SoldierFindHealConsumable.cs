@@ -74,9 +74,16 @@ public class SoldierFindHealConsumable : SoldierState
     public override void ChangeState()
     {
         base.ChangeState();
+        
+        soldier.StateMachineLogic();
+    }
+
+    public override void UnsubscribeFromEvents()
+    {
         GameController.OnCollectablePlaced.RemoveListener(ChangeState);
         Collectable.OnCollectableCollected.RemoveListener(ChangeState);
         Soldier.OnDamageDealed.RemoveListener(ChangeState);
-        soldier.StateMachineLogic();
     }
+
+
 }

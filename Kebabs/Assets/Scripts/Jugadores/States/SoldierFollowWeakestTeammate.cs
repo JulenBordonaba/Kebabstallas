@@ -52,7 +52,7 @@ public class SoldierFollowWeakestTeammate : SoldierState
 
                 float lostHealth = ((100 - s.stats.HealthPercentaje));
 
-                float allyHealHeuristic = lostHealth == 0 ? -100 : (lostHealth - (soldier.A_estrella_Coste(initial, target).Count * 3));
+                float allyHealHeuristic = s.riendo ? -1000 : (lostHealth == 0 ? -100 : (lostHealth - (soldier.A_estrella_Coste(initial, target).Count * 3)));
 
                 if (allyHealHeuristic > currentHealHeuristic)
                 {
@@ -84,6 +84,11 @@ public class SoldierFollowWeakestTeammate : SoldierState
                 ChangeState();
             }
         }
+        else
+        {
+            if (canCheckPath)
+                ChangeState();
+        }
     }
 
     public IEnumerator ResetCanCheckPath()
@@ -95,13 +100,16 @@ public class SoldierFollowWeakestTeammate : SoldierState
 
     public override void ChangeState()
     {
-        GameController.OnCollectablePlaced.RemoveListener(ChangeState);
-        Collectable.OnCollectableCollected.RemoveListener(ChangeState);
-        Soldier.OnDamageDealed.RemoveListener(ChangeState);
+        base.ChangeState();
         soldier.StateMachineLogic();
     }
 
-
+    public override void UnsubscribeFromEvents()
+    {
+        GameController.OnCollectablePlaced.RemoveListener(ChangeState);
+        Collectable.OnCollectableCollected.RemoveListener(ChangeState);
+        Soldier.OnDamageDealed.RemoveListener(ChangeState);
+    }
 
 }
 

@@ -31,6 +31,11 @@ public class SoldierState
 
     public virtual void ChangeState()
     {
+        UnsubscribeFromEvents();
+    }
+
+    public virtual void UnsubscribeFromEvents()
+    {
 
     }
 }
