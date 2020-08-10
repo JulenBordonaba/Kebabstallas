@@ -45,8 +45,14 @@ public class LoreaSoldier : Soldier
 
     public override void StateMachineLogic()
     {
+
         print("StateMachineLogic");
-        if(stats.HealthPercentaje<40f)
+        followTarget = null;
+        if (stats.HealthPercentaje < 25f)
+        {
+            SetState(new SoldierHuir(this));
+        }
+        else if (stats.HealthPercentaje < 40f)
         {
             GameObject[] consumables = GameObject.FindGameObjectsWithTag("Consumable");
             GameObject[] allies = GameObject.FindGameObjectsWithTag(tag);
@@ -57,20 +63,10 @@ public class LoreaSoldier : Soldier
                     Collectable collectable = consumable.GetComponent<Collectable>();
                     if (collectable.myType == Collectable.Type.VIDA)
                     {
-                        Location initial = new Location
-                        {
-                            X = Mathf.RoundToInt(transform.position.x * 10) + border,
-                            Y = Mathf.RoundToInt(transform.position.y * 10) + border,
-                        };
 
-                        Location target = new Location
-                        {
-                            X = Mathf.Clamp(Mathf.RoundToInt(collectable.transform.position.x * 10), 1, 19) + border,
-                            Y = Mathf.Clamp(Mathf.RoundToInt(collectable.transform.position.y * 10), 1, 19) + border,
-                        };
 
-                        float healDistance = A_estrella_Coste(initial, target).Count;
-                        if (healDistance<10)
+                        float healDistance = Vector2.Distance(transform.position, collectable.transform.position);
+                        if (healDistance < 0.8f)
                         {
                             SetState(new SoldierFindHealConsumable(this));
                         }
@@ -78,14 +74,8 @@ public class LoreaSoldier : Soldier
                         {
                             foreach (GameObject ally in allies)
                             {
-                                target = new Location
-                                {
-                                    X = Mathf.Clamp(Mathf.RoundToInt(collectable.transform.position.x * 10), 1, 19) + border,
-                                    Y = Mathf.Clamp(Mathf.RoundToInt(collectable.transform.position.y * 10), 1, 19) + border,
-                                };
-
-                                float allyDistance = A_estrella_Coste(initial, target).Count;
-                                if (allyDistance < 10)
+                                float allyDistance = Vector2.Distance(transform.position, collectable.transform.position);
+                                if (allyDistance < 0.8f)
                                 {
                                     SetState(new SoldierFollowWeakestTeammate(this));
                                 }
@@ -103,7 +93,35 @@ public class LoreaSoldier : Soldier
         else
         {
             SetState(new SoldierFollowWeakestTeammate(this));
+            //if (AllAlliesHealed)
+            //{
+
+            //}
+            //else
+            //{
+            //    SetState(new SoldierFollowWeakestTeammate(this));
+            //}
         }
-        
+
+    }
+
+    public bool AllAlliesHealed
+    {
+        get
+        {
+            bool allHealed = true;
+            foreach (GameObject ally in GameObject.FindGameObjectsWithTag(tag))
+            {
+                if (ally.GetComponent<Soldier>())
+                {
+                    if (ally.GetComponent<Soldier>().stats.HealthPercentaje < 85)
+                    {
+                        allHealed = false;
+                        break;
+                    }
+                }
+            }
+            return allHealed;
+        }
     }
 }

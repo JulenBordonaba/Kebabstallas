@@ -38,7 +38,8 @@ public class SoldierHuir : SoldierState
         //{
         //    soldier.target = bestPlace;
         //}
-
+        GameController.OnCollectablePlaced.AddListener(ChangeState);
+        Collectable.OnCollectableCollected.AddListener(ChangeState);
     }
 
     public override void Update()
@@ -48,9 +49,18 @@ public class SoldierHuir : SoldierState
         float posRoundX = soldier.RoundWithDecimals(soldier.transform.position.x, 1);
         float posRoundY = soldier.RoundWithDecimals(soldier.transform.position.y, 1);
 
+
+        
+
         //
         if (Mathf.Abs(soldier.transform.position.x - posRoundX) < 0.005f && Mathf.Abs(soldier.transform.position.y - posRoundY) < 0.005f && canCheckPath)
         {
+            if (VidaCerca())
+            {
+                soldier.SetState(new SoldierFindHealConsumable(soldier));
+                return;
+            }
+
             canCheckPath = false;
             soldier.StartCoroutine(ResetCanCheckPath());
 
@@ -66,8 +76,32 @@ public class SoldierHuir : SoldierState
             }
 
         }
+        
     }
 
+    public bool VidaCerca()
+    {
+        GameObject[] consumables = GameObject.FindGameObjectsWithTag("Consumable");
+
+        
+        foreach (GameObject consumable in consumables)
+        {
+            if (consumable.GetComponent<Collectable>())
+            {
+                Collectable collectable = consumable.GetComponent<Collectable>();
+                if (collectable.myType == Collectable.Type.VIDA)
+                {
+
+
+                    if(Vector2.Distance(consumable.transform.position,soldier.transform.position)<0.8f)
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
 
     public IEnumerator ResetCanCheckPath()
     {
@@ -177,7 +211,7 @@ public class SoldierHuir : SoldierState
     {
         bool hayPeligro = false;
         //foreach (Location casilla in bestPath)
-        for (int i = 0; i < bestPath.Count; i += 1)
+        for (int i = 0; i < bestPath.Count; i += 3)
         {
 
             foreach (GameObject enemy in enemies)
@@ -214,7 +248,8 @@ public class SoldierHuir : SoldierState
 
     public override void ChangeState()
     {
-
+        GameController.OnCollectablePlaced.RemoveListener(ChangeState);
+        Collectable.OnCollectableCollected.RemoveListener(ChangeState);
         soldier.StateMachineLogic();
     }
 
