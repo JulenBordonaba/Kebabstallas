@@ -1,0 +1,2419 @@
+fileFormatVersion: 2
+guid: 8b77e3d3bcfc1e94f89a3056f285d9a7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1153937851952873910
+    second: Calaveras_0
+  - first:
+      213: -819674288940433163
+    second: Calaveras_1
+  - first:
+      213: 6943395695597103972
+    second: Calaveras_2
+  - first:
+      213: -5847443672184635055
+    second: Calaveras_3
+  - first:
+      213: 3569357791834891273
+    second: Calaveras_4
+  - first:
+      213: 7916272889735080337
+    second: Calaveras_5
+  - first:
+      213: 6002907853509918989
+    second: Calaveras_6
+  - first:
+      213: -6761250189336164353
+    second: Calaveras_7
+  - first:
+      213: 706040416912299460
+    second: Calaveras_8
+  - first:
+      213: -4517966858257391963
+    second: Calaveras_9
+  - first:
+      213: -3551171422920708114
+    second: Calaveras_10
+  - first:
+      213: -8467425388375899979
+    second: Calaveras_11
+  - first:
+      213: 4009619420161163698
+    second: Calaveras_12
+  - first:
+      213: -7679085331004098649
+    second: Calaveras_13
+  - first:
+      213: -7966279743198462415
+    second: Calaveras_14
+  - first:
+      213: -4305710304968395829
+    second: Calaveras_15
+  - first:
+      213: 6077751004352082606
+    second: Calaveras_16
+  - first:
+      213: -898689416637684313
+    second: Calaveras_17
+  - first:
+      213: 2696760399708306273
+    second: Calaveras_18
+  - first:
+      213: -7821658398209131230
+    second: Calaveras_19
+  - first:
+      213: -3721480216101899499
+    second: Calaveras_20
+  - first:
+      213: 9161820631143052543
+    second: Calaveras_21
+  - first:
+      213: -8767847054938361526
+    second: Calaveras_22
+  - first:
+      213: -4740469519391909136
+    second: Calaveras_23
+  - first:
+      213: -6864099864332606246
+    second: Calaveras_24
+  - first:
+      213: -2108703679875032653
+    second: Calaveras_25
+  - first:
+      213: 4617187842831612241
+    second: Calaveras_26
+  - first:
+      213: 908123662098028160
+    second: Calaveras_27
+  - first:
+      213: 1630434861273171875
+    second: Calaveras_28
+  - first:
+      213: 8264495348106547969
+    second: Calaveras_29
+  - first:
+      213: 4497871715969223800
+    second: Calaveras_30
+  - first:
+      213: -2618465202224810
+    second: Calaveras_31
+  - first:
+      213: 6182590304515077322
+    second: Calaveras_32
+  - first:
+      213: 4520100896416775955
+    second: Calaveras_33
+  - first:
+      213: -1844990218685508272
+    second: Calaveras_34
+  - first:
+      213: -7282228162800230628
+    second: Calaveras_35
+  - first:
+      213: 4315503731213009358
+    second: Calaveras_36
+  - first:
+      213: 5165307012263656675
+    second: Calaveras_37
+  - first:
+      213: 4443047709696483332
+    second: Calaveras_38
+  - first:
+      213: -4168863801263026454
+    second: Calaveras_39
+  - first:
+      213: 946399123404893077
+    second: Calaveras_40
+  - first:
+      213: 6319469030881630150
+    second: Calaveras_41
+  - first:
+      213: 2304132431605946590
+    second: Calaveras_42
+  - first:
+      213: -898691619208749027
+    second: Calaveras_43
+  - first:
+      213: -183025048646611458
+    second: Calaveras_44
+  - first:
+      213: -9167452334040388106
+    second: Calaveras_45
+  - first:
+      213: -2378402160475279894
+    second: Calaveras_46
+  - first:
+      213: -2261962643774555050
+    second: Calaveras_47
+  - first:
+      213: 5390609751393786717
+    second: Calaveras_48
+  - first:
+      213: 8325285427738909116
+    second: Calaveras_49
+  - first:
+      213: -895596224377562044
+    second: Calaveras_50
+  - first:
+      213: -8572874303187479001
+    second: Calaveras_51
+  - first:
+      213: 5378172885650639324
+    second: Calaveras_52
+  - first:
+      213: -7445902456909453351
+    second: Calaveras_53
+  - first:
+      213: -4865683355373279407
+    second: Calaveras_54
+  - first:
+      213: -7670786873549476318
+    second: Calaveras_55
+  - first:
+      213: 1366591110511487146
+    second: Calaveras_56
+  - first:
+      213: 8722215991174017409
+    second: Calaveras_57
+  - first:
+      213: 6041750254542705475
+    second: Calaveras_58
+  - first:
+      213: 2075113127498220973
+    second: Calaveras_59
+  - first:
+      213: 8037128722046913296
+    second: Calaveras_60
+  - first:
+      213: -1343063798427009283
+    second: Calaveras_61
+  - first:
+      213: 7212551453001153824
+    second: Calaveras_62
+  - first:
+      213: -779964157439385761
+    second: Calaveras_63
+  - first:
+      213: 4714092319785583711
+    second: Calaveras_64
+  - first:
+      213: -4417170122361610763
+    second: Calaveras_65
+  - first:
+      213: 4196857239049881301
+    second: Calaveras_66
+  - first:
+      213: 2239644470420002530
+    second: Calaveras_67
+  - first:
+      213: -8597319219629198430
+    second: Calaveras_68
+  - first:
+      213: -270842012930355810
+    second: Calaveras_69
+  - first:
+      213: 3640593997407138924
+    second: Calaveras_70
+  - first:
+      213: 780325953552690511
+    second: Calaveras_71
+  - first:
+      213: 3453577560207504266
+    second: Calaveras_72
+  - first:
+      213: -3133692431454666072
+    second: Calaveras_73
+  - first:
+      213: -8940907369730696095
+    second: Calaveras_74
+  - first:
+      213: -2948507117429327133
+    second: Calaveras_75
+  - first:
+      213: 2007116239647257852
+    second: Calaveras_76
+  - first:
+      213: 2167145345851884485
+    second: Calaveras_77
+  - first:
+      213: -600230121206412512
+    second: Calaveras_78
+  - first:
+      213: 5485590795172606165
+    second: Calaveras_79
+  - first:
+      213: -1631671035719394748
+    second: Calaveras_80
+  - first:
+      213: 353248529989827461
+    second: Calaveras_81
+  - first:
+      213: 4313259112895411087
+    second: Calaveras_82
+  - first:
+      213: -3437434303306123063
+    second: Calaveras_83
+  - first:
+      213: 3325896177472334399
+    second: Calaveras_84
+  - first:
+      213: -2539059310312745479
+    second: Calaveras_85
+  - first:
+      213: -8438919644834086769
+    second: Calaveras_86
+  - first:
+      213: -7934988596195584216
+    second: Calaveras_87
+  - first:
+      213: -6480236830230756500
+    second: Calaveras_88
+  - first:
+      213: -6009932739632867021
+    second: Calaveras_89
+  - first:
+      213: 8002914828251528724
+    second: Calaveras_90
+  - first:
+      213: -2709375826551201327
+    second: Calaveras_91
+  - first:
+      213: -2963783441036529507
+    second: Calaveras_92
+  - first:
+      213: -445458088443647074
+    second: Calaveras_93
+  - first:
+      213: -1706725146150822633
+    second: Calaveras_94
+  - first:
+      213: -2830074915371383273
+    second: Calaveras_95
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Calaveras_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 336
+        width: 25
+        height: 38
+      alignment: 9
+      pivot: {x: 0.5, y: 0.36842105}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b1cc71c1a921db469447cbb73382284
+      internalID: 1153937851952873910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 336
+        width: 25
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35897437}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d14d8e5047c898b469443156aeb2c6dc
+      internalID: -819674288940433163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_2
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 336
+        width: 25
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34146342}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a179dbf096d8b141b2355f832a5be52
+      internalID: 6943395695597103972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_3
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 336
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a51a8eb17e7ed84c9e39c74cff4576e
+      internalID: -5847443672184635055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_4
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 336
+        width: 25
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8112dee75e1a04b4eb1a7c321dd49a95
+      internalID: 3569357791834891273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_5
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 336
+        width: 25
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bccb9d9f0f686a64fa77761f105848f4
+      internalID: 7916272889735080337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_6
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 336
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36b4a3080f6afc947b8019566b7883af
+      internalID: 6002907853509918989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_7
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 336
+        width: 25
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8dd8d52402556543bd9191f0173ae72
+      internalID: -6761250189336164353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_8
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 336
+        width: 25
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b4cf68f241214e408fda63e2047cca4
+      internalID: 706040416912299460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_9
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 336
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27fca71e086fb274eb54e62bc9229a46
+      internalID: -4517966858257391963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_10
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 336
+        width: 25
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 492590aa40181b0499edb791e0d0450f
+      internalID: -3551171422920708114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_11
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 336
+        width: 25
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18970a70f1d51a743ad3885bb0eefc44
+      internalID: -8467425388375899979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_12
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 288
+        width: 25
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b97d42dfe87dc544bb712298e7c8cc8
+      internalID: 4009619420161163698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_13
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 288
+        width: 25
+        height: 36
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3888889}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb31c7233b3a0494aa41665b90e5a5f8
+      internalID: -7679085331004098649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_14
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 288
+        width: 25
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3783784}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9a9e5a1147f08244a18a8ceeed96038
+      internalID: -7966279743198462415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_15
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 288
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0bc55e067b6eb949acaef410015d57f
+      internalID: -4305710304968395829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_16
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 288
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc483b85f350d5e42bbdd449a1c90bc9
+      internalID: 6077751004352082606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_17
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 288
+        width: 25
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d01df1d3d610b614299a0a12ddffc5f6
+      internalID: -898689416637684313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_18
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 288
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 950bd8019d98aa8449b1ea16d41300d3
+      internalID: 2696760399708306273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_19
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 288
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42258623733b0fd4f89b6ee57172fc6f
+      internalID: -7821658398209131230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_20
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 288
+        width: 25
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea89e6fe699a364db5029454b2cfc12
+      internalID: -3721480216101899499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_21
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 288
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15d13a66167b434280024529b93bed5
+      internalID: 9161820631143052543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_22
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 288
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7401f766f70629341b5791886512fef4
+      internalID: -8767847054938361526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_23
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 288
+        width: 25
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36275c88970ae51448ec771e56463d80
+      internalID: -4740469519391909136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_24
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 240
+        width: 25
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1348163efdba88647b4a4c4b2330f50e
+      internalID: -6864099864332606246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_25
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 240
+        width: 25
+        height: 36
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3888889}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbcc48b78ef03404e811b3ca4bd84a50
+      internalID: -2108703679875032653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_26
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 240
+        width: 25
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3783784}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a6ef77e6f536c4abad58c2e36ddff5
+      internalID: 4617187842831612241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_27
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 240
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0572992c4835db74faec2d8fa8396a29
+      internalID: 908123662098028160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_28
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 240
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a72f6bd4646037442a362e7c7a118839
+      internalID: 1630434861273171875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_29
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 240
+        width: 25
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b42d107749f1cb43ab3716c541c2bf5
+      internalID: 8264495348106547969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_30
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 240
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8216a5c4b29d5b14abb7bb878e8654b8
+      internalID: 4497871715969223800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_31
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 240
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 223dbd0da0d1e5349b66ab4fdfd05ea1
+      internalID: -2618465202224810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_32
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 240
+        width: 25
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b23541c60e31914b87a14586ca85b79
+      internalID: 6182590304515077322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_33
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 240
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd543780e4725bc4cb055eb7ca85f5b3
+      internalID: 4520100896416775955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_34
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 240
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d86c0df7637e264da1f1a46e627e2c3
+      internalID: -1844990218685508272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_35
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 240
+        width: 25
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63a71415437bc494b96a1a5d578c2d62
+      internalID: -7282228162800230628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_36
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 192
+        width: 25
+        height: 38
+      alignment: 9
+      pivot: {x: 0.5, y: 0.36842105}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 934cc19ed7c793d4bafb019fa46d5bc3
+      internalID: 4315503731213009358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_37
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 192
+        width: 25
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35897437}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e80370dcea19ed6489942ae704211bdb
+      internalID: 5165307012263656675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_38
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 192
+        width: 25
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c7042c7a4650744dba2c8880f671fc8
+      internalID: 4443047709696483332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_39
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 205
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08d3ada71d1e40d4da4b077fd52bc124
+      internalID: -4168863801263026454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_40
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 205
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f9d5ed2dfbc0cd42a335cb9ecbd8834
+      internalID: 946399123404893077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_41
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 205
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da8d4b0db5bc148429269582bcaae40b
+      internalID: 6319469030881630150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_42
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 205
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47e8f4a1d4e16894686e2f07ff639dfb
+      internalID: 2304132431605946590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_43
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 205
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 857276fd2158a264eb95e76f747e0b4f
+      internalID: -898691619208749027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_44
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 205
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0bb4e9c92ab8bf40a6997fbdba27d70
+      internalID: -183025048646611458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_45
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 205
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0e6c52f73c3c8d429d4abf4dac9bead
+      internalID: -9167452334040388106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_46
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 205
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d743bac26e8f1f94db3947a3e4f8bb33
+      internalID: -2378402160475279894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_47
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 205
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f21f2bf712b9c24986e3121c6be6f7d
+      internalID: -2261962643774555050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_48
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 143
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebfae8edb300a764eb6bfbc1c3b2cd42
+      internalID: 5390609751393786717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_49
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 144
+        width: 28
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a8968bb1e6932247aa616b40dae19c6
+      internalID: 8325285427738909116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_50
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 144
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e891fd7936fb70459405cb6a09b713d
+      internalID: -895596224377562044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_51
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 143
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d776034f645bc74ebc0a73761e4d91b
+      internalID: -8572874303187479001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_52
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 144
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c17dd307ee124b4988be27b1533b891
+      internalID: 5378172885650639324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_53
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 144
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1430cf12c92e3514184aa2af018fdd1a
+      internalID: -7445902456909453351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_54
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 96
+        width: 34
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0789d3fa79bf0a04bbeb786c34a4de91
+      internalID: -4865683355373279407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_55
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 144
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 431942453e8f5a64c966e90e31d7d7e3
+      internalID: -7670786873549476318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_56
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 144
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc9484f0c777c9549864485cec3d6d66
+      internalID: 1366591110511487146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_57
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 96
+        width: 34
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2afadbfe4a239646bd379efb8f21d34
+      internalID: 8722215991174017409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_58
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 144
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 881b416fe23df31488b995c2fc3d2a49
+      internalID: 6041750254542705475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_59
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 144
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3e1c98ac13a5444a9c5072632e0ac51
+      internalID: 2075113127498220973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_60
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 135
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f145bf392d6b7c946adaa9a42a246c85
+      internalID: 8037128722046913296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_61
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 96
+        width: 33
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4579016446ff94888dd7d630c0bb70
+      internalID: -1343063798427009283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_62
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 134
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc2463400deaf540a90372cc8ab4b3f
+      internalID: 7212551453001153824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_63
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 40
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e37132433e43f41955fe2348ee6427
+      internalID: -779964157439385761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_64
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 135
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fa1d83e2d862ca4eab51f7c325e4a2f
+      internalID: 4714092319785583711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_65
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 96
+        width: 33
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b474d9880aedc43945478db88930ac
+      internalID: -4417170122361610763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_66
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 134
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bec52bcbd377765429ccfc19a864493d
+      internalID: 4196857239049881301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_67
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 0
+        width: 40
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e7b42c3faca384389c5e4bd52e3770
+      internalID: 2239644470420002530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_68
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 135
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23cbbf551d80a3d49afd69bbd657588c
+      internalID: -8597319219629198430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_69
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 96
+        width: 33
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3e216132c9f5f48aa142561a1caf75
+      internalID: -270842012930355810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_70
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 134
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ebeb53d4c2e704bacf6db8112aecdc
+      internalID: 3640593997407138924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_71
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 0
+        width: 40
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81f16756a11cc6340a7e79fb95e34adc
+      internalID: 780325953552690511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_72
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 135
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 917bcfd70dbe2af419d6d39c03ecf4a3
+      internalID: 3453577560207504266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_73
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 96
+        width: 33
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 813e1d6ed6267374994f3872761d6896
+      internalID: -3133692431454666072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_74
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 134
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cc9723c7eece2d488a7fbc6126ecf1b
+      internalID: -8940907369730696095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_75
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 0
+        width: 40
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd9c2c1645976554b99386f3671b5ca6
+      internalID: -2948507117429327133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_76
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 48
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8817b9ea0334ea54b9a980bff095e297
+      internalID: 2007116239647257852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_77
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 48
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f95a173f7da27d44840eb1d6f3208ad
+      internalID: 2167145345851884485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_78
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 87
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b1c1654c053dc5418a448cfed02f0c8
+      internalID: -600230121206412512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_79
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 48
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb5ab50718a779c439cd714105e2328c
+      internalID: 5485590795172606165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_80
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 48
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d2897ace66cb01438f7e2509b26dae9
+      internalID: -1631671035719394748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_81
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 87
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c6dfae5ee27b87419aede5955ddcc0a
+      internalID: 353248529989827461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_82
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 48
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90832d44963e0794db07cbd0015718c1
+      internalID: 4313259112895411087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_83
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 48
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e85c01fa22d74314db62d2d5be9c14ec
+      internalID: -3437434303306123063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_84
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 87
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76a384b5f2416cf489d0c20d0eb9a7e9
+      internalID: 3325896177472334399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_85
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 48
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e5c57cb668e65459dff5c187da9f1f
+      internalID: -2539059310312745479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_86
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 48
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e1d01aec4615734f9ee01af503337fe
+      internalID: -8438919644834086769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_87
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 87
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5352f0736f0c54140b1249c77f078762
+      internalID: -7934988596195584216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_88
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 28
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c69a8255bde38f240b85bef11ca49c6e
+      internalID: -6480236830230756500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_89
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 0
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c921aa367eece944810e2ff620887a0
+      internalID: -6009932739632867021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_90
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 0
+        width: 28
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36f5205cbd6eecd408d7f644d474e5bd
+      internalID: 8002914828251528724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_91
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 0
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3055a39eb105f4e4c823e8b4491b5427
+      internalID: -2709375826551201327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_92
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 0
+        width: 28
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47377faf26d909f4dbe5425e21b75f5f
+      internalID: -2963783441036529507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_93
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 0
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56eb9276956d2fa439f449843128f620
+      internalID: -445458088443647074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_94
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 0
+        width: 28
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b6c63d506150e488e918a6744bdcb7
+      internalID: -1706725146150822633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calaveras_95
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 0
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df6bfafe75f5806409b7f2b81df915ab
+      internalID: -2830074915371383273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
