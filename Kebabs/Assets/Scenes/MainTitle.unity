@@ -1397,6 +1397,7 @@ MonoBehaviour:
   GamePaused: 0
   LoseImage: {fileID: 0}
   VictoryImage: {fileID: 0}
+  PauseImage: {fileID: 0}
 --- !u!4 &1980624368
 Transform:
   m_ObjectHideFlags: 0

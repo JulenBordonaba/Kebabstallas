@@ -40,6 +40,8 @@ public class Oso : MonoBehaviour
 
     public GameObject fart;
 
+    
+
 
     class Location  //Nodo para el algoritmo de búsqueda
     {

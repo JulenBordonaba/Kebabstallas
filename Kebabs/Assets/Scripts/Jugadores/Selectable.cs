@@ -34,7 +34,7 @@ public class Selectable : MonoBehaviour {
         {
             case "Player":
                 {
-                    sr.color = sr.color = new Color32(255, 83, 83, 255);
+                    sr.color = new Color32(255, 83, 83, 255);
                     tag = "Enemy";
                     break;
                 }

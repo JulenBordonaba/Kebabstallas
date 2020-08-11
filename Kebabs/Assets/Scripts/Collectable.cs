@@ -111,6 +111,14 @@ public class Collectable : MonoBehaviour
                         {
                             GameObject Osito = Instantiate(Oso, transform.position, Quaternion.identity);
                             Osito.GetComponent<Oso>().opositeTag = other.GetComponent<Soldier>().opositeTag;
+                            if (other.GetComponent<Soldier>().opositeTag == "Player")
+                            {
+                                Osito.GetComponent<SpriteRenderer>().color = new Color32(255, 83, 83, 255);
+                            }
+                            else if(other.GetComponent<Soldier>().opositeTag == "Enemy")
+                            {
+                                Osito.GetComponent<SpriteRenderer>().color = new Color32(129, 255, 133, 255);
+                            }
                             Destroy(this.gameObject);
                             break;
                         }

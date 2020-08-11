@@ -1,0 +1,490 @@
+fileFormatVersion: 2
+guid: 9a97d179fce54db4d860ead43f592aa2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7626052770289959985
+    second: explosionMagiaAzul_0
+  - first:
+      213: 5901508864348808500
+    second: explosionMagiaAzul_1
+  - first:
+      213: -6304408206359170772
+    second: explosionMagiaAzul_2
+  - first:
+      213: 6233889879188013050
+    second: explosionMagiaAzul_3
+  - first:
+      213: 208199243520352298
+    second: explosionMagiaAzul_4
+  - first:
+      213: 2545048684069871597
+    second: explosionMagiaAzul_5
+  - first:
+      213: 5999303767414335220
+    second: explosionMagiaAzul_6
+  - first:
+      213: -2658419361943626184
+    second: explosionMagiaAzul_7
+  - first:
+      213: 2870801262553552708
+    second: explosionMagiaAzul_8
+  - first:
+      213: 558535503165666120
+    second: explosionMagiaAzul_9
+  - first:
+      213: -1825973283647034656
+    second: explosionMagiaAzul_10
+  - first:
+      213: -7432372125860055374
+    second: explosionMagiaAzul_11
+  - first:
+      213: 7728046257154413096
+    second: explosionMagiaAzul_12
+  - first:
+      213: -6548583768024013070
+    second: explosionMagiaAzul_13
+  - first:
+      213: -6347285570123483806
+    second: explosionMagiaAzul_14
+  - first:
+      213: -4162384308732209066
+    second: explosionMagiaAzul_15
+  - first:
+      213: 699441080874577928
+    second: explosionMagiaAzul_16
+  - first:
+      213: 5960918026252097951
+    second: explosionMagiaAzul_17
+  - first:
+      213: -8123368193239016065
+    second: explosionMagiaAzul_18
+  - first:
+      213: 3026461772367351733
+    second: explosionMagiaAzul_19
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: explosionMagiaAzul_0
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 436
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e8e8008070208c47ba2e6f367ab7e93
+      internalID: -7626052770289959985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionMagiaAzul_1
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 414
+        width: 72
+        height: 74
+      alignment: 9
+      pivot: {x: 0.4999998, y: 0.50995946}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46480756b82302c40875d62c46c5869b
+      internalID: 5901508864348808500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionMagiaAzul_2
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 396
+        width: 112
+        height: 112
+      alignment: 9
+      pivot: {x: 0.49999973, y: 0.50658035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58cc75bc4d485ec4fb837b17a4082598
+      internalID: -6304408206359170772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionMagiaAzul_3
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 400
+        width: 100
+        height: 104
+      alignment: 9
+      pivot: {x: 0.49262908, y: 0.51771694}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e583b9c83d5088c42827061f69220305
+      internalID: 6233889879188013050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionMagiaAzul_6
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 276
+        width: 100
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48157382, y: 0.5153548}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0082c5811d615843b962319bb17025a
+      internalID: 5999303767414335220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionMagiaAzul_7
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 276
+        width: 96
+        height: 99
+      alignment: 9
+      pivot: {x: 0.48757538, y: 0.49152166}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5826be4563854449878a715b66d3c77
+      internalID: -2658419361943626184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionMagiaAzul_9
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 276
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.48210847, y: 0.48210847}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd4683984a1f614aab4dc1fe0b90e16
+      internalID: 558535503165666120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionMagiaAzul_10
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 272
+        width: 100
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b073ef3984ff5d4bb0f32a46015d21d
+      internalID: -1825973283647034656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionMagiaAzul_12
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 144
+        width: 104
+        height: 104
+      alignment: 9
+      pivot: {x: 0.48853117, y: 0.49426535}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ce7f65183707fc42856e8af86a3596d
+      internalID: 7728046257154413096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionMagiaAzul_13
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 140
+        width: 100
+        height: 112
+      alignment: 9
+      pivot: {x: 0.52385545, y: 0.49999985}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7f3175e5e5d98f44947acc7fd571a2b
+      internalID: -6548583768024013070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionMagiaAzul_14
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 139
+        width: 108
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24d3ff59bdd4e0f4eb32b157f30283d3
+      internalID: -6347285570123483806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionMagiaAzul_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12
+        width: 112
+        height: 112
+      alignment: 9
+      pivot: {x: 0.47870067, y: 0.5159746}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 278c1d123c4d4924a80f9135d8d7e6d9
+      internalID: -4162384308732209066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionMagiaAzul_16
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 16
+        width: 100
+        height: 104
+      alignment: 9
+      pivot: {x: 0.48807237, y: 0.51146895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea61373299ce76948abef2982e15fd22
+      internalID: 699441080874577928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionMagiaAzul_17
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 20
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48136297, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f868ad0fac7c454fb3af0f650338fec
+      internalID: 5960918026252097951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionMagiaAzul_19
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 139
+        width: 108
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8690e4d8abbe994fbbd17ca0dc8c412
+      internalID: 3026461772367351733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

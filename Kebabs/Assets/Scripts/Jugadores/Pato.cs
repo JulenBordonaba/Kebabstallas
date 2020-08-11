@@ -62,7 +62,7 @@ public class Pato : MonoBehaviour
         anim = this.GetComponent<Animator>();
         sr = transform.GetComponent<SpriteRenderer>();
         bar = transform.Find("Bar");
-        opositeTag = "Untagged";
+        //opositeTag = "Untagged";
         transform.position = new Vector3(Mathf.RoundToInt(transform.position.x*10)*0.1f,Mathf.RoundToInt(transform.position.y * 10) * 0.1f);
         timer = 0;
     }
