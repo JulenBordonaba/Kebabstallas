@@ -474,16 +474,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f6d19f571acfe6438cb62dee2b508a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  map: []
   arma: {fileID: 0}
   sangre: {fileID: 1284217796436144, guid: fa6ad27a4c01595479b078e73176167f, type: 3}
   nota: {fileID: 1349014291828412, guid: 81be92be73c4cba4a8354aff56b4bf9a, type: 3}
+  riendo: 0
+  border: 0
   opositeTag: 
   debilidad: 1
   stats: {fileID: 6783077876037474059}
   direction: {x: 0, y: 0, z: 0}
   myType: 4
   effectManager: {fileID: 330980592670134192}
-  followEnemy: {fileID: 0}
+  followTarget: {fileID: 0}
   CampoLlanto: {fileID: 1265294634559328}
   lagrimas: {fileID: 1323688625554854}
 --- !u!114 &6783077876037474059
@@ -507,6 +510,8 @@ MonoBehaviour:
   baseAttackDamage: 0
   baseDamageReduction: 0
   speedReplace: -1
+  danger: 0.8
+  help: 1
 --- !u!114 &330980592670134192
 MonoBehaviour:
   m_ObjectHideFlags: 0

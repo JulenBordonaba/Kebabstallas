@@ -15,6 +15,8 @@ public class Stats : MonoBehaviour
     public float baseDamageReduction = 0;
 
     public float speedReplace = -1;
+    public float danger = 1;
+    public float help=1;
 
 
 

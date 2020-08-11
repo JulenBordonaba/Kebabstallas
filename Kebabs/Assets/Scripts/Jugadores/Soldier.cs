@@ -833,6 +833,60 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
         InvokeRepeating("Move", 1, 5f);
     }
 
+    public float Danger
+    {
+        get
+        {
+            float danger = 0;
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag(opositeTag);
+            foreach (GameObject enemy in enemies)
+            {
+                if (enemy.GetComponent<Soldier>())
+                {
+                    Soldier sold = enemy.GetComponent<Soldier>();
+                    if (Vector2.Distance(transform.position, enemy.transform.position) < sold.stats.AttackDistance)
+                    {
+                        danger += sold.stats.help;
+                    }
+                }
+
+            }
+            return danger;
+        }
+    }
+
+    public float Help
+    {
+        get
+        {
+            float help = 0;
+            GameObject[] allies = GameObject.FindGameObjectsWithTag(tag);
+            foreach(GameObject ally in allies)
+            {
+                if(ally.GetComponent<Soldier>())
+                {
+                    Soldier sold = ally.GetComponent<Soldier>();
+                    if(Vector2.Distance(transform.position,ally.transform.position)<(stats.AttackDistance+sold.stats.AttackDistance)*0.5f)
+                    {
+                        help += sold.stats.help;
+                    }
+                    
+                }
+                
+            }
+            return help;
+        }
+    }
+
+    public float DangerBalance
+    {
+        get
+        {
+            return Help - Danger;
+        }
+    }
+
+
 
 }
 

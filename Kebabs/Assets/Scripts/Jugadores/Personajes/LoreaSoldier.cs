@@ -128,10 +128,12 @@ public class LoreaSoldier : Soldier
         bool hayCerca = false;
         foreach (GameObject collectable in GameObject.FindGameObjectsWithTag("Consumable"))
         {
-
-            if (Vector2.Distance(transform.position, collectable.transform.position) < 0.8f)
+            if (collectable != null)
             {
-                hayCerca = true;
+                if (Vector2.Distance(transform.position, collectable.transform.position) < 0.8f)
+                {
+                    hayCerca = true;
+                }
             }
         }
 

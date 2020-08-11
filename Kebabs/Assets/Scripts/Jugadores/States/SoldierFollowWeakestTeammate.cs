@@ -52,7 +52,7 @@ public class SoldierFollowWeakestTeammate : SoldierState
 
                 float lostHealth = ((100 - s.stats.HealthPercentaje));
 
-                float allyHealHeuristic = s.riendo ? -1000 : (lostHealth == 0 ? -100 : (lostHealth - (soldier.A_estrella_Coste(initial, target).Count * 3)));
+                float allyHealHeuristic = s.riendo ? -1000 : (lostHealth == 0 ? -100 : (lostHealth - (soldier.A_estrella_Coste(initial, target).Count * 3)-Mathf.Max((s.DangerBalance-1)*30,0)));
 
                 if (allyHealHeuristic > currentHealHeuristic)
                 {

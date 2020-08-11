@@ -280,6 +280,8 @@ MonoBehaviour:
   baseAttackDamage: 6
   baseDamageReduction: 0
   speedReplace: -1
+  danger: 2
+  help: 1
 --- !u!114 &8915747588165320005
 MonoBehaviour:
   m_ObjectHideFlags: 0
