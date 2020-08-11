@@ -58,11 +58,11 @@ public class EffectManager : MonoBehaviour
             {
                 effectAudioSource.PlayOneShot(_ed.effectClip);
             }
-            print("resetea tiempo");
+            //print("resetea tiempo");
         }
         else
         {
-            print("new effect");
+            //print("new effect");
             activeEffects.Add(ed);
             ed.dot.dotEffect = StartCoroutine(DOTEffect(ed.dot));
             EffectIcon icon = CreateIcon(ed);
@@ -128,7 +128,7 @@ public class EffectManager : MonoBehaviour
     //[PunRPC]
     public void StopEffect(string ed)
     {
-        print("Para el efecto");
+        //print("Para el efecto");
         if (CheckEffect(ed))
         {
             EffectData _ed = GetActiveEffectByID(ed);
@@ -160,7 +160,7 @@ public class EffectManager : MonoBehaviour
     //[PunRPC]
     public void StopPermanentEffect(string ed)
     {
-        print("Para el efecto");
+        //print("Para el efecto");
         if (CheckEffect(ed))
         {
             EffectData _ed = GetActiveEffectByID(ed);

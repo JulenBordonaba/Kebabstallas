@@ -584,6 +584,13 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
 
 
             var adjacentSquares = GetWalkableAdjacentSquares(current.X, current.Y, map);
+
+            if (adjacentSquares == null)
+            {
+                print("ATENCION, SI SALE ESTO ES POSIBLE QUE EL CORRECTOR DE BUG DE QUE NO SE SALGAN DEL MAPA NO VAYA BIEN");
+                return new Location { X = 10, Y = 10 };
+            }
+
             foreach (var adjacentSquare in adjacentSquares)
             {
                 // if this adjacent square is already in the closed list, ignore it
@@ -794,6 +801,10 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
 
         foreach (Location l in proposedLocations)
         {
+            if (l.X < 0 || l.X >20 || l.Y < 0 || l.Y > 20)
+            {
+                return null;
+            }
             if (map[l.X][l.Y] == 'X')
             {
                 aux.Add(l);

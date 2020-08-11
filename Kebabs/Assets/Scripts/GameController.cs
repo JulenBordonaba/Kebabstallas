@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour {
     public bool GamePaused = false;
     public GameObject LoseImage;    //Pantalla de derrota
     public GameObject VictoryImage; //Pantalla de victoria
+    public GameObject PauseImage; //Pantalla de pausa
     public static int[] levels = new int[20];
 
     public static UnityEvent OnCollectablePlaced = new UnityEvent();
@@ -121,13 +122,15 @@ public class GameController : MonoBehaviour {
 
     public void Resume()
     {
-        //PausedMenuUI.SetActive(false);
+        if (PauseImage)
+            PauseImage.SetActive(false);
         Time.timeScale = 1f;
         GamePaused = false;
     }
 
-    void Pause()
+    public void Pause()
     {
+        PauseImage.SetActive(true);
         Time.timeScale = 0f;
         GamePaused = true;
     }

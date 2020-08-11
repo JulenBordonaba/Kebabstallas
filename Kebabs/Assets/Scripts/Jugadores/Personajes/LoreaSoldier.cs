@@ -46,7 +46,7 @@ public class LoreaSoldier : Soldier
     public override void StateMachineLogic()
     {
 
-        print("StateMachineLogic");
+        //print("StateMachineLogic");
         followTarget = null;
 
         if (CheckNearConsumables())

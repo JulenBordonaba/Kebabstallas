@@ -10,6 +10,7 @@ public class Collectable : MonoBehaviour
     private bool exploting = false;
     public EffectData myEffect;
     public GameObject Oso;
+    private float timer = 0;
     public enum Type
     { EXPLOSION, VIDA, VELOCIDAD, RALENTIZADOR, ESCUDO, MINIOM, PETRIFICACION, ATAQUE };
 
@@ -22,11 +23,20 @@ public class Collectable : MonoBehaviour
     {
 
     }
+    
+    void Awake()
+    {
+        timer = 0.0f;
+    }
 
     // Update is called once per frame
     void Update()
     {
-
+        timer += Time.deltaTime;
+        if (timer > 25f)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     private IEnumerator Explode()

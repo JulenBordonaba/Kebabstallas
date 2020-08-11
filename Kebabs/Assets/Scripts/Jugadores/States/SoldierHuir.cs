@@ -167,10 +167,10 @@ public class SoldierHuir : SoldierState
 
                 if (CheckPeligro(enemies, bestPath))
                 {
-                    Debug.Log("Hay peligro");
+                    //Debug.Log("Hay peligro");
                     if (nearestEnemyDistance > maxDistSiHayPeligro)
                     {
-                        Debug.Log("Asigna bestPathSiHayPeligro");
+                        //Debug.Log("Asigna bestPathSiHayPeligro");
                         maxDistSiHayPeligro = nearestEnemyDistance;
                         bestPlaceSiHayPeligro = location;
                     }
@@ -178,7 +178,7 @@ public class SoldierHuir : SoldierState
                 }
                 else
                 {
-                    Debug.Log("No hay peligro");
+                    //Debug.Log("No hay peligro");
                     if (nearestEnemyDistance > maxDist)
                     {
                         maxDist = nearestEnemyDistance;
@@ -191,18 +191,18 @@ public class SoldierHuir : SoldierState
         {
             if (bestPlaceSiHayPeligro == null)
             {
-                Debug.Log("No hay sitio seguro");
+                //Debug.Log("No hay sitio seguro");
                 return null;
             }
             else
             {
-                Debug.Log("Hay sitio con peligro en el camino");
+                //Debug.Log("Hay sitio con peligro en el camino");
                 return bestPlaceSiHayPeligro;
             }
         }
         else
         {
-            Debug.Log("Hay sitio con camino seguro");
+            //Debug.Log("Hay sitio con camino seguro");
             return bestPlace;
         }
     }
