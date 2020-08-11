@@ -177,18 +177,20 @@ public class LoreaSoldier : Soldier
                 Collectable collectable = consumable.GetComponent<Collectable>();
                 if (collectable.myType != Collectable.Type.PETRIFICACION)
                 {
-
-
-                    try
+                    if (!(collectable.myType == Collectable.Type.EXPLOSION && collectable.NearestSoldier.tag == opositeTag))
                     {
-                        if (Vector2.Distance(transform.position, collectable.transform.position) < 0.8f)
+
+                        try
                         {
-                            hayCerca = true;
+                            if (Vector2.Distance(transform.position, collectable.transform.position) < 0.8f)
+                            {
+                                hayCerca = true;
+                            }
                         }
-                    }
-                    catch
-                    {
+                        catch
+                        {
 
+                        }
                     }
                 }
                 

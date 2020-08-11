@@ -161,4 +161,27 @@ public class Collectable : MonoBehaviour
             }
         }
     }
+
+    public Soldier NearestSoldier
+    {
+        get
+        {
+            Soldier[] soldiers = GameObject.FindObjectsOfType<Soldier>();
+
+            Soldier nearestSoldier = null;
+            float minDist = float.MaxValue;
+
+            foreach (Soldier soldier in soldiers)
+            {
+                float dist = Vector2.Distance(transform.position, soldier.transform.position);
+                if (dist < minDist)
+                {
+                    minDist = dist;
+                    nearestSoldier = soldier;
+                }
+            }
+
+            return nearestSoldier;
+        }
+    }
 }
