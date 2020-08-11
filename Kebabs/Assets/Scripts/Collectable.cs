@@ -34,6 +34,7 @@ public class Collectable : MonoBehaviour
     {
         transform.GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(100 - transform.position.y * 20 + 1);
         timer += Time.deltaTime;
+        print(myType + " " + NearestSoldier.tag);
         if (timer > 25f)
         {
             Destroy(this.gameObject);

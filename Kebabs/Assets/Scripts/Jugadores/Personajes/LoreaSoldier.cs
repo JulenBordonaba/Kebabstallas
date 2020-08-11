@@ -120,26 +120,34 @@ public class LoreaSoldier : Soldier
                         }
                         else
                         {
-                            foreach (GameObject ally in allies)
+                            if(allies.Length>0)
                             {
-                                try
+                                foreach (GameObject ally in allies)
                                 {
-                                    float allyDistance = Vector2.Distance(transform.position, collectable.transform.position);
-                                    if (allyDistance < 1.8f)
+                                    try
                                     {
-                                        SetState(new SoldierFollowWeakestTeammate(this));
+                                        float allyDistance = Vector2.Distance(transform.position, collectable.transform.position);
+                                        if (allyDistance < 1.8f)
+                                        {
+                                            SetState(new SoldierFollowWeakestTeammate(this));
+                                        }
+                                        else
+                                        {
+                                            SetState(new SoldierHuir(this));
+                                        }
                                     }
-                                    else
+                                    catch
                                     {
                                         SetState(new SoldierHuir(this));
                                     }
+
                                 }
-                                catch
-                                {
-                                    SetState(new SoldierHuir(this));
-                                }
-                                
                             }
+                            else
+                            {
+                                SetState(new SoldierHuir(this));
+                            }
+                            
                         }
                     }
                 }
