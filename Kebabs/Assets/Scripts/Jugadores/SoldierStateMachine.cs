@@ -9,6 +9,7 @@ public class SoldierStateMachine : MonoBehaviour
     public void SetState(SoldierState _state)
     {
         state = _state;
+        if(state!=null)
         StartCoroutine(state.Start());
     }
 

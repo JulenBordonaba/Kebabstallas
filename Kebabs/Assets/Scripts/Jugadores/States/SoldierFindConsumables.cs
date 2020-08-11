@@ -19,7 +19,7 @@ public class SoldierFindConsumables : SoldierState
             yield break;
         }
 
-        GameObject nearestCollectable = consumables[0];
+        GameObject nearestCollectable = null;
         float nearestDistace = float.MaxValue;
 
         foreach (GameObject collectable in consumables)
@@ -35,6 +35,7 @@ public class SoldierFindConsumables : SoldierState
                         nearestDistace = dist;
                         nearestCollectable = collectable;
                     }
+
                 }
                 
             }
@@ -43,7 +44,7 @@ public class SoldierFindConsumables : SoldierState
         GameController.OnCollectablePlaced.AddListener(ChangeState);
         Collectable.OnCollectableCollected.AddListener(ChangeState);
         Soldier.OnDamageDealed.AddListener(ChangeState);
-
+        
         soldier.followTarget = nearestCollectable;
 
     }

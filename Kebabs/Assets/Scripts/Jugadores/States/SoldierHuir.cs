@@ -40,6 +40,7 @@ public class SoldierHuir : SoldierState
         //}
         GameController.OnCollectablePlaced.AddListener(ChangeState);
         Collectable.OnCollectableCollected.AddListener(ChangeState);
+        Soldier.OnDamageDealed.AddListener(ChangeState);
     }
 
     public override void Update()
@@ -256,6 +257,7 @@ public class SoldierHuir : SoldierState
     {
         GameController.OnCollectablePlaced.RemoveListener(ChangeState);
         Collectable.OnCollectableCollected.RemoveListener(ChangeState);
+        Soldier.OnDamageDealed.RemoveListener(ChangeState);
     }
 
 }

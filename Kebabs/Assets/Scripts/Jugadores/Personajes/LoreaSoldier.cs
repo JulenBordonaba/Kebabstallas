@@ -5,6 +5,13 @@ using UnityEngine;
 public class LoreaSoldier : Soldier
 {
 
+
+    protected override void Start()
+    {
+        base.Start();
+        InvokeRepeating("GoForConsumable", 0.1f, 1f);
+    }
+
     protected override void Update()
     {
         base.Update();
@@ -16,6 +23,19 @@ public class LoreaSoldier : Soldier
         //    print(followTarget);
         //else
         //    print("No tengo followTarget");
+
+        if(state==null)
+        {
+            StateMachineLogic();
+        }
+    }
+
+    public void GoForConsumable()
+    {
+        if(CheckNearConsumables())
+        {
+            SetState(new SoldierFindConsumables(this));
+        }
     }
 
     public override void Attack()
@@ -85,7 +105,7 @@ public class LoreaSoldier : Soldier
                                 foreach (GameObject ally in allies)
                                 {
                                     float allyDistance = Vector2.Distance(transform.position, collectable.transform.position);
-                                    if (allyDistance < 0.8f)
+                                    if (allyDistance < 1.8f)
                                     {
                                         SetState(new SoldierFollowWeakestTeammate(this));
                                     }
@@ -96,6 +116,29 @@ public class LoreaSoldier : Soldier
                                 }
                             }
 
+                        }
+                        else
+                        {
+                            foreach (GameObject ally in allies)
+                            {
+                                try
+                                {
+                                    float allyDistance = Vector2.Distance(transform.position, collectable.transform.position);
+                                    if (allyDistance < 1.8f)
+                                    {
+                                        SetState(new SoldierFollowWeakestTeammate(this));
+                                    }
+                                    else
+                                    {
+                                        SetState(new SoldierHuir(this));
+                                    }
+                                }
+                                catch
+                                {
+                                    SetState(new SoldierHuir(this));
+                                }
+                                
+                            }
                         }
                     }
                 }
@@ -126,14 +169,28 @@ public class LoreaSoldier : Soldier
     public bool CheckNearConsumables()
     {
         bool hayCerca = false;
-        foreach (GameObject collectable in GameObject.FindGameObjectsWithTag("Consumable"))
+        foreach (GameObject consumable in GameObject.FindGameObjectsWithTag("Consumable"))
         {
-            if (collectable != null)
+            if (consumable != null)
             {
-                if (Vector2.Distance(transform.position, collectable.transform.position) < 0.8f)
+                Collectable collectable = consumable.GetComponent<Collectable>();
+                if (collectable.myType != Collectable.Type.PETRIFICACION)
                 {
-                    hayCerca = true;
+
+
+                    try
+                    {
+                        if (Vector2.Distance(transform.position, collectable.transform.position) < 0.8f)
+                        {
+                            hayCerca = true;
+                        }
+                    }
+                    catch
+                    {
+
+                    }
                 }
+                
             }
         }
 
