@@ -16,7 +16,9 @@ public class Pato : MonoBehaviour
 
     private GameObject targetEnemy;
 
-    public float vida = 30f;
+    public float maxVida = 20f;
+
+    public float vida = 20f;
 
     public string opositeTag;
 
@@ -105,11 +107,9 @@ public class Pato : MonoBehaviour
                 Y = Mathf.Clamp(Mathf.RoundToInt(targetEnemy.transform.position.y * 10), 1, 19)
             };
         }
-
-
         
 
-        if (vida == 0)
+        if (vida <= 0)
         {
             Die();
         }
@@ -235,7 +235,7 @@ public class Pato : MonoBehaviour
             vida = 0;
         }
         sr.color = new Color32(255, 83, 83, 255);
-        SetHealthBarSize(vida * 0.01f);
+        SetHealthBarSize(vida / maxVida);
         StartCoroutine(RecuperarColor(0.2f));
     }
 
