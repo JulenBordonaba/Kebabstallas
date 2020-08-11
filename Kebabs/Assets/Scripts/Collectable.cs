@@ -32,6 +32,7 @@ public class Collectable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(100 - transform.position.y * 20 + 1);
         timer += Time.deltaTime;
         if (timer > 25f)
         {
@@ -57,9 +58,15 @@ public class Collectable : MonoBehaviour
 
     private IEnumerator SubeAtaque()
     {
-        exploting = true;
         this.GetComponent<Animator>().SetBool("Recolectada", true);
         yield return new WaitForSeconds(0.95f);
+        Destroy(this.gameObject);
+    }
+
+    private IEnumerator Velocidad()
+    {
+        this.GetComponent<Animator>().SetBool("Recolectada", true);
+        yield return new WaitForSeconds(1f);
         Destroy(this.gameObject);
     }
 
@@ -87,7 +94,9 @@ public class Collectable : MonoBehaviour
                         {
                             //StartCoroutine(other.GetComponent<Soldier>().OriginalColorChange( Color.yellow));
                             other.GetComponent<EffectManager>().StartEffect(myEffect.id);
-                            Destroy(this.gameObject);
+                            transform.parent = other.transform;
+                            transform.position = transform.parent.position;
+                            StartCoroutine("Velocidad");
                             break;
                         }
                     case Type.RALENTIZADOR:

@@ -38,6 +38,8 @@ public class Pato : MonoBehaviour
 
     GameController GC;
 
+    public float TiempoVida;
+
     bool blinking = false;
 
 
@@ -85,10 +87,10 @@ public class Pato : MonoBehaviour
             }
         }
         timer += Time.deltaTime;
-        if (timer > 10)
+        if (timer > TiempoVida)
         {
             StartCoroutine("Explode");
-        }else if(timer > 8.5 && !blinking)
+        }else if(timer > TiempoVida - 1.5f && !blinking)
         {
             blinking = true;
             StartCoroutine("Blink");
@@ -220,7 +222,6 @@ public class Pato : MonoBehaviour
     {
         Destroy(this.gameObject);
     }
-
 
     public void SetHealthBarSize(float sizeNormalized)
     {

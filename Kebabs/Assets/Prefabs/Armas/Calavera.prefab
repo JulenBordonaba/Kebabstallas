@@ -132,11 +132,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 872f04a4701824b44be7c18d481b02b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxVida: 20
   vida: 20
   opositeTag: 
   "da\xF1o": 20
   defensa: 1
   speed: 0.15
+  TiempoVida: 10
 --- !u!54 &344029620986250773
 Rigidbody:
   m_ObjectHideFlags: 0

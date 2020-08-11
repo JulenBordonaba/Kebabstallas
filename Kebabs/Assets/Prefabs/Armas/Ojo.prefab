@@ -323,12 +323,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 872f04a4701824b44be7c18d481b02b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxVida: 20
-  vida: 20
+  maxVida: 10
+  vida: 10
   opositeTag: Player
   "da\xF1o": 20
   defensa: 1
   speed: 0.15
+  TiempoVida: 15
 --- !u!54 &5490005287781945042
 Rigidbody:
   m_ObjectHideFlags: 0
