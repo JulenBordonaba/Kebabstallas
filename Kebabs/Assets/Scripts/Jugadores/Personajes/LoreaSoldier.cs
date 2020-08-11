@@ -128,7 +128,7 @@ public class LoreaSoldier : Soldier
         bool hayCerca = false;
         foreach (GameObject collectable in GameObject.FindGameObjectsWithTag("Consumable"))
         {
-            
+
             if (Vector2.Distance(transform.position, collectable.transform.position) < 0.8f)
             {
                 hayCerca = true;
@@ -160,6 +160,7 @@ public class LoreaSoldier : Soldier
 
     private void OnDestroy()
     {
-        state.UnsubscribeFromEvents();
+        if (state != null)
+            state.UnsubscribeFromEvents();
     }
 }
