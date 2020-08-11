@@ -24,7 +24,7 @@ public class LoreaSoldier : Soldier
         //else
         //    print("No tengo followTarget");
 
-        if(state==null)
+        if(state==null && CompareTag("Enemy"))
         {
             StateMachineLogic();
         }
@@ -32,6 +32,7 @@ public class LoreaSoldier : Soldier
 
     public void GoForConsumable()
     {
+        if (!CompareTag("Enemy")) return;
         if(CheckNearConsumables())
         {
             SetState(new SoldierFindConsumables(this));
