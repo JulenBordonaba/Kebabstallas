@@ -24,14 +24,14 @@ public class Nota : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        sr.sortingOrder = Mathf.RoundToInt(100 - transform.position.y * 20);
+        sr.sortingOrder = Mathf.RoundToInt(100 - transform.position.y * 20 );
         timer += Time.deltaTime;
         if (timer > 0.6f)
         {
             Destroy(this.gameObject);
         }
 
-        transform.Translate(Vector2.up * speed);
+        transform.Translate(Vector2.up * speed * 50 * Time.deltaTime);
 
     }
 

@@ -15,7 +15,7 @@ public class Llama : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.RotateAround(transform.parent.position, Vector3.back, 3f);
+        transform.RotateAround(transform.parent.position, Vector3.back, 150f * Time.deltaTime);
         transform.rotation = Quaternion.Euler(Vector3.zero);
     }
 

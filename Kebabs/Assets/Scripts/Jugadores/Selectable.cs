@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Selectable : MonoBehaviour {
-
-    private int team = 0;
+    
     private SpriteRenderer sr;
     public int myNumber;
 
@@ -30,21 +29,16 @@ public class Selectable : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        team ++;
-        if (team == 3)
-        {
-            team = 0;
-        }
 
-        switch (team)
+        switch (tag)
         {
-            case 2:
+            case "Player":
                 {
                     sr.color = sr.color = new Color32(255, 83, 83, 255);
                     tag = "Enemy";
                     break;
                 }
-            case 1:
+            case "Selectable":
                 {
                     sr.color = new Color32(129, 255, 133, 255);
                     tag = "Player";
