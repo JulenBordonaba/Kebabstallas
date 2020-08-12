@@ -27,7 +27,15 @@ public class BossCalavera : MonoBehaviour
 
     private bool puedeLanzarOjos = false;
 
+    Camera camara;
+
+    GameController GC;
+
     private float timer;
+
+    private float MagiaTimer;
+
+    public bool HazMagia = false;
 
     //private Transform bar;
 
@@ -40,14 +48,18 @@ public class BossCalavera : MonoBehaviour
     private void Awake()
     {
         InvokeRepeating("LanzarOjo", 1f, 4f);
-        
-    
+        GC = FindObjectOfType<GameController>();
     }
 
     // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
+
+        if (HazMagia)
+        {
+            MagiaAnim();
+        }
 
         map = FindObjectOfType<GameController>().GetMap();
 
@@ -80,6 +92,8 @@ public class BossCalavera : MonoBehaviour
                     if (timer > 5f)
                     {
                         Instantiate(Magia, transform.position, Quaternion.identity);
+                        HazMagia = true;
+                        AudioManager.PlaySound(AudioManager.Sound.MAGIAAZUL);
                         timer = 0f;
                         miAtaque = Ataque.NONE;
                         StartCoroutine("ChooseAttack");
@@ -111,6 +125,30 @@ public class BossCalavera : MonoBehaviour
         }
     }
 
+    private void MagiaAnim()
+    {
+        MagiaTimer += Time.deltaTime;
+        if (MagiaTimer < 0.5f)
+        {
+            float t = MagiaTimer / 0.5f;
+            GC.MainCamera.transform.parent.position = Vector3.Lerp(Vector3.one, transform.position + Vector3.up * 0.1f, t);
+            GC.MainCamera.GetComponent<Camera>().orthographicSize = 1f - t / 2;
+        }
+        else if (MagiaTimer <= 2 && MagiaTimer > 1.5f)
+        {
+            float t = (MagiaTimer - 1.5f) / 0.5f;
+            GC.MainCamera.transform.parent.position = Vector3.Lerp(transform.position + Vector3.up * 0.1f, Vector3.one, t);
+            GC.MainCamera.GetComponent<Camera>().orthographicSize = 0.5f + t / 2;
+        }
+        else if (MagiaTimer > 2)
+        {
+            GC.MainCamera.transform.parent.position = Vector3.one;
+            GC.MainCamera.GetComponent<Camera>().orthographicSize = 1;
+            MagiaTimer = 0;
+            HazMagia = false;
+        }
+    }
+
     private IEnumerator ChooseAttack()
     {
         yield return new WaitForSeconds(3f);
@@ -124,6 +162,7 @@ public class BossCalavera : MonoBehaviour
         else if (Rand < 0.5f)
         {
             miAtaque = Ataque.MAGIA;
+            
             anim.SetInteger("Ataque", 0);
         }
         else if (Rand < 0.8f)
@@ -154,8 +193,12 @@ public class BossCalavera : MonoBehaviour
             GameObject meteorito = Instantiate(Meteorito, new Vector2(Random.Range(3, 17) / 10f, Random.Range(3, 17) / 10f), Quaternion.identity);
             meteorito.GetComponent<Meteorito>().targetTag = opositeTag;
         }
+        GC.MainCamera.GetComponent<Animator>().SetTrigger("Meteoritos");
+
         yield return null;
     }
+
+
 
     /*private void Die()
     {

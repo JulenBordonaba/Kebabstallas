@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour {
     public GameObject VictoryImage; //Pantalla de victoria
     public GameObject PauseImage; //Pantalla de pausa
     public static int[] levels = new int[20];
+    public Camera MainCamera;
 
     public static UnityEvent OnCollectablePlaced = new UnityEvent();
 

@@ -11,6 +11,7 @@ public class Collectable : MonoBehaviour
     public EffectData myEffect;
     public GameObject Oso;
     private float timer = 0;
+    private bool CanSound = true;
     public enum Type
     { EXPLOSION, VIDA, VELOCIDAD, RALENTIZADOR, ESCUDO, MINIOM, PETRIFICACION, ATAQUE };
 
@@ -59,6 +60,11 @@ public class Collectable : MonoBehaviour
 
     private IEnumerator SubeAtaque()
     {
+        if (CanSound)
+        {
+            CanSound = false;
+            AudioManager.PlaySound(AudioManager.Sound.ATAQUEUP);
+        }
         this.GetComponent<Animator>().SetBool("Recolectada", true);
         yield return new WaitForSeconds(0.95f);
         Destroy(this.gameObject);
@@ -66,6 +72,11 @@ public class Collectable : MonoBehaviour
 
     private IEnumerator Velocidad()
     {
+        if (CanSound)
+        {
+            CanSound = false;
+            AudioManager.PlaySound(AudioManager.Sound.VELOCIDAD);
+        }
         this.GetComponent<Animator>().SetBool("Recolectada", true);
         yield return new WaitForSeconds(1f);
         Destroy(this.gameObject);

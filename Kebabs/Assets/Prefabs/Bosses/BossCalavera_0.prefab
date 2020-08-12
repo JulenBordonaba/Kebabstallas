@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1250806554}
   - component: {fileID: 1250806559}
   - component: {fileID: 5073081050825843773}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BossCalavera_0
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1239150264449442731}
   - component: {fileID: 1325451334972674507}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -264,7 +264,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6084713668816498022}
   - component: {fileID: 998902351964097161}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8524336551863702643}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,7 +375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6663765000617047035}
   - component: {fileID: 8386662130629431043}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: border
   m_TagString: Untagged
   m_Icon: {fileID: 0}

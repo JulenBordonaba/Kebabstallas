@@ -36,7 +36,7 @@ public class Pato : MonoBehaviour
 
     private float timer;
 
-    private Vector2 direction = Vector2.zero;//Direccion del fantasma
+    public Vector2 direction = Vector2.zero;//Direccion del fantasma
 
     GameController GC;
 

@@ -7,6 +7,7 @@ public class Señal : MonoBehaviour {
     public string targetTag;
     public float daño = 5;
     float timer;
+    bool CanSound = true;
     private SpriteRenderer sr;
     // Use this for initialization
     void Start()
@@ -31,6 +32,11 @@ public class Señal : MonoBehaviour {
         }else if (timer > 0.3f)
         {
             GetComponent<BoxCollider>().enabled = true;
+            if (CanSound)
+            {
+                AudioManager.PlaySound(AudioManager.Sound.CARTEL);
+                CanSound = false;
+            }
         }
     }
 

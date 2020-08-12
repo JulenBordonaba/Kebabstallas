@@ -8,6 +8,7 @@ public class BombaCorazon : MonoBehaviour {
     public float daño = 30;
     private SpriteRenderer sr;
     private float timer = 0;
+    private bool CanSound = true;
 
     public Vector3 start;
     public Vector3 targetPos;
@@ -42,6 +43,11 @@ public class BombaCorazon : MonoBehaviour {
             else if (timer > 1.5)
             {
                 GetComponent<BoxCollider>().enabled = true;
+                if (CanSound)
+                {
+                    AudioManager.PlaySound(AudioManager.Sound.BOMBACORAZON);
+                    CanSound = false;
+                }
             }
         }
         else

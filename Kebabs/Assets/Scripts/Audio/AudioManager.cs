@@ -11,7 +11,12 @@ public static class AudioManager
         EXPLOSIONPATO,
         RAYONEGRO,
         HUESO,
-        RISA
+        RISA,
+        CARTEL,
+        MAGIAAZUL,
+        BOMBACORAZON,
+        VELOCIDAD,
+        ATAQUEUP
     }
 
     
