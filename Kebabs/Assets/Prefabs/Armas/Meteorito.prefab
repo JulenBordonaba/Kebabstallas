@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTag: Player
-  "da\xF1o": 30
+  "da\xF1o": 60
 --- !u!65 &1366363331965028795
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60,8 +60,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 0.55855834, y: 0.5490016, z: 5.52}
-  m_Center: {x: 0.0057342052, y: -0.003191173, z: 4.25}
+  m_Size: {x: 0.536659, y: 0.48741233, z: 23.690002}
+  m_Center: {x: 0.011091113, y: -0.0052761436, z: 4.25}
 --- !u!54 &1366363331965028792
 Rigidbody:
   m_ObjectHideFlags: 0

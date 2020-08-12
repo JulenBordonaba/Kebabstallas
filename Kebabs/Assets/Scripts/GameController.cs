@@ -114,7 +114,7 @@ public class GameController : MonoBehaviour {
             Y = Random.Range(1, 19);
         }
 
-        GameObject Collectable = Instantiate(Collectables[Random.Range(0, Collectables.Length)]);
+        GameObject Collectable = Instantiate(Collectables[0/*Random.Range(0, Collectables.Length)*/]);
         Collectable.transform.position = new Vector2(X/10f, Y/10f);
         OnCollectablePlaced.Invoke();
 

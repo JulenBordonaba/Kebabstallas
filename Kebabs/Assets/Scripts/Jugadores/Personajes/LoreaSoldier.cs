@@ -157,14 +157,15 @@ public class LoreaSoldier : Soldier
                 //SetState(new SoldierFollowWeakestTeammate(this));
                 if (AllAlliesHealed)
                 {
-                    if (GameObject.FindGameObjectsWithTag("Consumable").Length > 0)
-                    {
-                        SetState(new SoldierFindConsumables(this));
-                    }
-                    else
-                    {
-                        SetState(new SoldierHuir(this));
-                    }
+                    SetState(new SoldierHuir(this));
+                    //if (GameObject.FindGameObjectsWithTag("Consumable").Length > 0)
+                    //{
+                    //    //SetState(new SoldierFindConsumables(this));
+                    //}
+                    //else
+                    //{
+
+                    //}
                 }
                 else
                 {
@@ -177,7 +178,6 @@ public class LoreaSoldier : Soldier
 
     public bool CheckNearConsumables()
     {
-        bool hayCerca = false;
         foreach (GameObject consumable in GameObject.FindGameObjectsWithTag("Consumable"))
         {
             if (consumable != null)
@@ -187,12 +187,11 @@ public class LoreaSoldier : Soldier
                 {
                     if (!(collectable.myType == Collectable.Type.EXPLOSION && collectable.NearestSoldier.tag == opositeTag))
                     {
-
                         try
                         {
                             if (Vector2.Distance(transform.position, collectable.transform.position) < 0.8f)
                             {
-                                hayCerca = true;
+                                return true;
                             }
                         }
                         catch
@@ -200,12 +199,13 @@ public class LoreaSoldier : Soldier
 
                         }
                     }
+                    
                 }
                 
             }
         }
 
-        return hayCerca;
+        return false;
     }
 
     public bool AllAlliesHealed

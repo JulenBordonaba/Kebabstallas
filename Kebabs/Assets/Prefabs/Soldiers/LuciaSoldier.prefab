@@ -357,7 +357,7 @@ MonoBehaviour:
   baseSpeed: 0.3
   baseAttackSpeed: 2.5
   baseAttackDistance: 0.5
-  baseAttackDamage: 10
+  baseAttackDamage: 25
   baseDamageReduction: 0
   speedReplace: -1
   danger: 1

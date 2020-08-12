@@ -40,8 +40,8 @@ public class BossCalavera : MonoBehaviour
     private void Awake()
     {
         InvokeRepeating("LanzarOjo", 1f, 4f);
-        //sr = transform.GetComponent<SpriteRenderer>();
-        //bar = transform.Find("Bar");
+        
+    
     }
 
     // Update is called once per frame
@@ -148,12 +148,11 @@ public class BossCalavera : MonoBehaviour
 
     private IEnumerator Meteoritos()
     {
-        for (int i = 0; i < 6; i += 1)
+        for (int i = 0; i < 8; i += 1)
         {
             yield return new WaitForSeconds(0.2f);
             GameObject meteorito = Instantiate(Meteorito, new Vector2(Random.Range(3, 17) / 10f, Random.Range(3, 17) / 10f), Quaternion.identity);
-            Meteorito miMeteorito = meteorito.GetComponent<Meteorito>();
-            miMeteorito.targetTag = opositeTag;
+            meteorito.GetComponent<Meteorito>().targetTag = opositeTag;
         }
         yield return null;
     }

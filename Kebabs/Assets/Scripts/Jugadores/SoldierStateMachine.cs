@@ -10,7 +10,15 @@ public class SoldierStateMachine : MonoBehaviour
     {
         state = _state;
         if(state!=null)
-        StartCoroutine(state.Start());
+            try
+            {
+                StartCoroutine(state.Start());
+            }
+            catch
+            {
+
+            }
+        
     }
 
     protected virtual void Update()

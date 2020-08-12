@@ -169,6 +169,7 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
                     else
                     {
                         direction = new Vector2(next.X - initial.X, next.Y - initial.Y).normalized;
+                        direction = new Vector2 (Mathf.RoundToInt(direction[0]), Mathf.RoundToInt(direction[1]));
                     }
                 }
                 else

@@ -39,7 +39,6 @@ public class Oso : MonoBehaviour
     GameController GC;
 
     public GameObject fart;
-
     
 
 
@@ -75,7 +74,7 @@ public class Oso : MonoBehaviour
     {
         
         map = GC.GetMap();
-        sr.sortingOrder = Mathf.RoundToInt(100 - transform.position.y * 20);
+        sr.sortingOrder = Mathf.RoundToInt(100 - transform.position.y * 20 +1);
 
         targetEnemy = null;
         float distance = Mathf.Infinity;
