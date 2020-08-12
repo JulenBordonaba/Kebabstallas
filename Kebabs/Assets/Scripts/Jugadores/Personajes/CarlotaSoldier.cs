@@ -11,6 +11,7 @@ public class CarlotaSoldier : Soldier
 
     private IEnumerator Notas()
     {
+        AudioManager.PlaySound(AudioManager.Sound.RISA);
         for (int i = 0; i < 10; i += 1)
         {
             yield return new WaitForSeconds(0.02f);

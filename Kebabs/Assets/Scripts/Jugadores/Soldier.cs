@@ -29,7 +29,8 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
 
     public int border = 0;
 
-
+    
+        
     public string opositeTag;
 
     public float debilidad = 1;
@@ -69,6 +70,7 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
 
     public static UnityEvent OnDamageDealed = new UnityEvent();
 
+
     // Use this for initialization
     protected virtual void Start()
     {
@@ -79,7 +81,8 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
         sr = transform.GetComponent<SpriteRenderer>();
         //InvokeRepeating("Attack", Random.Range(1, 3.5f), stats.AttackSpeed);
         Invoke("StartAttacking", Random.Range(1, 3.5f));
-        
+
+
 
         effectManager.OnEffectStart.AddListener(UpdateSpriteColor);
         effectManager.OnEffectEnd.AddListener(UpdateSpriteColor);
@@ -475,6 +478,7 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
         if (!escudo)
         {
             stats.vida -= debilidad * daño * ((100f - stats.DamageReduction) / 100f);
+            AudioManager.PlaySound(AudioManager.Sound.HIT);
             if (stats.vida < 0)
             {
                 stats.vida = 0;

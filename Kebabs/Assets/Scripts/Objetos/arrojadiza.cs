@@ -8,6 +8,7 @@ public class arrojadiza : MonoBehaviour {
     public GameObject target;
     public string targetTag;
     public float daño = 10;
+    private bool CanSound = true;
     float timer;
     private SpriteRenderer sr;
     [Range(0f,1f)]
@@ -39,6 +40,12 @@ public class arrojadiza : MonoBehaviour {
             }
             else if (timer <1.6)
             {
+                if (CanSound)
+                {
+                    AudioManager.PlaySound(AudioManager.Sound.BOTTLECRASH);
+                    CanSound = false;
+                }
+                
                 this.GetComponent<BoxCollider>().enabled = true;
             }
             else
@@ -48,7 +55,7 @@ public class arrojadiza : MonoBehaviour {
         }
         else
         {
-            if (timer >= 0.001)
+            if (timer >= 0.000001)
             {
                 Destroy(this.gameObject);
             }

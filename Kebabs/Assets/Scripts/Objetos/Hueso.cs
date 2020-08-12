@@ -19,6 +19,7 @@ public class Hueso : MonoBehaviour {
     {
         timer = 0.0f;
         sr = transform.GetComponentInChildren<SpriteRenderer>();
+        AudioManager.PlaySound(AudioManager.Sound.HUESO);
     }
 
     // Update is called once per frame

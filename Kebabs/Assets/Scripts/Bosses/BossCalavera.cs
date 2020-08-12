@@ -126,7 +126,7 @@ public class BossCalavera : MonoBehaviour
             miAtaque = Ataque.MAGIA;
             anim.SetInteger("Ataque", 0);
         }
-        else if (Rand < 0.9f)
+        else if (Rand < 0.8f)
         {
             miAtaque = Ataque.OJOS;
             anim.SetInteger("Ataque", 2);

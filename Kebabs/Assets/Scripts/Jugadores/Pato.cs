@@ -32,6 +32,8 @@ public class Pato : MonoBehaviour
 
     private bool exploting = false;
 
+    private bool CanSound = true;
+
     private float timer;
 
     private Vector2 direction = Vector2.zero;//Direccion del fantasma
@@ -90,6 +92,7 @@ public class Pato : MonoBehaviour
         if (timer > TiempoVida)
         {
             StartCoroutine("Explode");
+            timer = 0;
         }else if(timer > TiempoVida - 1.5f && !blinking)
         {
             blinking = true;
@@ -100,6 +103,7 @@ public class Pato : MonoBehaviour
             
             if (Vector2.Distance(transform.position, targetEnemy.transform.position) < 0.13f)
             {
+                
                 StartCoroutine("Explode");
             }
 
@@ -213,6 +217,11 @@ public class Pato : MonoBehaviour
                 child.gameObject.SetActive(false);
         }
         exploting = true;
+        if (CanSound)
+        {
+            AudioManager.PlaySound(AudioManager.Sound.EXPLOSIONPATO);
+            CanSound = false;
+        }
         anim.SetBool("Explode", true);
         yield return new WaitForSeconds(0.7f);
         Destroy(this.gameObject);

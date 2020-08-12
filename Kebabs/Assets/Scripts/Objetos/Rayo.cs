@@ -15,6 +15,7 @@ public class Rayo : MonoBehaviour {
     void Awake()
     {
         timer = 0.0f;
+        AudioManager.PlaySound(AudioManager.Sound.RAYONEGRO);
     }
 
     // Update is called once per frame

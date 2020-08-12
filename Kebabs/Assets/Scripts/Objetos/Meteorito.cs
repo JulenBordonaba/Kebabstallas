@@ -22,11 +22,11 @@ public class Meteorito : MonoBehaviour {
     {
         timer += Time.deltaTime;
         
-        if (timer > 3.6f)
+        if (timer > 4.6f)
         {
             Destroy(this.gameObject);
         }
-        else if (timer > 3.1)
+        else if (timer > 4.1)
         {
             GetComponent<BoxCollider>().enabled = true;
         }
