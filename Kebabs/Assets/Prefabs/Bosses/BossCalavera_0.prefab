@@ -139,6 +139,7 @@ MonoBehaviour:
   Magia: {fileID: 7925633285509613968, guid: ac8995149df81174ca4f520fe2885c29, type: 3}
   Ojo: {fileID: 5545903355147374050, guid: 966534bc3f91fba45a7a7c4448dbc01e, type: 3}
   opositeTag: Player
+  HazMagia: 0
 --- !u!114 &1250806559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,6 +158,7 @@ MonoBehaviour:
   "da\xF1o": 10
   defensa: 1
   speed: 0
+  direction: {x: 0, y: 0}
   TiempoVida: 1e+19
 --- !u!54 &5073081050825843773
 Rigidbody:

@@ -22,7 +22,7 @@ public class MariaSoldier : Soldier
         {
             GameObject bomba = Instantiate(arma, transform.position, Quaternion.identity);
             BombaCorazon miBomba = bomba.GetComponent<BombaCorazon>();
-            miBomba.targetPos = targetEnemy.transform.position + targetEnemy.GetComponent<Soldier>().direction * 0.3f;
+            miBomba.targetPos = targetEnemy.transform.position + targetEnemy.GetComponent<Soldier>().direction * targetEnemy.GetComponent<Soldier>().stats.Speed;
             miBomba.targetTag = opositeTag;
             miBomba.daño = stats.AttackDamage;
         }

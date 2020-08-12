@@ -16,7 +16,10 @@ public static class AudioManager
         MAGIAAZUL,
         BOMBACORAZON,
         VELOCIDAD,
-        ATAQUEUP
+        ATAQUEUP,
+        EXPLOSIONAZUL,
+        VICTORIA,
+        DERROTA
     }
 
     

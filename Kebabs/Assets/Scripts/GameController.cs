@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour {
     public GameObject PauseImage; //Pantalla de pausa
     public static int[] levels = new int[20];
     public Camera MainCamera;
+    private bool CanSound = true;
 
     public static UnityEvent OnCollectablePlaced = new UnityEvent();
 
@@ -91,6 +92,12 @@ public class GameController : MonoBehaviour {
                 {
                     Time.timeScale = 0f;
                     LoseImage.SetActive(true); //Pierde
+                    MainCamera.GetComponent<AudioSource>().enabled = false;
+                    if (CanSound)
+                    {
+                        CanSound = false;
+                        AudioManager.PlaySound(AudioManager.Sound.DERROTA);
+                    }
                 }
                     
             }
@@ -100,6 +107,12 @@ public class GameController : MonoBehaviour {
                 {
                     Time.timeScale = 0f;
                     VictoryImage.SetActive(true); //Gana
+                    MainCamera.GetComponent<AudioSource>().enabled = false;
+                    if (CanSound)
+                    {
+                        CanSound = false;
+                        AudioManager.PlaySound(AudioManager.Sound.VICTORIA);
+                    }
                 }
             }
         }

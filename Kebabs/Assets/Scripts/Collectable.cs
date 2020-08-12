@@ -44,6 +44,11 @@ public class Collectable : MonoBehaviour
 
     private IEnumerator Explode()
     {
+        if (CanSound)
+        {
+            CanSound = false;
+            AudioManager.PlaySound(AudioManager.Sound.EXPLOSIONAZUL);
+        }
         exploting = true;
         this.GetComponent<Animator>().SetBool("Explota", true);
         yield return new WaitForSeconds(0.34f);

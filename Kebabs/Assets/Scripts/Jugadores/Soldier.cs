@@ -48,6 +48,8 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
 
     public Type myType;
 
+    private bool CanSound = true;
+
     private float notaDamage = 0;
 
 
@@ -477,8 +479,14 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
     {
         if (!escudo)
         {
+            if (CanSound)
+            {
+                AudioManager.PlaySound(AudioManager.Sound.HIT);
+                CanSound = false;
+                StartCoroutine("WaitUntilCanSoundAgain");
+            }
             stats.vida -= debilidad * daño * ((100f - stats.DamageReduction) / 100f);
-            AudioManager.PlaySound(AudioManager.Sound.HIT);
+            
             if (stats.vida < 0)
             {
                 stats.vida = 0;
@@ -491,6 +499,12 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
             StartCoroutine("OriginalColorChange", parms);
         }
 
+    }
+
+    private IEnumerator WaitUntilCanSoundAgain()
+    {
+        yield return new WaitForSeconds(0.5f);
+        CanSound = true;
     }
 
     public void GetHeal(float regeneracion)
