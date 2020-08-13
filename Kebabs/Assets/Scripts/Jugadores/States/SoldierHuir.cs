@@ -169,7 +169,7 @@ public class SoldierHuir : SoldierState
         //si hay una location sin peligro y sin camino peligroso
         if (bestPlace != null)
         {
-            Debug.Log("Hay lugares seguros con caminos seguros");
+            //Debug.Log("Hay lugares seguros con caminos seguros");
             return bestPlace;
         }
         else
@@ -179,14 +179,14 @@ public class SoldierHuir : SoldierState
             if (bestPlaceSiHayPeligro != null)
             {
 
-                Debug.Log("Hay lugares seguros pero con caminos peligrosos");
+                //Debug.Log("Hay lugares seguros pero con caminos peligrosos");
                 return bestPlaceSiHayPeligro;
 
             }
             else
             {
                 //si no hay devolver null
-                Debug.Log("Devuelve Null, no hay lugares seguros");
+                //Debug.Log("Devuelve Null, no hay lugares seguros");
                 return null;
             }
         }
@@ -242,7 +242,7 @@ public class SoldierHuir : SoldierState
                 Soldier sold = enemy.GetComponent<Soldier>();
                 if (sold.stats.AttackDistance > Vector2.Distance(enemy.transform.position, new Vector2(location.X / 10f, location.Y / 10f)))
                 {
-                    Debug.Log("Hay peligro (Soldados)");
+                    //Debug.Log("Hay peligro (Soldados)");
                     hayPeligro = true;
                 }
             }

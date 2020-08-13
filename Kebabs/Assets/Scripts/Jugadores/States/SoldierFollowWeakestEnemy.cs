@@ -19,7 +19,7 @@ public class SoldierFollowWeakestEnemy : SoldierState
         GameObject[] anemies = GameObject.FindGameObjectsWithTag(soldier.opositeTag);
         if (anemies.Length <= 0)
         {
-            Debug.Log("Sin aliados");
+            //Debug.Log("Sin aliados");
             ChangeState();
             yield break;
         }
