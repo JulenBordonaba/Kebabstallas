@@ -69,10 +69,14 @@ public class LoreaSoldier : Soldier
 
         //print("StateMachineLogic");
         followTarget = null;
-
+        GameObject[] allies = GameObject.FindGameObjectsWithTag(tag);
         if (CheckNearConsumables(0.8f))
         {
             SetState(new SoldierFindConsumables(this));
+        }
+        else if(allies.Length<=0)
+        {
+            SetState(new SoldierHuir(this));
         }
         else
         {
@@ -86,7 +90,6 @@ public class LoreaSoldier : Soldier
             else if (stats.HealthPercentaje < 40f)
             {
                 GameObject[] consumables = GameObject.FindGameObjectsWithTag("Consumable");
-                GameObject[] allies = GameObject.FindGameObjectsWithTag(tag);
                 foreach (GameObject consumable in consumables)
                 {
                     if (consumable.GetComponent<Collectable>())

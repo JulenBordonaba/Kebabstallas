@@ -27,4 +27,59 @@ public class DaniSoldier : Soldier
 
         }
     }
+
+    protected override void Start()
+    {
+        base.Start();
+        InvokeRepeating("GoForConsumable", 0.1f, 1f);
+    }
+
+    protected override void Update()
+    {
+        base.Update();
+
+        if (state == null && CompareTag("Enemy"))
+        {
+            StateMachineLogic();
+        }
+    }
+
+    public void GoForConsumable()
+    {
+        if (!CompareTag("Enemy")) return;
+        if (CheckNearConsumables(0.8f))
+        {
+            SetState(new SoldierFindConsumables(this));
+        }
+    }
+
+    public override void StateMachineLogic()
+    {
+        if (stats.HealthPercentaje < 35)
+        {
+            SetState(new SoldierHuir(this));
+        }
+        else if (stats.HealthPercentaje < 50)
+        {
+            if (CheckNearConsumables(1.2f))
+            {
+                SetState(new SoldierFindConsumables(this));
+            }
+            else
+            {
+                SetState(new SoldierFollowWeakestEnemy(this));
+            }
+        }
+        else
+        {
+            SetState(new SoldierFollowWeakestEnemy(this));
+        }
+    }
+
+
+    private void OnDestroy()
+    {
+        if (state != null)
+            state.UnsubscribeFromEvents();
+    }
 }
