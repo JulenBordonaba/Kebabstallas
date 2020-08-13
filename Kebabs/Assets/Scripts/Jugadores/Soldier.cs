@@ -64,6 +64,7 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
 
     private Color myColor = Color.white;
 
+
     
     public Location target;
     public Location provisionalTarget = null;
@@ -95,11 +96,13 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
             //InvokeRepeating("Move", 1, 5f);
             Invoke("StateMachineLogic",Random.Range(0.1f,2f));
             opositeTag = "Player";
+            IA = true;
             bar.GetComponentInChildren<SpriteRenderer>().color = Color.red;
         }
         else
         {
             opositeTag = "Enemy";
+            IA = false;
             bar.GetComponentInChildren<SpriteRenderer>().color = Color.green;
         }
 

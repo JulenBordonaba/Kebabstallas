@@ -6,6 +6,8 @@ public class SoldierStateMachine : MonoBehaviour
 {
     public SoldierState state;
 
+    public bool IA = false;
+
     public void SetState(SoldierState _state)
     {
         state = _state;
@@ -24,7 +26,7 @@ public class SoldierStateMachine : MonoBehaviour
     protected virtual void Update()
     {
 
-        if(state!=null && tag == "Enemy")
+        if(state!=null && IA)
         {
             state.Update();
         }

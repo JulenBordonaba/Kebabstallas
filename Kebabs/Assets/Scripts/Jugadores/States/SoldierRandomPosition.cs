@@ -15,6 +15,23 @@ public class SoldierRandomPosition : SoldierState
     public override IEnumerator Start()
     {
         yield return null;
+
+        int X = 0;
+        int Y = 0;
+        while (soldier.map[X][Y] == 'X')
+        {
+            X = Random.Range(1, 19);
+            Y = Random.Range(1, 19);
+        }
+        soldier.target = new Location
+        {
+            X = X,
+            Y = Y,
+        };
+
+        GameController.OnCollectablePlaced.AddListener(ChangeState);
+        Collectable.OnCollectableCollected.AddListener(ChangeState);
+        Soldier.OnDamageDealed.AddListener(ChangeState);
     }
 
     public override void Update()
@@ -32,11 +49,24 @@ public class SoldierRandomPosition : SoldierState
             {
                 soldier.direction = Vector2.zero;
                 soldier.target = null;
-                soldier.StateMachineLogic();
+                ChangeState();
             }
         }
 
 
+    }
+
+    public override void ChangeState()
+    {
+        base.ChangeState();
+        soldier.StateMachineLogic();
+    }
+
+    public override void UnsubscribeFromEvents()
+    {
+        GameController.OnCollectablePlaced.RemoveListener(ChangeState);
+        Collectable.OnCollectableCollected.RemoveListener(ChangeState);
+        Soldier.OnDamageDealed.RemoveListener(ChangeState);
     }
 }
 

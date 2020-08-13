@@ -24,16 +24,22 @@ public class LoreaSoldier : Soldier
         //else
         //    print("No tengo followTarget");
 
-        if(state==null && CompareTag("Enemy"))
+
+
+        if (state == null && IA)
         {
             StateMachineLogic();
+        }
+        else
+        {
+            print(state);
         }
     }
 
     public void GoForConsumable()
     {
-        if (!CompareTag("Enemy")) return;
-        if(CheckNearConsumables(0.8f))
+        if (!IA) return;
+        if (CheckNearConsumables(1.5f))
         {
             SetState(new SoldierFindConsumables(this));
         }
@@ -69,12 +75,34 @@ public class LoreaSoldier : Soldier
 
         //print("StateMachineLogic");
         followTarget = null;
-        GameObject[] allies = GameObject.FindGameObjectsWithTag(tag);
-        if (CheckNearConsumables(0.8f))
+        GameObject[] allies = null;
+        try
+        {
+            GameObject.FindGameObjectsWithTag(tag);
+        }
+        catch
+        {
+            if (CheckNearConsumables(1.5f))
+            {
+                SetState(new SoldierFindConsumables(this));
+            }
+            else 
+            {
+                SetState(new SoldierHuir(this));
+            }
+            return;
+        }
+
+
+        if (CheckNearConsumables(1.5f))
         {
             SetState(new SoldierFindConsumables(this));
         }
-        else if(allies.Length<=0)
+        else if(allies==null)
+        {
+            SetState(new SoldierHuir(this));
+        }
+        else if (allies.Length<=0)
         {
             SetState(new SoldierHuir(this));
         }

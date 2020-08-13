@@ -51,12 +51,12 @@ public class SoldierHuir : SoldierState
         float posRoundY = soldier.RoundWithDecimals(soldier.transform.position.y, 1);
 
 
-        
+
 
         //
         if (Mathf.Abs(soldier.transform.position.x - posRoundX) < 0.005f && Mathf.Abs(soldier.transform.position.y - posRoundY) < 0.005f && canCheckPath)
         {
-            
+
 
             canCheckPath = false;
             soldier.StartCoroutine(ResetCanCheckPath());
@@ -73,10 +73,10 @@ public class SoldierHuir : SoldierState
             }
 
         }
-        
+
     }
 
- 
+
 
     public IEnumerator ResetCanCheckPath()
     {
@@ -94,15 +94,15 @@ public class SoldierHuir : SoldierState
         List<Location> bestPath = new List<Location>();
         List<GameObject> enemies = new List<GameObject>(GameObject.FindGameObjectsWithTag(soldier.opositeTag));
         List<GameObject> minions = new List<GameObject>(GameObject.FindGameObjectsWithTag("Miniom"));
-        
 
-        foreach(GameObject miniom in minions)
+
+        foreach (GameObject minion in minions)
         {
-            if(miniom.GetComponent<Oso>())
+            if (minion.GetComponent<Oso>())
             {
-                if(miniom.GetComponent<Oso>().opositeTag==soldier.tag)
+                if (minion.GetComponent<Oso>().tag == soldier.opositeTag)
                 {
-                    enemies.Add(miniom);
+                    enemies.Add(minion);
                 }
             }
         }
@@ -111,35 +111,44 @@ public class SoldierHuir : SoldierState
 
         foreach (Location location in proposedEscapePoints)
         {
-            if (!CheckPeligro(enemies, new List<Location> { location }))
+            if (!CheckPeligro(enemies, location))
             {
 
+                //comprobar la distancia del enemigo más cercano
                 float nearestEnemyDistance = float.MaxValue;
-                //comprobar qué sitio es el que tiene el enemigo más cerca
+
                 foreach (GameObject enemy in enemies)
                 {
-                    float enemyDistance = Vector2.Distance(enemy.transform.position, new Vector2(location.X, location.Y));
+                    float enemyDistance = Vector2.Distance(enemy.transform.position, new Vector2(location.X / 10f, location.Y / 10f));
 
-                    if(enemyDistance < nearestEnemyDistance)
+                    if (enemyDistance < nearestEnemyDistance)
                     {
                         nearestEnemyDistance = enemyDistance;
                     }
 
                     //sumDist += bestPath.Count;
 
-                    
+
 
                 }
-                //Debug.Log(sumDist);
+
+                //calcular la ruta más rápida a esa location
+                Location initial = new Location
+                {
+                    X = Mathf.RoundToInt(soldier.transform.position.x * 10) + soldier.border,
+                    Y = Mathf.RoundToInt(soldier.transform.position.y * 10) + soldier.border,
+                };
+
+                bestPath = soldier.A_estrella_Coste(initial, location);
 
 
                 //comprobar si hay peligro en el camino
                 if (CheckPeligro(enemies, bestPath))
                 {
-                    //Debug.Log("Hay peligro");
+                    //si hay peligro
+                    //comprobar si entre las location con camino peligroso es la que tiene el enemigo más alejado
                     if (nearestEnemyDistance > maxDistSiHayPeligro)
                     {
-                        //Debug.Log("Asigna bestPathSiHayPeligro");
                         maxDistSiHayPeligro = nearestEnemyDistance;
                         bestPlaceSiHayPeligro = location;
                     }
@@ -147,7 +156,7 @@ public class SoldierHuir : SoldierState
                 }
                 else
                 {
-                    //Debug.Log("No hay peligro");
+                    //comprobar si entre las location sin camino peligroso es la que tiene el enemigo más alejado
                     if (nearestEnemyDistance > maxDist)
                     {
                         maxDist = nearestEnemyDistance;
@@ -156,23 +165,30 @@ public class SoldierHuir : SoldierState
                 }
             }
         }
-        if (bestPlace == null)
+
+        //si hay una location sin peligro y sin camino peligroso
+        if (bestPlace != null)
         {
-            if (bestPlaceSiHayPeligro == null)
-            {
-                //Debug.Log("No hay sitio seguro");
-                return null;
-            }
-            else
-            {
-                //Debug.Log("Hay sitio con peligro en el camino");
-                return bestPlaceSiHayPeligro;
-            }
+            Debug.Log("Hay lugares seguros con caminos seguros");
+            return bestPlace;
         }
         else
         {
-            //Debug.Log("Hay sitio con camino seguro");
-            return bestPlace;
+            //si no hay una zona sin camino peligroso
+            //comprobar si hay alguna zona con el final alejado del peligro
+            if (bestPlaceSiHayPeligro != null)
+            {
+
+                Debug.Log("Hay lugares seguros pero con caminos peligrosos");
+                return bestPlaceSiHayPeligro;
+
+            }
+            else
+            {
+                //si no hay devolver null
+                Debug.Log("Devuelve Null, no hay lugares seguros");
+                return null;
+            }
         }
     }
 
@@ -180,7 +196,7 @@ public class SoldierHuir : SoldierState
     {
         bool hayPeligro = false;
         //foreach (Location casilla in bestPath)
-        for (int i = 0; i < bestPath.Count; i += 3)
+        for (int i = 0; i < bestPath.Count; i += 1)
         {
 
             foreach (GameObject enemy in enemies)
@@ -188,21 +204,21 @@ public class SoldierHuir : SoldierState
                 if (enemy.GetComponent<Soldier>())
                 {
                     Soldier sold = enemy.GetComponent<Soldier>();
-                    if (sold.stats.AttackDistance > Vector2.Distance(enemy.transform.position, new Vector2(bestPath[i].X, bestPath[i].Y)))
+                    if (sold.stats.AttackDistance > Vector2.Distance(enemy.transform.position, new Vector2(bestPath[i].X / 10f, bestPath[i].Y / 10f)))
                     {
                         hayPeligro = true;
                     }
                 }
                 else if (enemy.GetComponent<Oso>())
                 {
-                    if(0.4f > Vector2.Distance(enemy.transform.position, new Vector2(bestPath[i].X, bestPath[i].Y)))
+                    if (0.4f > Vector2.Distance(enemy.transform.position, new Vector2(bestPath[i].X / 10f, bestPath[i].Y / 10f)))
                     {
                         hayPeligro = true;
                     }
                 }
                 else if (enemy.GetComponent<Pato>())
                 {
-                    if (0.2f > Vector2.Distance(enemy.transform.position, new Vector2(bestPath[i].X, bestPath[i].Y)))
+                    if (0.2f > Vector2.Distance(enemy.transform.position, new Vector2(bestPath[i].X / 10f, bestPath[i].Y / 10f)))
                     {
                         hayPeligro = true;
                     }
@@ -213,7 +229,44 @@ public class SoldierHuir : SoldierState
 
         return hayPeligro;
     }
-    
+
+    public bool CheckPeligro(List<GameObject> enemies, Location location)
+    {
+        bool hayPeligro = false;
+
+
+        foreach (GameObject enemy in enemies)
+        {
+            if (enemy.GetComponent<Soldier>())
+            {
+                Soldier sold = enemy.GetComponent<Soldier>();
+                if (sold.stats.AttackDistance > Vector2.Distance(enemy.transform.position, new Vector2(location.X / 10f, location.Y / 10f)))
+                {
+                    Debug.Log("Hay peligro (Soldados)");
+                    hayPeligro = true;
+                }
+            }
+            else if (enemy.GetComponent<Oso>())
+            {
+                if (0.4f > Vector2.Distance(enemy.transform.position, new Vector2(location.X / 10f, location.Y / 10f)))
+                {
+                    hayPeligro = true;
+                }
+            }
+            else if (enemy.GetComponent<Pato>())
+            {
+                if (0.2f > Vector2.Distance(enemy.transform.position, new Vector2(location.X / 10f, location.Y / 10f)))
+                {
+                    hayPeligro = true;
+                }
+            }
+        }
+
+
+
+        return hayPeligro;
+    }
+
 
     public override void ChangeState()
     {

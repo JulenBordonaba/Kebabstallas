@@ -39,7 +39,7 @@ public class ThaniaSoldier : Soldier
     {
         base.Update();
 
-        if (state == null && CompareTag("Enemy"))
+        if (state == null && IA)
         {
             StateMachineLogic();
         }
@@ -47,7 +47,7 @@ public class ThaniaSoldier : Soldier
 
     public void GoForConsumable()
     {
-        if (!CompareTag("Enemy")) return;
+        if (!IA) return;
         if (CheckNearConsumables(0.8f))
         {
             SetState(new SoldierFindConsumables(this));
