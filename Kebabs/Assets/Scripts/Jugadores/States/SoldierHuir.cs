@@ -56,11 +56,7 @@ public class SoldierHuir : SoldierState
         //
         if (Mathf.Abs(soldier.transform.position.x - posRoundX) < 0.005f && Mathf.Abs(soldier.transform.position.y - posRoundY) < 0.005f && canCheckPath)
         {
-            if (VidaCerca())
-            {
-                soldier.SetState(new SoldierFindHealConsumable(soldier));
-                return;
-            }
+            
 
             canCheckPath = false;
             soldier.StartCoroutine(ResetCanCheckPath());
@@ -80,29 +76,7 @@ public class SoldierHuir : SoldierState
         
     }
 
-    public bool VidaCerca()
-    {
-        GameObject[] consumables = GameObject.FindGameObjectsWithTag("Consumable");
-
-        
-        foreach (GameObject consumable in consumables)
-        {
-            if (consumable.GetComponent<Collectable>())
-            {
-                Collectable collectable = consumable.GetComponent<Collectable>();
-                if (collectable.myType == Collectable.Type.VIDA)
-                {
-
-
-                    if(Vector2.Distance(consumable.transform.position,soldier.transform.position)<0.8f)
-                    {
-                        return true;
-                    }
-                }
-            }
-        }
-        return false;
-    }
+ 
 
     public IEnumerator ResetCanCheckPath()
     {
@@ -113,7 +87,6 @@ public class SoldierHuir : SoldierState
 
     public Location FindSaveWay()
     {
-        float sumDist = 0;
         float maxDist = 0;
         Location bestPlace = null;
         Location bestPlaceSiHayPeligro = null;
@@ -140,23 +113,16 @@ public class SoldierHuir : SoldierState
         {
             if (!CheckPeligro(enemies, new List<Location> { location }))
             {
-                sumDist = 0;
 
                 float nearestEnemyDistance = float.MaxValue;
+                //comprobar qué sitio es el que tiene el enemigo más cerca
                 foreach (GameObject enemy in enemies)
                 {
-                    Location target = new Location
-                    {
-                        X = Mathf.Clamp(Mathf.RoundToInt(enemy.transform.position.x * 10), 1, 19) + soldier.border,
-                        Y = Mathf.Clamp(Mathf.RoundToInt(enemy.transform.position.y * 10), 1, 19) + soldier.border,
-                    };
+                    float enemyDistance = Vector2.Distance(enemy.transform.position, new Vector2(location.X, location.Y));
 
-                    
-                    bestPath = soldier.A_estrella_Coste(location, target);
-
-                    if(bestPath.Count<nearestEnemyDistance)
+                    if(enemyDistance < nearestEnemyDistance)
                     {
-                        nearestEnemyDistance = bestPath.Count;
+                        nearestEnemyDistance = enemyDistance;
                     }
 
                     //sumDist += bestPath.Count;
@@ -166,6 +132,8 @@ public class SoldierHuir : SoldierState
                 }
                 //Debug.Log(sumDist);
 
+
+                //comprobar si hay peligro en el camino
                 if (CheckPeligro(enemies, bestPath))
                 {
                     //Debug.Log("Hay peligro");

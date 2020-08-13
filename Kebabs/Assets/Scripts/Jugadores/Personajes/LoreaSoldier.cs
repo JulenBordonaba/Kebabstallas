@@ -33,7 +33,7 @@ public class LoreaSoldier : Soldier
     public void GoForConsumable()
     {
         if (!CompareTag("Enemy")) return;
-        if(CheckNearConsumables())
+        if(CheckNearConsumables(0.8f))
         {
             SetState(new SoldierFindConsumables(this));
         }
@@ -70,7 +70,7 @@ public class LoreaSoldier : Soldier
         //print("StateMachineLogic");
         followTarget = null;
 
-        if (CheckNearConsumables())
+        if (CheckNearConsumables(0.8f))
         {
             SetState(new SoldierFindConsumables(this));
         }
@@ -176,44 +176,15 @@ public class LoreaSoldier : Soldier
 
     }
 
-    public bool CheckNearConsumables()
-    {
-        foreach (GameObject consumable in GameObject.FindGameObjectsWithTag("Consumable"))
-        {
-            if (consumable != null)
-            {
-                Collectable collectable = consumable.GetComponent<Collectable>();
-                if (collectable.myType != Collectable.Type.PETRIFICACION)
-                {
-                    if (!(collectable.myType == Collectable.Type.EXPLOSION && collectable.NearestSoldier.tag == opositeTag))
-                    {
-                        try
-                        {
-                            if (Vector2.Distance(transform.position, collectable.transform.position) < 0.8f)
-                            {
-                                return true;
-                            }
-                        }
-                        catch
-                        {
-
-                        }
-                    }
-                    
-                }
-                
-            }
-        }
-
-        return false;
-    }
+    
 
     public bool AllAlliesHealed
     {
         get
         {
             bool allHealed = true;
-            foreach (GameObject ally in GameObject.FindGameObjectsWithTag(tag))
+            GameObject[] allies = GameObject.FindGameObjectsWithTag(tag);
+            foreach (GameObject ally in allies)
             {
                 if (ally.GetComponent<Soldier>())
                 {

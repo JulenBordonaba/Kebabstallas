@@ -905,7 +905,37 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
         }
     }
 
+    public bool CheckNearConsumables(float dist)
+    {
+        foreach (GameObject consumable in GameObject.FindGameObjectsWithTag("Consumable"))
+        {
+            if (consumable != null)
+            {
+                Collectable collectable = consumable.GetComponent<Collectable>();
+                if (collectable.myType != Collectable.Type.PETRIFICACION)
+                {
+                    if (!(collectable.myType == Collectable.Type.EXPLOSION && collectable.NearestSoldier.tag == opositeTag))
+                    {
+                        try
+                        {
+                            if (Vector2.Distance(transform.position, collectable.transform.position) < dist)
+                            {
+                                return true;
+                            }
+                        }
+                        catch
+                        {
 
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+        return false;
+    }
 
 }
 
