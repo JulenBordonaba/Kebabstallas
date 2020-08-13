@@ -23,7 +23,8 @@ public class SoldierStateMachine : MonoBehaviour
 
     protected virtual void Update()
     {
-        if(state!=null)
+
+        if(state!=null && tag == "Enemy")
         {
             state.Update();
         }
