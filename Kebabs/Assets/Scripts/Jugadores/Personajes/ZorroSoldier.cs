@@ -16,11 +16,7 @@ public class ZorroSoldier : Soldier
     protected override void Update()
     {
         base.Update();
-
-        if (state == null && IA)
-        {
-            StateMachineLogic();
-        }
+        
     }
 
     public void GoForConsumable()
@@ -44,7 +40,10 @@ public class ZorroSoldier : Soldier
         misLlamas.transform.Find("Llama1").GetComponent<Llama>().targetTag = opositeTag;
         misLlamas.transform.Find("Llama2").GetComponent<Llama>().targetTag = opositeTag;
         atacando = true;
-        StateMachineLogic();
+        if (IA)
+        {
+            StateMachineLogic();
+        }
         yield return new WaitForSeconds(35);
         misLlamas.SetActive(false);
         atacando = false;

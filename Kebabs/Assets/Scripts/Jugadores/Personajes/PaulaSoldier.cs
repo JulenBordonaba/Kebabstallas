@@ -20,34 +20,31 @@ public class PaulaSoldier : Soldier
         base.Update();
 
 
-        if (lastDirection == Vector2.up)
-        {
-            lagrimas.GetComponent<Animator>().SetInteger("Llorar", 0);
-            lagrimas.GetComponent<SpriteRenderer>().sortingOrder = 50;
-        }
-        else
-        {
-            lagrimas.GetComponent<SpriteRenderer>().sortingOrder = 100;
-            if (lastDirection == Vector2.right)
-            {
-                lagrimas.GetComponent<Animator>().SetInteger("Llorar", 1);
-            }
-            else if (lastDirection == Vector2.down)
-            {
-                lagrimas.GetComponent<Animator>().SetInteger("Llorar", 0);
-            }
-            else if (lastDirection == Vector2.left)
-            {
-                lagrimas.GetComponent<Animator>().SetInteger("Llorar", 2);
-            }
-        }
+        //if (lastDirection == Vector2.up)
+        //{
+        //    lagrimas.GetComponent<Animator>().SetInteger("Llorar", 0);
+        //    lagrimas.GetComponent<SpriteRenderer>().sortingOrder = 50;
+        //}
+        //else
+        //{
+        //    lagrimas.GetComponent<SpriteRenderer>().sortingOrder = 100;
+        //    if (lastDirection == Vector2.right)
+        //    {
+        //        lagrimas.GetComponent<Animator>().SetInteger("Llorar", 1);
+        //    }
+        //    else if (lastDirection == Vector2.down)
+        //    {
+        //        lagrimas.GetComponent<Animator>().SetInteger("Llorar", 0);
+        //    }
+        //    else if (lastDirection == Vector2.left)
+        //    {
+        //        lagrimas.GetComponent<Animator>().SetInteger("Llorar", 2);
+        //    }
+        //}
 
 
 
-        if (state == null && IA)
-        {
-            StateMachineLogic();
-        }
+        
     }
 
     public void GoForConsumable()
@@ -106,7 +103,10 @@ public class PaulaSoldier : Soldier
         CampoLlanto.GetComponent<CampoDebilitador>().targetTag = opositeTag;
         lagrimas.SetActive(true);
         atacando = true;
-        StateMachineLogic();
+        if(IA)
+        {
+            StateMachineLogic();
+        }
         yield return new WaitForSeconds(40);
         CampoLlanto.SetActive(false);
         lagrimas.SetActive(false);

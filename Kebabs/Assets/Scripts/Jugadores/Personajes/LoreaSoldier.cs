@@ -25,15 +25,7 @@ public class LoreaSoldier : Soldier
         //    print("No tengo followTarget");
 
 
-
-        if (state == null && IA)
-        {
-            StateMachineLogic();
-        }
-        else
-        {
-            print(state);
-        }
+        
     }
 
     public void GoForConsumable()

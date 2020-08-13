@@ -173,6 +173,7 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
                     if (provisionalTarget != null && Mathf.Abs(provisionalTarget.X / 10f - posRoundX) < 0.05f && Mathf.Abs(provisionalTarget.Y / 10f - posRoundY) < 0.05f)
                     {
                         direction = Vector2.zero;
+                        
                     }
                     else
                     {
@@ -185,6 +186,7 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
                     if (provisionalTarget != null && Mathf.Abs(provisionalTarget.X / 10f - posRoundX) < 0.05f && Mathf.Abs(provisionalTarget.Y / 10f - posRoundY) < 0.05f)
                     {
                         direction = Vector2.zero;
+                        
                     }
                 }
 
@@ -203,12 +205,49 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
 
 
 
-        SetWalkAnimator();
+
+        SetWalkAnimator(direction);
+
+        if (state == null && IA)
+        {
+            StateMachineLogic();
+        }
+
+        try
+        {
+            if (followTarget != null && direction == Vector3.zero)
+            {
+                Vector3 provisionalDirection = -(transform.position - followTarget.transform.position).normalized;
+                provisionalDirection = new Vector2(Mathf.RoundToInt(provisionalDirection[0]), Mathf.RoundToInt(provisionalDirection[1]));
+                lastDirection = provisionalDirection;
+                if (provisionalDirection == Vector3.up)
+                {
+                    anim.Play("IdleU");
+                }
+                else if (provisionalDirection == Vector3.right)
+                {
+                    anim.Play("IdleR");
+                }
+                else if (provisionalDirection == Vector3.down)
+                {
+                    anim.Play("IdleD");
+                }
+                else if (provisionalDirection == Vector3.left)
+                {
+                    anim.Play("IdleL");
+                }
+            }
+        }
+        catch
+        {
+
+        }
+        
 
     }
 
 
-    public void SetWalkAnimator()
+    public void SetWalkAnimator(Vector3 _direction)
     {
         if (stats.Speed == 0)
         {
@@ -216,25 +255,26 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
         }
         else
         {
-            if (direction == Vector3.up)
+            if (_direction == Vector3.up)
             {
                 anim.SetInteger("Walk", 1);
             }
-            else if (direction == Vector3.right)
+            else if (_direction == Vector3.right)
             {
                 anim.SetInteger("Walk", 0);
             }
-            else if (direction == Vector3.down)
+            else if (_direction == Vector3.down)
             {
                 anim.SetInteger("Walk", 2);
             }
-            else if (direction == Vector3.left)
+            else if (_direction == Vector3.left)
             {
                 anim.SetInteger("Walk", 3);
             }
             else
             {
                 anim.SetInteger("Walk", 4);
+                
             }
         }
 

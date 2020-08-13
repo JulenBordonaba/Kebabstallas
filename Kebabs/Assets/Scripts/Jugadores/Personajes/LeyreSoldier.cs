@@ -20,11 +20,7 @@ public class LeyreSoldier : Soldier
     protected override void Update()
     {
         base.Update();
-
-        if (state == null && IA)
-        {
-            StateMachineLogic();
-        }
+        
     }
 
     public void GoForConsumable()
