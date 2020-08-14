@@ -329,7 +329,9 @@ MonoBehaviour:
   "da\xF1o": 20
   defensa: 1
   speed: 0.15
+  direction: {x: 0, y: 0}
   TiempoVida: 15
+  sangre: {fileID: 1284217796436144, guid: fa6ad27a4c01595479b078e73176167f, type: 3}
 --- !u!54 &5490005287781945042
 Rigidbody:
   m_ObjectHideFlags: 0

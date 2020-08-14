@@ -44,6 +44,8 @@ public class Pato : MonoBehaviour
 
     bool blinking = false;
 
+    public GameObject sangre;
+
 
     class Location  //Nodo para el algoritmo de búsqueda
     {
@@ -229,6 +231,7 @@ public class Pato : MonoBehaviour
 
     private void Die()
     {
+        Instantiate(sangre, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
 

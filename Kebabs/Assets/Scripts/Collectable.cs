@@ -16,18 +16,21 @@ public class Collectable : MonoBehaviour
     { EXPLOSION, VIDA, VELOCIDAD, RALENTIZADOR, ESCUDO, MINIOM, PETRIFICACION, ATAQUE };
 
     public Type myType;
+    GameController GC;
+
 
     public static UnityEvent OnCollectableCollected = new UnityEvent();
 
     // Use this for initialization
     void Start()
     {
-
+        
     }
     
     void Awake()
     {
         timer = 0.0f;
+        GC = FindObjectOfType<GameController>();
     }
 
     // Update is called once per frame
@@ -50,6 +53,7 @@ public class Collectable : MonoBehaviour
             AudioManager.PlaySound(AudioManager.Sound.EXPLOSIONAZUL);
         }
         exploting = true;
+        GC.MainCamera.GetComponent<Animator>().SetTrigger("ExplosionPequeña");
         this.GetComponent<Animator>().SetBool("Explota", true);
         yield return new WaitForSeconds(0.34f);
         Destroy(this.gameObject);

@@ -19,7 +19,8 @@ public static class AudioManager
         ATAQUEUP,
         EXPLOSIONAZUL,
         VICTORIA,
-        DERROTA
+        DERROTA,
+        PEDETE
     }
 
     

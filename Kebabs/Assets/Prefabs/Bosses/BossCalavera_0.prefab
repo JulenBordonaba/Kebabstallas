@@ -160,6 +160,7 @@ MonoBehaviour:
   speed: 0
   direction: {x: 0, y: 0}
   TiempoVida: 1e+19
+  sangre: {fileID: 1284217796436144, guid: fa6ad27a4c01595479b078e73176167f, type: 3}
 --- !u!54 &5073081050825843773
 Rigidbody:
   m_ObjectHideFlags: 0

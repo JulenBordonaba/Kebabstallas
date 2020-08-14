@@ -191,6 +191,7 @@ public class Oso : MonoBehaviour
     private void Attack()
     {
         GameObject pedo = Instantiate(fart, transform.position, Quaternion.identity);
+        AudioManager.PlaySound(AudioManager.Sound.PEDETE);
         pedo.GetComponent<Fart>().targetTag = opositeTag;
         pedo.transform.parent = this.transform;
     }

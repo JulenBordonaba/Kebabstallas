@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Text;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
     private string[] map;
@@ -18,6 +19,10 @@ public class GameController : MonoBehaviour {
     public static int[] levels = new int[20];
     public Camera MainCamera;
     private bool CanSound = true;
+    private int GreenTeamCount = 0;
+    private int RedTeamCount = 0;
+    public Text GreenTeamCountText;
+    public Text RedTeamCountText;
 
     public static UnityEvent OnCollectablePlaced = new UnityEvent();
 
@@ -176,7 +181,7 @@ public class GameController : MonoBehaviour {
         onGame = true;
     }
 
-    public void RandomizeTeams()
+    public void Clear()
     {
         foreach (GameObject persona in GameObject.FindGameObjectsWithTag("Player"))
         {
@@ -188,22 +193,57 @@ public class GameController : MonoBehaviour {
             persona.tag = "Selectable";
             persona.GetComponent<SpriteRenderer>().color = Color.white;
         }
-        GameObject[] personas = GameObject.FindGameObjectsWithTag("Selectable");
-        int nEnemigos = Random.Range(1, personas.Length);
+    }
+
+    public void ChangeGreenCount(int change)
+    {
+        if (GreenTeamCount + change >= 0 && GreenTeamCount + change + RedTeamCount <= 16)
+        {
+            GreenTeamCount += change;
+        }
+        GreenTeamCountText.text = "" + GreenTeamCount;
+    }
+
+    public void ChangeRedCount(int change)
+    {
+        if (RedTeamCount + change >= 0 && GreenTeamCount + change + RedTeamCount <= 16)
+        {
+            RedTeamCount += change;
+        }
+        RedTeamCountText.text = "" + RedTeamCount;
+    }
+
+    public void RandomizeTeams()
+    {
+        Clear();
+        List<GameObject> personas = new List<GameObject>(GameObject.FindGameObjectsWithTag("Selectable"));
+        int nEnemigos = RedTeamCount;
+        if (RedTeamCount == 0)
+        {
+            nEnemigos = Random.Range(1, personas.Count - GreenTeamCount);
+        }
+        
         for (int i = 0; i < nEnemigos; i++)
         {
-            int ind = Random.Range(0, personas.Length);
+            int ind = Random.Range(0, personas.Count);
             personas[ind].tag = "Enemy";
             personas[ind].GetComponent<SpriteRenderer>().color = new Color32(255, 83, 83, 255);
+            personas.Remove(personas[ind]);
 
         }
-        personas = GameObject.FindGameObjectsWithTag("Selectable");
-        int nPlayers = Random.Range(1, personas.Length);
+        personas = new List<GameObject>(GameObject.FindGameObjectsWithTag("Selectable")); ;
+
+        int nPlayers = GreenTeamCount;
+        if (GreenTeamCount == 0)
+        {
+            nPlayers = Random.Range(1, personas.Count);
+        }
         for (int i = 0; i < nPlayers; i++)
         {
-            int ind = Random.Range(0, personas.Length);
+            int ind = Random.Range(0, personas.Count);
             personas[ind].tag = "Player";
             personas[ind].GetComponent<SpriteRenderer>().color = new Color32(129, 255, 133, 255);
+            personas.Remove(personas[ind]);
         }
     }
 
@@ -219,7 +259,7 @@ public class GameController : MonoBehaviour {
         {
             enemies.Add(persona.GetComponent<Selectable>().myNumber);
         }
-        
+
 
         if (players.Count > 0 && enemies.Count > 0)
         {

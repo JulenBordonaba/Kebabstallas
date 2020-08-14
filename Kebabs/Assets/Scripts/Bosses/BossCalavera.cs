@@ -37,6 +37,10 @@ public class BossCalavera : MonoBehaviour
 
     public bool HazMagia = false;
 
+    private float InterAttack = 3;
+
+    private float TPprob = 0.95f;
+
     //private Transform bar;
 
     // Start is called before the first frame update
@@ -70,8 +74,6 @@ public class BossCalavera : MonoBehaviour
                     if (timer > 6f)
                     {
                         StartCoroutine("Meteoritos");
-                        timer = 0f;
-                        miAtaque = Ataque.NONE;
                         StartCoroutine("ChooseAttack");
                     }
                     break;
@@ -81,8 +83,6 @@ public class BossCalavera : MonoBehaviour
                     if (timer > 20f)
                     {
                         puedeLanzarOjos = false;
-                        timer = 0f;
-                        miAtaque = Ataque.NONE;
                         StartCoroutine("ChooseAttack");
                     }
                     break;
@@ -94,8 +94,6 @@ public class BossCalavera : MonoBehaviour
                         Instantiate(Magia, transform.position, Quaternion.identity);
                         HazMagia = true;
                         AudioManager.PlaySound(AudioManager.Sound.MAGIAAZUL);
-                        timer = 0f;
-                        miAtaque = Ataque.NONE;
                         StartCoroutine("ChooseAttack");
                     }
                     break;
@@ -112,8 +110,6 @@ public class BossCalavera : MonoBehaviour
                             Y = Random.Range(1, 19);
                         }
                         transform.position = new Vector2(X / 10f, Y / 10f);
-                        timer = 0f;
-                        miAtaque = Ataque.NONE;
                         StartCoroutine("ChooseAttack");
                     }
                     break;
@@ -151,31 +147,57 @@ public class BossCalavera : MonoBehaviour
 
     private IEnumerator ChooseAttack()
     {
-        yield return new WaitForSeconds(3f);
+        Ataque Anterior = miAtaque;
+        timer = 0f;
+        miAtaque = Ataque.NONE;
+        if (transform.GetComponent<Pato>().vida < 300)
+        {
+            InterAttack = 2f;
+        }
+        yield return new WaitForSeconds(InterAttack);
         timer = 0;
-        float Rand = Random.Range(0, 1f);
-        if (Rand < 0.25f)
+        do
         {
-            miAtaque = Ataque.METEORITO;
-            anim.SetInteger("Ataque", 1);
-        }
-        else if (Rand < 0.5f)
+            float Rand = Random.Range(0, 1f);
+            if (Rand < 0.25f)
+                miAtaque = Ataque.METEORITO;
+            else if (Rand < 0.3f)
+                miAtaque = Ataque.MAGIA;
+            else if (Rand < TPprob)
+                miAtaque = Ataque.OJOS;
+            else
+                miAtaque = Ataque.TELETRANSPORTE;
+        } while (miAtaque == Anterior);
+
+        switch (miAtaque)
         {
-            miAtaque = Ataque.MAGIA;
-            
-            anim.SetInteger("Ataque", 0);
+            case Ataque.METEORITO:
+                {
+                    anim.SetInteger("Ataque", 1);
+                    TPprob -= 0.3f;
+                    break;
+                }
+            case Ataque.MAGIA:
+                {
+                    anim.SetInteger("Ataque", 0);
+                    TPprob -= 0.3f;
+                    break;
+                }
+            case Ataque.OJOS:
+                {
+                    anim.SetInteger("Ataque", 2);
+                    puedeLanzarOjos = true;
+                    TPprob -= 0.3f;
+                    break;
+                }
+            case Ataque.TELETRANSPORTE:
+                {
+                    anim.SetInteger("Ataque", 3);
+                    TPprob = 0.95f;
+                    break;
+                }
         }
-        else if (Rand < 0.8f)
-        {
-            miAtaque = Ataque.OJOS;
-            anim.SetInteger("Ataque", 2);
-            puedeLanzarOjos = true;
-        }
-        else
-        {
-            miAtaque = Ataque.TELETRANSPORTE;
-            anim.SetInteger("Ataque", 3);
-        }
+        
         
     }
 
