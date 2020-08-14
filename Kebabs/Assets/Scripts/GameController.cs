@@ -7,6 +7,9 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
     private string[] map;
+
+    public enum MapType { TEMPLE, HELL, PRISION};
+    public MapType myMap;
     public GameObject[] Soldiers;
     public GameObject[] Collectables;
     public static bool onGame = false;
@@ -23,6 +26,8 @@ public class GameController : MonoBehaviour {
     private int RedTeamCount = 0;
     public Text GreenTeamCountText;
     public Text RedTeamCountText;
+    public Soldier Selected = null;
+    
 
     public static UnityEvent OnCollectablePlaced = new UnityEvent();
 
@@ -269,6 +274,25 @@ public class GameController : MonoBehaviour {
             
     }
 
+
+    public void AvtivarIA()
+    {
+        if (Selected != null)
+        {
+            Selected.IA = true;
+        }
+    }
+
+    public void DesvtivarIA()
+    {
+        if (Selected != null)
+        {
+            Selected.IA = false;
+            Selected.state = null;
+        }
+    }
+
+
     public string[] GetMap()
     {
         return map;
@@ -276,6 +300,122 @@ public class GameController : MonoBehaviour {
 
     private string[] GetOriginalMap()
     {
+
+        switch (myMap)
+        {
+            case MapType.TEMPLE:
+                {
+                    return new string[]
+                    {  //0         1         2      
+                       //012345678901234567890
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "X   X    XX X   X   X",
+                        "X   X           X   X",
+                        "X   X    XX X   X   X",
+                        "X   X    X  X   X   X",
+                        "X        X  X       X",
+                        "X   X    X  X   X   X",
+                        "X   XX  XX   X  X   X",
+                        "X    XXXX     XX    X",
+                        "X    XXXX     XX    X",
+                        "X                   X",
+                        "X    XXXX     XX    X",
+                        "X    XXXX     XX    X",
+                        "X   XX  XX   X  X   X",
+                        "X   X    X  X   X   X",
+                        "X        X  X       X",
+                        "X   X    X  X   X   X",
+                        "X   X    XX X   X   X",
+                        "X   X           X   X",
+                        "X   X    XX X   X   X",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                    };
+                }
+            case MapType.HELL:
+                {
+                    return new string[]
+                    {  //0         1         2      
+                       //012345678901234567890
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXX   XXXXXXXXX",
+                        "XXXXXXX      XXXXXXXX",
+                        "XXXXX          XXXXXX",
+                        "XXXX            XXXXX",
+                        "XXXX    X   X    XXXX",
+                        "XXX   XXX   XX   XXXX",
+                        "XXX   XXX   XXX   XXX",
+                        "XX   XXX     XX   XXX",
+                        "X                   X",
+                        "X                   X",
+                        "X                   X",
+                        "XX   XXX     XX   XXX",
+                        "XXX   XXX   XXX   XXX",
+                        "XXX   XXX   XX   XXXX",
+                        "XXXX    X   X    XXXX",
+                        "XXXX            XXXXX",
+                        "XXXXX          XXXXXX",
+                        "XXXXXXX      XXXXXXXX",
+                        "XXXXXXXXX   XXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                    };
+                }
+            case MapType.PRISION:
+                {
+                    return new string[]
+                    {  //0         1         2      
+                       //012345678901234567890
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "X  XXXXXX XXXXX   XXX",
+                        "X  XXXXX  XX        X",
+                        "X   XXXXX  X  X   X X",
+                        "X   XXXXX  X  XXXXX X",
+                        "X  XXXXXX  X  XXXXX X",
+                        "X          X        X",
+                        "X          X        X",
+                        "X                   X",
+                        "X                   X",
+                        "X                   X",
+                        "X          X        X",
+                        "X          X        X",
+                        "X  XXXXXX  XXXXXXXX X",
+                        "X   XXXXX  XXXXXXXX X",
+                        "X   X XXX  XXXXXXXX X",
+                        "X     XXX  XXXXXXXX X",
+                        "X  XX     XXXXXXXXX X",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                    };
+                }
+            default:
+                {
+                    return new string[]
+                    {  //0         1         2      
+                       //012345678901234567890
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "X   X    XX X   X   X",
+                        "X   X           X   X",
+                        "X   X    XX X   X   X",
+                        "X   X    X  X   X   X",
+                        "X        X  X       X",
+                        "X   X    X  X   X   X",
+                        "X   XX  XX   X  X   X",
+                        "X    XXXX     XX    X",
+                        "X    XXXX     XX    X",
+                        "X                   X",
+                        "X    XXXX     XX    X",
+                        "X    XXXX     XX    X",
+                        "X   XX  XX   X  X   X",
+                        "X   X    X  X   X   X",
+                        "X        X  X       X",
+                        "X   X    X  X   X   X",
+                        "X   X    XX X   X   X",
+                        "X   X           X   X",
+                        "X   X    XX X   X   X",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                    };
+                }
+        }
         /*return new string[]
         {  //0         1         2      
            //012345678901234567890
@@ -302,31 +442,39 @@ public class GameController : MonoBehaviour {
             "XXXXXXXXXXXXXXXXXXXXX",
         };*/
 
-        return new string[]
-        {  //0         1         2      
-           //012345678901234567890
-            "XXXXXXXXXXXXXXXXXXXXX",
-            "X   X    XX X   X   X",
-            "X   X           X   X",
-            "X   X    XX X   X   X",
-            "X   X    X  X   X   X",
-            "X        X  X       X",
-            "X   X    X  X   X   X",
-            "X   XX  XX   X  X   X",
-            "X    XXXX     XX    X",
-            "X    XXXX     XX    X",
-            "X                   X",
-            "X    XXXX     XX    X",
-            "X    XXXX     XX    X",
-            "X   XX  XX   X  X   X",
-            "X   X    X  X   X   X",
-            "X        X  X       X",
-            "X   X    X  X   X   X",
-            "X   X    XX X   X   X",
-            "X   X           X   X",
-            "X   X    XX X   X   X",
-            "XXXXXXXXXXXXXXXXXXXXX",
-        };
+
+
+        //return new string[]
+        //{  //0         1         2      
+        //     //012345678901234567890
+        //    "XXXXXXXXXXXXXXXXXXXXX",
+        //    "X                   X",
+        //    "X                   X",
+        //    "X                   X",
+        //    "X                   X",
+        //    "X                   X",
+        //    "X                   X",
+        //    "X                   X",
+        //    "X                   X",
+        //    "X                   X",
+        //    "X                   X",
+        //    "X                   X",
+        //    "X                   X",
+        //    "X                   X",
+        //    "X                   X",
+        //    "X                   X",
+        //    "X                   X",
+        //    "X                   X",
+        //    "X                   X",
+        //    "X                   X",
+        //    "XXXXXXXXXXXXXXXXXXXXX",
+        //};
+
+
+
+
+
+
     }
 
     private string[] UpdateMap()

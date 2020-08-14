@@ -42,7 +42,7 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
 
     protected Vector2 lastDirection = Vector2.down;
 
-    GameController GC;
+    public GameController GC;
 
     public enum Type { HULS, CARLOS, OSKAR, DANI, PAULA, LOREA, LEYRE, MARIA, LUCIA, CARLOTA, THANIA, ESQUELETO2 };
 
@@ -64,8 +64,8 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
 
     private Color myColor = Color.white;
 
+    public Dictionary<GameController.MapType, List<Location>> proposedEscapePoints = new Dictionary<GameController.MapType, List<Location>>();
 
-    
     public Location target;
     public Location provisionalTarget = null;
 
@@ -105,6 +105,44 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
             IA = false;
             bar.GetComponentInChildren<SpriteRenderer>().color = Color.green;
         }
+
+        proposedEscapePoints.Add(GameController.MapType.TEMPLE, new List<Location>()
+        {
+            new Location { X = 5, Y = 2 },
+            new Location { X = 15, Y = 2 },
+            new Location { X = 10, Y = 2 },
+            new Location { X = 3, Y = 10 },
+            new Location { X = 17, Y = 10 },
+            new Location { X = 10, Y = 10 },
+            new Location { X = 5, Y = 17 },
+            new Location { X = 15, Y = 17 },
+            new Location { X = 10, Y = 17}
+        });
+
+        proposedEscapePoints.Add(GameController.MapType.HELL,
+
+        new List<Location>()
+        {
+            new Location { X = 10, Y = 3 },
+            new Location { X = 3, Y = 10 },
+            new Location { X = 10, Y = 16 },
+            new Location { X = 17, Y = 10 },
+            new Location { X = 10, Y = 10 }
+        });
+
+        proposedEscapePoints.Add(GameController.MapType.PRISION,
+
+        new List<Location>()
+        {
+            new Location { X = 10, Y = 10 },
+            new Location { X = 10, Y = 2 },
+            new Location { X = 10, Y = 18 },
+            new Location { X = 18, Y = 8 },
+            new Location { X = 17, Y = 2 },
+            new Location { X = 3, Y = 19 },
+            new Location { X = 3, Y = 13 },
+        });
+
 
     }
 
@@ -299,6 +337,9 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
                 if (hitInfo.transform == transform)
                 {
                     selected = true;
+                    GC.Selected = this;
+                    IA = false;
+                    state = null;
                 }
                 else
                 {

@@ -6,18 +6,9 @@ public class SoldierHuir : SoldierState
 {
     bool canCheckPath = true;
 
-    List<Location> proposedEscapePoints = new List<Location>()
-        {
-            new Location { X = 5, Y = 2 },
-            new Location { X = 15, Y = 2 },
-            new Location { X = 10, Y = 2 },
-            new Location { X = 3, Y = 10 },
-            new Location { X = 17, Y = 10 },
-            new Location { X = 10, Y = 10 },
-            new Location { X = 5, Y = 17 },
-            new Location { X = 15, Y = 17 },
-            new Location { X = 10, Y = 17}
-        };
+    
+
+
 
     public SoldierHuir(Soldier soldier) : base(soldier)
     {
@@ -27,6 +18,8 @@ public class SoldierHuir : SoldierState
     public override IEnumerator Start()
     {
         yield return null;
+
+        
 
         //Location bestPlace = FindSaveWay();
 
@@ -116,7 +109,7 @@ public class SoldierHuir : SoldierState
 
         if (enemies.Count <= 0) return null;
 
-        foreach (Location location in proposedEscapePoints)
+        foreach (Location location in soldier.proposedEscapePoints[soldier.GC.myMap])
         {
             if (!CheckPeligro(enemies, location))
             {
