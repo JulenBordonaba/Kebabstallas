@@ -70,7 +70,8 @@ public class LoreaSoldier : Soldier
         GameObject[] allies = null;
         try
         {
-            GameObject.FindGameObjectsWithTag(tag);
+            allies=GameObject.FindGameObjectsWithTag(tag);
+
         }
         catch
         {
@@ -84,7 +85,7 @@ public class LoreaSoldier : Soldier
             }
             return;
         }
-
+        print(allies);
 
         if (CheckNearConsumables(1.5f))
         {
