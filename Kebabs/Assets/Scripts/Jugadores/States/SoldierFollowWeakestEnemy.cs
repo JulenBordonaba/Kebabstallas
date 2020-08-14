@@ -16,16 +16,16 @@ public class SoldierFollowWeakestEnemy : SoldierState
     {
         yield return null;
 
-        GameObject[] anemies = GameObject.FindGameObjectsWithTag(soldier.opositeTag);
-        if (anemies.Length <= 0)
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag(soldier.opositeTag);
+        if (enemies.Length <= 0)
         {
             //Debug.Log("Sin aliados");
             ChangeState();
             yield break;
         }
-        GameObject currentEnemy = anemies[0];
+        GameObject currentEnemy = enemies[0];
         float currentFollowValue = float.MinValue;
-        foreach (GameObject enemy in anemies)
+        foreach (GameObject enemy in enemies)
         {
 
 
