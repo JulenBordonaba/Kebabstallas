@@ -22,4 +22,92 @@ public class CarlotaSoldier : Soldier
         }
         yield return null;
     }
+
+    protected override void Start()
+    {
+        base.Start();
+        InvokeRepeating("GoForConsumable", 0.1f, 1f);
+    }
+
+    protected override void Update()
+    {
+        base.Update();
+    }
+    
+
+    public void GoForConsumable()
+    {
+        if (!IA) return;
+        if (BoredEnemies)
+        {
+            SetState(new SoldierFollowBoredEnemy(this));
+        }
+        else if (CheckNearConsumables(0.8f))
+        {
+            SetState(new SoldierFindConsumables(this));
+        }
+    }
+
+    public override void StateMachineLogic()
+    {
+        if (stats.HealthPercentaje < 35)
+        {
+            SetState(new SoldierHuir(this));
+        }
+        else if (stats.HealthPercentaje < 50)
+        {
+            if (CheckNearConsumables(1.2f))
+            {
+                SetState(new SoldierFindConsumables(this));
+            }
+            else if(BoredEnemies)
+            {
+                SetState(new SoldierFollowBoredEnemy(this));
+            }
+            else
+            {
+                SetState(new SoldierHuir(this));
+            }
+        }
+        else
+        {
+            if (BoredEnemies)
+            {
+                SetState(new SoldierFollowBoredEnemy(this));
+            }
+            else
+            {
+                SetState(new SoldierHuir(this));
+            }
+        }
+    }
+
+    public bool BoredEnemies
+    {
+        get
+        {
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag(opositeTag);
+            if (enemies == null) return false;
+            if (enemies.Length <= 0) return false;
+            foreach(GameObject enemy in enemies)
+            {
+                if(enemy.GetComponent<Soldier>())
+                {
+                    Soldier sold = enemy.GetComponent<Soldier>();
+                    if(!sold.riendo)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+    }
+
+
+    private void OnDestroy()
+    {
+        if (state != null)
+            state.UnsubscribeFromEvents();
+    }
 }

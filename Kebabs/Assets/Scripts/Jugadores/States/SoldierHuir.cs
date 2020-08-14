@@ -100,7 +100,14 @@ public class SoldierHuir : SoldierState
         {
             if (minion.GetComponent<Oso>())
             {
-                if (minion.GetComponent<Oso>().tag == soldier.opositeTag)
+                if (minion.CompareTag(soldier.opositeTag))
+                {
+                    enemies.Add(minion);
+                }
+            }
+            else if(minion.GetComponent<Pato>())
+            {
+                if (minion.CompareTag(soldier.opositeTag))
                 {
                     enemies.Add(minion);
                 }
