@@ -326,6 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da5eb94e5a8c07e4babe4d5c39a67664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IA: 0
   map: []
   arma: {fileID: 1221519297998534, guid: c99a0ada97adf9a4780ebf1b1920b333, type: 3}
   sangre: {fileID: 1284217796436144, guid: fa6ad27a4c01595479b078e73176167f, type: 3}
@@ -336,6 +337,7 @@ MonoBehaviour:
   debilidad: 1
   stats: {fileID: 1497535016375610898}
   direction: {x: 0, y: 0, z: 0}
+  GC: {fileID: 0}
   myType: 0
   effectManager: {fileID: 929884745394012287}
   followTarget: {fileID: 0}
@@ -355,7 +357,7 @@ MonoBehaviour:
   vida: 100
   maxVida: 0
   baseSpeed: 0.25
-  baseAttackSpeed: 7
+  baseAttackSpeed: 6
   baseAttackDistance: 0.7
   baseAttackDamage: 30
   baseDamageReduction: 0

@@ -49,6 +49,7 @@ public class LuciaSoldier : Soldier
 
     public override void StateMachineLogic()
     {
+        if (!IA) return;
         if (stats.HealthPercentaje < 35)
         {
             SetState(new SoldierHuir(this));

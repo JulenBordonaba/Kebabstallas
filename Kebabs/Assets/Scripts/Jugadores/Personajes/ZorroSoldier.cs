@@ -51,6 +51,7 @@ public class ZorroSoldier : Soldier
 
     public override void StateMachineLogic()
     {
+        if (!IA) return;
         if (CheckNearConsumables(0.8f))
         {
             SetState(new SoldierFindConsumables(this));

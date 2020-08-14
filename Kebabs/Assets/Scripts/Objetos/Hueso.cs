@@ -6,7 +6,7 @@ public class Hueso : MonoBehaviour {
 
     public string targetTag;
     public float daño = 10;
-    private float speed = 0.008f;
+    private float speed = 0.4f;
     float timer;
     private SpriteRenderer sr;
     // Use this for initialization
@@ -32,7 +32,7 @@ public class Hueso : MonoBehaviour {
             Destroy(this.gameObject);
         }
 
-        transform.Translate(Vector2.up * speed * 50 * Time.deltaTime);
+        transform.Translate(Vector2.up * speed * Time.deltaTime);
 
     }
 

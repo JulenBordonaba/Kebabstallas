@@ -64,7 +64,7 @@ public class LoreaSoldier : Soldier
 
     public override void StateMachineLogic()
     {
-
+        if (!IA) return;
         //print("StateMachineLogic");
         followTarget = null;
         GameObject[] allies = null;
@@ -85,7 +85,6 @@ public class LoreaSoldier : Soldier
             }
             return;
         }
-        print(allies);
 
         if (CheckNearConsumables(1.5f))
         {

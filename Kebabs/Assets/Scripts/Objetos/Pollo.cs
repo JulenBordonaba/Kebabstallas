@@ -6,7 +6,7 @@ public class Pollo : MonoBehaviour {
     public string targetTag;
     public float daño = 5;
     public Vector3 direccion;
-    private float speed = 0.015f;
+    private float speed = 0.75f;
     float timer;
     private SpriteRenderer sr;
     // Use this for initialization
@@ -30,7 +30,7 @@ public class Pollo : MonoBehaviour {
         }
         if (direccion != null)
         {
-            transform.Translate(direccion * speed);
+            transform.Translate(direccion * speed * Time.deltaTime);
         }
 	}
 
