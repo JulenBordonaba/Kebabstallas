@@ -137,7 +137,7 @@ public class SoldierFollowAtDistanceManhatan : SoldierState
 
         bestPath = soldier.A_estrella_Coste(initial, location);
 
-        Location loc = bestPath[10 - distanceToEnemy];
+        Location loc = bestPath[Mathf.Clamp(10 - distanceToEnemy, 0 , bestPath.Count -1)];
 
         return loc;
     }

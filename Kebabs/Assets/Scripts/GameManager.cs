@@ -6,28 +6,13 @@ using UnityEngine.SceneManagement;
 
 public static class GameManager {
     
-    public static void MainMenu()
+    public static void LoadScene(string scene)
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(scene);
     }
-
-    public static void Selection()
+    
+    public static void ReLoadLevel()
     {
-        SceneManager.LoadScene(1);
-    }
-
-    public static void CustomedBattle()
-    {
-        SceneManager.LoadScene(2);
-    }
-
-    public static void Levels()
-    {
-        SceneManager.LoadScene(3);
-    }
-
-    public static void LoadLevel(int level)
-    {
-        SceneManager.LoadScene(level + 4);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

@@ -29,6 +29,10 @@ public static class AudioManager
     {
         GameObject soundGameObject = new GameObject("Sound");
         AudioSource aus = soundGameObject.AddComponent<AudioSource>();
+        SoundTypeVolume tipoVolumen = soundGameObject.AddComponent<SoundTypeVolume>();
+        tipoVolumen.soundType = SoundType.effect;
+        tipoVolumen.audioSource = aus;
+        
         soundGameObject.AddComponent<FinishSound>();
         aus.PlayOneShot(GetAudioClip(sound));
     }
@@ -43,7 +47,7 @@ public static class AudioManager
             }
             
         }
-        Debug.LogError("Sound" + sound + " bot found");
+        Debug.LogError("Sound" + sound + " not found");
         return null;
     }
 }

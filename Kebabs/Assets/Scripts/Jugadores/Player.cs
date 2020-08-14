@@ -68,7 +68,7 @@ public class Player : MonoBehaviour {
             {
                 if (CurrentInterObject != null)
                 {
-                    GameManager.MainMenu();
+                    GameManager.LoadScene("MainTitle");
                 }
             }
         }

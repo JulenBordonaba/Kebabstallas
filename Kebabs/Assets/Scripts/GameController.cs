@@ -33,6 +33,7 @@ public class GameController : MonoBehaviour {
 
     private void Start()
     {
+        Resume();
         if (onGame)
         {
             VictoryImage.SetActive(false);
@@ -148,6 +149,8 @@ public class GameController : MonoBehaviour {
     {
         if (PauseImage)
             PauseImage.SetActive(false);
+        if (MainCamera)
+            MainCamera.GetComponent<AudioSource>().UnPause();
         Time.timeScale = 1f;
         GamePaused = false;
     }
@@ -155,26 +158,27 @@ public class GameController : MonoBehaviour {
     public void Pause()
     {
         PauseImage.SetActive(true);
+        MainCamera.GetComponent<AudioSource>().Pause();
         Time.timeScale = 0f;
         GamePaused = true;
     }
 
     public void MainMenuScene()
     {
-        GameManager.MainMenu();
+        GameManager.LoadScene("MainTitle");
     }
 
     public void SelectionScene()
     {
         onGame = false;
-        GameManager.Selection();
+        GameManager.LoadScene("Selection");
         Resume();
     }
 
     public void LevelsScene()
     {
         onGame = false;
-        GameManager.Levels();
+        GameManager.LoadScene("Levels");
         Resume();
     }
 
@@ -182,8 +186,18 @@ public class GameController : MonoBehaviour {
     {
         players = new List<int>();
         enemies = new List<int>();
-        GameManager.LoadLevel(level);
+        GameManager.LoadScene("Level" + level);
         onGame = true;
+    }
+
+    public void ReloadLevel()
+    {
+        GameManager.ReLoadLevel();
+    }
+
+    public void Portada()
+    {
+        GameManager.LoadScene("Portada");
     }
 
     public void Clear()
@@ -269,7 +283,7 @@ public class GameController : MonoBehaviour {
         if (players.Count > 0 && enemies.Count > 0)
         {
             onGame = true;
-            GameManager.CustomedBattle();
+            GameManager.LoadScene("CustomizedBattle");
         }
             
     }
@@ -289,6 +303,14 @@ public class GameController : MonoBehaviour {
         {
             Selected.IA = false;
             Selected.state = null;
+        }
+    }
+
+    public void IAParaTodosHijosDePuta()
+    {
+        foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player"))
+        {
+            player.GetComponent<Soldier>().IA = true;
         }
     }
 

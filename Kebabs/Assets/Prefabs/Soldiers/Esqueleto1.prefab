@@ -436,10 +436,10 @@ MonoBehaviour:
   effectManager: {fileID: 4996481748955434855}
   vida: 130
   maxVida: 0
-  baseSpeed: 0.3
+  baseSpeed: 0.25
   baseAttackSpeed: 2.5
   baseAttackDistance: 0.5
-  baseAttackDamage: 10
+  baseAttackDamage: 12.5
   baseDamageReduction: 0
   speedReplace: -1
   danger: 1

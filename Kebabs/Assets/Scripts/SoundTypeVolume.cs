@@ -8,11 +8,12 @@ public class SoundTypeVolume : MonoBehaviour
 
     public SoundType soundType;
 
-    private float defaultVolume;
+    private float defaultVolume = 1;
 
     private void Awake()
     {
-        defaultVolume = audioSource.volume;
+        if (audioSource != null)
+            defaultVolume = audioSource.volume;
     }
     
     // Update is called once per frame
@@ -23,8 +24,13 @@ public class SoundTypeVolume : MonoBehaviour
 
     public float FinalVolume
     {
+        
         get
         {
+            if (OptionsMenu.settings == null)
+            {
+                return defaultVolume;
+            }
             if(soundType== SoundType.effect)
             {
                 return defaultVolume * OptionsMenu.settings.effectVolume * OptionsMenu.settings.generalVolume;

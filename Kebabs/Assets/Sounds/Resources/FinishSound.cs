@@ -11,7 +11,8 @@ public class FinishSound : MonoBehaviour
 
     private IEnumerator Suicide()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitUntil(() => transform.GetComponent<AudioSource>().isPlaying);
+        yield return new WaitUntil(() => !transform.GetComponent<AudioSource>().isPlaying);
         Destroy(this.gameObject);
     }
 }

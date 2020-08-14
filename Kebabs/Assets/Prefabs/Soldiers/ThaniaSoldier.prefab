@@ -356,7 +356,7 @@ MonoBehaviour:
   effectManager: {fileID: 5649121524110625137}
   vida: 100
   maxVida: 0
-  baseSpeed: 0.3
+  baseSpeed: 0.24
   baseAttackSpeed: 2
   baseAttackDistance: 0.5
   baseAttackDamage: 8
