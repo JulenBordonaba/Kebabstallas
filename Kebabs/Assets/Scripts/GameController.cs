@@ -200,6 +200,11 @@ public class GameController : MonoBehaviour {
         GameManager.LoadScene("Portada");
     }
 
+    public void Configuracion()
+    {
+        GameManager.LoadScene("Configuracion");
+    }
+
     public void Clear()
     {
         foreach (GameObject persona in GameObject.FindGameObjectsWithTag("Player"))

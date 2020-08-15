@@ -395,6 +395,10 @@ public class Pato : MonoBehaviour
 
         foreach (Location l in proposedLocations)
         {
+            if (l.X < 0 || l.X > 20 || l.Y < 0 || l.Y > 20)
+            {
+                return null;
+            }
             if (map[l.X][l.Y] == 'X')
             {
                 aux.Add(l);

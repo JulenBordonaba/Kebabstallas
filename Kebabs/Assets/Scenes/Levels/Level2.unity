@@ -1279,6 +1279,16 @@ PrefabInstance:
       propertyPath: baseSpeed
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 6556942625384706631, guid: 268558dac54036c4d82ba3f93a573540,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875181213631149386, guid: 268558dac54036c4d82ba3f93a573540,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 268558dac54036c4d82ba3f93a573540, type: 3}
 --- !u!1 &649778174
@@ -2226,6 +2236,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Esqueleto1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1913781140069312, guid: 9943776167d030544b0387e712211633, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4695078688670886, guid: 9943776167d030544b0387e712211633, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.662
@@ -2284,6 +2298,32 @@ PrefabInstance:
         type: 3}
       propertyPath: baseAttackDamage
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5755847737022345517, guid: 9943776167d030544b0387e712211633,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292947401200740, guid: 9943776167d030544b0387e712211633, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702528779912318, guid: 9943776167d030544b0387e712211633, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076001359330264, guid: 9943776167d030544b0387e712211633, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6865422339936876071, guid: 9943776167d030544b0387e712211633,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612529366372446, guid: 9943776167d030544b0387e712211633, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9943776167d030544b0387e712211633, type: 3}
@@ -2856,7 +2896,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5166ff510d4600b46884e3055b611136, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 10db7d961d109c648b1cb4977c91e839, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3559,6 +3599,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Esqueleto1
       objectReference: {fileID: 0}
+    - target: {fileID: 1913781140069312, guid: 9943776167d030544b0387e712211633, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4695078688670886, guid: 9943776167d030544b0387e712211633, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.305
@@ -3617,6 +3661,32 @@ PrefabInstance:
         type: 3}
       propertyPath: baseAttackDamage
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5755847737022345517, guid: 9943776167d030544b0387e712211633,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292947401200740, guid: 9943776167d030544b0387e712211633, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702528779912318, guid: 9943776167d030544b0387e712211633, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076001359330264, guid: 9943776167d030544b0387e712211633, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6865422339936876071, guid: 9943776167d030544b0387e712211633,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612529366372446, guid: 9943776167d030544b0387e712211633, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9943776167d030544b0387e712211633, type: 3}

@@ -23,7 +23,7 @@ public class DontDestroy : MonoBehaviour
     void Update()
     {
         a = SceneManager.GetActiveScene().name;
-        if (!(a == "MainTitle" || a =="Selection" || a=="Levels"))
+        if (!(a == "MainTitle" || a =="Selection" || a=="Levels" || a=="Portada"))
         {
             Destroy(this.gameObject);
         }

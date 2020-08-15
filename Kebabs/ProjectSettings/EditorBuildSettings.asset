@@ -12,12 +12,27 @@ EditorBuildSettings:
     path: Assets/Scenes/Selection.unity
     guid: e8c79ab23e0669a458777ee3e040a897
   - enabled: 1
-    path: Assets/Scenes/BattleScene.unity
+    path: Assets/Scenes/CustomizedBattle.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Levels.unity
     guid: 804598ad4c8a6f14cb71fbf723f144c0
   - enabled: 1
-    path: Assets/Scenes/Levels/Level 1.unity
-    guid: 7564e6ff2278e5642ab1af3ba376d5b2
+    path: Assets/Scenes/Levels/Level1.unity
+    guid: 4729af9ec3a1b484da63085477d6ca6c
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level2.unity
+    guid: 5a681f48dd7cfc046a73e8e2752d6554
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level3.unity
+    guid: d31c0c87163932a469a2cd5ac0995d80
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level4.unity
+    guid: 56942042e86e4d14cb5d98de95e39b14
+  - enabled: 1
+    path: Assets/Scenes/Portada.unity
+    guid: ee6d43dcc66affa4f84fa00a0ddba3b3
+  - enabled: 1
+    path: Assets/Scenes/Configuracion.unity
+    guid: ebcb1a06dc72d0a47bb8f6d38572a064
   m_configObjects: {}
