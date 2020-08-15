@@ -337,7 +337,7 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
                 if (hitInfo.transform == transform)
                 {
                     selected = true;
-                    GC.Selected = this;
+                    GC.ChangeSelected(this);
                     IA = false;
                     state = null;
                 }

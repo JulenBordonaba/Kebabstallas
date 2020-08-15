@@ -27,6 +27,8 @@ public class GameController : MonoBehaviour {
     public Text GreenTeamCountText;
     public Text RedTeamCountText;
     public Soldier Selected = null;
+    public GameObject SeleccionadoPrefab;
+    private GameObject Seleccionado;
     
 
     public static UnityEvent OnCollectablePlaced = new UnityEvent();
@@ -86,8 +88,14 @@ public class GameController : MonoBehaviour {
     void Update()
     {
         map = UpdateMap();
+        if (Seleccionado == null)
+        {
+            Seleccionado = Instantiate(SeleccionadoPrefab);
+        }
         if (onGame)
         {
+            
+
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 if (GamePaused)
@@ -296,6 +304,7 @@ public class GameController : MonoBehaviour {
 
     public void AvtivarIA()
     {
+        
         if (Selected != null)
         {
             Selected.IA = true;
@@ -309,6 +318,13 @@ public class GameController : MonoBehaviour {
             Selected.IA = false;
             Selected.state = null;
         }
+    }
+
+    public void ChangeSelected(Soldier player)
+    {
+        Selected = player;
+        Seleccionado.transform.parent = player.transform;
+        Seleccionado.transform.position = player.transform.position + Vector3.down * 0.02f;
     }
 
     public void IAParaTodosHijosDePuta()

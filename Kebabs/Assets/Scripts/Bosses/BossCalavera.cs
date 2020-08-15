@@ -215,6 +215,7 @@ public class BossCalavera : MonoBehaviour
             GameObject meteorito = Instantiate(Meteorito, new Vector2(Random.Range(3, 17) / 10f, Random.Range(3, 17) / 10f), Quaternion.identity);
             meteorito.GetComponent<Meteorito>().targetTag = opositeTag;
         }
+        yield return new WaitForSeconds(2.75f);
         GC.MainCamera.GetComponent<Animator>().SetTrigger("Meteoritos");
 
         yield return null;
