@@ -88,7 +88,7 @@ public class GameController : MonoBehaviour {
     void Update()
     {
         map = UpdateMap();
-        if (Seleccionado == null)
+        if (Seleccionado == null && SeleccionadoPrefab != null)
         {
             Seleccionado = Instantiate(SeleccionadoPrefab);
         }

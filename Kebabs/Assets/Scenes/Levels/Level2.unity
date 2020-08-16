@@ -1004,6 +1004,8 @@ MonoBehaviour:
   GreenTeamCountText: {fileID: 0}
   RedTeamCountText: {fileID: 0}
   Selected: {fileID: 0}
+  SeleccionadoPrefab: {fileID: 1297954062585760577, guid: 82d81af7cf8167846b8d2df73ab78e64,
+    type: 3}
 --- !u!4 &529910587
 Transform:
   m_ObjectHideFlags: 0
