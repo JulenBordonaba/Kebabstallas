@@ -74,6 +74,15 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
     public static UnityEvent OnDamageDealed = new UnityEvent();
 
 
+    private Vector3 currentPoint;
+
+    private Vector3 nextPoint;
+
+    private float Timer = 0;
+
+    private float TimeToGo = 0.3f;
+
+
     // Use this for initialization
     protected virtual void Start()
     {
@@ -85,7 +94,7 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
         //InvokeRepeating("Attack", Random.Range(1, 3.5f), stats.AttackSpeed);
         Invoke("StartAttacking", Random.Range(1, 3.5f));
 
-
+        currentPoint = nextPoint = transform.position;
 
         effectManager.OnEffectStart.AddListener(UpdateSpriteColor);
         effectManager.OnEffectEnd.AddListener(UpdateSpriteColor);
@@ -178,6 +187,60 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
             };
         }
 
+        Timer += Time.deltaTime;
+
+        if (target != null && Timer > 0.1f / stats.Speed)
+        {
+            Timer = 0;
+            currentPoint = nextPoint;
+            transform.position = currentPoint;
+
+            float posRoundX = Mathf.RoundToInt(transform.position.x * 10f) / 10f;
+            float posRoundY = Mathf.RoundToInt(transform.position.y * 10f) / 10f;
+
+            if (Mathf.Abs(target.X / 10f - posRoundX) < 0.05f && Mathf.Abs(target.Y / 10f - posRoundY) < 0.05f)
+            {
+                direction = Vector2.zero;
+                target = null;
+            }
+            else
+            {
+                //Posición actual para el primer nodo del A*
+                Location initial = new Location
+                {
+                    X = Mathf.RoundToInt(transform.position.x * 10),
+                    Y = Mathf.RoundToInt(transform.position.y * 10),
+                };
+
+                //Calculamos el siguiente movimiento
+                Location next = A_estrella(initial, target);
+
+
+                //Si lo encuentra, obtenemos la dirección que toma el fantasma
+                if (next != null)
+                {
+                    if (provisionalTarget != null && Mathf.Abs(provisionalTarget.X / 10f - posRoundX) < 0.05f && Mathf.Abs(provisionalTarget.Y / 10f - posRoundY) < 0.05f)
+                    {
+                        direction = Vector2.zero;
+                    }
+                    else
+                    {
+                        direction = new Vector2(next.X - initial.X, next.Y - initial.Y).normalized;
+
+                    }
+                }
+                else
+                {
+                    if (provisionalTarget != null && Mathf.Abs(provisionalTarget.X / 10f - posRoundX) < 0.05f && Mathf.Abs(provisionalTarget.Y / 10f - posRoundY) < 0.05f)
+                    {
+                        direction = Vector2.zero;
+                    }
+                }
+
+
+            }
+        }
+        /*
         //redondear a float con un decimal
         float posRoundX = RoundWithDecimals(transform.position.x, 1);
         float posRoundY = RoundWithDecimals(transform.position.y, 1);
@@ -229,16 +292,20 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
                 }
 
 
-            }
+            }       x/1     0.1/y
 
 
-        }
+        }*/
+
+        nextPoint = currentPoint + direction / 10f;
 
         //Movemos el fantasma(personaje XD) en esa dirección
         if (direction != Vector3.zero)
         {
             lastDirection = direction;
-            this.transform.Translate(direction * stats.Speed * Time.deltaTime);
+            float t = Timer * stats.Speed / 0.1f;
+            transform.position = Vector3.Lerp(currentPoint, nextPoint, t);
+            //this.transform.Translate(direction * stats.Speed * Time.deltaTime);
         }
 
 

@@ -1930,6 +1930,7 @@ MonoBehaviour:
   GreenTeamCountText: {fileID: 0}
   RedTeamCountText: {fileID: 0}
   Selected: {fileID: 0}
+  SeleccionadoPrefab: {fileID: 0}
 --- !u!4 &1980624368
 Transform:
   m_ObjectHideFlags: 0

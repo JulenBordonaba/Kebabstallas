@@ -331,7 +331,8 @@ public class GameController : MonoBehaviour {
     {
         foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player"))
         {
-            player.GetComponent<Soldier>().IA = true;
+            if(player.GetComponent<Soldier>())
+                player.GetComponent<Soldier>().IA = true;
         }
     }
 

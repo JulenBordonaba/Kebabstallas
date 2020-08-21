@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 65821369278875968}
   - component: {fileID: 114539762064762528}
   - component: {fileID: 54577783150861326}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Pato
   m_TagString: Player
   m_Icon: {fileID: 0}
