@@ -82,6 +82,8 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
 
     private float TimeToGo = 0.3f;
 
+    private float ClickTimer = 0f;
+
 
     // Use this for initialization
     protected virtual void Start()
@@ -394,8 +396,21 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
 
     public void OnMouseClick()
     {
-        if (Input.GetMouseButton(0) && this.tag == "Player")
+        if (Input.GetMouseButtonDown(0))
         {
+            ClickTimer = 0;
+        }
+        if (Input.GetMouseButton(0))
+        {
+            ClickTimer += Time.deltaTime;
+        }
+        if (Input.GetMouseButtonUp(0) && this.tag == "Player")
+        {
+            if(ClickTimer > 0.1f)
+            {
+                return;
+            }
+
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hitInfo = new RaycastHit();
             int layerMask = 1 << 8;
