@@ -47,6 +47,10 @@ public class ZorroSoldier : Soldier
         yield return new WaitForSeconds(35);
         misLlamas.SetActive(false);
         atacando = false;
+        if (IA)
+        {
+            StateMachineLogic();
+        }
     }
 
     public override void StateMachineLogic()
