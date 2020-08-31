@@ -41,6 +41,9 @@ public class BossCalavera : MonoBehaviour
 
     private float TPprob = 0.95f;
 
+    private float originalSize;
+    private Vector3 originalPosition;
+
     //private Transform bar;
 
     // Start is called before the first frame update
@@ -60,10 +63,10 @@ public class BossCalavera : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (HazMagia)
-        {
-            MagiaAnim();
-        }
+        //if (HazMagia)
+        //{
+        //    MagiaAnim();
+        //}
 
         map = FindObjectOfType<GameController>().GetMap();
 
@@ -123,26 +126,35 @@ public class BossCalavera : MonoBehaviour
 
     private void MagiaAnim()
     {
-        MagiaTimer += Time.deltaTime;
-        if (MagiaTimer < 0.5f)
+
+        
+
+        if (MagiaTimer == 0f)
+        {
+            //originalSize = Camera.main.orthographicSize;
+            originalPosition = Camera.main.transform.position;
+        }
+        else if (MagiaTimer < 0.5f)
         {
             float t = MagiaTimer / 0.5f;
-            GC.MainCamera.transform.parent.position = Vector3.Lerp(Vector3.one, transform.position + Vector3.up * 0.1f, t);
-            GC.MainCamera.GetComponent<Camera>().orthographicSize = 1f - t / 2;
+            Camera.main.transform.position = Vector3.Lerp(originalPosition, transform.position + Vector3.up * 0.1f, t);
+            //Camera.main.orthographicSize = originalSize - (t * (originalSize - 0.5f));
         }
         else if (MagiaTimer <= 2 && MagiaTimer > 1.5f)
         {
             float t = (MagiaTimer - 1.5f) / 0.5f;
-            GC.MainCamera.transform.parent.position = Vector3.Lerp(transform.position + Vector3.up * 0.1f, Vector3.one, t);
-            GC.MainCamera.GetComponent<Camera>().orthographicSize = 0.5f + t / 2;
+            Camera.main.transform.position = Vector3.Lerp(transform.position + Vector3.up * 0.1f, originalPosition, t);
+            //Camera.main.orthographicSize = 0.5f - (t * (0.5f - originalSize ));
         }
         else if (MagiaTimer > 2)
         {
-            GC.MainCamera.transform.parent.position = Vector3.one;
-            GC.MainCamera.GetComponent<Camera>().orthographicSize = 1;
+            Camera.main.transform.position = originalPosition;
+            //Camera.main.orthographicSize = originalSize;
             MagiaTimer = 0;
             HazMagia = false;
         }
+
+        MagiaTimer += Time.deltaTime;
     }
 
     private IEnumerator ChooseAttack()
@@ -161,7 +173,7 @@ public class BossCalavera : MonoBehaviour
             float Rand = Random.Range(0, 1f);
             if (Rand < 0.25f)
                 miAtaque = Ataque.METEORITO;
-            else if (Rand < 0.3f)
+            else if (Rand < 0.8f)
                 miAtaque = Ataque.MAGIA;
             else if (Rand < TPprob)
                 miAtaque = Ataque.OJOS;
@@ -216,7 +228,7 @@ public class BossCalavera : MonoBehaviour
             meteorito.GetComponent<Meteorito>().targetTag = opositeTag;
         }
         yield return new WaitForSeconds(2.75f);
-        GC.MainCamera.GetComponent<Animator>().SetTrigger("Meteoritos");
+        GC.MainCamera.transform.parent.GetComponent<Animator>().SetTrigger("Meteoritos");
 
         yield return null;
     }

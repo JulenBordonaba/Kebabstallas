@@ -29,6 +29,10 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
 
     public int border = 0;
 
+    public int nutellaCount = 0;
+
+    private bool isNutella = false;
+
     
         
     public string opositeTag;
@@ -406,7 +410,7 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
         }
         if (Input.GetMouseButtonUp(0) && this.tag == "Player")
         {
-            if(ClickTimer > 0.1f)
+            if(ClickTimer > 0.3f)
             {
                 return;
             }
@@ -506,82 +510,6 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
         }
     }
 
-
-    private void Atack()
-    {
-
-        switch (myType)
-        {
-            case Type.HULS:
-                {
-
-                    break;
-                }
-            case Type.DANI:
-                {
-
-                    break;
-                }
-            case Type.THANIA:
-                {
-
-
-                    break;
-                }
-            case Type.LUCIA:
-                {
-
-
-                    break;
-                }
-            case Type.PAULA:
-                {
-
-                    break;
-                }
-            case Type.LEYRE:
-                {
-
-                    break;
-                }
-            case Type.CARLOTA:
-                {
-
-                    break;
-                }
-            case Type.ESQUELETO2:
-                {
-
-                    break;
-                }
-            case Type.MARIA:
-                {
-
-                    break;
-                }
-            case Type.CARLOS:
-                {
-
-                    break;
-                }
-            case Type.OSKAR:
-                {
-
-
-                    break;
-                }
-            case Type.LOREA:
-                {
-
-                    break;
-                }
-            default:
-                {
-                    break;
-                }
-        }
-    }
-
     public void EmpiezaContagio(float damage)
     {
         StartCoroutine(Contagiar(damage));
@@ -629,12 +557,29 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
     //}
 
 
-
-
-
-
-
-
+    public void CheckNutella()
+    {
+        if (nutellaCount <= 0)
+        {
+            if (isNutella)
+            {
+                isNutella = false;
+                stats.speedReplace = -1;
+                Timer /= stats.Speed / 0.1f;
+            }
+        }
+        else
+        {
+            if (!isNutella)
+            {
+                isNutella = true;
+                Timer /= 0.1f / stats.Speed;
+                stats.speedReplace = 0.1f;
+                
+            }
+            
+        }
+    }
 
     public void SetHealthBarSize(float sizeNormalized)
     {

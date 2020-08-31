@@ -7,6 +7,7 @@ public class Nutella : MonoBehaviour {
     public string targetTag;
     private SpriteRenderer sr;
     private float timer = 0;
+    private List<GameObject> Nutellados = new List<GameObject>();
     // Use this for initialization
     void Start()
     {
@@ -26,26 +27,25 @@ public class Nutella : MonoBehaviour {
         timer += Time.deltaTime;
         if (timer > 15f)
         {
-            foreach (GameObject enemy in GameObject.FindGameObjectsWithTag(targetTag))
+            foreach (GameObject enemy in Nutellados)
             {
-
-                if (Vector2.Distance(enemy.transform.position, transform.position) < 0.1f && enemy.GetComponent<Soldier>() != null)
-                {
-
-                    enemy.GetComponent<Soldier>().stats.speedReplace = -1; ;
-                }
+                enemy.GetComponent<Soldier>().nutellaCount -= 1;
+                enemy.GetComponent<Soldier>().CheckNutella();
             }
             Destroy(this.gameObject);
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.tag == targetTag)
         {
             if (other.GetComponent<Soldier>() != null)
             {
-                other.GetComponent<Soldier>().stats.speedReplace = 0.1f;
+                Nutellados.Add(other.gameObject);
+                other.GetComponent<Soldier>().nutellaCount += 1;
+                other.GetComponent<Soldier>().CheckNutella();
+                //other.GetComponent<Soldier>().stats.speedReplace = 0.1f;
             }
         }
     }
@@ -56,7 +56,10 @@ public class Nutella : MonoBehaviour {
         {
             if (other.GetComponent<Soldier>() != null)
             {
-                other.GetComponent<Soldier>().stats.speedReplace=-1;
+                Nutellados.Remove(other.gameObject);
+                //other.GetComponent<Soldier>().stats.speedReplace=-1;
+                other.GetComponent<Soldier>().nutellaCount -= 1;
+                other.GetComponent<Soldier>().CheckNutella();
             }
         }
     }
