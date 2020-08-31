@@ -11,6 +11,7 @@ public class SoldierStay : SoldierState
 
     public override IEnumerator Start()
     {
+        base.Start();
         yield return null;
     }
 

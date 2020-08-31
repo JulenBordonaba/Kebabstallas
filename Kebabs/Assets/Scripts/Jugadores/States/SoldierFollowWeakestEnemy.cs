@@ -14,6 +14,7 @@ public class SoldierFollowWeakestEnemy : SoldierState
 
     public override IEnumerator Start()
     {
+        base.Start();
         yield return null;
 
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(soldier.opositeTag);

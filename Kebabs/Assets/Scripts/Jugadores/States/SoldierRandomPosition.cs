@@ -14,6 +14,7 @@ public class SoldierRandomPosition : SoldierState
 
     public override IEnumerator Start()
     {
+        base.Start();
         yield return null;
 
         int X = 0;

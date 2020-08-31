@@ -25,7 +25,17 @@ public class LoreaSoldier : Soldier
         //    print("No tengo followTarget");
 
 
+        print(state);
+        try
+        {
+            Debug.Log(target.X + " " + target.Y);
+        }
+        catch
+        {
+            print("No hay target");
+        }
         
+
     }
 
     public void GoForConsumable()
@@ -85,6 +95,29 @@ public class LoreaSoldier : Soldier
             }
             return;
         }
+        if (allies.Length > 0)
+        {
+            List<GameObject> _allies = new List<GameObject>();
+
+            foreach (GameObject ally in allies)
+            {
+                if (ally.activeInHierarchy)
+                {
+                    if (ally.GetComponent<Soldier>())
+                    {
+                        if (ally.GetComponent<Soldier>() != this)
+                        {
+                            print(ally.name);
+                            _allies.Add(ally);
+                        }
+                    }
+                }
+            }
+
+            allies = _allies.ToArray();
+        }
+
+        print("Allies: " + allies.Length);
 
         if (CheckNearConsumables(1.5f))
         {
@@ -94,7 +127,7 @@ public class LoreaSoldier : Soldier
         {
             SetState(new SoldierHuir(this));
         }
-        else if (allies.Length<=0)
+        else if (allies.Length<=1)
         {
             SetState(new SoldierHuir(this));
         }
@@ -131,6 +164,7 @@ public class LoreaSoldier : Soldier
                                     float allyDistance = Vector2.Distance(transform.position, collectable.transform.position);
                                     if (allyDistance < 1.8f)
                                     {
+                                        print("1");
                                         SetState(new SoldierFollowWeakestTeammate(this));
                                     }
                                     else
@@ -152,6 +186,7 @@ public class LoreaSoldier : Soldier
                                         float allyDistance = Vector2.Distance(transform.position, collectable.transform.position);
                                         if (allyDistance < 1.8f)
                                         {
+                                            print("2");
                                             SetState(new SoldierFollowWeakestTeammate(this));
                                         }
                                         else
@@ -192,6 +227,7 @@ public class LoreaSoldier : Soldier
                 }
                 else
                 {
+                    print("3    Allies: " + allies.Length);
                     SetState(new SoldierFollowWeakestTeammate(this));
                 }
             }

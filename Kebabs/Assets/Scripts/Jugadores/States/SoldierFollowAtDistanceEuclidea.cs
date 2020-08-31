@@ -26,6 +26,7 @@ public class SoldierFollowAtDistanceEuclidea : SoldierState
 
     public override IEnumerator Start()
     {
+        base.Start();
         yield return null;
 
         //Location bestPlace = FindSaveWay();

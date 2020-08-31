@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+[SerializeField]
 public class SoldierState 
 {
     protected Soldier soldier;
@@ -15,7 +17,9 @@ public class SoldierState
 
     public virtual IEnumerator Start()
     {
-        yield break;
+        yield return null;
+
+        soldier.followTarget = null;
     }
 
     public virtual void Update()

@@ -11,6 +11,7 @@ public class SoldierFindConsumables : SoldierState
 
     public override IEnumerator Start()
     {
+        base.Start();
         yield return null;
 
         GameObject[] consumables = GameObject.FindGameObjectsWithTag("Consumable");

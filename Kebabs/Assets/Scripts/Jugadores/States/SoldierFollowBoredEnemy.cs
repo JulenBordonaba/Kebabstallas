@@ -14,6 +14,7 @@ public class SoldierFollowBoredEnemy : SoldierState
 
     public override IEnumerator Start()
     {
+        base.Start();
         yield return null;
 
         GameObject[] anemies = GameObject.FindGameObjectsWithTag(soldier.opositeTag);

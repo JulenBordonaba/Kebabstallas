@@ -63,6 +63,7 @@ public class OptionsMenu : MonoBehaviour
     public void SetSliderValues()
     {
         //sonido
+        if (settings == null) return;
         musicVolumeSlider.value = settings.musicVolume;
         effectVolumeSlider.value = settings.effectVolume;
         generalVolumeSlider.value = settings.generalVolume;

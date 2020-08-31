@@ -17,8 +17,8 @@ public class SoldierHuir : SoldierState
 
     public override IEnumerator Start()
     {
+        base.Start();
         yield return null;
-
         
 
         //Location bestPlace = FindSaveWay();
@@ -43,8 +43,8 @@ public class SoldierHuir : SoldierState
         float posRoundX = soldier.RoundWithDecimals(soldier.transform.position.x, 1);
         float posRoundY = soldier.RoundWithDecimals(soldier.transform.position.y, 1);
 
-
-
+        soldier.followTarget = null;
+        
 
         //
         if (Mathf.Abs(soldier.transform.position.x - posRoundX) < 0.005f && Mathf.Abs(soldier.transform.position.y - posRoundY) < 0.005f && canCheckPath)
@@ -66,6 +66,8 @@ public class SoldierHuir : SoldierState
             }
 
         }
+
+
 
     }
 

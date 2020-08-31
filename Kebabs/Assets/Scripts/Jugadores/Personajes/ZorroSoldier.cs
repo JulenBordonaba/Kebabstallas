@@ -16,7 +16,6 @@ public class ZorroSoldier : Soldier
     protected override void Update()
     {
         base.Update();
-        
     }
 
     public void GoForConsumable()
