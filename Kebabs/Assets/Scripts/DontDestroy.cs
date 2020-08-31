@@ -9,6 +9,7 @@ public class DontDestroy : MonoBehaviour
 {
 
     private string a;
+    private List<string> scenes = new List<string> { "MainTitle", "Selection", "Levels", "Portada", "Configuracion" };
 
     void Awake()
     {
@@ -23,7 +24,7 @@ public class DontDestroy : MonoBehaviour
     void Update()
     {
         a = SceneManager.GetActiveScene().name;
-        if (!(a == "MainTitle" || a =="Selection" || a=="Levels" || a=="Portada"))
+        if (!scenes.Contains(a))
         {
             Destroy(this.gameObject);
         }

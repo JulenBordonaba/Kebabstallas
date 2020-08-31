@@ -53,7 +53,7 @@ public class Collectable : MonoBehaviour
             AudioManager.PlaySound(AudioManager.Sound.EXPLOSIONAZUL);
         }
         exploting = true;
-        GC.MainCamera.transform.GetComponent<Animator>().SetTrigger("ExplosionPequeña");
+        GC.MainCamera.transform.parent.GetComponent<Animator>().SetTrigger("ExplosionPequeña");
         this.GetComponent<Animator>().SetBool("Explota", true);
         yield return new WaitForSeconds(0.34f);
         Destroy(this.gameObject);

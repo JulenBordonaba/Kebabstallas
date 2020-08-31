@@ -308,6 +308,7 @@ public class GameController : MonoBehaviour {
         if (Selected != null)
         {
             Selected.IA = true;
+            Selected.GetComponent<Soldier>().StateMachineLogic();
         }
     }
 
@@ -331,10 +332,39 @@ public class GameController : MonoBehaviour {
     {
         foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player"))
         {
-            if(player.GetComponent<Soldier>())
+            if (player.GetComponent<Soldier>())
+            {
                 player.GetComponent<Soldier>().IA = true;
+                player.GetComponent<Soldier>().StateMachineLogic();
+            }
+               
+
         }
     }
+
+    ////Función para mostrar los dialogos por pantalla
+    //public IEnumerator Type(string myEvent)
+    //{
+    //    DialogBox.enabled = true;
+    //    textDisplay.text = "";
+    //    endConversation = false;
+    //    foreach (char letter in myEvent.ToCharArray())
+    //    {
+    //        textDisplay.text += letter;
+    //        yield return new WaitForSeconds(0.01f);
+    //    }
+    //    yield return new WaitUntil(() => endConversation == true);
+    //    //Cuando acaba de hablar:
+    //    textDisplay.text = "";
+    //    DialogBox.enabled = false;
+    //    //El NPC vuelve a su tarea original
+    //    Player.GetComponent<PlayerController>().talking = false;
+    //    if (TalkedNPC != null)
+    //    {
+    //        TalkedNPC.GetComponent<NPCController>().Continue();
+    //    }
+
+    //}
 
 
     public string[] GetMap()

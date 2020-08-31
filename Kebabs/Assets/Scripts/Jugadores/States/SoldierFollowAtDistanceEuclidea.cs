@@ -72,7 +72,7 @@ public class SoldierFollowAtDistanceEuclidea : SoldierState
 
                 Location bestPlace = FindSaveWay();
 
-                if (bestPlace == null)
+                if (bestPlace == null && nearestEnemy != null)
                 {
                     loc = RunToEnemy(nearestEnemy);
                 }
@@ -81,7 +81,7 @@ public class SoldierFollowAtDistanceEuclidea : SoldierState
                     loc = RunAway(bestPlace, distanceToEnemy, nearestEnemy);
                 }
             }
-            else if (distanceToEnemy > soldier.stats.AttackDistance)
+            else if (distanceToEnemy > soldier.stats.AttackDistance && nearestEnemy != null)
             {
                 loc = RunToEnemy(nearestEnemy);
             }
