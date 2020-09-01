@@ -12,6 +12,7 @@ public class Collectable : MonoBehaviour
     public GameObject Oso;
     private float timer = 0;
     private bool CanSound = true;
+    public float timeToDissapear = 25;
     public enum Type
     { EXPLOSION, VIDA, VELOCIDAD, RALENTIZADOR, ESCUDO, MINIOM, PETRIFICACION, ATAQUE };
 
@@ -39,7 +40,7 @@ public class Collectable : MonoBehaviour
         transform.GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(100 - transform.position.y * 20 + 1);
         timer += Time.deltaTime;
         
-        if (timer > 25f)
+        if (timer > timeToDissapear)
         {
             Destroy(this.gameObject);
         }

@@ -40,13 +40,17 @@ public class PanZoom : MonoBehaviour
 
                 //zoom(difference * 0.001f);
             }
-            zoom(Input.GetAxis("Mouse ScrollWheel"));
-            if (Input.GetMouseButton(0))
+            else
             {
-                Vector3 direction = touchStart - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                Camera.main.transform.position += direction;
+                if (Input.GetMouseButton(0))
+                {
+                    Vector3 direction = touchStart - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    Camera.main.transform.position += direction;
 
+                }
             }
+            zoom(Input.GetAxis("Mouse ScrollWheel"));
+            
 
             Camera.main.transform.position = new Vector3(Mathf.Clamp(Camera.main.transform.position.x, 0.001f + Camera.main.orthographicSize, 2.01f - Camera.main.orthographicSize), Mathf.Clamp(Camera.main.transform.position.y, 0.01f + Camera.main.orthographicSize, 2.01f - Camera.main.orthographicSize), -10f);
 

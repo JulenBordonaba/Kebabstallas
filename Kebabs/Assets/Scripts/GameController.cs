@@ -31,6 +31,7 @@ public class GameController : MonoBehaviour {
     private GameObject Seleccionado;
     
 
+
     public static UnityEvent OnCollectablePlaced = new UnityEvent();
 
     private void Start()
@@ -180,6 +181,13 @@ public class GameController : MonoBehaviour {
     {
         onGame = false;
         GameManager.LoadScene("Selection");
+        Resume();
+    }
+
+    public void TutorialScene()
+    {
+        onGame = false;
+        GameManager.LoadScene("Tutorial");
         Resume();
     }
 
@@ -341,30 +349,6 @@ public class GameController : MonoBehaviour {
 
         }
     }
-
-    ////Función para mostrar los dialogos por pantalla
-    //public IEnumerator Type(string myEvent)
-    //{
-    //    DialogBox.enabled = true;
-    //    textDisplay.text = "";
-    //    endConversation = false;
-    //    foreach (char letter in myEvent.ToCharArray())
-    //    {
-    //        textDisplay.text += letter;
-    //        yield return new WaitForSeconds(0.01f);
-    //    }
-    //    yield return new WaitUntil(() => endConversation == true);
-    //    //Cuando acaba de hablar:
-    //    textDisplay.text = "";
-    //    DialogBox.enabled = false;
-    //    //El NPC vuelve a su tarea original
-    //    Player.GetComponent<PlayerController>().talking = false;
-    //    if (TalkedNPC != null)
-    //    {
-    //        TalkedNPC.GetComponent<NPCController>().Continue();
-    //    }
-
-    //}
 
 
     public string[] GetMap()

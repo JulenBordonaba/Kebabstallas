@@ -410,7 +410,7 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
         }
         if (Input.GetMouseButtonUp(0) && this.tag == "Player")
         {
-            if(ClickTimer > 0.3f)
+            if(ClickTimer > 0.5f)
             {
                 return;
             }
