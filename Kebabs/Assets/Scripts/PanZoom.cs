@@ -10,6 +10,7 @@ public class PanZoom : MonoBehaviour
     public float zoomOutMax = 1f;
     public bool CanZoom = true;
     public Slider ZoomSlider;
+    public Vector3 direction;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,13 +39,13 @@ public class PanZoom : MonoBehaviour
 
                 float difference = currentMagnitude - prevMagnitude;
 
-                //zoom(difference * 0.001f);
+                zoom(difference * 0.002f);
             }
             else
             {
                 if (Input.GetMouseButton(0))
                 {
-                    Vector3 direction = touchStart - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    direction = touchStart - Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     Camera.main.transform.position += direction;
 
                 }

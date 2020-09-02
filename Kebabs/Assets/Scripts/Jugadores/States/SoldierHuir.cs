@@ -111,7 +111,7 @@ public class SoldierHuir : SoldierState
 
         if (enemies.Count <= 0) return null;
 
-        foreach (Location location in soldier.proposedEscapePoints[soldier.GC.myMap])
+        foreach (Location location in soldier.proposedEscapePoints[GameController.myMap])
         {
             if (!CheckPeligro(enemies, location))
             {

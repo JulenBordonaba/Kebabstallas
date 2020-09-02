@@ -84,9 +84,7 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
 
     private float Timer = 0;
 
-    private float TimeToGo = 0.3f;
-
-    private float ClickTimer = 0f;
+    
 
 
     // Use this for initialization
@@ -400,18 +398,11 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
 
     public void OnMouseClick()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            ClickTimer = 0;
-        }
-        if (Input.GetMouseButton(0))
-        {
-            ClickTimer += Time.deltaTime;
-        }
         if (Input.GetMouseButtonUp(0) && this.tag == "Player")
         {
-            if(ClickTimer > 0.5f)
+            if(Camera.main.GetComponent<PanZoom>().direction.magnitude * (1/Camera.main.orthographicSize)> 0.001f)
             {
+                Camera.main.GetComponent<PanZoom>().direction = Vector3.zero;
                 return;
             }
 

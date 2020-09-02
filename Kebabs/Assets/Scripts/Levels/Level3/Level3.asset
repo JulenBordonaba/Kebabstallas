@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d6f150040df16a4eb9ab5ee163b1e1b, type: 3}
+  m_Name: Level3
+  m_EditorClassIdentifier: 
+  Music: {fileID: 8300000, guid: 2dfc8868632ee8b4db965090c536b29f, type: 3}
+  Map: {fileID: 3293566678895700240, guid: 71653d648b0328f49b0a66ff91ce047a, type: 3}
+  perosnas:
+  - {fileID: 11400000, guid: 21afae68bd19641418b9b103a2b49b8e, type: 2}
+  - {fileID: 11400000, guid: 04f09c0e869d0ce439769ff1577734c8, type: 2}
+  nPildoras: 1

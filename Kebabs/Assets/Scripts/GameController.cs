@@ -9,12 +9,13 @@ public class GameController : MonoBehaviour {
     private string[] map;
 
     public enum MapType { TEMPLE, HELL, PRISION};
-    public MapType myMap;
+    public static MapType myMap;
     public GameObject[] Soldiers;
     public GameObject[] Collectables;
     public static bool onGame = false;
     public static List<int> players = new List<int>();
     public static List<int> enemies = new List<int>();
+    public static LevelsInfo Nivel;
     public bool GamePaused = false;
     public GameObject LoseImage;    //Pantalla de derrota
     public GameObject VictoryImage; //Pantalla de victoria
@@ -29,9 +30,8 @@ public class GameController : MonoBehaviour {
     public Soldier Selected = null;
     public GameObject SeleccionadoPrefab;
     private GameObject Seleccionado;
+    public LevelsInfo[] levelsInfo;
     
-
-
     public static UnityEvent OnCollectablePlaced = new UnityEvent();
 
     private void Start()
@@ -39,44 +39,8 @@ public class GameController : MonoBehaviour {
         Resume();
         if (onGame)
         {
-            VictoryImage.SetActive(false);
-            LoseImage.SetActive(false);
-            float posx = 1;
-            float inc = 0;
-
-            InvokeRepeating("DropCollectable", 2, 10f);
-
-            foreach (int number in players)
-            {
-                GameObject soldier = Instantiate(Soldiers[number]);
-                posx += inc * 0.2f * Mathf.Pow(-1, inc);
-                soldier.transform.position = new Vector2(posx, 0.1f);
-                soldier.tag = "Player";
-                soldier.layer = 8;
-                inc++;
-                if (inc > 8)
-                {
-                    inc = 0;
-                    posx = 1.1f;
-                }
-            }
-            posx = 1;
-            inc = 0;
-
-            foreach (int number in enemies)
-            {
-                GameObject soldier = Instantiate(Soldiers[number]);
-                posx += inc * 0.2f * Mathf.Pow(-1, inc);
-                soldier.transform.position = new Vector2(posx, 1.9f);
-                soldier.tag = "Enemy";
-                soldier.layer = 9;
-                inc++;
-                if (inc > 8)
-                {
-                    inc = 0;
-                    posx = 1.1f;
-                }
-            }
+            LoadLevel();
+            LoadLevelInfo();
         }
         else
         {
@@ -138,6 +102,8 @@ public class GameController : MonoBehaviour {
         }
     }
 
+    
+
     private void DropCollectable()
     {
         int X = 0;
@@ -147,10 +113,18 @@ public class GameController : MonoBehaviour {
             X = Random.Range(1, 19);
             Y = Random.Range(1, 19);
         }
-
-        GameObject Collectable = Instantiate(Collectables[Random.Range(0, Collectables.Length)]);
-        Collectable.transform.position = new Vector2(X/10f, Y/10f);
-        OnCollectablePlaced.Invoke();
+        int maxRand = Collectables.Length;
+        if (Nivel != null)
+        {
+            maxRand = Nivel.nPildoras;
+        }
+        if (maxRand != 0)
+        {
+            GameObject Collectable = Instantiate(Collectables[Random.Range(0, maxRand)]);
+            Collectable.transform.position = new Vector2(X / 10f, Y / 10f);
+            OnCollectablePlaced.Invoke();
+        }
+        
 
     }
 
@@ -202,8 +176,94 @@ public class GameController : MonoBehaviour {
     {
         players = new List<int>();
         enemies = new List<int>();
-        GameManager.LoadScene("Level" + level);
+        GameManager.LoadScene("Level1");
+        Nivel = levelsInfo[level - 1];
+
         onGame = true;
+    }
+
+    private void LoadLevel()
+    {
+        VictoryImage.SetActive(false);
+        LoseImage.SetActive(false);
+        float posx = 1;
+        float inc = 0;
+
+        InvokeRepeating("DropCollectable", 2, 10f);
+
+        foreach (int number in players)
+        {
+            GameObject soldier = Instantiate(Soldiers[number]);
+            posx += inc * 0.2f * Mathf.Pow(-1, inc);
+            soldier.transform.position = new Vector2(posx, 0.1f);
+            soldier.tag = "Player";
+            soldier.layer = 8;
+            inc++;
+            if (inc > 8)
+            {
+                inc = 0;
+                posx = 1.1f;
+            }
+        }
+        posx = 1;
+        inc = 0;
+
+        foreach (int number in enemies)
+        {
+            GameObject soldier = Instantiate(Soldiers[number]);
+            posx += inc * 0.2f * Mathf.Pow(-1, inc);
+            soldier.transform.position = new Vector2(posx, 1.9f);
+            soldier.tag = "Enemy";
+            soldier.layer = 9;
+            inc++;
+            if (inc > 8)
+            {
+                inc = 0;
+                posx = 1.1f;
+            }
+        }
+    }
+
+    private void LoadLevelInfo()
+    {
+        if (Nivel != null)
+        {
+            GameObject map = Instantiate(Nivel.Map);
+            if (Nivel.Map.name == "Temple")
+                myMap = MapType.TEMPLE;
+            else if (Nivel.Map.name == "Prision")
+                myMap = MapType.PRISION;
+            else if (Nivel.Map.name == "Hell")
+                myMap = MapType.HELL;
+            map.transform.position = new Vector3(0.98f, 1.008f);
+            Camera.main.GetComponent<AudioSource>().clip = Nivel.Music;
+            Camera.main.GetComponent<AudioSource>().Play();
+
+            foreach (SoldierInfo persona in Nivel.perosnas)
+            {
+                GameObject pers = Instantiate(persona.prefab);
+                pers.transform.position = persona.position;
+                pers.tag = persona.Tag;
+                if (pers.tag == "Player")
+                {
+                    pers.layer = 8;
+                }
+                else
+                {
+                    pers.layer = 9;
+                }
+                Stats stats = pers.GetComponent<Stats>();
+                stats.vida = persona.vida;
+                stats.baseSpeed = persona.baseSpeed;
+                stats.baseAttackSpeed = persona.baseAttackSpeed;
+                stats.baseAttackDistance = persona.baseAttackDistance;
+                stats.baseAttackDamage = persona.baseAttackDamage;
+            }
+        }
+        else
+        {
+            myMap = MapType.TEMPLE;
+        }
     }
 
     public void ReloadLevel()
@@ -304,6 +364,7 @@ public class GameController : MonoBehaviour {
         if (players.Count > 0 && enemies.Count > 0)
         {
             onGame = true;
+            Nivel = null;
             GameManager.LoadScene("CustomizedBattle");
         }
             
@@ -577,4 +638,6 @@ public class GameController : MonoBehaviour {
         }
         return newMap;
     }
+
+    
 }

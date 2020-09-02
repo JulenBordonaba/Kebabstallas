@@ -28,7 +28,7 @@ public class Tutorial : MonoBehaviour
         "empieza...",
         "aquí.",
 
-        "Empezemos aprendiendo a mover a tu personaje:",
+        "Empecemos aprendiendo a mover a tu personaje:",
         "Para ello, primero tienes que seleccionarlo pulsándolo una vez.",
 
         "¡Muy bien! Ahora mismo eres igual de inteligente que una marmota.",
