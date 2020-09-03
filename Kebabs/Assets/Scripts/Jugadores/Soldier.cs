@@ -156,6 +156,17 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
             new Location { X = 3, Y = 13 },
         });
 
+        proposedEscapePoints.Add(GameController.MapType.CLIFF,
+
+        new List<Location>()
+        {
+            new Location { X = 10, Y = 10 },
+            new Location { X = 17, Y = 16 },
+            new Location { X = 3, Y = 16 },
+            new Location { X = 17, Y = 3 },
+            new Location { X = 3, Y = 17 },
+        });
+
 
     }
 

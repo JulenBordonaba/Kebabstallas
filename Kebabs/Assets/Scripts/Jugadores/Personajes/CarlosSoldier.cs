@@ -20,11 +20,16 @@ public class CarlosSoldier : Soldier
 
     private IEnumerator Rayos()
     {
-        for (int i = 0; i < 6; i += 1)
+        for (int i = 0; i < 4; i += 1)
         {
             yield return new WaitForSeconds(0.1f);
-            GameObject rayo = Instantiate(arma, transform.position + new Vector3(Random.Range(-0.4f, 0.4f), Random.Range(-0.4f, 0.4f)), Quaternion.identity);
+            GameObject rayo = Instantiate(arma, transform.position + new Vector3(Random.Range(-0.4f, 0.4f), Random.Range(-0.3f, 0.3f)), Quaternion.identity);
             Rayo miRayo = rayo.GetComponent<Rayo>();
+            miRayo.targetTag = opositeTag;
+            miRayo.daño = stats.AttackDamage;
+            yield return new WaitForSeconds(0.1f);
+            rayo = Instantiate(arma, transform.position + new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f)), Quaternion.identity);
+            miRayo = rayo.GetComponent<Rayo>();
             miRayo.targetTag = opositeTag;
             miRayo.daño = stats.AttackDamage;
         }

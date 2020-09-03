@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour {
     private string[] map;
 
-    public enum MapType { TEMPLE, HELL, PRISION};
+    public enum MapType { TEMPLE, HELL, PRISION, CLIFF};
     public static MapType myMap;
     public GameObject[] Soldiers;
     public GameObject[] Collectables;
@@ -235,6 +235,8 @@ public class GameController : MonoBehaviour {
                 myMap = MapType.PRISION;
             else if (Nivel.Map.name == "Hell")
                 myMap = MapType.HELL;
+            else if (Nivel.Map.name == "Cliff")
+                myMap = MapType.CLIFF;
             map.transform.position = new Vector3(0.98f, 1.008f);
             Camera.main.GetComponent<AudioSource>().clip = Nivel.Music;
             Camera.main.GetComponent<AudioSource>().Play();
@@ -503,6 +505,34 @@ public class GameController : MonoBehaviour {
                         "X     XXX  XXXXXXXX X",
                         "X  XX     XXXXXXXXX X",
                         "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                    };
+                }
+            case MapType.CLIFF:
+                {
+                    return new string[]
+                    {  //0         1         2      
+                       //012345678901234567890
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XX                XXX",
+                        "XX                XXX",
+                        "XX                XXX",
+                        "XX                XXX",
+                        "XX                XXX",
+                        "XX                XXX",
+                        "XX                 XX",
+                        "XX                 XX",
+                        "XX                 XX",
+                        "XX                 XX",
+                        "XX                 XX",
+                        "XX                 XX",
+                        "XX                 XX",
+                        "XX                XXX",
+                        "XX                XXX",
+                        "XX                XXX",
+                        "XX                XXX",
+                        "XX                XXX",
+                        "XX                XXX",
                         "XXXXXXXXXXXXXXXXXXXXX",
                     };
                 }
