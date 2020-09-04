@@ -16,7 +16,7 @@ MonoBehaviour:
   position: {x: 1, y: 1}
   Tag: Enemy
   vida: 100
-  baseSpeed: 0.15
-  baseAttackSpeed: 3.5
+  baseSpeed: 0.25
+  baseAttackSpeed: 2.5
   baseAttackDistance: 0.5
-  baseAttackDamage: 20
+  baseAttackDamage: 12.5

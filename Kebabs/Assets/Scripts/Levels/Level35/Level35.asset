@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d6f150040df16a4eb9ab5ee163b1e1b, type: 3}
+  m_Name: Level35
+  m_EditorClassIdentifier: 
+  Music: {fileID: 8300000, guid: ad605a271701c434ca856b51f0b46292, type: 3}
+  Map: {fileID: 3293566678895700240, guid: 71653d648b0328f49b0a66ff91ce047a, type: 3}
+  perosnas:
+  - {fileID: 11400000, guid: 99186a603a939a8469eab965b09d9450, type: 2}
+  - {fileID: 11400000, guid: 3346ea02f1fac434c9d8d9ed3caa1596, type: 2}
+  - {fileID: 11400000, guid: de9a42c79d2172449bbf1806b5495e55, type: 2}
+  - {fileID: 11400000, guid: 53be81b93a9f7ea469258fa55dfd3115, type: 2}
+  - {fileID: 11400000, guid: f676a1bc808d9e645af8d42cd213efcf, type: 2}
+  - {fileID: 11400000, guid: 5ec82c6e9041a8c44b9385098fa05675, type: 2}
+  nPildoras: 4

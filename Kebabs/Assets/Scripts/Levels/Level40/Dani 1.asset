@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aa52c5c745040542a76a1ac9b33a87f, type: 3}
+  m_Name: Dani 1
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1660934730287340, guid: 7eaa490d715f78d4bac4047099046338, type: 3}
+  position: {x: 1, y: 1.7}
+  Tag: Enemy
+  vida: 100
+  baseSpeed: 0.25
+  baseAttackSpeed: 4
+  baseAttackDistance: 0.6
+  baseAttackDamage: 17
