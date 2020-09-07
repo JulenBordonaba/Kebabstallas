@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Huls 1
   m_EditorClassIdentifier: 
   prefab: {fileID: 1844136049336126, guid: aba806650b6767748ab306ed8c013a24, type: 3}
-  position: {x: 1, y: 0.2}
+  position: {x: 1, y: 0.5}
   Tag: Player
   vida: 100
   baseSpeed: 0.3

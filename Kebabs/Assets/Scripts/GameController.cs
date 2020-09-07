@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour {
 
     public enum MapType { TEMPLE, HELL, PRISION, CLIFF};
     public static MapType myMap;
+    public List<GameObject> Maps = new List<GameObject>();
     public GameObject[] Soldiers;
     public GameObject[] Collectables;
     public static bool onGame = false;
@@ -187,6 +188,7 @@ public class GameController : MonoBehaviour {
         VictoryImage.SetActive(false);
         LoseImage.SetActive(false);
         float posx = 1;
+        float posy = 0.1f;
         float inc = 0;
 
         InvokeRepeating("DropCollectable", 2, 10f);
@@ -195,31 +197,34 @@ public class GameController : MonoBehaviour {
         {
             GameObject soldier = Instantiate(Soldiers[number]);
             posx += inc * 0.2f * Mathf.Pow(-1, inc);
-            soldier.transform.position = new Vector2(posx, 0.1f);
+            soldier.transform.position = new Vector2(posx, posy);
             soldier.tag = "Player";
             soldier.layer = 8;
             inc++;
-            if (inc > 8)
+            if (inc > 4)
             {
                 inc = 0;
-                posx = 1.1f;
+                posx = 1.1f - posy + 0.1f;
+                posy += 0.1f;
             }
         }
         posx = 1;
+        posy = 1.9f;
         inc = 0;
 
         foreach (int number in enemies)
         {
             GameObject soldier = Instantiate(Soldiers[number]);
             posx += inc * 0.2f * Mathf.Pow(-1, inc);
-            soldier.transform.position = new Vector2(posx, 1.9f);
+            soldier.transform.position = new Vector2(posx, posy);
             soldier.tag = "Enemy";
             soldier.layer = 9;
             inc++;
-            if (inc > 8)
+            if (inc > 4)
             {
                 inc = 0;
-                posx = 1.1f;
+                posx = 1.1f + posy - 1.9f;
+                posy -= 0.1f;
             }
         }
     }
@@ -228,16 +233,26 @@ public class GameController : MonoBehaviour {
     {
         if (Nivel != null)
         {
-            GameObject map = Instantiate(Nivel.Map);
-            if (Nivel.Map.name == "Temple")
-                myMap = MapType.TEMPLE;
-            else if (Nivel.Map.name == "Prision")
-                myMap = MapType.PRISION;
-            else if (Nivel.Map.name == "Hell")
-                myMap = MapType.HELL;
-            else if (Nivel.Map.name == "Cliff")
-                myMap = MapType.CLIFF;
-            map.transform.position = new Vector3(0.98f, 1.008f);
+            GameObject mapa;
+            if (Nivel.Map == MapType.TEMPLE)
+            {
+                mapa = Instantiate(Maps[0]);
+            }
+
+            else if (Nivel.Map == MapType.PRISION)
+            {
+                mapa = Instantiate(Maps[1]);
+            }
+            else if (Nivel.Map == MapType.HELL)
+            {
+                mapa = Instantiate(Maps[2]);
+            }
+            else if (Nivel.Map == MapType.CLIFF)
+            {
+                mapa = Instantiate(Maps[3]);
+            }
+            myMap = Nivel.Map;
+            //mapa.transform.position = new Vector3(0.98f, 1.008f);
             Camera.main.GetComponent<AudioSource>().clip = Nivel.Music;
             Camera.main.GetComponent<AudioSource>().Play();
 
@@ -430,11 +445,11 @@ public class GameController : MonoBehaviour {
                     {  //0         1         2      
                        //012345678901234567890
                         "XXXXXXXXXXXXXXXXXXXXX",
-                        "X   X    XX X   X   X",
-                        "X   X           X   X",
-                        "X   X    XX X   X   X",
-                        "X   X    X  X   X   X",
-                        "X        X  X       X",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "X                   X",
                         "X   X    X  X   X   X",
                         "X   XX  XX   X  X   X",
                         "X    XXXX     XX    X",
@@ -444,11 +459,11 @@ public class GameController : MonoBehaviour {
                         "X    XXXX     XX    X",
                         "X   XX  XX   X  X   X",
                         "X   X    X  X   X   X",
-                        "X        X  X       X",
-                        "X   X    X  X   X   X",
-                        "X   X    XX X   X   X",
-                        "X   X           X   X",
-                        "X   X    XX X   X   X",
+                        "X                   X",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
                         "XXXXXXXXXXXXXXXXXXXXX",
                     };
                 }
@@ -458,25 +473,25 @@ public class GameController : MonoBehaviour {
                     {  //0         1         2      
                        //012345678901234567890
                         "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
                         "XXXXXXXXX   XXXXXXXXX",
-                        "XXXXXXX      XXXXXXXX",
-                        "XXXXX          XXXXXX",
-                        "XXXX            XXXXX",
-                        "XXXX    X   X    XXXX",
-                        "XXX   XXX   XX   XXXX",
-                        "XXX   XXX   XXX   XXX",
-                        "XX   XXX     XX   XXX",
+                        "XXXXXXX       XXXXXXX",
+                        "XXXXXX   X X   XXXXXX",
+                        "XXXXXX  XX XX  XXXXXX",
+                        "XXXXX  XX   XX  XXXXX",
                         "X                   X",
-                        "X                   X",
-                        "X                   X",
-                        "XX   XXX     XX   XXX",
-                        "XXX   XXX   XXX   XXX",
-                        "XXX   XXX   XX   XXXX",
-                        "XXXX    X   X    XXXX",
-                        "XXXX            XXXXX",
-                        "XXXXX          XXXXXX",
-                        "XXXXXXX      XXXXXXXX",
+                        "XXXXX  XX   XX  XXXXX",
+                        "XXXXXX  XX XX  XXXXXX",
+                        "XXXXXX   X X   XXXXXX",
+                        "XXXXXXX       XXXXXXX",
                         "XXXXXXXXX   XXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
                         "XXXXXXXXXXXXXXXXXXXXX",
                     };
                 }
@@ -487,23 +502,23 @@ public class GameController : MonoBehaviour {
                        //012345678901234567890
                         "XXXXXXXXXXXXXXXXXXXXX",
                         "XXXXXXXXXXXXXXXXXXXXX",
-                        "X  XXXXXX XXXXX   XXX",
-                        "X  XXXXX  XX        X",
-                        "X   XXXXX  X  X   X X",
-                        "X   XXXXX  X  XXXXX X",
-                        "X  XXXXXX  X  XXXXX X",
-                        "X          X        X",
-                        "X          X        X",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXX  X         X",
+                        "XXXXXXXX  X  XXXXXX X",
+                        "XXXXXXXX  X  XXXXXX X",
+                        "X         X         X",
                         "X                   X",
                         "X                   X",
                         "X                   X",
-                        "X          X        X",
-                        "X          X        X",
-                        "X  XXXXXX  XXXXXXXX X",
-                        "X   XXXXX  XXXXXXXX X",
-                        "X   X XXX  XXXXXXXX X",
-                        "X     XXX  XXXXXXXX X",
-                        "X  XX     XXXXXXXXX X",
+                        "X         X         X",
+                        "X XXXXXX  XXXXXXXXXXX",
+                        "X XXXXXX  XXXXXXXXXXX",
+                        "X         XXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
                         "XXXXXXXXXXXXXXXXXXXXX",
                         "XXXXXXXXXXXXXXXXXXXXX",
                     };
@@ -514,25 +529,25 @@ public class GameController : MonoBehaviour {
                     {  //0         1         2      
                        //012345678901234567890
                         "XXXXXXXXXXXXXXXXXXXXX",
-                        "XX                XXX",
-                        "XX                XXX",
-                        "XX                XXX",
-                        "XX                XXX",
-                        "XX                XXX",
-                        "XX                XXX",
-                        "XX                 XX",
-                        "XX                 XX",
-                        "XX                 XX",
-                        "XX                 XX",
-                        "XX                 XX",
-                        "XX                 XX",
-                        "XX                 XX",
-                        "XX                XXX",
-                        "XX                XXX",
-                        "XX                XXX",
-                        "XX                XXX",
-                        "XX                XXX",
-                        "XX                XXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXX          XXXXXXX",
+                        "XXXX          XXXXXXX",
+                        "XXXX          XXXXXXX",
+                        "XXXX           XXXXXX",
+                        "XXXX           XXXXXX",
+                        "XXXX           XXXXXX",
+                        "XXXX           XXXXXX",
+                        "XXXX           XXXXXX",
+                        "XXXX          XXXXXXX",
+                        "XXXX          XXXXXXX",
+                        "XXXX          XXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
                         "XXXXXXXXXXXXXXXXXXXXX",
                     };
                 }

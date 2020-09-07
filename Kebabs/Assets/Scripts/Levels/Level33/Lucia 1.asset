@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Lucia 1
   m_EditorClassIdentifier: 
   prefab: {fileID: 1844136049336126, guid: ad1b7bebcfa051444b6bf03ff090323b, type: 3}
-  position: {x: 1, y: 0.2}
+  position: {x: 1, y: 0.5}
   Tag: Player
   vida: 115
   baseSpeed: 0.26

@@ -799,7 +799,7 @@ Transform:
   m_GameObject: {fileID: 1075260806}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1.6, y: 1.6, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -900,7 +900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16369801681eaaa4ab14b298ecc3ae91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myMap: 0
+  Maps: []
   Soldiers: []
   Collectables: []
   GamePaused: 0
@@ -911,3 +911,5 @@ MonoBehaviour:
   GreenTeamCountText: {fileID: 0}
   RedTeamCountText: {fileID: 0}
   Selected: {fileID: 0}
+  SeleccionadoPrefab: {fileID: 0}
+  levelsInfo: []

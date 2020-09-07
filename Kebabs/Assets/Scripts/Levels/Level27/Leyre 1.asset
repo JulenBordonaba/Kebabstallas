@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Leyre 1
   m_EditorClassIdentifier: 
   prefab: {fileID: 1844136049336126, guid: 8fbcbe4ddc4211e489a906548abf8aae, type: 3}
-  position: {x: 0.9, y: 0.3}
+  position: {x: 0.9, y: 0.5}
   Tag: Player
   vida: 100
   baseSpeed: 0.3

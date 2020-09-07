@@ -8,7 +8,7 @@ using UnityEngine;
 public class LevelsInfo : ScriptableObject
 {
     public AudioClip Music;
-    public GameObject Map;
+    public GameController.MapType Map;
     public List<SoldierInfo> perosnas;
     public int nPildoras;
 }

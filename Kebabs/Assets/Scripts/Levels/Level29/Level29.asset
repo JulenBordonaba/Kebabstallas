@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level29
   m_EditorClassIdentifier: 
   Music: {fileID: 8300000, guid: aa18bde673a579d488c44010cc215951, type: 3}
-  Map: {fileID: 2413185829722057525, guid: e6cfef4d62419ef46b169cd75ad80bc7, type: 3}
+  Map: 3
   perosnas:
   - {fileID: 11400000, guid: a96838fff6a9b394eb68a6afb93ebda2, type: 2}
   - {fileID: 11400000, guid: f826e04267cc98344b94544e55e3027c, type: 2}

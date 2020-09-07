@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dani 1
   m_EditorClassIdentifier: 
   prefab: {fileID: 1660934730287340, guid: 7eaa490d715f78d4bac4047099046338, type: 3}
-  position: {x: 1.2, y: 0.3}
+  position: {x: 1.2, y: 0.5}
   Tag: Player
   vida: 100
   baseSpeed: 0.25

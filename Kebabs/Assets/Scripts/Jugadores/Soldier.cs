@@ -124,8 +124,8 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
             new Location { X = 5, Y = 2 },
             new Location { X = 15, Y = 2 },
             new Location { X = 10, Y = 2 },
-            new Location { X = 3, Y = 10 },
-            new Location { X = 17, Y = 10 },
+            new Location { X = 5, Y = 10 },
+            new Location { X = 15, Y = 10 },
             new Location { X = 10, Y = 10 },
             new Location { X = 5, Y = 17 },
             new Location { X = 15, Y = 17 },
@@ -136,10 +136,10 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
 
         new List<Location>()
         {
-            new Location { X = 10, Y = 3 },
-            new Location { X = 3, Y = 10 },
-            new Location { X = 10, Y = 16 },
-            new Location { X = 17, Y = 10 },
+            new Location { X = 10, Y = 5 },
+            new Location { X = 5, Y = 10 },
+            new Location { X = 10, Y = 15 },
+            new Location { X = 15, Y = 10 },
             new Location { X = 10, Y = 10 }
         });
 
@@ -148,12 +148,12 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
         new List<Location>()
         {
             new Location { X = 10, Y = 10 },
-            new Location { X = 10, Y = 2 },
-            new Location { X = 10, Y = 18 },
-            new Location { X = 18, Y = 8 },
-            new Location { X = 17, Y = 2 },
-            new Location { X = 3, Y = 19 },
-            new Location { X = 3, Y = 13 },
+            new Location { X = 8, Y = 1 },
+            new Location { X = 12, Y = 19 },
+            new Location { X = 15, Y = 8 },
+            new Location { X = 15, Y = 1 },
+            new Location { X = 5, Y = 19 },
+            new Location { X = 5, Y = 12 },
         });
 
         proposedEscapePoints.Add(GameController.MapType.CLIFF,
@@ -161,10 +161,10 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
         new List<Location>()
         {
             new Location { X = 10, Y = 10 },
-            new Location { X = 17, Y = 16 },
-            new Location { X = 3, Y = 16 },
-            new Location { X = 17, Y = 3 },
-            new Location { X = 3, Y = 17 },
+            new Location { X = 14, Y = 14 },
+            new Location { X = 6, Y = 14 },
+            new Location { X = 14, Y = 4 },
+            new Location { X = 6, Y = 4 },
         });
 
 

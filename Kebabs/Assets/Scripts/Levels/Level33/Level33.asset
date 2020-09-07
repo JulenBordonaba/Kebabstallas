@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: Level33
   m_EditorClassIdentifier: 
   Music: {fileID: 8300000, guid: ad605a271701c434ca856b51f0b46292, type: 3}
-  Map: {fileID: 2413185829722057525, guid: e6cfef4d62419ef46b169cd75ad80bc7, type: 3}
+  Map: 3
   perosnas:
   - {fileID: 11400000, guid: bd4dcdfe0e91e5946b3c4e405b606e3e, type: 2}
   - {fileID: 11400000, guid: 2182e6102b125884c9ce663ed9a2b28c, type: 2}
-  - {fileID: 11400000, guid: 7f403b15962495e47bea9091301f224e, type: 2}
   - {fileID: 11400000, guid: a6db3121b032c844991aa91a002c5e4e, type: 2}
   nPildoras: 4
