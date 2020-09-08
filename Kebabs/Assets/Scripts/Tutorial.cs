@@ -29,10 +29,10 @@ public class Tutorial : MonoBehaviour
         "aquí.",
 
         "Empecemos aprendiendo a mover a tu personaje:",
-        "Para ello, primero tienes que seleccionarlo pulsándolo una vez.",
+        "Para ello, primero tienes que seleccionarlo pulsándolo una vez. (pulsa un segundo)",
 
         "¡Muy bien! Ahora mismo eres igual de inteligente que una marmota.",
-        "Con el personaje seleccionado, pulsa cualquier parte del mapa para que Huls vaya hasta él.",
+        "Para que se mueva, pulsa en Huls y arrastra a cualquier parte del mapa para que vaya hasta él.",
 
         "Parece que ya lo tienes dominado más o menos.",
         "Si el tutorial te está suponiendo demasiado esfuerzo, descansa un par de horas y si eso luego ya sigues (o no).",

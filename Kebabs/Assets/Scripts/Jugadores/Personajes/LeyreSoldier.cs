@@ -6,7 +6,7 @@ public class LeyreSoldier : Soldier
 {
     public override void Attack()
     {
-        GameObject nutella = Instantiate(arma, transform.position, Quaternion.identity);
+        GameObject nutella = Instantiate(arma, transform.position + Vector3.back*0.02f, Quaternion.identity);
         nutella.GetComponent<Nutella>().targetTag = opositeTag;
         
     }

@@ -16,7 +16,7 @@ MonoBehaviour:
   Map: 3
   perosnas:
   - {fileID: 11400000, guid: b81b9935d120639408c8b3aaea6079b9, type: 2}
-  - {fileID: 11400000, guid: 7e128d41bfb57ca4f830898bfcfb08a7, type: 2}
-  - {fileID: 11400000, guid: 7b2a328c7316cf64d8d342002373ccac, type: 2}
-  - {fileID: 11400000, guid: 80c734e5c7d6029448e7a32026700f09, type: 2}
+  - {fileID: 11400000, guid: cf10926279a1d854e82571bf36ca12e2, type: 2}
+  - {fileID: 11400000, guid: 6e2a127823ac65d48b6d6f5e446da73b, type: 2}
+  - {fileID: 11400000, guid: bbe5a0933110d3541aef45d2c7100fe5, type: 2}
   nPildoras: 3

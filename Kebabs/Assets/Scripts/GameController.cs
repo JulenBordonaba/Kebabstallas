@@ -30,6 +30,7 @@ public class GameController : MonoBehaviour {
     public Text RedTeamCountText;
     public static Soldier Selected = null;
     public float SelectedDistance = int.MaxValue;
+    public float EnemySelectedDistance = int.MaxValue;
     public GameObject SeleccionadoPrefab;
     public GameObject FollowArrowPrefab;
     private GameObject Seleccionado;

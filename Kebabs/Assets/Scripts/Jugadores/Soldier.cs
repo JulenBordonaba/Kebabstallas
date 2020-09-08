@@ -472,17 +472,37 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
                 }
                 else
                 {
-                    var v3 = Input.mousePosition;
-                    v3.z = 10.0f;
-                    v3 = Camera.main.ScreenToWorldPoint(v3);
-                    int X = Mathf.Clamp(Mathf.RoundToInt(v3.x * 10), 1, 19) + border;
-                    int Y = Mathf.Clamp(Mathf.RoundToInt(v3.y * 10), 1, 19) + border;
-                    followTarget = null;
-                    target = new Location
+                    float distan = int.MaxValue;
+                    GameObject followEnemy = null;
+                    foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
                     {
-                        X = X,
-                        Y = Y,
-                    };
+                        float a = Vector2.Distance(enemy.transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition));
+                        if (a <= distan)
+                        {
+                            followEnemy = enemy;
+                            distan = a;
+                        }
+                    }
+                    if (distan < 0.1f)
+                    {
+                        followTarget = followEnemy;
+                        GC.FollowArrow(followTarget);
+                    }
+                    else
+                    {
+                        var v3 = Input.mousePosition;
+                        v3.z = 10.0f;
+                        v3 = Camera.main.ScreenToWorldPoint(v3);
+                        int X = Mathf.Clamp(Mathf.RoundToInt(v3.x * 10), 1, 19) + border;
+                        int Y = Mathf.Clamp(Mathf.RoundToInt(v3.y * 10), 1, 19) + border;
+                        followTarget = null;
+                        target = new Location
+                        {
+                            X = X,
+                            Y = Y,
+                        };
+                    }
+                    
                 }
 
                 GC.ChangeSelected(null);

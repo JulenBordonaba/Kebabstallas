@@ -16,7 +16,7 @@ public class Nutella : MonoBehaviour {
 
     void Awake()
     {
-        transform.position = new Vector3(Mathf.RoundToInt(transform.position.x * 10) * 0.1f, Mathf.RoundToInt(transform.position.y * 10) * 0.1f);
+        transform.position = new Vector3(Mathf.RoundToInt(transform.position.x * 10) * 0.1f, Mathf.RoundToInt(transform.position.y * 10) * 0.1f, 0.02f);
         timer = 0.0f;
     }
 
