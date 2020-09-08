@@ -751,8 +751,10 @@ MonoBehaviour:
   MainCamera: {fileID: 1252128498}
   GreenTeamCountText: {fileID: 0}
   RedTeamCountText: {fileID: 0}
-  Selected: {fileID: 0}
-  SeleccionadoPrefab: {fileID: 1297954062585760577, guid: 82d81af7cf8167846b8d2df73ab78e64,
+  SelectedDistance: 2.1474836e+9
+  SeleccionadoPrefab: {fileID: 9124826494097096385, guid: 54bee117d3576a7438945a7132cbe760,
+    type: 3}
+  FollowArrowPrefab: {fileID: 489958093289965058, guid: ea97ab5b98b216b4f97bce0e42d102a9,
     type: 3}
   levelsInfo:
   - {fileID: 11400000, guid: 2fb4e60161c96a64c8d10acc034c0fb0, type: 2}

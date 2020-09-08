@@ -106,7 +106,7 @@ public class Tutorial : MonoBehaviour
                             Camera.main.GetComponent<PanZoom>().CanZoom = true;
                         }
                     }
-                    if (GC.Selected != null && DM.endConversation)
+                    if (GameController.Selected != null && DM.endConversation)
                     {
                         DialogIndex++;
                         SecuenceIndex++;

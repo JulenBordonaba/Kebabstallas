@@ -28,8 +28,10 @@ public class GameController : MonoBehaviour {
     private int RedTeamCount = 0;
     public Text GreenTeamCountText;
     public Text RedTeamCountText;
-    public Soldier Selected = null;
+    public static Soldier Selected = null;
+    public float SelectedDistance = int.MaxValue;
     public GameObject SeleccionadoPrefab;
+    public GameObject FollowArrowPrefab;
     private GameObject Seleccionado;
     public LevelsInfo[] levelsInfo;
     
@@ -387,6 +389,11 @@ public class GameController : MonoBehaviour {
             
     }
 
+    public void FollowArrow(GameObject soldier)
+    {
+        GameObject arrow = Instantiate(FollowArrowPrefab);
+        StartCoroutine(arrow.GetComponent<DownArrow>().Select(soldier));
+    }
 
     public void AvtivarIA()
     {
@@ -410,8 +417,17 @@ public class GameController : MonoBehaviour {
     public void ChangeSelected(Soldier player)
     {
         Selected = player;
-        Seleccionado.transform.parent = player.transform;
-        Seleccionado.transform.position = player.transform.position + Vector3.down * 0.02f;
+        if (Selected != null)
+        {
+            Seleccionado.transform.parent = player.transform;
+            Seleccionado.transform.position = player.transform.position + Vector3.down * 0.02f;
+        }
+        else
+        {
+            Seleccionado.transform.parent = this.transform;
+            Seleccionado.transform.position = new Vector3(-3, -10);
+        }
+        
     }
 
     public void IAParaTodosHijosDePuta()

@@ -888,6 +888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16369801681eaaa4ab14b298ecc3ae91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Maps: []
   Soldiers:
   - {fileID: 1961644551180558, guid: 08f76615d6f6b084eaf7d54a4fec61d8, type: 3}
   - {fileID: 1844136049336126, guid: b9907f0b994e3174d9e777d6c894a17d, type: 3}
@@ -921,8 +922,10 @@ MonoBehaviour:
   MainCamera: {fileID: 1252128498}
   GreenTeamCountText: {fileID: 0}
   RedTeamCountText: {fileID: 0}
-  Selected: {fileID: 0}
-  SeleccionadoPrefab: {fileID: 1297954062585760577, guid: 82d81af7cf8167846b8d2df73ab78e64,
+  SelectedDistance: 2.1474836e+9
+  SeleccionadoPrefab: {fileID: 9124826494097096385, guid: 54bee117d3576a7438945a7132cbe760,
+    type: 3}
+  FollowArrowPrefab: {fileID: 489958093289965058, guid: ea97ab5b98b216b4f97bce0e42d102a9,
     type: 3}
   levelsInfo: []
 --- !u!4 &529910587
@@ -4039,7 +4042,7 @@ PrefabInstance:
     - target: {fileID: 8079089133881568686, guid: e8ce9a1b17a0cce449432f23ecdc32cf,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8079089133881568686, guid: e8ce9a1b17a0cce449432f23ecdc32cf,
         type: 3}

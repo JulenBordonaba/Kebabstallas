@@ -409,13 +409,9 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
 
     public void OnMouseClick()
     {
-        if (Input.GetMouseButtonUp(0) && this.tag == "Player")
+
+        if (Input.GetMouseButtonDown(0) && this.tag == "Player")
         {
-            if(Camera.main.GetComponent<PanZoom>().direction.magnitude * (1/Camera.main.orthographicSize)> 0.001f)
-            {
-                Camera.main.GetComponent<PanZoom>().direction = Vector3.zero;
-                return;
-            }
 
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hitInfo = new RaycastHit();
@@ -436,37 +432,72 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
             }
             else
             {
-                if (selected)
+                float dist = Vector2.Distance(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition));
+                if (dist <= 0.1f &&  dist <= GC.SelectedDistance)
                 {
-                    int layerMask2 = 1 << 9;
-                    if (Physics.Raycast(ray, out hitInfo, 100, layerMask2))
-                    {
-                        followTarget = hitInfo.collider.gameObject;
-                    }
-                    else
-                    {
-                        var v3 = Input.mousePosition;
-                        v3.z = 10.0f;
-                        v3 = Camera.main.ScreenToWorldPoint(v3);
-                        int X = Mathf.Clamp(Mathf.RoundToInt(v3.x * 10), 1, 19) + border;
-                        int Y = Mathf.Clamp(Mathf.RoundToInt(v3.y * 10), 1, 19) + border;
-                        if (map[X][Y] != 'X')
-                        {
-                            followTarget = null;
-                            target = new Location
-                            {
-                                X = X,
-                                Y = Y,
-                            };
-                        }
-                    }
+                    GC.SelectedDistance = dist;
+                    selected = true;
+                    GC.ChangeSelected(this);
+                    IA = false;
+                    state = null;
                 }
+                else
+                {
+                    selected = false;
+                }
+                
             }
+        }
+
+
+
+        if (Input.GetMouseButtonUp(0) && this.tag == "Player")
+        {
+            //if(Camera.main.GetComponent<PanZoom>().direction.magnitude * (1/Camera.main.orthographicSize)> 0.001f)
+            //{
+            //    Camera.main.GetComponent<PanZoom>().direction = Vector3.zero;
+            //    return;
+            //}
+
+            
+            if (selected)
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hitInfo = new RaycastHit();
+                int layerMask2 = 1 << 9;
+                if (Physics.Raycast(ray, out hitInfo, 100, layerMask2))
+                {
+                    followTarget = hitInfo.collider.gameObject;
+                    GC.FollowArrow(followTarget);
+                }
+                else
+                {
+                    var v3 = Input.mousePosition;
+                    v3.z = 10.0f;
+                    v3 = Camera.main.ScreenToWorldPoint(v3);
+                    int X = Mathf.Clamp(Mathf.RoundToInt(v3.x * 10), 1, 19) + border;
+                    int Y = Mathf.Clamp(Mathf.RoundToInt(v3.y * 10), 1, 19) + border;
+                    followTarget = null;
+                    target = new Location
+                    {
+                        X = X,
+                        Y = Y,
+                    };
+                }
+
+                GC.ChangeSelected(null);
+            }
+            GC.SelectedDistance = int.MaxValue;
         }
     }
 
     protected void Die()
     {
+        if (transform.Find("DownArrow"))
+        {
+            transform.Find("DownArrow").parent = null;
+            transform.Find("DownArrow").position = new Vector2(0, -10f);
+        }
         Instantiate(sangre, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
