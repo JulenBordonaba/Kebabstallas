@@ -25,15 +25,15 @@ public class LoreaSoldier : Soldier
         //    print("No tengo followTarget");
 
 
-        print(state);
+        /*print(state);
         try
         {
             Debug.Log(target.X + " " + target.Y);
         }
         catch
         {
-            print("No hay target");
-        }
+            //print("No hay target");
+        }*/
         
 
     }

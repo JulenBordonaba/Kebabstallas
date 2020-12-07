@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class LevelData {
 
-    public int[] levels;
+    public int[] levels = new int[50];
 	
     public LevelData(int[] levs)
     {

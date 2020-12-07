@@ -510,6 +510,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100760259}
   m_CullTransparentMesh: 0
+--- !u!1 &236244499
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 236244500}
+  m_Layer: 0
+  m_Name: LevelData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &236244500
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236244499}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.68663424, y: 0.8719653, z: -0.8417969}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &289906687
 GameObject:
   m_ObjectHideFlags: 0
@@ -2181,8 +2211,10 @@ MonoBehaviour:
   MainCamera: {fileID: 0}
   GreenTeamCountText: {fileID: 0}
   RedTeamCountText: {fileID: 0}
-  Selected: {fileID: 0}
+  SelectedDistance: 2.1474836e+9
+  EnemySelectedDistance: 2.1474836e+9
   SeleccionadoPrefab: {fileID: 0}
+  FollowArrowPrefab: {fileID: 0}
   levelsInfo: []
 --- !u!4 &1980624368
 Transform:

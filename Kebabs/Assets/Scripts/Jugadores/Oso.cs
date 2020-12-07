@@ -8,7 +8,7 @@ public class Oso : MonoBehaviour
 
     string[] map;
 
-    private bool selected = false;
+    //private bool selected = false;
 
     private Animator anim;
 

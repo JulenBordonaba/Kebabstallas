@@ -21,7 +21,11 @@ public class GameController : MonoBehaviour {
     public GameObject LoseImage;    //Pantalla de derrota
     public GameObject VictoryImage; //Pantalla de victoria
     public GameObject PauseImage; //Pantalla de pausa
-    public static int[] levels = new int[20];
+    public static int[] levels = new int[50];
+    public static LevelData ld;
+    public static int currentLevel;
+
+
     public Camera MainCamera;
     private bool CanSound = true;
     private int GreenTeamCount = 0;
@@ -45,10 +49,26 @@ public class GameController : MonoBehaviour {
         {
             LoadLevel();
             LoadLevelInfo();
+            
         }
         else
         {
             CancelInvoke("DropCollectable");
+            if(ld == null)
+            {
+
+                ld = SaveSystem.LoadLevels();
+                if (ld == null)
+                {
+                    
+                    for (int i = 0; i < 50; i++)
+                    {
+                        levels[i] = 0;
+                    }
+                    ld = new LevelData(levels);
+                }
+            }
+            
         }
 
     }
@@ -101,6 +121,8 @@ public class GameController : MonoBehaviour {
                         CanSound = false;
                         AudioManager.PlaySound(AudioManager.Sound.VICTORIA);
                     }
+                    ld.levels[currentLevel] = 1;
+                    ld.levels[currentLevel+1] = 2;
                 }
             }
         }
@@ -171,6 +193,8 @@ public class GameController : MonoBehaviour {
 
     public void LevelsScene()
     {
+        SaveSystem.SaveLevels(ld.levels);
+        print(ld.levels[0] +" lul");
         onGame = false;
         GameManager.LoadScene("Levels");
         Resume();
@@ -180,6 +204,7 @@ public class GameController : MonoBehaviour {
     {
         players = new List<int>();
         enemies = new List<int>();
+        currentLevel = level - 1;
         GameManager.LoadScene("Level1");
         Nivel = levelsInfo[level - 1];
 
