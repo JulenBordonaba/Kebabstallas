@@ -54,21 +54,24 @@ public class GameController : MonoBehaviour {
         else
         {
             CancelInvoke("DropCollectable");
-            if(ld == null)
+            
+            if (ld == null)
             {
 
                 ld = SaveSystem.LoadLevels();
                 if (ld == null)
                 {
                     
-                    for (int i = 0; i < 50; i++)
+                    for (int i = 1; i < 50; i++)
                     {
                         levels[i] = 0;
                     }
+                    levels[0] = 2;
                     ld = new LevelData(levels);
+                    
                 }
             }
-            
+
         }
 
     }
@@ -122,7 +125,8 @@ public class GameController : MonoBehaviour {
                         AudioManager.PlaySound(AudioManager.Sound.VICTORIA);
                     }
                     ld.levels[currentLevel] = 1;
-                    ld.levels[currentLevel+1] = 2;
+                    if (currentLevel < 50)
+                        ld.levels[currentLevel+1] = 2;
                 }
             }
         }
@@ -194,9 +198,15 @@ public class GameController : MonoBehaviour {
     public void LevelsScene()
     {
         SaveSystem.SaveLevels(ld.levels);
-        print(ld.levels[0] +" lul");
         onGame = false;
         GameManager.LoadScene("Levels");
+        Resume();
+    }
+
+    public void BossScene()
+    {
+        onGame = true;
+        GameManager.LoadScene("Level4");
         Resume();
     }
 
