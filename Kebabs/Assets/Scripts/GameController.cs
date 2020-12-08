@@ -125,7 +125,7 @@ public class GameController : MonoBehaviour {
                         AudioManager.PlaySound(AudioManager.Sound.VICTORIA);
                     }
                     ld.levels[currentLevel] = 1;
-                    if (currentLevel < 50)
+                    if (currentLevel < 49)
                         ld.levels[currentLevel+1] = 2;
                 }
             }
