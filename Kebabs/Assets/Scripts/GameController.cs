@@ -25,6 +25,8 @@ public class GameController : MonoBehaviour {
     public static LevelData ld;
     public static int currentLevel;
 
+    public GameObject confirmation;
+
 
     public Camera MainCamera;
     private bool CanSound = true;
@@ -125,7 +127,7 @@ public class GameController : MonoBehaviour {
                         AudioManager.PlaySound(AudioManager.Sound.VICTORIA);
                     }
                     ld.levels[currentLevel] = 1;
-                    if (currentLevel < 49)
+                    if (currentLevel < 49 && ld.levels[currentLevel + 1] == 0)
                         ld.levels[currentLevel+1] = 2;
                 }
             }
@@ -207,6 +209,13 @@ public class GameController : MonoBehaviour {
     {
         onGame = true;
         GameManager.LoadScene("Level4");
+        Resume();
+    }
+
+    public void SurvivalScene()
+    {
+        onGame = false;
+        GameManager.LoadScene("Survival");
         Resume();
     }
 
@@ -402,6 +411,27 @@ public class GameController : MonoBehaviour {
         }
     }
 
+    public static void LiderSelected(GameObject lider)
+    {
+        foreach (GameObject persona in GameObject.FindGameObjectsWithTag("Lider"))
+        {
+            if (persona != lider)
+            {
+                persona.SetActive(false);
+            }
+        }
+    }
+
+    public void ShowConfirmation()
+    {
+        confirmation.SetActive(true);
+    }
+
+    public void HideConfirmation()
+    {
+        confirmation.SetActive(false);
+    }
+
     public void StartGameScene()
     {
         players = new List<int>();
@@ -423,6 +453,30 @@ public class GameController : MonoBehaviour {
             GameManager.LoadScene("CustomizedBattle");
         }
             
+    }
+
+    public void StartSurvivalGameScene()
+    {
+        players = new List<int>();
+        enemies = new List<int>();
+        players.Add(GameObject.FindGameObjectWithTag("Lider").GetComponent<Selectable>().myNumber);
+        for (int i = 0; i < 2; i++)
+        {
+            players.Add(Random.Range(0, 16));
+        }
+        for (int i = 0; i < 3; i++)
+        {
+            enemies.Add(Random.Range(0, 16));
+        }
+
+
+        if (players.Count > 0 && enemies.Count > 0)
+        {
+            onGame = true;
+            Nivel = null;
+            GameManager.LoadScene("SurvivalBattle");
+        }
+
     }
 
     public void FollowArrow(GameObject soldier)

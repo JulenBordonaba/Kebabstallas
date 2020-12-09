@@ -6,6 +6,7 @@ public class Selectable : MonoBehaviour {
     
     private SpriteRenderer sr;
     public int myNumber;
+    public GameObject GC;
 
     // Use this for initialization
     void Start () {
@@ -27,11 +28,39 @@ public class Selectable : MonoBehaviour {
         transform.localScale /= 1.3f;
     }
 
+    IEnumerator MoveToSpot()
+    {
+        Vector3 Gotoposition = new Vector3(0f,-3f,0f);
+        float elapsedTime = 0;
+        float waitTime = 1f;
+        Vector3 currentPos = transform.position;
+
+        while (elapsedTime < waitTime)
+        {
+            transform.position = Vector3.Lerp(currentPos, Gotoposition, (elapsedTime / waitTime));
+            elapsedTime += Time.deltaTime;
+
+            // Yield here
+            yield return null;
+        }
+        // Make sure we got there
+        transform.position = Gotoposition;
+        GC.GetComponent<GameController>().ShowConfirmation();
+        yield return null;
+    }
+
     private void OnMouseDown()
     {
 
         switch (tag)
         {
+            case "Lider":
+                {
+                    
+                    GameController.LiderSelected(this.gameObject);
+                    StartCoroutine("MoveToSpot");
+                    break;
+                }
             case "Player":
                 {
                     sr.color = new Color32(255, 83, 83, 255);

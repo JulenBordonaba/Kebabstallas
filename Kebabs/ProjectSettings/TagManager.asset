@@ -9,6 +9,7 @@ TagManager:
   - Selectable
   - Consumable
   - music
+  - Lider
   layers:
   - Default
   - TransparentFX
