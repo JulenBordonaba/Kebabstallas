@@ -5,6 +5,7 @@ using System.Text;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
     private string[] map;
@@ -95,7 +96,10 @@ public class GameController : MonoBehaviour {
 
                 }
             }
-
+            if (SceneManager.GetActiveScene().name == "TeamMatch")
+            {
+                FillTeams();
+            }
         }
 
     }
@@ -458,6 +462,7 @@ public class GameController : MonoBehaviour {
 
     public static void LiderSelected(GameObject lider)
     {
+        currentLider = lider.GetComponent<Selectable>().myNumber;
         foreach (GameObject persona in GameObject.FindGameObjectsWithTag("Lider"))
         {
             if (persona != lider)
@@ -485,21 +490,32 @@ public class GameController : MonoBehaviour {
         players = new List<int>();
         enemies = new List<int>();
 
-        players.Add(GameObject.FindGameObjectWithTag("Lider").GetComponent<Selectable>().myNumber);
+        GameObject lider = Instantiate(Soldiers[currentLider], new Vector2(0, -3f), Quaternion.identity);
+        Destroy(lider.GetComponent<NuevoPersonaje>());
+        lider.GetComponent<Animator>().enabled = true;
+        lider.GetComponent<SpriteRenderer>().color = Color.white;
+        players.Add(currentLider);
         int num = Random.Range(0, 16);
-        GameObject soldier = Instantiate(Soldiers[num], new Vector2(1.3f, -3f), Quaternion.identity);
+        Instantiate(Soldiers[num], new Vector2(1.3f, -3f), Quaternion.identity);
         players.Add(num);
 
         num = Random.Range(0, 16);
-        soldier = Instantiate(Soldiers[num], new Vector2(-1.3f, -3f), Quaternion.identity);
+        Instantiate(Soldiers[num], new Vector2(-1.3f, -3f), Quaternion.identity);
         players.Add(num);
 
         for (int i = -1; i < 2; i++)
         {
             num = Random.Range(0, 16);
-            soldier = Instantiate(Soldiers[num], new Vector2(i*1.3f, 1f), Quaternion.identity);
+            Instantiate(Soldiers[num], new Vector2(i*1.3f, 1f), Quaternion.identity);
             enemies.Add(num);
         }
+    }
+
+    public void TeamMatchScene()
+    {
+        onGame = false;
+        GameManager.LoadScene("TeamMatch");
+        Resume();
     }
 
     public void StartSurvivalGameScene()

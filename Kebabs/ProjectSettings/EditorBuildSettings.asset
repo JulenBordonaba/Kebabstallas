@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SurvivalBattle.unity
     guid: a71b97de8c28dfb438c1dd3f97835c4e
+  - enabled: 1
+    path: Assets/Scenes/TeamMatch.unity
+    guid: 71d104becc4e9414682cea22c532cb23
   m_configObjects: {}
