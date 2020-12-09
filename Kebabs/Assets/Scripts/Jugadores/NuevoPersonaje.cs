@@ -10,7 +10,7 @@ public class NuevoPersonaje : MonoBehaviour
     public GameObject Nombre;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         sr = transform.GetComponent<SpriteRenderer>();
         sr.color = Color.black;

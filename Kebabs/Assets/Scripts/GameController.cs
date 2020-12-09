@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Text;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameController : MonoBehaviour {
     private string[] map;
@@ -21,9 +22,14 @@ public class GameController : MonoBehaviour {
     public GameObject LoseImage;    //Pantalla de derrota
     public GameObject VictoryImage; //Pantalla de victoria
     public GameObject PauseImage; //Pantalla de pausa
-    public static int[] levels = new int[50];
+
     public static LevelData ld;
     public static int currentLevel;
+
+    public static RecordsData rd;
+    public static int currentLider;
+
+
 
     public GameObject confirmation;
 
@@ -63,7 +69,7 @@ public class GameController : MonoBehaviour {
                 ld = SaveSystem.LoadLevels();
                 if (ld == null)
                 {
-                    
+                    int[] levels = new int[50];
                     for (int i = 1; i < 50; i++)
                     {
                         levels[i] = 0;
@@ -71,6 +77,22 @@ public class GameController : MonoBehaviour {
                     levels[0] = 2;
                     ld = new LevelData(levels);
                     
+                }
+            }
+
+            if (rd == null)
+            {
+
+                rd = SaveSystem.LoadRecords();
+                if (rd == null)
+                {
+                    Dictionary<int, int> records = new Dictionary<int, int>();
+                    for (int i = 0; i < 16; i++)
+                    {
+                        records[i] = 0;
+                    }
+                    rd = new RecordsData(records);
+
                 }
             }
 
@@ -411,27 +433,6 @@ public class GameController : MonoBehaviour {
         }
     }
 
-    public static void LiderSelected(GameObject lider)
-    {
-        foreach (GameObject persona in GameObject.FindGameObjectsWithTag("Lider"))
-        {
-            if (persona != lider)
-            {
-                persona.SetActive(false);
-            }
-        }
-    }
-
-    public void ShowConfirmation()
-    {
-        confirmation.SetActive(true);
-    }
-
-    public void HideConfirmation()
-    {
-        confirmation.SetActive(false);
-    }
-
     public void StartGameScene()
     {
         players = new List<int>();
@@ -452,7 +453,53 @@ public class GameController : MonoBehaviour {
             Nivel = null;
             GameManager.LoadScene("CustomizedBattle");
         }
-            
+
+    }
+
+    public static void LiderSelected(GameObject lider)
+    {
+        foreach (GameObject persona in GameObject.FindGameObjectsWithTag("Lider"))
+        {
+            if (persona != lider)
+            {
+                persona.SetActive(false);
+            }
+        }
+    }
+
+    public void ShowConfirmation(int num)
+    {
+        confirmation.transform.Find("Record").GetComponent<TextMeshProUGUI>().text = "" + rd.records[num];
+        confirmation.SetActive(true);
+    }
+
+    public void HideConfirmation()
+    {
+        confirmation.SetActive(false);
+    }
+
+    public void FillTeams()
+    {
+
+        confirmation.SetActive(false);
+        players = new List<int>();
+        enemies = new List<int>();
+
+        players.Add(GameObject.FindGameObjectWithTag("Lider").GetComponent<Selectable>().myNumber);
+        int num = Random.Range(0, 16);
+        GameObject soldier = Instantiate(Soldiers[num], new Vector2(1.3f, -3f), Quaternion.identity);
+        players.Add(num);
+
+        num = Random.Range(0, 16);
+        soldier = Instantiate(Soldiers[num], new Vector2(-1.3f, -3f), Quaternion.identity);
+        players.Add(num);
+
+        for (int i = -1; i < 2; i++)
+        {
+            num = Random.Range(0, 16);
+            soldier = Instantiate(Soldiers[num], new Vector2(i*1.3f, 1f), Quaternion.identity);
+            enemies.Add(num);
+        }
     }
 
     public void StartSurvivalGameScene()
@@ -460,14 +507,7 @@ public class GameController : MonoBehaviour {
         players = new List<int>();
         enemies = new List<int>();
         players.Add(GameObject.FindGameObjectWithTag("Lider").GetComponent<Selectable>().myNumber);
-        for (int i = 0; i < 2; i++)
-        {
-            players.Add(Random.Range(0, 16));
-        }
-        for (int i = 0; i < 3; i++)
-        {
-            enemies.Add(Random.Range(0, 16));
-        }
+        
 
 
         if (players.Count > 0 && enemies.Count > 0)

@@ -45,7 +45,7 @@ public class Selectable : MonoBehaviour {
         }
         // Make sure we got there
         transform.position = Gotoposition;
-        GC.GetComponent<GameController>().ShowConfirmation();
+        GC.GetComponent<GameController>().ShowConfirmation(myNumber);
         yield return null;
     }
 
