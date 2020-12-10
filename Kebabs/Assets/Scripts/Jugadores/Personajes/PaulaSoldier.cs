@@ -6,45 +6,44 @@ public class PaulaSoldier : Soldier
 {
     private bool atacando = false;
     public GameObject CampoLlanto;
-
+    private Animator an;
     public GameObject lagrimas;
 
     protected override void Start()
     {
         base.Start();
         InvokeRepeating("GoForConsumable", 0.1f, 1f);
+        an = lagrimas.GetComponent<Animator>();
     }
 
     protected override void Update()
     {
         base.Update();
 
-
-        if (lastDirection == Vector2.up)
+        if (lagrimas != null)
         {
-            lagrimas.GetComponent<Animator>().SetInteger("Llorar", 0);
-            lagrimas.GetComponent<SpriteRenderer>().sortingOrder = 50;
+            if (lastDirection == Vector2.up)
+            {
+                an.SetInteger("Llorar", 0);
+                lagrimas.GetComponent<SpriteRenderer>().sortingOrder = 50;
+            }
+            else
+            {
+                lagrimas.GetComponent<SpriteRenderer>().sortingOrder = 100;
+                if (lastDirection == Vector2.right)
+                {
+                    an.SetInteger("Llorar", 1);
+                }
+                else if (lastDirection == Vector2.down)
+                {
+                    an.SetInteger("Llorar", 0);
+                }
+                else if (lastDirection == Vector2.left)
+                {
+                    an.SetInteger("Llorar", 2);
+                }
+            }
         }
-        else
-        {
-            lagrimas.GetComponent<SpriteRenderer>().sortingOrder = 100;
-            if (lastDirection == Vector2.right)
-            {
-                lagrimas.GetComponent<Animator>().SetInteger("Llorar", 1);
-            }
-            else if (lastDirection == Vector2.down)
-            {
-                lagrimas.GetComponent<Animator>().SetInteger("Llorar", 0);
-            }
-            else if (lastDirection == Vector2.left)
-            {
-                lagrimas.GetComponent<Animator>().SetInteger("Llorar", 2);
-            }
-        }
-
-
-
-
     }
 
     public void GoForConsumable()

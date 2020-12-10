@@ -255,62 +255,6 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
 
             }
         }
-        /*
-        //redondear a float con un decimal
-        float posRoundX = RoundWithDecimals(transform.position.x, 1);
-        float posRoundY = RoundWithDecimals(transform.position.y, 1);
-
-        //
-        if (target != null && Mathf.Abs(transform.position.x - posRoundX) < 0.005f
-                           && Mathf.Abs(transform.position.y - posRoundY) < 0.005f)
-        {
-
-            if (Mathf.Abs(target.X / 10f - posRoundX) < 0.05f && Mathf.Abs(target.Y / 10f - posRoundY) < 0.05f)
-            {
-                direction = Vector2.zero;
-                target = null;
-            }
-            else
-            {
-                //Posición actual para el primer nodo del A*
-                Location initial = new Location
-                {
-                    X = Mathf.RoundToInt(transform.position.x * 10) + border,
-                    Y = Mathf.RoundToInt(transform.position.y * 10) + border,
-                };
-
-                //Calculamos el siguiente movimiento
-                Location next = A_estrella(initial, target);
-
-
-                //Si lo encuentra, obtenemos la dirección que toma el fantasma
-                if (next != null)
-                {
-                    if (provisionalTarget != null && Mathf.Abs(provisionalTarget.X / 10f - posRoundX) < 0.05f && Mathf.Abs(provisionalTarget.Y / 10f - posRoundY) < 0.05f)
-                    {
-                        direction = Vector2.zero;
-                        
-                    }
-                    else
-                    {
-                        direction = new Vector2(next.X - initial.X, next.Y - initial.Y).normalized;
-                        direction = new Vector2 (Mathf.RoundToInt(direction[0]), Mathf.RoundToInt(direction[1]));
-                    }
-                }
-                else
-                {
-                    if (provisionalTarget != null && Mathf.Abs(provisionalTarget.X / 10f - posRoundX) < 0.05f && Mathf.Abs(provisionalTarget.Y / 10f - posRoundY) < 0.05f)
-                    {
-                        direction = Vector2.zero;
-                        
-                    }
-                }
-
-
-            }       x/1     0.1/y
-
-
-        }*/
 
         nextPoint = currentPoint + direction / 10f;
 

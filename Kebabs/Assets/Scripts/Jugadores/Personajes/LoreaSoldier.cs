@@ -107,7 +107,6 @@ public class LoreaSoldier : Soldier
                     {
                         if (ally.GetComponent<Soldier>() != this)
                         {
-                            print(ally.name);
                             _allies.Add(ally);
                         }
                     }
@@ -117,7 +116,6 @@ public class LoreaSoldier : Soldier
             allies = _allies.ToArray();
         }
 
-        print("Allies: " + allies.Length);
 
         if (CheckNearConsumables(1.5f))
         {

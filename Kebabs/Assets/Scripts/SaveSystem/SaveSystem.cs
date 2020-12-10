@@ -26,7 +26,6 @@ public static class SaveSystem {
         string path = Application.persistentDataPath + "/levels.progress";
         if (File.Exists(path))
         {
-            Debug.Log("Loaded ");
             BinaryFormatter formatter = new BinaryFormatter();
              FileStream stream = new FileStream(path, FileMode.Open);
 

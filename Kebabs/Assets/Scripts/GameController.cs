@@ -29,7 +29,10 @@ public class GameController : MonoBehaviour {
 
     public static RecordsData rd;
     public static int currentLider;
+    public static int currentKebabs;
 
+    public GameObject kebabs;
+    public GameObject record;
 
 
     public GameObject confirmation;
@@ -58,7 +61,6 @@ public class GameController : MonoBehaviour {
         {
             LoadLevel();
             LoadLevelInfo();
-            
         }
         else
         {
@@ -101,7 +103,6 @@ public class GameController : MonoBehaviour {
                 FillTeams();
             }
         }
-
     }
 
     // Update is called once per frame
@@ -124,11 +125,15 @@ public class GameController : MonoBehaviour {
                     Pause();
             }
             
-            if (GameObject.FindGameObjectsWithTag("Player").Length == 0)
+            if (GameObject.FindGameObjectsWithTag("Player").Length == 0 && onGame)
             {
                 
                 if (LoseImage != null)
                 {
+                    if (kebabs != null)
+                    {
+                        kebabs.GetComponent<TextMeshProUGUI>().text = currentKebabs + "";
+                    }
                     Time.timeScale = 0f;
                     LoseImage.SetActive(true); //Pierde
                     MainCamera.GetComponent<AudioSource>().enabled = false;
@@ -137,13 +142,23 @@ public class GameController : MonoBehaviour {
                         CanSound = false;
                         AudioManager.PlaySound(AudioManager.Sound.DERROTA);
                     }
+                    onGame = false;
                 }
                     
             }
-            else if(GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
+            else if(GameObject.FindGameObjectsWithTag("Enemy").Length == 0 && onGame)
             {
                 if (VictoryImage != null)
                 {
+                    if (record != null)
+                    {
+                        currentKebabs += 1;
+                        if (currentKebabs > rd.records[currentLider])
+                        {
+                            record.SetActive(true);
+                        }
+                        
+                    }
                     Time.timeScale = 0f;
                     VictoryImage.SetActive(true); //Gana
                     MainCamera.GetComponent<AudioSource>().enabled = false;
@@ -155,7 +170,9 @@ public class GameController : MonoBehaviour {
                     ld.levels[currentLevel] = 1;
                     if (currentLevel < 49 && ld.levels[currentLevel + 1] == 0)
                         ld.levels[currentLevel+1] = 2;
+                    onGame = false;
                 }
+                
             }
         }
     }
@@ -241,6 +258,7 @@ public class GameController : MonoBehaviour {
     public void SurvivalScene()
     {
         onGame = false;
+        currentKebabs = 0;
         GameManager.LoadScene("Survival");
         Resume();
     }
@@ -485,8 +503,16 @@ public class GameController : MonoBehaviour {
 
     public void FillTeams()
     {
+        //confirmation.SetActive(false);
+        if (currentKebabs > rd.records[currentLider])
+        {
+            rd.records[currentLider] = currentKebabs;
+            SaveSystem.SaveRecords(rd.records);
+        }
+        
+        kebabs.GetComponent<TextMeshProUGUI>().text = "" + currentKebabs;
+        record.GetComponent<TextMeshProUGUI>().text = "" + rd.records[currentLider];
 
-        confirmation.SetActive(false);
         players = new List<int>();
         enemies = new List<int>();
 
@@ -506,7 +532,7 @@ public class GameController : MonoBehaviour {
         for (int i = -1; i < 2; i++)
         {
             num = Random.Range(0, 16);
-            Instantiate(Soldiers[num], new Vector2(i*1.3f, 1f), Quaternion.identity);
+            Instantiate(Soldiers[num], new Vector2(i*1.3f, -0.5f), Quaternion.identity);
             enemies.Add(num);
         }
     }
@@ -520,19 +546,9 @@ public class GameController : MonoBehaviour {
 
     public void StartSurvivalGameScene()
     {
-        players = new List<int>();
-        enemies = new List<int>();
-        players.Add(GameObject.FindGameObjectWithTag("Lider").GetComponent<Selectable>().myNumber);
-        
-
-
-        if (players.Count > 0 && enemies.Count > 0)
-        {
-            onGame = true;
-            Nivel = null;
-            GameManager.LoadScene("SurvivalBattle");
-        }
-
+        onGame = true;
+        Nivel = null;
+        GameManager.LoadScene("SurvivalBattle");
     }
 
     public void FollowArrow(GameObject soldier)

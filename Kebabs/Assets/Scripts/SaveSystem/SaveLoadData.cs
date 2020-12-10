@@ -29,13 +29,11 @@ public class SaveLoadData : Singleton<SaveLoadData>
     public void SaveData()
     {
         if (!dataLoaded) return;
-        print("Save");
         Global.SaveData<Settings>(OptionsMenu.settings, "Settings.json");
     }
 
     public void LoadData()
     {
-        print("Load");
         Settings settings = Global.LoadData<Settings>("Settings.json");
         if (settings == null)
         {
