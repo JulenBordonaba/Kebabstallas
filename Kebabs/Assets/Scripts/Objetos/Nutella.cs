@@ -29,7 +29,15 @@ public class Nutella : MonoBehaviour {
         {
             foreach (GameObject enemy in Nutellados)
             {
-                enemy.GetComponent<Soldier>().nutellaCount -= 1;
+                try
+                {
+                    enemy.GetComponent<Soldier>().nutellaCount -= 1;
+                }
+                catch
+                {
+
+                }
+                
                 enemy.GetComponent<Soldier>().CheckNutella();
             }
             Destroy(this.gameObject);

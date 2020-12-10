@@ -102,6 +102,15 @@ public class GameController : MonoBehaviour {
             {
                 FillTeams();
             }
+            else if (SceneManager.GetActiveScene().name == "Survival")
+            {
+                int sum = 0;
+                foreach (int num in rd.records.Values)
+                {
+                    sum += num;
+                }
+                record.GetComponent<TextMeshProUGUI>().text = "-   " + sum + "   -";
+            }
         }
     }
 
@@ -251,6 +260,7 @@ public class GameController : MonoBehaviour {
     public void BossScene()
     {
         onGame = true;
+        Nivel = null;
         GameManager.LoadScene("Level4");
         Resume();
     }

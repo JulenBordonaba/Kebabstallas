@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -39,7 +40,7 @@ public class BossCalavera : MonoBehaviour
 
     private float InterAttack = 3;
 
-    private float TPprob = 0.95f;
+    private float TPprob = 1f;
 
     private float originalSize;
     private Vector3 originalPosition;
@@ -171,9 +172,9 @@ public class BossCalavera : MonoBehaviour
         do
         {
             float Rand = Random.Range(0, 1f);
-            if (Rand < 0.25f)
+            if (Rand < 0.35f * TPprob)
                 miAtaque = Ataque.METEORITO;
-            else if (Rand < 0.8f)
+            else if (Rand < 0.65f * TPprob)
                 miAtaque = Ataque.MAGIA;
             else if (Rand < TPprob)
                 miAtaque = Ataque.OJOS;
@@ -186,26 +187,26 @@ public class BossCalavera : MonoBehaviour
             case Ataque.METEORITO:
                 {
                     anim.SetInteger("Ataque", 1);
-                    TPprob -= 0.3f;
+                    TPprob -= 0.08f;
                     break;
                 }
             case Ataque.MAGIA:
                 {
                     anim.SetInteger("Ataque", 0);
-                    TPprob -= 0.3f;
+                    TPprob -= 0.08f;
                     break;
                 }
             case Ataque.OJOS:
                 {
                     anim.SetInteger("Ataque", 2);
                     puedeLanzarOjos = true;
-                    TPprob -= 0.3f;
+                    TPprob -= 0.08f;
                     break;
                 }
             case Ataque.TELETRANSPORTE:
                 {
                     anim.SetInteger("Ataque", 3);
-                    TPprob = 0.95f;
+                    TPprob = 1f;
                     break;
                 }
         }
@@ -221,10 +222,10 @@ public class BossCalavera : MonoBehaviour
 
     private IEnumerator Meteoritos()
     {
-        for (int i = 0; i < 8; i += 1)
+        for (int i = 0; i < 7; i += 1)
         {
             yield return new WaitForSeconds(0.2f);
-            GameObject meteorito = Instantiate(Meteorito, new Vector2(Random.Range(3, 17) / 10f, Random.Range(3, 17) / 10f), Quaternion.identity);
+            GameObject meteorito = Instantiate(Meteorito, new Vector2(Random.Range(6, 14) / 10f, Random.Range(3, 17) / 10f), Quaternion.identity);
             meteorito.GetComponent<Meteorito>().targetTag = opositeTag;
         }
         yield return new WaitForSeconds(2.75f);

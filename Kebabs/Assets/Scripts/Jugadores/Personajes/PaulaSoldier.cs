@@ -20,7 +20,7 @@ public class PaulaSoldier : Soldier
     {
         base.Update();
 
-        if (lagrimas != null)
+        if (lagrimas.activeSelf)
         {
             if (lastDirection == Vector2.up)
             {

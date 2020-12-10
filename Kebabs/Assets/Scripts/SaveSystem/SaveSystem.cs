@@ -14,7 +14,6 @@ public static class SaveSystem {
         FileStream stream = new FileStream(path, FileMode.Create);
 
         LevelData data = new LevelData(levels);
-        Debug.Log("Saved ");
         formatter.Serialize(stream, data);
         stream.Close();
     }
@@ -49,7 +48,6 @@ public static class SaveSystem {
         FileStream stream = new FileStream(path, FileMode.Create);
 
         RecordsData data = new RecordsData(records);
-        Debug.Log("Saved ");
         formatter.Serialize(stream, data);
         stream.Close();
     }
@@ -61,7 +59,6 @@ public static class SaveSystem {
         string path = Application.persistentDataPath + "/records.progress";
         if (File.Exists(path))
         {
-            Debug.Log("Loaded ");
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream stream = new FileStream(path, FileMode.Open);
 

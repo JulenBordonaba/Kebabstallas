@@ -225,7 +225,6 @@ public class LoreaSoldier : Soldier
                 }
                 else
                 {
-                    print("3    Allies: " + allies.Length);
                     SetState(new SoldierFollowWeakestTeammate(this));
                 }
             }

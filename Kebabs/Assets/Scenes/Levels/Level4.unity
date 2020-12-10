@@ -906,23 +906,19 @@ MonoBehaviour:
   - {fileID: 1913781140069312, guid: 9943776167d030544b0387e712211633, type: 3}
   - {fileID: 6428136641898072489, guid: 3ca088ce5a59c6b4b9f16898a0eb66b1, type: 3}
   - {fileID: 4234435534389231602, guid: b88674399605fbe4b92497af63df641b, type: 3}
-  Collectables:
-  - {fileID: 1603980040381792, guid: 17dc68b448d22f442a13b74d426414c6, type: 3}
-  - {fileID: 6888042286760410213, guid: f4c50534035055e4e967c6998d463ae3, type: 3}
-  - {fileID: 8462020537455632508, guid: 5e02ef8ac1f26904f8716f6c598f2bb4, type: 3}
-  - {fileID: 5328994323015141950, guid: 6a9360c2ddefc5547973df3d18df2a85, type: 3}
-  - {fileID: 1679452085620583045, guid: a2cb87acad777f44bbb77508f6a8b639, type: 3}
-  - {fileID: 6474941591504255356, guid: 9a406fb290890294d9263e3ce368b42b, type: 3}
-  - {fileID: 1938660314206857670, guid: ecace4edc4d86884189e7bbb441ed763, type: 3}
-  - {fileID: 3316993020954728622, guid: 1c52245a376d771419fd3b2c2ba8ea6f, type: 3}
+  Collectables: []
   GamePaused: 0
   LoseImage: {fileID: 868616418}
   VictoryImage: {fileID: 22787542}
   PauseImage: {fileID: 1580208829}
+  kebabs: {fileID: 0}
+  record: {fileID: 0}
+  confirmation: {fileID: 0}
   MainCamera: {fileID: 1252128498}
   GreenTeamCountText: {fileID: 0}
   RedTeamCountText: {fileID: 0}
   SelectedDistance: 2.1474836e+9
+  EnemySelectedDistance: 2.1474836e+9
   SeleccionadoPrefab: {fileID: 9124826494097096385, guid: 54bee117d3576a7438945a7132cbe760,
     type: 3}
   FollowArrowPrefab: {fileID: 489958093289965058, guid: ea97ab5b98b216b4f97bce0e42d102a9,
@@ -2812,11 +2808,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BossCalavera_0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1620065962431593419, guid: 527ad0bca58674d448421cc86a4738ad,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1620065962431593462, guid: 527ad0bca58674d448421cc86a4738ad,
         type: 3}

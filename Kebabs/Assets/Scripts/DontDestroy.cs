@@ -9,7 +9,7 @@ public class DontDestroy : MonoBehaviour
 {
 
     private string a;
-    private List<string> scenes = new List<string> { "MainTitle", "Selection", "Levels", "Portada", "Configuracion", "Survival" };
+    private List<string> scenes = new List<string> { "MainTitle", "Selection", "Levels", "Portada", "Configuracion", "Survival", "TeamMatch" };
 
     void Awake()
     {

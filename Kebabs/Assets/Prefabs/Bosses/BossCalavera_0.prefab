@@ -152,8 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 872f04a4701824b44be7c18d481b02b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxVida: 2000
-  vida: 2000
+  maxVida: 3000
+  vida: 3000
   opositeTag: Respawn
   "da\xF1o": 10
   defensa: 1
