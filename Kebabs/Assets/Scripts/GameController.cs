@@ -35,7 +35,8 @@ public class GameController : MonoBehaviour {
     public GameObject record;
 
 
-    public GameObject confirmation;
+    public GameObject var1;
+    private float time;
 
 
     public Camera MainCamera;
@@ -61,6 +62,12 @@ public class GameController : MonoBehaviour {
         {
             LoadLevel();
             LoadLevelInfo();
+
+            if (var1 != null)
+            {
+                time = 120;
+                var1.GetComponent<TextMeshProUGUI>().text = Mathf.RoundToInt(time / 60) + " : " + (Mathf.RoundToInt(time) - Mathf.RoundToInt(time / 60 * 60));
+            }
         }
         else
         {
@@ -133,8 +140,34 @@ public class GameController : MonoBehaviour {
                 else
                     Pause();
             }
+
+            if (var1 != null)
+            {
+                if (time > 0)
+                {
+                    time -= Time.deltaTime;
+                    int aux = (Mathf.FloorToInt(time) - Mathf.FloorToInt(time / 60) * 60);
+                    string aux2 = "";
+                    if (aux < 10)
+                    {
+                        aux2 = "0";
+                    }
+                    var1.GetComponent<TextMeshProUGUI>().text = Mathf.FloorToInt(time / 60) + " : " + aux2 + (Mathf.FloorToInt(time) - Mathf.FloorToInt(time / 60) * 60);
+
+                }
+                
+
+                else
+                {
+                    foreach (GameObject persona in GameObject.FindGameObjectsWithTag("Player"))
+                    {
+                        persona.SetActive(false);
+                    }
+                }
+
+            }
             
-            if (GameObject.FindGameObjectsWithTag("Player").Length == 0 && onGame)
+            if (GameObject.FindGameObjectsWithTag("Player").Length == 0)
             {
                 
                 if (LoseImage != null)
@@ -155,7 +188,7 @@ public class GameController : MonoBehaviour {
                 }
                     
             }
-            else if(GameObject.FindGameObjectsWithTag("Enemy").Length == 0 && onGame)
+            else if(GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
             {
                 if (VictoryImage != null)
                 {
@@ -502,13 +535,13 @@ public class GameController : MonoBehaviour {
 
     public void ShowConfirmation(int num)
     {
-        confirmation.transform.Find("Record").GetComponent<TextMeshProUGUI>().text = "" + rd.records[num];
-        confirmation.SetActive(true);
+        var1.transform.Find("Record").GetComponent<TextMeshProUGUI>().text = "" + rd.records[num];
+        var1.SetActive(true);
     }
 
     public void HideConfirmation()
     {
-        confirmation.SetActive(false);
+        var1.SetActive(false);
     }
 
     public void FillTeams()
