@@ -113,16 +113,20 @@ public class GameController : MonoBehaviour {
             {
                 if (currentKebabs > rd.records[currentLider])
                 {
-                    rd.records[currentLider] = currentKebabs;
-                    SaveSystem.SaveRecords(rd.records);
+                    
+                    StartCoroutine("SumCurrentKebabs");
+                    
                 }
-                int sum = 0;
-                foreach (int num in rd.records.Values)
+                else
                 {
-                    sum += num;
+                    int sum = 0;
+                    foreach (int num in rd.records.Values)
+                    {
+                        sum += num;
+                    }
+                    record.GetComponent<TextMeshProUGUI>().text = "-   " + (sum - currentKebabs) + "   -";
                 }
-                record.GetComponent<TextMeshProUGUI>().text = "-   " + (sum - currentKebabs) + "   -";
-                StartCoroutine("SumCurrentKebabs");
+                
             }
         }
     }
@@ -228,21 +232,34 @@ public class GameController : MonoBehaviour {
 
     private IEnumerator SumCurrentKebabs()
     {
+        
+        int aux = currentKebabs - rd.records[currentLider];
+        int aux2 = currentKebabs;
+        int aux3 = rd.records[currentLider];
+        rd.records[currentLider] = currentKebabs;
+        int sum = 0;
+        foreach (int num in rd.records.Values)
+        {
+            sum += num;
+        }
+        record.GetComponent<TextMeshProUGUI>().text = "-   " + (sum - currentKebabs + aux3) + "   -";
         yield return new WaitForSeconds(0.5f);
-        int aux = currentKebabs;
         while (aux > 0)
         {
             GameObject bola = Instantiate(kebabs, GameObject.Find(Soldiers[currentLider].name).transform.position, Quaternion.identity);
             bola.GetComponent<SpriteRenderer>().sortingOrder = 100;
-            StartCoroutine("SumToRecord");
+            StartCoroutine("SumToRecord", aux3);
             aux--;
             yield return new WaitForSeconds(0.3f);
             
         }
-        yield return null;
+        yield return new WaitForSeconds(1f);
+        rd.records[currentLider] = aux2;
+        currentKebabs = 0;
+
     }
 
-    public IEnumerator SumToRecord()
+    public IEnumerator SumToRecord(int aux3)
     {
         yield return new WaitForSeconds(1);
         currentKebabs--;
@@ -251,7 +268,7 @@ public class GameController : MonoBehaviour {
         {
             sum += num;
         }
-        record.GetComponent<TextMeshProUGUI>().text = "-   " + (sum - currentKebabs) + "   -";
+        record.GetComponent<TextMeshProUGUI>().text = "-   " + (sum - currentKebabs + aux3) + "   -";
     }
 
     private void DropCollectable()

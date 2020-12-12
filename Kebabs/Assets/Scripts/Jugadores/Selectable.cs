@@ -17,7 +17,7 @@ public class Selectable : MonoBehaviour {
 	void Update () {
 		
 	}
-
+    /*
     private void OnMouseEnter()
     {
         transform.localScale *= 1.3f;
@@ -27,6 +27,7 @@ public class Selectable : MonoBehaviour {
     {
         transform.localScale /= 1.3f;
     }
+    */
 
     IEnumerator MoveToSpot()
     {
