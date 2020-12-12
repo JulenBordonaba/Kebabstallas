@@ -124,7 +124,8 @@ public class GameController : MonoBehaviour {
                     {
                         sum += num;
                     }
-                    record.GetComponent<TextMeshProUGUI>().text = "-   " + (sum - currentKebabs) + "   -";
+                    record.GetComponent<TextMeshProUGUI>().text = "-   " + (sum) + "   -";
+                    currentKebabs = 0;
                 }
                 
             }
@@ -155,7 +156,7 @@ public class GameController : MonoBehaviour {
             {
                 if (time > 0)
                 {
-                    time -= Time.deltaTime;
+                    
                     int aux = (Mathf.FloorToInt(time) - Mathf.FloorToInt(time / 60) * 60);
                     string aux2 = "";
                     if (aux < 10)
@@ -163,7 +164,7 @@ public class GameController : MonoBehaviour {
                         aux2 = "0";
                     }
                     var1.GetComponent<TextMeshProUGUI>().text = Mathf.FloorToInt(time / 60) + " : " + aux2 + (Mathf.FloorToInt(time) - Mathf.FloorToInt(time / 60) * 60);
-
+                    time -= Time.deltaTime;
                 }
                 
 
@@ -188,7 +189,7 @@ public class GameController : MonoBehaviour {
                         if (currentKebabs > rd.records[currentLider])
                         {
                             record.SetActive(true);
-                            rd.records[currentLider] = currentKebabs;
+                            //rd.records[currentLider] = currentKebabs;
                             SaveSystem.SaveRecords(rd.records);
                             
                         }
@@ -233,14 +234,14 @@ public class GameController : MonoBehaviour {
     private IEnumerator SumCurrentKebabs()
     {
         
-        int aux = currentKebabs - rd.records[currentLider];
-        int aux2 = currentKebabs;
-        int aux3 = rd.records[currentLider];
-        rd.records[currentLider] = currentKebabs;
+        int aux = currentKebabs - rd.records[currentLider]; //5
+        int aux2 = currentKebabs; //10
+        int aux3 = rd.records[currentLider];  //5
+        rd.records[currentLider] = currentKebabs;    //10
         int sum = 0;
         foreach (int num in rd.records.Values)
         {
-            sum += num;
+            sum += num;    //60
         }
         record.GetComponent<TextMeshProUGUI>().text = "-   " + (sum - currentKebabs + aux3) + "   -";
         yield return new WaitForSeconds(0.5f);
@@ -253,7 +254,7 @@ public class GameController : MonoBehaviour {
             yield return new WaitForSeconds(0.3f);
             
         }
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.1f);
         rd.records[currentLider] = aux2;
         currentKebabs = 0;
 
@@ -269,6 +270,7 @@ public class GameController : MonoBehaviour {
             sum += num;
         }
         record.GetComponent<TextMeshProUGUI>().text = "-   " + (sum - currentKebabs + aux3) + "   -";
+        SaveSystem.SaveRecords(rd.records);
     }
 
     private void DropCollectable()
@@ -326,6 +328,7 @@ public class GameController : MonoBehaviour {
     public void TutorialScene()
     {
         onGame = false;
+        Nivel = null;
         GameManager.LoadScene("Tutorial");
         Resume();
     }
