@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Baston
+    - BolaVerde
     - BombaCorazon
     - BossCalavera
     - ButtonBlock
@@ -1314,6 +1315,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11650}
     - Class: 114
       Script: {instanceID: 11706}
+    - Class: 114
+      Script: {instanceID: 22128}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -1778,7 +1781,7 @@ ScriptsOnlyBuild:
     className: EffectIcon
   - hash:
       serializedVersion: 2
-      Hash: 5e31ba49051db1cd8048e2d6e1b2e960
+      Hash: 7538c500e65de04fc9bb9bc72e2204ab
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameController
@@ -2508,6 +2511,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Pollo
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BolaVerde
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainTitle.unity

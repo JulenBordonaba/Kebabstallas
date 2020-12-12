@@ -254,7 +254,7 @@ MonoBehaviour:
   PauseImage: {fileID: 0}
   kebabs: {fileID: 1856488301}
   record: {fileID: 491470632}
-  confirmation: {fileID: 566755679}
+  var1: {fileID: 0}
   MainCamera: {fileID: 0}
   GreenTeamCountText: {fileID: 0}
   RedTeamCountText: {fileID: 0}
@@ -637,9 +637,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'RECORD
-
-'
+  m_text: "\xDALTIMO RECORD\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -708,10 +706,10 @@ MonoBehaviour:
   m_margin: {x: -97.04303, y: 0, z: -96.59802, w: -12.018677}
   m_textInfo:
     textComponent: {fileID: 363203452}
-    characterCount: 7
+    characterCount: 14
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 1
+    spaceCount: 2
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1

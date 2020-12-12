@@ -172,7 +172,7 @@ MonoBehaviour:
   LoseImage: {fileID: 0}
   VictoryImage: {fileID: 0}
   PauseImage: {fileID: 0}
-  kebabs: {fileID: 0}
+  kebabs: {fileID: 7986926528264152619, guid: d12c88e8f9abbc04cabd062fd2e479db, type: 3}
   record: {fileID: 1126855468}
   var1: {fileID: 566755679}
   MainCamera: {fileID: 0}

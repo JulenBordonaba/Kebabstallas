@@ -111,12 +111,18 @@ public class GameController : MonoBehaviour {
             }
             else if (SceneManager.GetActiveScene().name == "Survival")
             {
+                if (currentKebabs > rd.records[currentLider])
+                {
+                    rd.records[currentLider] = currentKebabs;
+                    SaveSystem.SaveRecords(rd.records);
+                }
                 int sum = 0;
                 foreach (int num in rd.records.Values)
                 {
                     sum += num;
                 }
-                record.GetComponent<TextMeshProUGUI>().text = "-   " + sum + "   -";
+                record.GetComponent<TextMeshProUGUI>().text = "-   " + (sum - currentKebabs) + "   -";
+                StartCoroutine("SumCurrentKebabs");
             }
         }
     }
@@ -175,6 +181,13 @@ public class GameController : MonoBehaviour {
                     if (kebabs != null)
                     {
                         kebabs.GetComponent<TextMeshProUGUI>().text = currentKebabs + "";
+                        if (currentKebabs > rd.records[currentLider])
+                        {
+                            record.SetActive(true);
+                            rd.records[currentLider] = currentKebabs;
+                            SaveSystem.SaveRecords(rd.records);
+                            
+                        }
                     }
                     Time.timeScale = 0f;
                     LoseImage.SetActive(true); //Pierde
@@ -194,12 +207,7 @@ public class GameController : MonoBehaviour {
                 {
                     if (record != null)
                     {
-                        currentKebabs += 1;
-                        if (currentKebabs > rd.records[currentLider])
-                        {
-                            record.SetActive(true);
-                        }
-                        
+                        currentKebabs += 1; 
                     }
                     Time.timeScale = 0f;
                     VictoryImage.SetActive(true); //Gana
@@ -214,12 +222,37 @@ public class GameController : MonoBehaviour {
                         ld.levels[currentLevel+1] = 2;
                     onGame = false;
                 }
-                
             }
         }
     }
 
-    
+    private IEnumerator SumCurrentKebabs()
+    {
+        yield return new WaitForSeconds(0.5f);
+        int aux = currentKebabs;
+        while (aux > 0)
+        {
+            GameObject bola = Instantiate(kebabs, GameObject.Find(Soldiers[currentLider].name).transform.position, Quaternion.identity);
+            bola.GetComponent<SpriteRenderer>().sortingOrder = 100;
+            StartCoroutine("SumToRecord");
+            aux--;
+            yield return new WaitForSeconds(0.3f);
+            
+        }
+        yield return null;
+    }
+
+    public IEnumerator SumToRecord()
+    {
+        yield return new WaitForSeconds(1);
+        currentKebabs--;
+        int sum = 0;
+        foreach (int num in rd.records.Values)
+        {
+            sum += num;
+        }
+        record.GetComponent<TextMeshProUGUI>().text = "-   " + (sum - currentKebabs) + "   -";
+    }
 
     private void DropCollectable()
     {
@@ -241,8 +274,6 @@ public class GameController : MonoBehaviour {
             Collectable.transform.position = new Vector2(X / 10f, Y / 10f);
             OnCollectablePlaced.Invoke();
         }
-        
-
     }
 
     public void Resume()
@@ -301,7 +332,7 @@ public class GameController : MonoBehaviour {
     public void SurvivalScene()
     {
         onGame = false;
-        currentKebabs = 0;
+        //currentKebabs = 0;
         GameManager.LoadScene("Survival");
         Resume();
     }
@@ -546,12 +577,7 @@ public class GameController : MonoBehaviour {
 
     public void FillTeams()
     {
-        //confirmation.SetActive(false);
-        if (currentKebabs > rd.records[currentLider])
-        {
-            rd.records[currentLider] = currentKebabs;
-            SaveSystem.SaveRecords(rd.records);
-        }
+        
         
         kebabs.GetComponent<TextMeshProUGUI>().text = "" + currentKebabs;
         record.GetComponent<TextMeshProUGUI>().text = "" + rd.records[currentLider];
