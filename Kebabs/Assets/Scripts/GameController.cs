@@ -44,6 +44,7 @@ public class GameController : MonoBehaviour {
 
     public Camera MainCamera;
     private bool CanSound = true;
+    private bool timeEnding = false;
     private int GreenTeamCount = 0;
     private int RedTeamCount = 0;
     public Text GreenTeamCountText;
@@ -68,7 +69,7 @@ public class GameController : MonoBehaviour {
 
             if (var1 != null)
             {
-                time = 120;
+                time = 150;
                 var1.GetComponent<TextMeshProUGUI>().text = Mathf.RoundToInt(time / 60) + " : " + (Mathf.RoundToInt(time) - Mathf.RoundToInt(time / 60 * 60));
             }
         }
@@ -154,12 +155,14 @@ public class GameController : MonoBehaviour {
                         selectable.GetComponent<SpriteRenderer>().color = Color.black;
                         selectable.GetComponent<Selectable>().unlocked = false;
                         selectable.GetComponent<Animator>().enabled = false;
+                        selectable.transform.Find("record").gameObject.SetActive(false);
                     }
                     else
                     {
                         selectable.GetComponent<SpriteRenderer>().color = Color.white;
                         selectable.GetComponent<Selectable>().unlocked = true;
                         selectable.GetComponent<Animator>().enabled = true;
+                        selectable.transform.Find("record").GetComponent<TextMeshProUGUI>().text = rd.records[i] + "";
                     }
                 }
                 if (currentKebabs > rd.records[currentLider])
@@ -169,7 +172,7 @@ public class GameController : MonoBehaviour {
                     int sum = 0;
                     foreach (int num in rd.records.Values)
                         sum += num;
-                    record.GetComponent<TextMeshProUGUI>().text = "-   " + (sum) + "   -";
+                    record.GetComponent<TextMeshProUGUI>().text = sum+ "";
                     currentKebabs = 0;
                 }
             }
@@ -209,6 +212,11 @@ public class GameController : MonoBehaviour {
                     }
                     var1.GetComponent<TextMeshProUGUI>().text = Mathf.FloorToInt(time / 60) + " : " + aux2 + (Mathf.FloorToInt(time) - Mathf.FloorToInt(time / 60) * 60);
                     time -= Time.deltaTime;
+                    if (time < 10 && !timeEnding)
+                    {
+                        timeEnding = true;
+                        StartCoroutine("Blink");
+                    }
                 }
                 else
                 {
@@ -304,14 +312,17 @@ public class GameController : MonoBehaviour {
         {
             sum += num;    //60
         }
-        record.GetComponent<TextMeshProUGUI>().text = "-   " + (sum - currentKebabs + aux3) + "   -";
+        record.GetComponent<TextMeshProUGUI>().text = (sum - currentKebabs + aux3) + "";
         yield return new WaitForSeconds(0.5f);
         while (aux > 0)
         {
-            GameObject bola = Instantiate(kebabs, GameObject.Find(Soldiers[currentLider].name).transform.position, Quaternion.identity);
+            GameObject lider = GameObject.Find(Soldiers[currentLider].name);
+            
+            GameObject bola = Instantiate(kebabs, lider.transform.position, Quaternion.identity);
             bola.GetComponent<SpriteRenderer>().sortingOrder = 100;
             StartCoroutine("SumToRecord", aux3);
             aux--;
+            lider.transform.Find("record").GetComponent<TextMeshProUGUI>().text = currentKebabs - aux + "";
             yield return new WaitForSeconds(0.3f);
             
         }
@@ -746,6 +757,20 @@ public class GameController : MonoBehaviour {
             Seleccionado.transform.parent = this.transform;
             Seleccionado.transform.position = new Vector3(-3, -10);
         }
+        
+    }
+
+    private IEnumerator Blink()
+    {
+        TextMeshProUGUI sr = var1.GetComponent<TextMeshProUGUI>();
+        for (int i = 0; i < 10; i++)
+        {
+            sr.color = Color.red;
+            yield return new WaitForSeconds(0.5f);
+            sr.color = Color.white;
+            yield return new WaitForSeconds(0.5f);
+        }
+        
         
     }
 

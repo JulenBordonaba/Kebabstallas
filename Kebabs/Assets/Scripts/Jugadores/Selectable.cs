@@ -32,6 +32,7 @@ public class Selectable : MonoBehaviour {
 
     IEnumerator MoveToSpot()
     {
+        transform.Find("record").gameObject.SetActive(false);
         Vector3 Gotoposition = new Vector3(0f,-3f,0f);
         float elapsedTime = 0;
         float waitTime = 1f;
