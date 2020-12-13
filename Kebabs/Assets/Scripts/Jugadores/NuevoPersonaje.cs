@@ -34,7 +34,8 @@ public class NuevoPersonaje : MonoBehaviour
         }else if(timer > 5)
         {
             transform.GetComponent<Animator>().enabled = true;
-            //Nombre.SetActive(true);
+            if (Nombre != null)
+                Nombre.SetActive(true);
         }
         
     }

@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TeamMatch.unity
     guid: 71d104becc4e9414682cea22c532cb23
+  - enabled: 1
+    path: Assets/Scenes/PersonajeDesbloqueado.unity
+    guid: a0d4da92b279ffa4f9117ee47b523d02
   m_configObjects: {}

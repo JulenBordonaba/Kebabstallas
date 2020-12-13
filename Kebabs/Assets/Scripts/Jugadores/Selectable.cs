@@ -7,6 +7,7 @@ public class Selectable : MonoBehaviour {
     private SpriteRenderer sr;
     public int myNumber;
     public GameObject GC;
+    public bool unlocked = true;
 
     // Use this for initialization
     void Start () {
@@ -57,9 +58,12 @@ public class Selectable : MonoBehaviour {
         {
             case "Lider":
                 {
+                    if (unlocked)
+                    {
+                        GameController.LiderSelected(this.gameObject);
+                        StartCoroutine("MoveToSpot");
+                    }
                     
-                    GameController.LiderSelected(this.gameObject);
-                    StartCoroutine("MoveToSpot");
                     break;
                 }
             case "Player":

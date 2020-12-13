@@ -34,6 +34,9 @@ public class GameController : MonoBehaviour {
     public GameObject kebabs;
     public GameObject record;
 
+    public static CharactersData cd;
+    private static int character;
+
 
     public GameObject var1;
     private float time;
@@ -75,7 +78,6 @@ public class GameController : MonoBehaviour {
             
             if (ld == null)
             {
-
                 ld = SaveSystem.LoadLevels();
                 if (ld == null)
                 {
@@ -86,13 +88,39 @@ public class GameController : MonoBehaviour {
                     }
                     levels[0] = 2;
                     ld = new LevelData(levels);
-                    
+                }
+            }
+
+            if (cd == null)
+            {
+                cd = SaveSystem.LoadCharacters();
+                if (cd == null)
+                {
+                    int[] characters = new int[16];
+                    for (int i = 0; i < 16; i++)
+                    {
+                        characters[i] = 0;
+                    }
+                    if (ld.levels[0] == 1)
+                        characters[3] = 1;
+                    if (ld.levels[2] == 1)
+                        characters[2] = 1;
+                    if (ld.levels[11] == 1)
+                        characters[6] = 1;
+                    if (ld.levels[18] == 1)
+                        characters[0] = 1;
+                    if (ld.levels[25] == 1)
+                        characters[4] = 1;
+                    if (ld.levels[35] == 1)
+                        characters[7] = 1;
+                    if (ld.levels[45] == 1)
+                        characters[13] = 1;
+                    cd = new CharactersData(characters);
                 }
             }
 
             if (rd == null)
             {
-
                 rd = SaveSystem.LoadRecords();
                 if (rd == null)
                 {
@@ -102,32 +130,48 @@ public class GameController : MonoBehaviour {
                         records[i] = 0;
                     }
                     rd = new RecordsData(records);
-
                 }
             }
-            if (SceneManager.GetActiveScene().name == "TeamMatch")
+
+            if (SceneManager.GetActiveScene().name == "PersonajeDesbloqueado")
+            {
+                GameObject newcharacter = Instantiate(Soldiers[character], new Vector2(0, -0.9f), Quaternion.identity);
+                newcharacter.GetComponent<NuevoPersonaje>().Nombre = var1;
+                newcharacter.transform.localScale *= 2;
+                //var1.GetComponent<TextMeshProUGUI>().text = newcharacter.name;
+            }
+            else if (SceneManager.GetActiveScene().name == "TeamMatch")
             {
                 FillTeams();
             }
             else if (SceneManager.GetActiveScene().name == "Survival")
             {
-                if (currentKebabs > rd.records[currentLider])
+                for (int i = 0; i < cd.characters.Length; i++)
                 {
-                    
-                    StartCoroutine("SumCurrentKebabs");
-                    
+                    GameObject selectable = GameObject.Find(Soldiers[i].name);
+                    if (cd.characters[i] == 0)
+                    {
+                        selectable.GetComponent<SpriteRenderer>().color = Color.black;
+                        selectable.GetComponent<Selectable>().unlocked = false;
+                        selectable.GetComponent<Animator>().enabled = false;
+                    }
+                    else
+                    {
+                        selectable.GetComponent<SpriteRenderer>().color = Color.white;
+                        selectable.GetComponent<Selectable>().unlocked = true;
+                        selectable.GetComponent<Animator>().enabled = true;
+                    }
                 }
+                if (currentKebabs > rd.records[currentLider])
+                    StartCoroutine("SumCurrentKebabs");
                 else
                 {
                     int sum = 0;
                     foreach (int num in rd.records.Values)
-                    {
                         sum += num;
-                    }
                     record.GetComponent<TextMeshProUGUI>().text = "-   " + (sum) + "   -";
                     currentKebabs = 0;
                 }
-                
             }
         }
     }
@@ -166,8 +210,6 @@ public class GameController : MonoBehaviour {
                     var1.GetComponent<TextMeshProUGUI>().text = Mathf.FloorToInt(time / 60) + " : " + aux2 + (Mathf.FloorToInt(time) - Mathf.FloorToInt(time / 60) * 60);
                     time -= Time.deltaTime;
                 }
-                
-
                 else
                 {
                     foreach (GameObject persona in GameObject.FindGameObjectsWithTag("Player"))
@@ -202,7 +244,7 @@ public class GameController : MonoBehaviour {
                         CanSound = false;
                         AudioManager.PlaySound(AudioManager.Sound.DERROTA);
                     }
-                    onGame = false;
+                    //onGame = false;
                 }
                     
             }
@@ -226,6 +268,25 @@ public class GameController : MonoBehaviour {
                     if (currentLevel < 49 && ld.levels[currentLevel + 1] == 0)
                         ld.levels[currentLevel+1] = 2;
                     onGame = false;
+
+                    if(SceneManager.GetActiveScene().name == "Level1")
+                    {
+                        if (currentLevel == 0 && cd.characters[3] == 0)
+                            PersonajeDesbloqueado(3);
+                        else if (currentLevel == 2 && cd.characters[2] == 0)
+                            PersonajeDesbloqueado(2);
+                        else if (currentLevel == 11 && cd.characters[6] == 0)
+                            PersonajeDesbloqueado(6);
+                        else if (currentLevel == 18 && cd.characters[0] == 0)
+                            PersonajeDesbloqueado(0);
+                        else if (currentLevel == 25 && cd.characters[25] == 0)
+                            PersonajeDesbloqueado(4);
+                        else if (currentLevel == 35 && cd.characters[7] == 0)
+                            PersonajeDesbloqueado(7);
+                        else if (currentLevel == 45 && cd.characters[45] == 0)
+                            PersonajeDesbloqueado(13);
+                    }
+                    
                 }
             }
         }
@@ -289,8 +350,7 @@ public class GameController : MonoBehaviour {
         }
         if (maxRand != 0)
         {
-            GameObject Collectable = Instantiate(Collectables[Random.Range(0, maxRand)]);
-            Collectable.transform.position = new Vector2(X / 10f, Y / 10f);
+            Instantiate(Collectables[Random.Range(0, maxRand)], new Vector2(X / 10f, Y / 10f), Quaternion.identity);
             OnCollectablePlaced.Invoke();
         }
     }
@@ -316,6 +376,14 @@ public class GameController : MonoBehaviour {
     public void MainMenuScene()
     {
         GameManager.LoadScene("MainTitle");
+    }
+
+    public void PersonajeDesbloqueado(int personaje)
+    {
+        cd.characters[personaje] = 1;
+        character = personaje;
+        GameManager.LoadScene("PersonajeDesbloqueado");
+        SaveSystem.SaveCharacters(cd.characters);
     }
 
     public void SelectionScene()
