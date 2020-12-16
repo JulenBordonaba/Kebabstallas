@@ -167,6 +167,17 @@ public class Soldier : SoldierStateMachine, IDamagable, IHealeable
             new Location { X = 6, Y = 4 },
         });
 
+        proposedEscapePoints.Add(GameController.MapType.BRIDGE,
+
+        new List<Location>()
+        {
+            new Location { X = 7, Y = 1 },
+            new Location { X = 13, Y = 1 },
+            new Location { X = 7, Y = 19 },
+            new Location { X = 13, Y = 19 },
+            new Location { X = 1, Y = 1 },
+        });
+
 
     }
 

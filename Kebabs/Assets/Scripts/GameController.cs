@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour {
     private string[] map;
 
-    public enum MapType { TEMPLE, HELL, PRISION, CLIFF};
+    public enum MapType { TEMPLE, HELL, PRISION, CLIFF, BRIDGE};
     public static MapType myMap;
     public List<GameObject> Maps = new List<GameObject>();
     public GameObject[] Soldiers;
@@ -515,6 +515,10 @@ public class GameController : MonoBehaviour {
             {
                 mapa = Instantiate(Maps[3]);
             }
+            else if (Nivel.Map == MapType.BRIDGE)
+            {
+                mapa = Instantiate(Maps[4]);
+            }
             myMap = Nivel.Map;
             //mapa.transform.position = new Vector3(0.98f, 1.008f);
             Camera.main.GetComponent<AudioSource>().clip = Nivel.Music;
@@ -543,7 +547,34 @@ public class GameController : MonoBehaviour {
         }
         else
         {
-            myMap = MapType.TEMPLE;
+            if (SceneManager.GetActiveScene().name == "SurvivalBattle")
+            {
+                print("holi");
+                float rand = Random.value;
+                if (rand < 0.33f)
+                {
+                    myMap = MapType.TEMPLE;
+                    Instantiate(Maps[0]);
+                }
+                    
+                else if (rand < 0.66f)
+                {
+                    myMap = MapType.PRISION;
+                    Instantiate(Maps[1]);
+                }
+                    
+                else {
+                    myMap = MapType.BRIDGE;
+                    Instantiate(Maps[4]);
+                }
+                    
+            }
+            else
+            {
+                print("adios");
+                myMap = MapType.TEMPLE;
+            }
+                
         }
     }
 
@@ -690,11 +721,11 @@ public class GameController : MonoBehaviour {
         lider.GetComponent<SpriteRenderer>().color = Color.white;
         players.Add(currentLider);
         int num = Random.Range(0, 16);
-        Instantiate(Soldiers[num], new Vector2(1.3f, -3f), Quaternion.identity);
+        Instantiate(Soldiers[num], new Vector2(-1.3f, -3f), Quaternion.identity);
         players.Add(num);
 
         num = Random.Range(0, 16);
-        Instantiate(Soldiers[num], new Vector2(-1.3f, -3f), Quaternion.identity);
+        Instantiate(Soldiers[num], new Vector2(1.3f, -3f), Quaternion.identity);
         players.Add(num);
 
         for (int i = -1; i < 2; i++)
@@ -783,8 +814,6 @@ public class GameController : MonoBehaviour {
                 player.GetComponent<Soldier>().IA = true;
                 player.GetComponent<Soldier>().StateMachineLogic();
             }
-               
-
         }
     }
 
@@ -904,6 +933,34 @@ public class GameController : MonoBehaviour {
                         "XXXX          XXXXXXX",
                         "XXXX          XXXXXXX",
                         "XXXX          XXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                    };
+                }
+            case MapType.BRIDGE:
+                {
+                    return new string[]
+                    {  //0         1         2      
+                       //012345678901234567890
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "X                   X",
+                        "X                   X",
+                        "X                   X",
+                        "X                   X",
+                        "X                   X",
+                        "X      XXXXXXX      X",
+                        "X     XXXXXXXXX     X",
+                        "XXXXXXXXXXXXXXXXXXXXX",
+                        "XXXXXXXXXXXXXXXXXXXXX",
                         "XXXXXXXXXXXXXXXXXXXXX",
                         "XXXXXXXXXXXXXXXXXXXXX",
                         "XXXXXXXXXXXXXXXXXXXXX",

@@ -22,6 +22,10 @@ public class ButtonBlock : MonoBehaviour
         }
         else
         {
+            //myNum += 50;
+            //this.name = "Level Button (" + myNum + ")";
+            
+            //transform.Find("Text").GetComponent<Text>().text = myNum + 50 + "";
             int state = GameController.ld.levels[myNum - 1];
             if (state >= 1)
             {
@@ -36,7 +40,6 @@ public class ButtonBlock : MonoBehaviour
                 transform.GetComponent<Button>().interactable = false;
             }
         }
-        
     }
 
     // Update is called once per frame

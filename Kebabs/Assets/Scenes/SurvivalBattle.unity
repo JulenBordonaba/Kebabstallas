@@ -1102,7 +1102,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16369801681eaaa4ab14b298ecc3ae91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Maps: []
+  Maps:
+  - {fileID: 8079089133881568592, guid: e8ce9a1b17a0cce449432f23ecdc32cf, type: 3}
+  - {fileID: 7747317374717247708, guid: c0c127e33eeb6ba4797f93bd72b328b1, type: 3}
+  - {fileID: 8837292127902904666, guid: 28f43fc79510c2f468dd59c2307365cf, type: 3}
+  - {fileID: 2258697149654412157, guid: 38d7df291370dd24b883f01f13a6c76c, type: 3}
+  - {fileID: 3149786185470989408, guid: 23451fe037def4c44bd0fe66384c51cf, type: 3}
   Soldiers:
   - {fileID: 1961644551180558, guid: 08f76615d6f6b084eaf7d54a4fec61d8, type: 3}
   - {fileID: 1844136049336126, guid: b9907f0b994e3174d9e777d6c894a17d, type: 3}
@@ -2413,7 +2418,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 041adb4fcd7778047850f741960e772f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5166ff510d4600b46884e3055b611136, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2723,6 +2728,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Temple 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079089133881568592, guid: e8ce9a1b17a0cce449432f23ecdc32cf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8079089133881568686, guid: e8ce9a1b17a0cce449432f23ecdc32cf,
         type: 3}

@@ -789,7 +789,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16369801681eaaa4ab14b298ecc3ae91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Maps: []
+  Maps:
+  - {fileID: 8079089133881568592, guid: e8ce9a1b17a0cce449432f23ecdc32cf, type: 3}
+  - {fileID: 7747317374717247708, guid: c0c127e33eeb6ba4797f93bd72b328b1, type: 3}
+  - {fileID: 8837292127902904666, guid: 28f43fc79510c2f468dd59c2307365cf, type: 3}
+  - {fileID: 2258697149654412157, guid: 38d7df291370dd24b883f01f13a6c76c, type: 3}
+  - {fileID: 3149786185470989408, guid: 23451fe037def4c44bd0fe66384c51cf, type: 3}
   Soldiers:
   - {fileID: 1961644551180558, guid: 08f76615d6f6b084eaf7d54a4fec61d8, type: 3}
   - {fileID: 1844136049336126, guid: b9907f0b994e3174d9e777d6c894a17d, type: 3}
@@ -820,10 +825,14 @@ MonoBehaviour:
   LoseImage: {fileID: 500060522}
   VictoryImage: {fileID: 22787542}
   PauseImage: {fileID: 1580208829}
+  kebabs: {fileID: 0}
+  record: {fileID: 0}
+  var1: {fileID: 0}
   MainCamera: {fileID: 1252128498}
   GreenTeamCountText: {fileID: 0}
   RedTeamCountText: {fileID: 0}
   SelectedDistance: 2.1474836e+9
+  EnemySelectedDistance: 2.1474836e+9
   SeleccionadoPrefab: {fileID: 9124826494097096385, guid: 54bee117d3576a7438945a7132cbe760,
     type: 3}
   FollowArrowPrefab: {fileID: 489958093289965058, guid: ea97ab5b98b216b4f97bce0e42d102a9,
